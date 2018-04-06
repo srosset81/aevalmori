@@ -44,6 +44,7 @@ class Layout extends React.Component {
           </FixedDiv>
 
           <BurgerMenu
+              width="350px"
             pageWrapId="page-wrap"
             outerContainerId="outer-container"
             styles={{
@@ -58,14 +59,10 @@ class Layout extends React.Component {
             left
             isOpen={this.state.isMenuOpen}
             customBurgerIcon={false}
-
+            customCrossIcon={false}
           >
             <Navigation />
           </BurgerMenu>
-
-          {/*<FixedDiv top left bottom w="350px">
-            <Navigation />
-          </FixedDiv>*/}
           <div id="page-wrap">{children}</div>
         </div>
       </ThemeProvider>

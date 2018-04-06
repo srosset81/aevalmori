@@ -14,9 +14,9 @@ const BorderedCell = Cell.extend`
 
 const HoverDiv = Div.extend`
   cursor: pointer;
-  transition: all ease-in-out 300ms;
+  transition: all ease-in-out 200ms;
   &:hover {
-    color: white;
+    color: ${props => theme.colors[props.hoverColor]};;
     background-color: ${props => theme.colors[props.hoverBgColor]};
   }
 `;
@@ -51,22 +51,21 @@ const Navigation = () => (
     <AbsoluteDiv bottom left right>
       <Separator />
       <Row>
-        <Cell w={1 / 3} h="40px">
-          <HoverDiv bg="lightGrey" hoverBgColor="facebook" align="middle" h="100%">
-            <Icon size="18px" color="white">
+        <Cell w={1 / 3} h="42px">
+          <HoverDiv color="darkGrey" hoverColor="white" hoverBgColor="facebook" align="middle" h="100%">
+            <Icon size="18px">
               <Facebook />
             </Icon>
           </HoverDiv>
         </Cell>
-        <BorderedCell w={0.32} h="40px">
-          <HoverDiv bg="lightGrey" hoverBgColor="facebookDark" align="middle" h="100%">
-            <Icon size="20px" color="white">
+        <BorderedCell w={0.32} h="42px">
+          <HoverDiv color="darkGrey" hoverColor="white" hoverBgColor="facebookDark" align="middle" h="100%">
+            <Icon size="18px">
               <LinkedIn />
             </Icon>
           </HoverDiv>
         </BorderedCell>
-        <Cell w={1 / 3} h="40px" align="middle">
-          In
+        <Cell w={1 / 3} h="42px" align="middle">
         </Cell>
       </Row>
     </AbsoluteDiv>
