@@ -5,8 +5,7 @@ import { Li } from 'components/layout';
 import { Text } from 'components/text';
 
 const StyledLi = Li.extend`
-  padding: 13px 0 12px;
-  width: 100%;
+  ${props => (props.indent ? `padding: 7px 0 6px 15px;` : `padding: 7px 0 6px;`)} width: 100%;
 `;
 
 const StyledA = styled.a`
@@ -17,8 +16,8 @@ const StyledA = styled.a`
   }
 `;
 
-const NavLink = ({ to, children }) => (
-  <StyledLi>
+const NavLink = ({ to, indent, children }) => (
+  <StyledLi indent={indent}>
     <Link href={to}>
       <Text color="darkGrey" fontSize="0.95em">
         <StyledA>{children}</StyledA>
@@ -26,5 +25,9 @@ const NavLink = ({ to, children }) => (
     </Link>
   </StyledLi>
 );
+
+NavLink.defaultProps = {
+  indent: false
+};
 
 export default NavLink;

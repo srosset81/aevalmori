@@ -17,6 +17,7 @@ const IndexPage = () => (
         <ShadowP color="white" align="center" font="lobster" fontSize="1.5em" m="0">
           Psychopraticienne relationnelle
         </ShadowP>
+          <br/><br/><br/>
       </Div>
     </BgImage>
     <P fontSize="3em" align="center">

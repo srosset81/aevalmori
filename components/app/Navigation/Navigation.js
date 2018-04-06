@@ -22,7 +22,7 @@ const HoverDiv = Div.extend`
 `;
 
 const Navigation = () => (
-  <Div bg="background" h="100%">
+  <Div bg="background" h="100%" w="100%">
     <Div align="center" p="20px">
       <BgImage src="/static/images/arbre-de-vie-300x300.jpg" h="200px" w="200px" />
     </Div>
@@ -30,11 +30,20 @@ const Navigation = () => (
     <Div p="20px 30px">
       <Ul>
         <NavLink to="/">Accueil</NavLink>
-        <Separator />
+        <Separator m="5px 0" />
         <NavLink to="/">Qui suis-je?</NavLink>
-        <Separator />
-        <NavLink to="/">Constellations familiales</NavLink>
-        <Separator />
+        <Separator m="5px 0" />
+        <NavLink to="/" indent>Séances individuelles</NavLink>
+        <NavLink to="/" indent>Consultations en ligne</NavLink>
+        <NavLink to="/" indent>Constellations familiales</NavLink>
+        <NavLink to="/" indent>D.M.O.K.A.</NavLink>
+        <Separator m="5px 0" />
+        <NavLink to="/contact">Témoignages</NavLink>
+        <Separator m="5px 0" />
+        <NavLink to="/contact">Agenda</NavLink>
+        <Separator m="5px 0" />
+        <NavLink to="/contact">Blog</NavLink>
+        <Separator m="5px 0" />
         <NavLink to="/contact">Contact</NavLink>
       </Ul>
     </Div>
