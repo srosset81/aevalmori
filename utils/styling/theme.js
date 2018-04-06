@@ -11,8 +11,10 @@ const theme = {
   breakpoints: { xs: '0px', sm: '540px', smd: '768px', md: '820px', mdl: '992px', lg: '1060px', xl: '1200px' },
   fontFamily: {
     openSans: "'Open Sans', Helvetica, Arial, sans-serif",
+    roboto: "'Roboto', Helvetica, Arial, sans-serif",
     montserrat: "'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif",
-    noto: "'Noto Serif', 'Open Sans', Helvetica, Arial, sans-serif"
+    noto: "'Noto Serif', 'Open Sans', Helvetica, Arial, sans-serif",
+    lobster: "'Lobster', cursive"
   },
   colors: {
     purple: '#54295E',

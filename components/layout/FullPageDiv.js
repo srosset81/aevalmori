@@ -1,7 +1,7 @@
 import React from 'react';
 import Div from './Div';
 
-const NAV_MIN_SIZE = 45;
+const NAV_MIN_SIZE = 0;
 
 // prettier-ignore
 const FullPageDiv = Div.extend`

@@ -1,6 +1,9 @@
 import { theme } from 'utils/styling';
 import { Div, AbsoluteDiv, Ul, Separator, Row, Cell } from 'components/layout';
-import { BgImage } from 'components/media';
+import { BgImage, Icon } from 'components/media';
+
+import Facebook from 'static/svg/logo-facebook.svg';
+import LinkedIn from 'static/svg/logo-linkedin.svg';
 
 import NavLink from './NavLink';
 
@@ -40,13 +43,17 @@ const Navigation = () => (
       <Separator />
       <Row>
         <Cell w={1 / 3} h="40px">
-          <HoverDiv hoverBgColor="facebook" align="middle" h="100%">
-            Fb
+          <HoverDiv bg="lightGrey" hoverBgColor="facebook" align="middle" h="100%">
+            <Icon size="18px" color="white">
+              <Facebook />
+            </Icon>
           </HoverDiv>
         </Cell>
         <BorderedCell w={0.32} h="40px">
-          <HoverDiv hoverBgColor="facebookDark" align="middle" h="100%">
-            In
+          <HoverDiv bg="lightGrey" hoverBgColor="facebookDark" align="middle" h="100%">
+            <Icon size="20px" color="white">
+              <LinkedIn />
+            </Icon>
           </HoverDiv>
         </BorderedCell>
         <Cell w={1 / 3} h="40px" align="middle">

@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled, css, responsiveStyle, responsivePropType } from 'utils/styling';
-import { translate } from 'utils/intl';
-
-const BaseText = ({ children, className }) => <span className={className}>{translate(children)}</span>;
 
 // prettier-ignore
-const Text = styled(BaseText)`
+const Text = styled.span`
   word-wrap: break-word;
   display: ${props => (props.m || props.p ? 'inline-block' : 'inline')};
   font-family: ${({ font, theme }) => (font ? theme.fontFamily[font] : theme.fontFamily.openSans)};

@@ -14,6 +14,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>Anna Elisa Valmori</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,700,400italic,700italic|Montserrat:400,700|Roboto:300,400,500,700"
+            rel="stylesheet"
+          />
           {this.props.styleTags}
         </Head>
         <body style={{ margin: 0, padding: 0 }}>
