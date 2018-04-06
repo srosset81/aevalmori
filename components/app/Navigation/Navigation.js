@@ -1,5 +1,4 @@
 import { theme } from 'utils/styling';
-import { Trans } from 'utils/intl';
 import { Div, AbsoluteDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { BgImage } from 'components/media';
 
@@ -24,27 +23,16 @@ const Navigation = () => (
     <Div align="center" p="20px">
       <BgImage src="/static/images/arbre-de-vie-300x300.jpg" h="200px" w="200px" />
     </Div>
-    <p>
-      <Trans>Accueil !</Trans>
-    </p>
     <Separator />
     <Div p="20px 30px">
       <Ul>
-        <NavLink to="/">
-          <Trans>Accueil</Trans>
-        </NavLink>
+        <NavLink to="/">Accueil</NavLink>
         <Separator />
-        <NavLink to="/">
-          <Trans>Qui suis-je?</Trans>
-        </NavLink>
+        <NavLink to="/">Qui suis-je?</NavLink>
         <Separator />
-        <NavLink to="/">
-          <Trans>Constellations familiales</Trans>
-        </NavLink>
+        <NavLink to="/">Constellations familiales</NavLink>
         <Separator />
-        <NavLink to="/contact">
-          <Trans>Contact</Trans>
-        </NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </Ul>
     </Div>
 
