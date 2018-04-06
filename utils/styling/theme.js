@@ -54,6 +54,7 @@ const theme = {
     whatsapp: '#41C452'
   },
   zIndex: {
+    hamburger: 101,
     navigation: 100,
     fixedDefault: 1,
     absoluteDefault: 0,
