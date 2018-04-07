@@ -14,6 +14,7 @@ const Text = styled.span`
   ${props => props.color && css`color: ${props.theme.colors[props.color]};`}
   ${props => props.upper && css`text-transform: uppercase;`}
   ${props => props.underline && css`text-decoration: underline;`}
+  ${props => props.shadow && css`text-shadow: 2px 2px 3px black;`}
   ${responsiveStyle({m: 'margin', p: 'padding', fontSize: 'font-size'})}
   ${props => props.linkColor && css`> a, > span > a {
     color: ${props.theme.colors[props.linkColor]};
@@ -25,6 +26,7 @@ Text.propTypes = {
   upper: PropTypes.bool,
   bold: PropTypes.bool,
   italic: PropTypes.bool,
+  shadow: PropTypes.bool,
   color: PropTypes.string,
   linkColor: PropTypes.string,
   lineHeight: PropTypes.string,

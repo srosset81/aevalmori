@@ -13,4 +13,8 @@ P.propTypes = {
   align: responsivePropType
 };
 
+P.defaultProps = {
+  lineHeight: '1.7em'
+};
+
 export default P;

@@ -1,6 +1,8 @@
 import { theme } from 'utils/styling';
+import { Link } from 'utils/next';
+
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
-import { Icon } from 'components/media';
+import { Icon, Image } from 'components/media';
 
 import Facebook from 'static/svg/logo-facebook.svg';
 import LinkedIn from 'static/svg/logo-linkedin.svg';
@@ -29,14 +31,16 @@ const HoverDiv = Div.extend`
 const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
     <Div align="center" p="20px 20px 0">
-      <img src="/static/images/logo.png" height="200" width="200" />
+      <Link href="/">
+        <Image src="/static/images/logo.png" w="200px" />
+      </Link>
     </Div>
     <Separator />
     <Div p="20px 30px 70px">
       <Ul>
         <NavLink to="/">Accueil</NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/">Qui suis-je?</NavLink>
+        <NavLink to="/about">Qui suis-je?</NavLink>
         <Separator m="5px 0" />
         <NavLink to="/" indent>
           Séances individuelles
@@ -61,15 +65,24 @@ const Navigation = () => (
       </Ul>
     </Div>
 
-    <FixedDiv bottom left w={{ xs: '320px', sm: '350px' }}>
+    <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '350px' }}>
       <Separator />
       <Row>
         <Cell w={1 / 3} h="42px">
-          <HoverDiv bg="background" color="darkGrey" hoverColor="white" hoverBgColor="facebook" align="middle" h="100%">
-            <Icon size="18px">
-              <Facebook />
-            </Icon>
-          </HoverDiv>
+          <a href="https://www.facebook.com/profile.php?id=100009866502497" target="_blank">
+            <HoverDiv
+              bg="background"
+              color="darkGrey"
+              hoverColor="white"
+              hoverBgColor="facebook"
+              align="middle"
+              h="100%"
+            >
+              <Icon size="18px">
+                <Facebook />
+              </Icon>
+            </HoverDiv>
+          </a>
         </Cell>
         <BorderedCell w={0.32} h="42px">
           <HoverDiv
