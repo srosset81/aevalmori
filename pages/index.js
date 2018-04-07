@@ -3,7 +3,7 @@ import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
-import { MenuSection } from 'components/section';
+import { MenuSection, FooterSection } from 'components/section';
 
 const IndexPage = () => (
   <Layout>
@@ -43,6 +43,7 @@ const IndexPage = () => (
       propos d’un héritage est souvent l’option la plus belle. Ce que nous avons nous-mêmes gagné, nous l’avons gagné et
       il reste.
     </MenuSection>
+    <FooterSection />
   </Layout>
 );
 

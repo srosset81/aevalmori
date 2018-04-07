@@ -1,8 +1,8 @@
 import { Layout } from 'components/app';
-import { Cell, Div, Row, Space } from 'components/layout';
+import { Cell, Div, Row } from 'components/layout';
 import { Image } from 'components/media';
 import { P, SubTitle } from 'components/text';
-import { TopSection } from 'components/section';
+import { TopSection, FooterSection } from 'components/section';
 
 const AboutPage = () => (
   <Layout>
@@ -39,7 +39,17 @@ const AboutPage = () => (
         </Div>
       </Cell>
     </Row>
-    <Space h="50px" />
+    <Div bg="lightGrey" h="160px" align="middle" p="20px">
+      <Div maxW="800px">
+        <P fontSize="1.3em" align="center">
+          <em>
+            « Toutes ses compétences acquises tout au long de mes différentes formations et surtout dans le cadre de mon
+            activité me permettent de m’inscrire dans une démarche préventive et curative dans de nombreux domaines. »
+          </em>
+        </P>
+      </Div>
+    </Div>
+    <FooterSection />
   </Layout>
 );
 
