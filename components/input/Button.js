@@ -1,0 +1,182 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { styled, css, responsiveStyle, responsivePropType } from 'utils/styling';
+
+import { Icon } from 'components/media';
+
+const buttonColors = {
+  classic: {
+    font: 'white',
+    bg: 'darkBlue',
+    border: 'darkBlue',
+    hoverFont: 'darkBlue',
+    hoverBg: 'transparent'
+  },
+  classicNoHover: {
+    font: 'white',
+    bg: 'darkBlue',
+    border: 'darkBlue',
+    hoverBg: 'darkBlue'
+  },
+  classicLight: {
+    font: 'white',
+    bg: 'darkBlue',
+    border: 'white',
+    hoverFont: 'darkBlue',
+    hoverBg: 'white'
+  },
+  classicHoverLight: {
+    font: 'white',
+    bg: 'darkBlue',
+    border: 'darkBlue',
+    hoverFont: 'white',
+    hoverBg: 'transparent',
+    hoverBorder: 'white'
+  },
+  primary: {
+    font: 'white',
+    bg: 'yellow',
+    border: 'yellow'
+  },
+  primaryLight: {
+    font: 'yellow',
+    border: 'yellow'
+  },
+  primaryLightHover: {
+    font: 'white',
+    bg: 'yellow',
+    border: 'yellow',
+    hoverFont: 'yellow',
+    hoverBg: 'transparent'
+  },
+  primaryDarkHover: {
+    font: 'white',
+    bg: 'yellow',
+    border: 'yellow',
+    hoverBg: 'orange',
+    hoverBorder: 'orange'
+  },
+  whiteTransparent: {
+    font: 'white',
+    hoverBorder: 'white'
+  },
+  mediumGrey: {
+    font: 'white',
+    bg: 'mediumGrey',
+    border: 'mediumGrey',
+    hoverFont: 'mediumGrey',
+    hoverBg: 'white'
+  },
+  banner: {
+    font: 'darkRed',
+    bg: 'white',
+    border: 'white',
+    hoverFont: 'white',
+    hoverBg: 'transparent'
+  },
+  red: {
+    font: 'white',
+    bg: 'darkRed',
+    border: 'darkRed',
+    hoverFont: 'darkRed',
+    hoverBg: 'white'
+  },
+  facebook: {
+    font: 'white',
+    bg: 'facebook',
+    border: 'none',
+    hoverBg: 'facebookDark'
+  },
+  twitter: {
+    font: 'white',
+    bg: 'twitter',
+    border: 'none',
+    hoverBg: 'twitterDark'
+  }
+};
+
+const buttonColorStyle = (prop, cssProp) => ({ colors, theme }) =>
+  buttonColors[colors] && buttonColors[colors][prop]
+    ? css`
+        ${cssProp}: ${theme.colors[buttonColors[colors][prop]]};
+      `
+    : null;
+
+const buttonSizes = {
+  auto: {
+    padding: '0.65em 1em',
+    height: 'auto'
+  },
+  big: {
+    padding: '0 13px',
+    height: '56px'
+  },
+  normal: {
+    padding: '0 12px',
+    height: '39px'
+  },
+  medium: {
+    padding: '0 10px',
+    height: '33px'
+  }
+};
+
+// prettier-ignore
+const StyledButton = styled.button`
+  flex: 0 0 auto; /* prevent height to be impacted by flex */
+  display: inline-block;
+  cursor: pointer;
+  font-family: Open Sans, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  padding: ${props => buttonSizes[props.size].padding };
+  height: ${props => buttonSizes[props.size].height };
+  ${props => props.bold && css`font-weight: bold;` }
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+  vertical-align: middle;
+
+  ${buttonColorStyle('font', 'color')};
+  ${buttonColorStyle('bg', 'background-color')};
+  ${buttonColorStyle('border', 'border-color')};
+  ${responsiveStyle({fontSize: 'font-size', w: 'width', m: 'margin'})}
+
+  :hover {
+    ${buttonColorStyle('hoverFont', 'color')};
+    ${buttonColorStyle('hoverBg', 'background-color')};
+    ${buttonColorStyle('hoverBorder', 'border-color')};
+    ${props => buttonColors[props.colors].hoverBg === 'transparent' && css`background: none;`}
+  }
+`;
+
+const Button = ({ children, icon, go, ...otherProps }) => (
+  <StyledButton data-go={go} {...otherProps}>
+    {icon && (
+      <span>
+        <Icon name={icon} size="1.1em" />
+        &nbsp;&nbsp;
+      </span>
+    )}
+    {children}
+  </StyledButton>
+);
+
+Button.propTypes = {
+  children: PropTypes.node,
+  icon: PropTypes.string,
+  colors: PropTypes.string,
+  bold: PropTypes.bool,
+  size: PropTypes.oneOf(['auto', 'big', 'normal', 'medium']),
+  fontSize: responsivePropType,
+  w: responsivePropType,
+  m: responsivePropType,
+  go: PropTypes.string
+};
+
+Button.defaultProps = {
+  colors: 'classic',
+  size: 'normal',
+  fontSize: '1em'
+};
+
+export default Button;

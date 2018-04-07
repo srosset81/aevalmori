@@ -8,7 +8,7 @@
  * --desktop = xl
  */
 const theme = {
-  breakpoints: { xs: '0px', sm: '540px', smd: '768px', md: '820px', mdl: '992px', lg: '1060px', xl: '1200px' },
+  breakpoints: { xs: '0px', sm: '540px', md: '820px', lg: '1060px', xl: '1200px' },
   fontFamily: {
     openSans: "'Open Sans', Helvetica, Arial, sans-serif",
     roboto: "'Roboto', Helvetica, Arial, sans-serif",
@@ -17,6 +17,8 @@ const theme = {
     lobster: "'Lobster', cursive"
   },
   colors: {
+    lightRose: '#EFCFD9',
+    rose: '#A74A50',
     purple: '#54295E',
     darkBlue: '#063A56',
     blue: '#23719B',
@@ -56,6 +58,7 @@ const theme = {
   zIndex: {
     hamburger: 101,
     navigation: 100,
+    overlay: 80,
     fixedDefault: 1,
     absoluteDefault: 0,
     background: -1

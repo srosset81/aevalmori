@@ -1,9 +1,9 @@
-import { elastic as BurgerMenu } from 'react-burger-menu';
 import { theme, ThemeProvider } from 'utils/styling';
-import { Cell, Div, FixedDiv, Row, AbsoluteDiv } from 'components/layout';
+import { Cell, Div, FixedDiv, Visible, Hidden } from 'components/layout';
 import { Navigation } from 'components/app';
 
 import HamburgerIcon from './HamburgerIcon';
+import SideMenu from './SideMenu';
 
 const Content = Cell.extend`
   flex-grow: 1;
@@ -16,9 +16,6 @@ class Layout extends React.Component {
       isMenuOpen: false
     };
   }
-  componentDidMount() {
-      setTimeout(this.toggleMenu, 700);
-  }
   toggleMenu = () => {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen
@@ -28,42 +25,35 @@ class Layout extends React.Component {
     const { children } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <div id="outer-container">
-          <FixedDiv top right p="25px" zIndex="hamburger">
-            <HamburgerIcon
-              isOpen={this.state.isMenuOpen}
-              menuClicked={this.toggleMenu}
-              width={32}
-              height={22}
-              strokeWidth={4}
-              rotate={0}
-              color="white"
-              borderRadius={5}
-              animationDuration={0.5}
-            />
-          </FixedDiv>
+        <div>
+          <Hidden sm>
+            <FixedDiv top left p="25px" zIndex="hamburger">
+              <HamburgerIcon
+                isOpen={this.state.isMenuOpen}
+                menuClicked={this.toggleMenu}
+                width={32}
+                height={22}
+                strokeWidth={4}
+                rotate={0}
+                color={this.state.isMenuOpen ? 'grey' : 'white'}
+                borderRadius={5}
+                animationDuration={0.5}
+              />
+            </FixedDiv>
+            <SideMenu open={this.state.isMenuOpen} onClose={this.toggleMenu}>
+              <Navigation />
+            </SideMenu>
+          </Hidden>
 
-          <BurgerMenu
-              width="350px"
-            pageWrapId="page-wrap"
-            outerContainerId="outer-container"
-            styles={{
-              bmMenu: {
-                width: '100%'
-              },
-              bmMorphShape: {
-                width: 0
-              }
-            }}
-            noOverlay
-            left
-            isOpen={this.state.isMenuOpen}
-            customBurgerIcon={false}
-            customCrossIcon={false}
-          >
-            <Navigation />
-          </BurgerMenu>
-          <div id="page-wrap">{children}</div>
+          <Visible sm>
+            <FixedDiv top left bottom w="350px" zIndex="navigation">
+              <Navigation />
+            </FixedDiv>
+          </Visible>
+
+          <Div p={{ xs: '0', sm: '0 0 0 350px' }}>
+            {children}
+          </Div>
         </div>
       </ThemeProvider>
     );

@@ -14,7 +14,6 @@ const Div = styled.div`
 `;
 
 Div.propTypes = {
-  h: PropTypes.string,
   minW: responsivePropType,
   maxW: responsivePropType,
   minH: responsivePropType,
