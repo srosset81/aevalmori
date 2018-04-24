@@ -62,7 +62,7 @@ export default function HamburgerIcon(props) {
     );
 };
 
-HamburgerIcon.PropTypes = {
+HamburgerIcon.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     menuClicked: PropTypes.func.isRequired,
     width: PropTypes.number,

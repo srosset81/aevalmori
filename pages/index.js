@@ -22,8 +22,8 @@ const IndexPage = () => (
         <br />
       </Div>
     </BgImage>
-    <Div bg="lightRose" h="160px" align="middle" p="20px">
-      <P fontSize="1.3em" align="center">
+    <Div bg="darkPurple" h="160px" align="middle" p="20px">
+      <P fontSize="1.5em" color="white" align="center">
         <em>« La réalité rend fort et libre quand elle est reconnue »</em> - Bert Hellinger
       </P>
     </Div>
@@ -42,6 +42,10 @@ const IndexPage = () => (
       sont complètement centrés sur cet héritage et en paient le coût avec la vie de leurs enfants. Ainsi, la liberté à
       propos d’un héritage est souvent l’option la plus belle. Ce que nous avons nous-mêmes gagné, nous l’avons gagné et
       il reste.
+    </MenuSection>
+    <MenuSection title="Contactez-moi" image="contact.jpg" link="/contact">
+      N'hésitez pas à prendre contact avec moi en laissant vos coordonnées, je répondrai à votre demande dans
+      les meilleurs délais.
     </MenuSection>
     <FooterSection />
   </Layout>

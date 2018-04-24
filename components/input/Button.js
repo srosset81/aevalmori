@@ -8,9 +8,9 @@ import { Icon } from 'components/media';
 const buttonColors = {
   classic: {
     font: 'white',
-    bg: 'darkBlue',
-    border: 'darkBlue',
-    hoverFont: 'darkBlue',
+    bg: 'darkPurple',
+    border: 'darkPurple',
+    hoverFont: 'darkPurple',
     hoverBg: 'transparent'
   },
   classicNoHover: {
@@ -127,13 +127,14 @@ const StyledButton = styled.button`
   flex: 0 0 auto; /* prevent height to be impacted by flex */
   display: inline-block;
   cursor: pointer;
-  font-family: Open Sans, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Century Gothic', 'Open Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   padding: ${props => buttonSizes[props.size].padding };
   height: ${props => buttonSizes[props.size].height };
   ${props => props.bold && css`font-weight: bold;` }
   border-radius: 3px;
   border: 1px solid transparent;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   vertical-align: middle;
 
   ${buttonColorStyle('font', 'color')};

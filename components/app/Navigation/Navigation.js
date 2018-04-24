@@ -28,11 +28,15 @@ const HoverDiv = Div.extend`
   }
 `;
 
+const TransparentImage = Image.extend`
+  mix-blend-mode: multiply;
+`;
+
 const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
-    <Div align="center" p="20px 20px 0">
+    <Div align="center" p="20px">
       <Link href="/">
-        <Image src="/static/images/logo.png" w="200px" />
+        <TransparentImage src="/static/images/logo-ae.png" w="180px" />
       </Link>
     </Div>
     <Separator />

@@ -14,12 +14,14 @@ const theme = {
     roboto: "'Roboto', Helvetica, Arial, sans-serif",
     montserrat: "'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif",
     noto: "'Noto Serif', 'Open Sans', Helvetica, Arial, sans-serif",
-    lobster: "'Lobster', cursive"
+    lobster: "'Lobster', cursive",
+    century: "'Century Gothic', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
     lightRose: '#EFCFD9',
-    rose: '#A74A50',
-    purple: '#54295E',
+    rose: '#DC00E4',
+    purple: '#B500DF',
+    darkPurple: '#6d0092',
     darkBlue: '#063A56',
     blue: '#23719B',
     lightBlue: '#EBF0F4',

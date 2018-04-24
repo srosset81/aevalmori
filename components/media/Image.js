@@ -9,8 +9,7 @@ const Image = styled.img`
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  w: PropTypes.string,
-  h: PropTypes.height
+  w: PropTypes.string
 };
 
 Image.defaultProps = {
