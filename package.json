@@ -7,17 +7,24 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "now"
+    "deploy": "now",
+    "lingui:extract": "lingui extract --clean",
+    "lingui:compile": "lingui compile"
   },
   "keywords": [],
   "author": "Sebastien Rosset",
   "license": "ISC",
   "dependencies": {
+    "@lingui/react": "^2.7.0",
+    "babel-plugin-macros": "^2.4.2",
     "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-react-require": "^3.0.1",
     "express": "^4.16.3",
     "final-form": "^4.6.1",
-    "next": "^5.1.0",
-    "now": "^10.2.2",
+    "fs": "0.0.1-security",
+    "module": "^1.2.5",
+    "next": "^7.0.2",
+    "raw-loader": "^0.5.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-final-form": "^3.4.0",
@@ -25,6 +32,10 @@
     "styled-components": "^3.2.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@lingui/cli": "^2.7.0",
+    "@lingui/macro": "^2.7.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-inline-react-svg": "^0.5.2"
   }
 }

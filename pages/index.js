@@ -4,6 +4,7 @@ import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 import { MenuSection, FooterSection } from 'components/section';
+import { Trans } from "@lingui/macro";
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +15,9 @@ const IndexPage = () => (
             Anna Elisa Valmori
           </P>
           <P shadow color="white" align="center" font="lobster" fontSize="1.5em" m="0">
+              <Trans id="home.work">
             Psychopraticienne relationnelle
+              </Trans>
           </P>
         </AnimOnAppear>
         <br />
