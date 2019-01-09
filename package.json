@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "deploy": "now"
+    "start": "next start"
   },
   "keywords": [],
   "author": "Sebastien Rosset",
@@ -17,7 +16,7 @@
     "express": "^4.16.3",
     "final-form": "^4.6.1",
     "next": "^5.1.0",
-    "now": "^10.2.2",
+    "now": "^13.0.3",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-final-form": "^3.4.0",
