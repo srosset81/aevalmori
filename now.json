@@ -1,4 +1,7 @@
 {
-  "version": 1,
-  "name": "aevalmori"
+  "version": 2,
+  "name": "aevalmori",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ]
 }

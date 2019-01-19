@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
             mod => mod.default
         );
 
-        const initialProps = await NextDocument.getInitialProps(ctx);
+        const initialProps = await Document.getInitialProps(ctx);
 
         return { ...initialProps, ...page, styleTags, linguiCatalog };
     }
