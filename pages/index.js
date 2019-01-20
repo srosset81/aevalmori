@@ -31,7 +31,7 @@ const IndexPage = () => (
         <em>« La réalité rend fort et libre quand elle est reconnue »</em> - Bert Hellinger
       </P>
     </Div>
-    <MenuSection right title="Qui suis-je ?" image="elisa.jpg" link="/about">
+    <MenuSection right title="Qui suis-je ?" image="elisa.jpg" link="about">
       Il existe des secrets qui, quand ils sont amenés à la lumière, ont un effet libérateur. Ces secrets attendent le
       moment où ils peuvent venir à la lumière. Un enfant caché, par exemple, est un exemple d’un tel secret. Le système
       n’est pas en paix jusqu’à ce que ce secret s’incarne soudainement. Alors, nous nous sentons plus léger.
@@ -47,7 +47,7 @@ const IndexPage = () => (
       propos d’un héritage est souvent l’option la plus belle. Ce que nous avons nous-mêmes gagné, nous l’avons gagné et
       il reste.
     </MenuSection>
-    <MenuSection title="Contactez-moi" image="contact.jpg" link="/contact">
+    <MenuSection title="Contactez-moi" image="contact.jpg" link="contact">
       N'hésitez pas à prendre contact avec moi en laissant vos coordonnées, je répondrai à votre demande dans
       les meilleurs délais.
     </MenuSection>

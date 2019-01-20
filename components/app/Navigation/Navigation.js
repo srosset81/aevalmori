@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { theme } from 'utils/styling';
-import { Link } from 'utils/next';
+import { PageLink } from 'utils/router';
+import { Trans } from "@lingui/macro";
 
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { Icon, Image } from 'components/media';
@@ -36,37 +38,37 @@ const TransparentImage = Image.extend`
 const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
     <Div align="center" p="20px">
-      <Link href="/">
+      <PageLink page="index">
         <TransparentImage src="/static/images/logo-ae.png" w="180px" />
-      </Link>
+      </PageLink>
     </Div>
     <Separator />
     <Div p="20px 30px 70px">
       <Ul>
-        <NavLink to="/">Accueil</NavLink>
+          <NavLink page="index"><Trans id="menu.home">Accueil</Trans></NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/about">Qui suis-je?</NavLink>
+          <NavLink page="about"><Trans id="menu.about">Qui suis-je?</Trans></NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/" indent>
-          Séances individuelles
+        <NavLink page="index" indent>
+            <Trans id="menu.individual-consulting">Séances individuelles</Trans>
         </NavLink>
-        <NavLink to="/" indent>
-          Consultations en ligne
+        <NavLink page="index" indent>
+            <Trans id="menu.online-consulting">Consultations en ligne</Trans>
         </NavLink>
-        <NavLink to="/" indent>
-          Constellations familiales
+        <NavLink page="index" indent>
+            <Trans id="menu.family-constellations">Constellations familiales</Trans>
         </NavLink>
-        <NavLink to="/" indent>
-          D.M.O.K.A.
+        <NavLink page="index" indent>
+            <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
         </NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/contact">Témoignages</NavLink>
+          <NavLink page="contact"><Trans id="menu.testimony">Témoignages</Trans></NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/contact">Agenda</NavLink>
+          <NavLink page="contact"><Trans id="menu.events">Agenda</Trans></NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/contact">Blog</NavLink>
+          <NavLink page="contact"><Trans id="menu.blog">Blog</Trans></NavLink>
         <Separator m="5px 0" />
-        <NavLink to="/contact">Contact</NavLink>
+          <NavLink page="contact"><Trans id="menu.contact">Contact</Trans></NavLink>
       </Ul>
     </Div>
 

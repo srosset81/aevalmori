@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'utils/next';
+import { PageLink } from 'utils/router';
 import { styled } from 'utils/styling';
-import { I18n } from "@lingui/react"
 
 import { Li } from 'components/layout';
 import { Text } from 'components/text';
@@ -18,18 +17,14 @@ const StyledA = styled.a`
   }
 `;
 
-const NavLink = ({ to, indent, children }) => (
-    <I18n>
-        {({ i18n }) => (
-            <StyledLi indent={indent}>
-                <Link href={`/${i18n._language}${to}`}>
-                    <Text color="darkGrey" fontSize="0.95em">
-                        <StyledA>{children}</StyledA>
-                    </Text>
-                </Link>
-            </StyledLi>
-        )}
-    </I18n>
+const NavLink = ({ page, indent, children }) => (
+    <StyledLi indent={indent}>
+        <PageLink page={page}>
+            <Text color="darkGrey" fontSize="0.95em">
+                <StyledA>{children}</StyledA>
+            </Text>
+        </PageLink>
+    </StyledLi>
 );
 
 NavLink.defaultProps = {

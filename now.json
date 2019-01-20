@@ -5,7 +5,11 @@
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
+    { "src": "/fr/?", "dest": "/?locale=fr" },
+    { "src": "/it/?", "dest": "/?locale=it" },
     { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
-    { "src": "/it/chi-sono", "dest": "/about?locale=it" }
+    { "src": "/it/chi-sono", "dest": "/about?locale=it" },
+    { "src": "/fr/contact", "dest": "/contact?locale=fr" },
+    { "src": "/it/contatto", "dest": "/contact?locale=it" }
   ]
 }

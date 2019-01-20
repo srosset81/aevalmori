@@ -4,7 +4,7 @@
   "description": "Anna Elisa Valmori",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node dev-server.js",
     "build": "next build",
     "start": "next start",
     "lingui:extract": "lingui extract --clean",

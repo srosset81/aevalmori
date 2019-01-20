@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const routes = require('./utils/router/routes.json');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -18,9 +19,17 @@ app
     });
 
     server.get('/:locale(it|fr)(/:page)?', (req, res) => {
-      const actualPage = req.params.page ? '/' + req.params.page : '/';
       const queryParams = { locale: req.params.locale };
-      app.render(req, res, actualPage, queryParams);
+      if( req.params.page ) {
+          const actualPage = Object.keys(routes).find(page => routes[page][req.params.locale] === req.params.page);
+          if( actualPage ) {
+              app.render(req, res, '/'+actualPage, queryParams);
+          } else {
+              return handle(req, res);
+          }
+      } else {
+          app.render(req, res, '/', queryParams);
+      }
     });
 
     server.get('*', (req, res) => {
