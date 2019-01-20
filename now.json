@@ -3,5 +3,9 @@
   "name": "aevalmori",
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
+    { "src": "/it/chi-sono", "dest": "/about?locale=it" }
   ]
 }

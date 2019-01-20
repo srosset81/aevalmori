@@ -4,7 +4,7 @@ import { Cell, Div, Row } from 'components/layout';
 import { Image } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
-import {Trans} from "@lingui/macro";
+import { Trans } from "@lingui/macro";
 
 const AboutPage = () => (
   <Layout>

@@ -18,21 +18,19 @@ const StyledA = styled.a`
   }
 `;
 
-const NavLink = ({ to, indent, children }) => {
-    return (
-        <I18n>
-            {({ i18n }) => (
-                <StyledLi indent={indent}>
-                    <Link href={`/${i18n._language}${to}`}>
-                        <Text color="darkGrey" fontSize="0.95em">
-                            <StyledA>{children}</StyledA>
-                        </Text>
-                    </Link>
-                </StyledLi>
-            )}
-        </I18n>
-    );
-};
+const NavLink = ({ to, indent, children }) => (
+    <I18n>
+        {({ i18n }) => (
+            <StyledLi indent={indent}>
+                <Link href={`/${i18n._language}${to}`}>
+                    <Text color="darkGrey" fontSize="0.95em">
+                        <StyledA>{children}</StyledA>
+                    </Text>
+                </Link>
+            </StyledLi>
+        )}
+    </I18n>
+);
 
 NavLink.defaultProps = {
   indent: false

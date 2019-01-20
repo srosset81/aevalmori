@@ -5,8 +5,8 @@ import { Link } from 'utils/next';
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { Icon, Image } from 'components/media';
 
-import Facebook from 'static/svg/logo-facebook.svg';
-import LinkedIn from 'static/svg/logo-linkedin.svg';
+import Facebook from '../../../svg/logo-facebook.svg';
+import LinkedIn from '../../../svg/logo-linkedin.svg';
 
 import NavLink from './NavLink';
 
