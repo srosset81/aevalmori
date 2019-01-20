@@ -16,7 +16,9 @@ class ContactPage extends React.Component {
   render() {
     return (
       <Layout>
-        <TopSection image="contact.jpg" title="Contactez-moi" />
+        <TopSection image="contact.jpg">
+            Contactez-moi
+        </TopSection>
         <Row>
           <Cell w={{ xs: 1, sm: 1 / 3 }}>
             <Div p="30px">

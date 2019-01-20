@@ -17,6 +17,12 @@ app
       app.render(req, res, actualPage, queryParams);
     });
 
+    server.get('/:locale(it|fr)(/:page)?', (req, res) => {
+      const actualPage = req.params.page ? '/' + req.params.page : '/';
+      const queryParams = { locale: req.params.locale };
+      app.render(req, res, actualPage, queryParams);
+    });
+
     server.get('*', (req, res) => {
       return handle(req, res);
     });

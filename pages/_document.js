@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
 
         const initialProps = await Document.getInitialProps(ctx);
 
-        return { ...initialProps, ...page, styleTags, linguiCatalog };
+        return { ...initialProps, ...page, styleTags, linguiCatalog, queryLocale };
     }
 
   render() {
@@ -29,7 +29,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Anna Elisa Valmori</title>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
