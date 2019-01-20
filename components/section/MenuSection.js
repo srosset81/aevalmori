@@ -1,10 +1,10 @@
-import { Link } from 'utils/next';
+import { PageLink } from 'utils/router';
 import { Div, Row, Cell } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { Button } from 'components/input';
 
-const MenuSection = ({ right, image, title, children, link = '/' }) => (
+const MenuSection = ({ right, image, title, children, link = 'index' }) => (
   <Row>
     <Cell w={{ xs: 1, sm: 2 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
       <BgImage src={`/static/images/${image}`} h={{ xs: '250px', sm: '500px' }} />
@@ -13,9 +13,9 @@ const MenuSection = ({ right, image, title, children, link = '/' }) => (
       <Div p="40px">
         <SubTitle>{title}</SubTitle>
         <P m="10px 0 15px">{children}</P>
-        <Link href={link}>
+        <PageLink page={link}>
           <Button>En savoir +</Button>
-        </Link>
+        </PageLink>
       </Div>
     </Cell>
   </Row>

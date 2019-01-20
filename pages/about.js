@@ -1,12 +1,16 @@
+import React from 'react';
 import { Layout } from 'components/app';
 import { Cell, Div, Row } from 'components/layout';
 import { Image } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
+import { Trans } from "@lingui/macro";
 
 const AboutPage = () => (
   <Layout>
-    <TopSection image="elisa.jpg" title="Qui suis-je ?" />
+    <TopSection image="elisa.jpg">
+      <Trans id="about.title">Qui suis-je ?</Trans>
+    </TopSection>
     <Row>
       <Cell w={{ xs: 1, sm: 1 / 2, md: 1 / 3 }}>
         <Div p="40px 0 40px 40px">
@@ -15,7 +19,7 @@ const AboutPage = () => (
       </Cell>
       <Cell w={{ xs: 1, sm: 1 / 2, md: 2 / 3 }}>
         <Div p="40px">
-          <SubTitle>Mon parcours</SubTitle>
+          <SubTitle><Trans id="about.my-journey">Mon parcours</Trans></SubTitle>
           <P>
             Dott.ssa Anna Elisa Valmori, psicologa, master in Pnl umanistica integrata, formazione in biopsicosomatica,
             psicogenealogia, facilitatore in Costellazioni familiari Sistemico-umaniste e Quantiche e D.M.O.K.A

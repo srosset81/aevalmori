@@ -3,12 +3,12 @@ import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 
-const TopSection = ({ image, title }) => (
+const TopSection = ({ image, children }) => (
   <BgImage src={`/static/images/${image}`} h="400px" align="middle">
     <Div>
       <AnimOnAppear>
         <P shadow color="white" align="center" font="lobster" fontSize="4.5em" m="0">
-          {title}
+          {children}
         </P>
       </AnimOnAppear>
     </Div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { theme, ThemeProvider } from 'utils/styling';
 import { Cell, Div, FixedDiv, Visible, Hidden } from 'components/layout';
 import { Navigation } from 'components/app';

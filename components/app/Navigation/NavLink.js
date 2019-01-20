@@ -1,4 +1,5 @@
-import { Link } from 'utils/next';
+import React from 'react';
+import { PageLink } from 'utils/router';
 import { styled } from 'utils/styling';
 
 import { Li } from 'components/layout';
@@ -16,14 +17,14 @@ const StyledA = styled.a`
   }
 `;
 
-const NavLink = ({ to, indent, children }) => (
-  <StyledLi indent={indent}>
-    <Link href={to}>
-      <Text color="darkGrey" fontSize="0.95em">
-        <StyledA>{children}</StyledA>
-      </Text>
-    </Link>
-  </StyledLi>
+const NavLink = ({ page, indent, children }) => (
+    <StyledLi indent={indent}>
+        <PageLink page={page}>
+            <Text color="darkGrey" fontSize="0.95em">
+                <StyledA>{children}</StyledA>
+            </Text>
+        </PageLink>
+    </StyledLi>
 );
 
 NavLink.defaultProps = {

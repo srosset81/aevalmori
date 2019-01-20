@@ -1,20 +1,36 @@
+import React from 'react';
 import { Document, Head, Main, NextScript } from 'utils/next';
 import { ServerStyleSheet } from 'utils/styling';
 
+const supportedLocale = ["fr", "it"];
+
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
-  }
+    static async getInitialProps(ctx) {
+
+        const sheet = new ServerStyleSheet();
+        const page = ctx.renderPage(App => props => sheet.collectStyles(<App {...props} />));
+        const styleTags = sheet.getStyleElement();
+
+        const queryLocale = ctx.query.locale;
+        const locale = supportedLocale.find(l => l === queryLocale)
+            ? queryLocale
+            : "fr";
+
+        const linguiCatalog = await import(`raw-loader!../locale/${locale}/messages.js`).then(
+            mod => mod.default
+        );
+
+        const initialProps = await Document.getInitialProps(ctx);
+
+        return { ...initialProps, ...page, styleTags, linguiCatalog, queryLocale };
+    }
 
   render() {
+      const { linguiCatalog } = this.props;
     return (
       <html>
         <Head>
-          <title>Anna Elisa Valmori</title>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <link
@@ -22,6 +38,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link href="/static/fonts/stylesheet.css" rel="stylesheet" />
+          <script dangerouslySetInnerHTML={{ __html: linguiCatalog }} />
           {this.props.styleTags}
         </Head>
         <body style={{ margin: 0, padding: 0 }}>
