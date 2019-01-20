@@ -1,3 +1,4 @@
+import React from 'react';
 import { Layout } from 'components/app';
 import { Cell, Div, Row } from 'components/layout';
 import { Image } from 'components/media';

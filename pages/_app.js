@@ -1,5 +1,5 @@
+import React from 'react';
 import NextApp, { Container } from "next/app";
-import React from "react";
 import { I18nProvider } from "@lingui/react";
 import getCatalog from "@catalogs";
 

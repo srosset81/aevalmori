@@ -1,3 +1,4 @@
+import React from 'react';
 import { Layout } from 'components/app';
 import { Div } from 'components/layout';
 import { BgImage } from 'components/media';

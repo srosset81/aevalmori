@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'utils/next';
 import { styled } from 'utils/styling';
 import { I18n } from "@lingui/react"

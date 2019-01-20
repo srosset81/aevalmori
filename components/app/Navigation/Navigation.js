@@ -1,11 +1,12 @@
+import React from 'react';
 import { theme } from 'utils/styling';
 import { Link } from 'utils/next';
 
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { Icon, Image } from 'components/media';
 
-//import Facebook from 'static/svg/logo-facebook.svg';
-//import LinkedIn from 'static/svg/logo-linkedin.svg';
+import Facebook from 'static/svg/logo-facebook.svg';
+import LinkedIn from 'static/svg/logo-linkedin.svg';
 
 import NavLink from './NavLink';
 
@@ -83,7 +84,7 @@ const Navigation = () => (
               h="100%"
             >
               <Icon size="18px">
-
+                <Facebook/>
               </Icon>
             </HoverDiv>
           </a>
@@ -98,7 +99,7 @@ const Navigation = () => (
             h="100%"
           >
             <Icon size="18px">
-
+              <LinkedIn/>
             </Icon>
           </HoverDiv>
         </BorderedCell>

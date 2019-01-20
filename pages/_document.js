@@ -1,3 +1,4 @@
+import React from 'react';
 import { Document, Head, Main, NextScript } from 'utils/next';
 import { ServerStyleSheet } from 'utils/styling';
 

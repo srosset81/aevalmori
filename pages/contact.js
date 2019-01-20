@@ -1,8 +1,8 @@
+import React from 'react';
 import { Form, Field } from 'utils/form';
 import { Layout } from 'components/app';
 import { Cell, Div, Row, Space } from 'components/layout';
 import { Button, Input, Textarea, Label } from 'components/input';
-import { Image } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 
