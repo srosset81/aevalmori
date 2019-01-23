@@ -1,8 +1,10 @@
 import React from 'react';
+import Router from 'next/router'
+import { Trans } from "@lingui/macro";
+import { I18n } from "@lingui/react";
 
 import { theme } from 'utils/styling';
 import { PageLink } from 'utils/router';
-import { Trans } from "@lingui/macro";
 
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { Icon, Image } from 'components/media';
@@ -11,6 +13,7 @@ import Facebook from '../../../svg/logo-facebook.svg';
 import LinkedIn from '../../../svg/logo-linkedin.svg';
 
 import NavLink from './NavLink';
+import FlagSelector from './FlagSelector';
 
 const ScrollableDiv = Div.extend`
   overflow-y: auto;
@@ -105,7 +108,13 @@ const Navigation = () => (
             </Icon>
           </HoverDiv>
         </BorderedCell>
-        <Cell w={1 / 3} h="42px" align="middle" bg="background" />
+        <Cell w={1 / 3} h="42px" align="middle" bg="background">
+            <I18n>
+                {({ i18n }) => (
+                    <FlagSelector value={i18n._language || 'fr'} onChange={(value) => Router.push('/' + value)} />
+                )}
+            </I18n>
+        </Cell>
       </Row>
     </FixedDiv>
   </ScrollableDiv>
