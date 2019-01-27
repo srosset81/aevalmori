@@ -22,13 +22,13 @@ export default class MyDocument extends Document {
 
         const initialProps = await Document.getInitialProps(ctx);
 
-        return { ...initialProps, ...page, styleTags, linguiCatalog, queryLocale };
+        return { ...initialProps, ...page, styleTags, linguiCatalog, locale };
     }
 
   render() {
-      const { linguiCatalog } = this.props;
+    const { linguiCatalog, locale } = this.props;
     return (
-      <html>
+      <html lang={locale}>
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,6 +38,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link href="/static/fonts/stylesheet.css" rel="stylesheet" />
+          <meta httpEquiv="Content-Language" content={locale} />
           <script dangerouslySetInnerHTML={{ __html: linguiCatalog }} />
           {this.props.styleTags}
         </Head>

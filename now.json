@@ -2,9 +2,11 @@
   "version": 2,
   "name": "aevalmori",
   "builds": [
+    { "src": "select-locale.js", "use": "@now/node-server" },
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
+    { "src": "/", "dest": "select-locale.js" },
     { "src": "/fr/?", "dest": "/?locale=fr" },
     { "src": "/it/?", "dest": "/?locale=it" },
     { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
