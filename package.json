@@ -24,6 +24,8 @@
     "module": "^1.2.5",
     "next": "^7.0.2",
     "now": "^13.0.3",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
     "raw-loader": "^0.5.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",

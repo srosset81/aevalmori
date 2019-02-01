@@ -7,7 +7,7 @@ import { Button } from 'components/input';
 const MenuSection = ({ right, image, title, children, link = 'index' }) => (
   <Row>
     <Cell w={{ xs: 1, sm: 2 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
-      <BgImage src={`/static/images/${image}`} h={{ xs: '250px', sm: '500px' }} />
+      <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '250px', sm: '500px' }} />
     </Cell>
     <Cell w={{ xs: 1, sm: 1 / 3 }} order="1" align="middle">
       <Div p="40px">

@@ -12,14 +12,15 @@ app
     const server = express();
 
     // https://learnnextjs.com/basics/server-side-support-for-clean-urls/create-our-custom-route
-    server.get('/blog/:slug', (req, res) => {
+    /*server.get('/blog/:slug', (req, res) => {
       const actualPage = '/article';
       const queryParams = { slug: req.params.slug };
       app.render(req, res, actualPage, queryParams);
-    });
+    });*/
 
     server.get('/:locale(it|fr)(/:page)?', (req, res) => {
       const queryParams = { locale: req.params.locale };
+
       if( req.params.page ) {
           const actualPage = Object.keys(routes).find(page => routes[page][req.params.locale] === req.params.page);
           if( actualPage ) {

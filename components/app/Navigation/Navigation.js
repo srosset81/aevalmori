@@ -69,7 +69,7 @@ const Navigation = () => (
         <Separator m="5px 0" />
           <NavLink page="contact"><Trans id="menu.events">Agenda</Trans></NavLink>
         <Separator m="5px 0" />
-          <NavLink page="contact"><Trans id="menu.blog">Blog</Trans></NavLink>
+          <NavLink page="blog"><Trans id="menu.blog">Blog</Trans></NavLink>
         <Separator m="5px 0" />
           <NavLink page="contact"><Trans id="menu.contact">Contact</Trans></NavLink>
       </Ul>
