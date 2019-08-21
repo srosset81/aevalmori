@@ -7,6 +7,10 @@
         "fr": "blog",
         "it": "blog"
     },
+    "testimonies": {
+        "fr": "temoignages",
+        "it": "testimonianze"
+    },
     "contact": {
         "fr": "contact",
         "it": "contatto"

@@ -20,8 +20,10 @@ const FooterSection = () => (
           Adresse
         </P>
         <P color="white" linkColor="white">
-          Anna Elisa Valmori<br />
-          10 ter Impasse Souchier<br />
+          Anna Elisa Valmori
+          <br />
+          10 ter Impasse Souchier
+          <br />
           60500 Chantilly
         </P>
       </Cell>
@@ -30,7 +32,8 @@ const FooterSection = () => (
           Contact
         </P>
         <P color="white" linkColor="white">
-          Tél: 06 59 02 64 79<br />
+          Tél: 06 59 02 64 79
+          <br />
           Email: aelisa.valmori@gmail.com
         </P>
       </Cell>

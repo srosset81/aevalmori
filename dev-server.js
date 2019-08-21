@@ -21,15 +21,15 @@ app
     server.get('/:locale(it|fr)(/:page)?', (req, res) => {
       const queryParams = { locale: req.params.locale };
 
-      if( req.params.page ) {
-          const actualPage = Object.keys(routes).find(page => routes[page][req.params.locale] === req.params.page);
-          if( actualPage ) {
-              app.render(req, res, '/'+actualPage, queryParams);
-          } else {
-              return handle(req, res);
-          }
+      if (req.params.page) {
+        const actualPage = Object.keys(routes).find(page => routes[page][req.params.locale] === req.params.page);
+        if (actualPage) {
+          app.render(req, res, '/' + actualPage, queryParams);
+        } else {
+          return handle(req, res);
+        }
       } else {
-          app.render(req, res, '/', queryParams);
+        app.render(req, res, '/', queryParams);
       }
     });
 

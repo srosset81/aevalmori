@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled, css } from 'utils/styling';
 
 const Input = styled.input.attrs({
-    type: props => props.type || 'text'
+  type: props => props.type || 'text'
 })`
   display: block;
   width: ${props => props.w || 'calc(100% - 20px)'};
@@ -30,12 +30,12 @@ const Input = styled.input.attrs({
 `;
 
 Input.propTypes = {
-    type: PropTypes.string,
-    font: PropTypes.string,
-    fontSize: PropTypes.string,
-    color: PropTypes.string,
-    w: PropTypes.string,
-    h: PropTypes.string
+  type: PropTypes.string,
+  font: PropTypes.string,
+  fontSize: PropTypes.string,
+  color: PropTypes.string,
+  w: PropTypes.string,
+  h: PropTypes.string
 };
 
 export default Input;

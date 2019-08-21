@@ -1,23 +1,23 @@
 import routes from './routes';
 
 const getUrl = (pageName, lang) => {
-    let path;
+  let path;
 
-    if( pageName === 'index' ) {
-        path = '';
+  if (pageName === 'index') {
+    path = '';
+  } else {
+    if (routes[pageName]) {
+      if (routes[pageName][lang]) {
+        path = routes[pageName][lang];
+      } else {
+        path = routes[pageName]['fr'];
+      }
     } else {
-        if( routes[pageName] ) {
-            if( routes[pageName][lang] ) {
-                path = routes[pageName][lang];
-            } else {
-                path = routes[pageName]['fr'];
-            }
-        } else {
-            path = pageName;
-        }
+      path = pageName;
     }
+  }
 
-    return '/' + lang + '/' + path;
+  return '/' + lang + '/' + path;
 };
 
 export default getUrl;

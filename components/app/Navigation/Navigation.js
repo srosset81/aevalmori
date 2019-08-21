@@ -1,7 +1,7 @@
 import React from 'react';
-import Router from 'next/router'
-import { Trans } from "@lingui/macro";
-import { I18n } from "@lingui/react";
+import Router from 'next/router';
+import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 
 import { theme } from 'utils/styling';
 import { PageLink } from 'utils/router';
@@ -48,30 +48,38 @@ const Navigation = () => (
     <Separator />
     <Div p="20px 30px 70px">
       <Ul>
-          <NavLink page="index"><Trans id="menu.home">Accueil</Trans></NavLink>
-        <Separator m="5px 0" />
-          <NavLink page="about"><Trans id="menu.about">Qui suis-je?</Trans></NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="index" indent>
-            <Trans id="menu.individual-consulting">Séances individuelles</Trans>
-        </NavLink>
-        <NavLink page="index" indent>
-            <Trans id="menu.online-consulting">Consultations en ligne</Trans>
-        </NavLink>
-        <NavLink page="index" indent>
-            <Trans id="menu.family-constellations">Constellations familiales</Trans>
-        </NavLink>
-        <NavLink page="index" indent>
-            <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
+        <NavLink page="index">
+          <Trans id="menu.home">Accueil</Trans>
         </NavLink>
         <Separator m="5px 0" />
-          <NavLink page="contact"><Trans id="menu.testimony">Témoignages</Trans></NavLink>
+        <NavLink page="about">
+          <Trans id="menu.about">Qui suis-je?</Trans>
+        </NavLink>
         <Separator m="5px 0" />
-          <NavLink page="contact"><Trans id="menu.events">Agenda</Trans></NavLink>
+        <NavLink page="index" indent>
+          <Trans id="menu.individual-consulting">Séances individuelles</Trans>
+        </NavLink>
+        <NavLink page="index" indent>
+          <Trans id="menu.online-consulting">Consultations en ligne</Trans>
+        </NavLink>
+        <NavLink page="index" indent>
+          <Trans id="menu.family-constellations">Constellations familiales</Trans>
+        </NavLink>
+        <NavLink page="index" indent>
+          <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
+        </NavLink>
         <Separator m="5px 0" />
-          <NavLink page="blog"><Trans id="menu.blog">Blog</Trans></NavLink>
+        <NavLink page="testimonies">
+          <Trans id="menu.testimony">Témoignages</Trans>
+        </NavLink>
         <Separator m="5px 0" />
-          <NavLink page="contact"><Trans id="menu.contact">Contact</Trans></NavLink>
+        <NavLink page="links">
+          <Trans id="menu.links">Liens amis</Trans>
+        </NavLink>
+        <Separator m="5px 0" />
+        <NavLink page="contact">
+          <Trans id="menu.contact">Contact</Trans>
+        </NavLink>
       </Ul>
     </Div>
 
@@ -89,7 +97,7 @@ const Navigation = () => (
               h="100%"
             >
               <Icon size="18px">
-                <Facebook/>
+                <Facebook />
               </Icon>
             </HoverDiv>
           </a>
@@ -104,16 +112,14 @@ const Navigation = () => (
             h="100%"
           >
             <Icon size="18px">
-              <LinkedIn/>
+              <LinkedIn />
             </Icon>
           </HoverDiv>
         </BorderedCell>
         <Cell w={1 / 3} h="42px" align="middle" bg="background">
-            <I18n>
-                {({ i18n }) => (
-                    <FlagSelector value={i18n._language || 'fr'} onChange={(value) => Router.push('/' + value)} />
-                )}
-            </I18n>
+          <I18n>
+            {({ i18n }) => <FlagSelector value={i18n._language || 'fr'} onChange={value => Router.push('/' + value)} />}
+          </I18n>
         </Cell>
       </Row>
     </FixedDiv>

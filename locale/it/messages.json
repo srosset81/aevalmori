@@ -1,15 +1,15 @@
 {
+  "about.my-journey": "Il mio percorso",
+  "about.title": "Chi sono ?",
+  "home.work": "Psicologa",
   "menu.about": "Chi sono ?",
-  "menu.blog": "Blog",
   "menu.contact": "Contatto",
   "menu.dmoka": "D.M.O.K.A.",
-  "menu.events": "Eventi",
   "menu.family-constellations": "Costellazioni familiari",
   "menu.home": "Accoglienza",
   "menu.individual-consulting": "Consultazioni individuali",
+  "menu.links": "",
   "menu.online-consulting": "Consultazioni online",
   "menu.testimony": "Testimonianze",
-  "about.my-journey": "Il mio percorso",
-  "about.title": "Chi sono ?",
-  "home.work": "Psicologa"
+  "testimonies.title": "Testimonianze"
 }

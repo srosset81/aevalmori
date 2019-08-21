@@ -1,1 +1,23 @@
-/* eslint-disable */window.LINGUI_CATALOG={languageData:{"plurals":function(n,ord){if(ord)return n==1?"one":"other";return n>=0&&n<2?"one":"other"}},messages:{"menu.about":"Qui suis-je?","menu.blog":"Blog","menu.contact":"Contact","menu.dmoka":"D.M.O.K.A.","menu.events":"Agenda","menu.family-constellations":"Constellations familiales","menu.home":"Accueil","menu.individual-consulting":"S\xE9ances individuelles","menu.online-consulting":"Consultations en ligne","menu.testimony":"T\xE9moignages","about.my-journey":"Mon parcours","about.title":"Qui suis-je ?","home.work":"Psychopraticienne relationnelle"}};
+/* eslint-disable */ window.LINGUI_CATALOG = {
+  languageData: {
+    plurals: function(n, ord) {
+      if (ord) return n == 1 ? 'one' : 'other';
+      return n >= 0 && n < 2 ? 'one' : 'other';
+    }
+  },
+  messages: {
+    'about.my-journey': 'Mon parcours',
+    'about.title': 'Qui suis-je ?',
+    'home.work': 'Psychopraticienne relationnelle',
+    'menu.about': 'Qui suis-je?',
+    'menu.contact': 'Contact',
+    'menu.dmoka': 'D.M.O.K.A.',
+    'menu.family-constellations': 'Constellations familiales',
+    'menu.home': 'Accueil',
+    'menu.individual-consulting': 'S\xE9ances individuelles',
+    'menu.links': 'Liens amis',
+    'menu.online-consulting': 'Consultations en ligne',
+    'menu.testimony': 'T\xE9moignages',
+    'testimonies.title': 'T\xE9moignages'
+  }
+};

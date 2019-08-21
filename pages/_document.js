@@ -2,28 +2,23 @@ import React from 'react';
 import { Document, Head, Main, NextScript } from 'utils/next';
 import { ServerStyleSheet } from 'utils/styling';
 
-const supportedLocale = ["fr", "it"];
+const supportedLocale = ['fr', 'it'];
 
 export default class MyDocument extends Document {
-    static async getInitialProps(ctx) {
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet();
+    const page = ctx.renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
 
-        const sheet = new ServerStyleSheet();
-        const page = ctx.renderPage(App => props => sheet.collectStyles(<App {...props} />));
-        const styleTags = sheet.getStyleElement();
+    const queryLocale = ctx.query.locale;
+    const locale = supportedLocale.find(l => l === queryLocale) ? queryLocale : 'fr';
 
-        const queryLocale = ctx.query.locale;
-        const locale = supportedLocale.find(l => l === queryLocale)
-            ? queryLocale
-            : "fr";
+    const linguiCatalog = await import(`raw-loader!../locale/${locale}/messages.js`).then(mod => mod.default);
 
-        const linguiCatalog = await import(`raw-loader!../locale/${locale}/messages.js`).then(
-            mod => mod.default
-        );
+    const initialProps = await Document.getInitialProps(ctx);
 
-        const initialProps = await Document.getInitialProps(ctx);
-
-        return { ...initialProps, ...page, styleTags, linguiCatalog, locale };
-    }
+    return { ...initialProps, ...page, styleTags, linguiCatalog, locale };
+  }
 
   render() {
     const { linguiCatalog, locale } = this.props;

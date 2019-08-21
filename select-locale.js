@@ -1,5 +1,5 @@
-const express = require("express");
-const locale = require("locale");
+const express = require('express');
+const locale = require('locale');
 
 const port = process.env.PORT || 3000;
 const supportedLocales = ['fr', 'it'];
@@ -9,11 +9,11 @@ const app = express();
 
 app.use(locale(supportedLocales, defaultLocale));
 
-app.get("/", function(req, res) {
-    res.redirect('/' + req.locale);
+app.get('/', function(req, res) {
+  res.redirect('/' + req.locale);
 });
 
 app.listen(port, err => {
-    if( err ) throw err;
-    console.log(`> Ready On Server http://localhost:${port}`)
+  if (err) throw err;
+  console.log(`> Ready On Server http://localhost:${port}`);
 });

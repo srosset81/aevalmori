@@ -16,16 +16,14 @@ class ContactPage extends React.Component {
   render() {
     return (
       <Layout>
-        <TopSection image="contact.jpg">
-            Contactez-moi
-        </TopSection>
+        <TopSection image="contact.jpg">Contactez-moi</TopSection>
         <Row>
           <Cell w={{ xs: 1, sm: 1 / 3 }}>
             <Div p="30px">
               <SubTitle>Rencontrons-nous !</SubTitle>
               <P>
-                N'hésitez pas à prendre contact avec moi en laissant vos coordonnées ci-contre, je répondrai à
-                votre demande dans les meilleurs délais.
+                N'hésitez pas à prendre contact avec moi en laissant vos coordonnées ci-contre, je répondrai à votre
+                demande dans les meilleurs délais.
               </P>
             </Div>
           </Cell>

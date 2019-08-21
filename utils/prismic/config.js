@@ -1,1 +1,0 @@
-export const PRISMIC_API_URL = 'https://aelisa.cdn.prismic.io/api/v2';

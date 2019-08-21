@@ -3,7 +3,7 @@
   "name": "aevalmori",
   "builds": [
     { "src": "select-locale.js", "use": "@now/node-server" },
-    { "src": "next.config.js", "use": "@now/next" }
+    { "src": "package.json", "use": "@now/next" }
   ],
   "routes": [
     { "src": "/", "dest": "select-locale.js" },
@@ -11,6 +11,8 @@
     { "src": "/it/?", "dest": "/?locale=it" },
     { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
     { "src": "/it/chi-sono", "dest": "/about?locale=it" },
+    { "src": "/fr/temoignages", "dest": "/testimonies?locale=fr" },
+    { "src": "/it/testimonianze", "dest": "/testimonies?locale=it" },
     { "src": "/fr/contact", "dest": "/contact?locale=fr" },
     { "src": "/it/contatto", "dest": "/contact?locale=it" }
   ]

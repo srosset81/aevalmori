@@ -52,9 +52,7 @@ class Layout extends React.Component {
             </FixedDiv>
           </Visible>
 
-          <Div p={{ xs: '0', sm: '0 0 0 350px' }}>
-            {children}
-          </Div>
+          <Div p={{ xs: '0', sm: '0 0 0 350px' }}>{children}</Div>
         </div>
       </ThemeProvider>
     );

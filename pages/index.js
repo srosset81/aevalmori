@@ -5,7 +5,7 @@ import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 import { MenuSection, FooterSection } from 'components/section';
-import { Trans } from "@lingui/macro";
+import { Trans } from '@lingui/macro';
 
 const IndexPage = () => (
   <Layout>
@@ -16,9 +16,7 @@ const IndexPage = () => (
             Anna Elisa Valmori
           </P>
           <P shadow color="white" align="center" font="lobster" fontSize="1.5em" m="0">
-              <Trans id="home.work">
-            Psychopraticienne relationnelle
-              </Trans>
+            <Trans id="home.work">Psychopraticienne relationnelle</Trans>
           </P>
         </AnimOnAppear>
         <br />
@@ -48,8 +46,8 @@ const IndexPage = () => (
       il reste.
     </MenuSection>
     <MenuSection title="Contactez-moi" image="contact.jpg" link="contact">
-      N'hésitez pas à prendre contact avec moi en laissant vos coordonnées, je répondrai à votre demande dans
-      les meilleurs délais.
+      N'hésitez pas à prendre contact avec moi en laissant vos coordonnées, je répondrai à votre demande dans les
+      meilleurs délais.
     </MenuSection>
     <FooterSection />
   </Layout>

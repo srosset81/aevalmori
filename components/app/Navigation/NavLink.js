@@ -18,13 +18,13 @@ const StyledA = styled.a`
 `;
 
 const NavLink = ({ page, indent, children }) => (
-    <StyledLi indent={indent}>
-        <PageLink page={page}>
-            <Text color="darkGrey" fontSize="0.95em">
-                <StyledA>{children}</StyledA>
-            </Text>
-        </PageLink>
-    </StyledLi>
+  <StyledLi indent={indent}>
+    <PageLink page={page}>
+      <Text color="darkGrey" fontSize="0.95em">
+        <StyledA>{children}</StyledA>
+      </Text>
+    </PageLink>
+  </StyledLi>
 );
 
 NavLink.defaultProps = {
