@@ -1,7 +1,8 @@
 import React from 'react';
+import { styled } from 'utils/styling';
 import Div from './Div';
 
-const FullScreenDiv = Div.extend`
+const FullScreenDiv = styled(Div)`
   position: fixed;
   top: 0;
   left: 0;

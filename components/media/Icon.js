@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from 'utils/styling';
 import Span from '../text/Span';
 
 // prettier-ignores
-const Icon = Span.extend`
+const Icon = styled(Span)`
   > svg {
     fill: currentColor;
     width: ${props => props.size};

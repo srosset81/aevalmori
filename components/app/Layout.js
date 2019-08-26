@@ -1,12 +1,12 @@
 import React from 'react';
-import { theme, ThemeProvider } from 'utils/styling';
+import { styled, theme, ThemeProvider } from 'utils/styling';
 import { Cell, Div, FixedDiv, Visible, Hidden } from 'components/layout';
 import { Navigation } from 'components/app';
 
 import HamburgerIcon from './HamburgerIcon';
 import SideMenu from './SideMenu';
 
-const Content = Cell.extend`
+const Content = styled(Cell)`
   flex-grow: 1;
 `;
 

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled, css } from 'utils/styling';
 
-const Input = styled.input.attrs({
-  type: props => props.type || 'text'
-})`
+const Input = styled.input.attrs(props => ({
+  type: props.type || 'text'
+}))`
   display: block;
   width: ${props => props.w || 'calc(100% - 20px)'};
   height: ${props => props.h || '22px'};

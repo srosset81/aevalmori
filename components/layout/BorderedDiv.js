@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css, responsiveStyle, responsivePropType } from '../../utils/styling';
+import { styled, css, responsiveStyle, responsivePropType } from '../../utils/styling';
 import Div from './Div';
 
 // prettier-ignore
-export const BorderedDiv = Div.extend`
+export const BorderedDiv = styled(Div)`
   ${props => !props.noBorder && css`border: 1px solid ${props => props.borderColor ? props.theme.colors[props.borderColor] : 'transparent'};`}
   ${responsiveStyle({borderRadius: 'border-radius'})}
   overflow: ${props => props.overflow ? props.overflow : 'visible'};

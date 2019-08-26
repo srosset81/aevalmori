@@ -3,7 +3,7 @@ import Router from 'next/router';
 import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 
-import { theme } from 'utils/styling';
+import { styled, theme } from 'utils/styling';
 import { PageLink } from 'utils/router';
 
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
@@ -15,17 +15,17 @@ import LinkedIn from '../../../svg/logo-linkedin.svg';
 import NavLink from './NavLink';
 import FlagSelector from './FlagSelector';
 
-const ScrollableDiv = Div.extend`
+const ScrollableDiv = styled(Div)`
   overflow-y: auto;
   overflow-x: hidden;
 `;
 
-const BorderedCell = Cell.extend`
+const BorderedCell = styled(Cell)`
   border-left: 1px #dddddd solid;
   border-right: 1px #dddddd solid;
 `;
 
-const HoverDiv = Div.extend`
+const HoverDiv = styled(Div)`
   cursor: pointer;
   transition: all ease-in-out 200ms;
   &:hover {
@@ -34,15 +34,15 @@ const HoverDiv = Div.extend`
   }
 `;
 
-const TransparentImage = Image.extend`
+const TransparentImage = styled(Image)`
   mix-blend-mode: multiply;
 `;
 
 const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
-    <Div align="center" p="20px">
+    <Div align="center" p="30px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/logo-ae.png" w="180px" />
+        <TransparentImage src="/static/images/logo-new.png" w="100%" />
       </PageLink>
     </Div>
     <Separator />

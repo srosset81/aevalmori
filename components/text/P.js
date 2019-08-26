@@ -1,13 +1,17 @@
 import React from 'react';
-import { responsiveStyle, responsivePropType } from 'utils/styling';
+import { styled, responsiveStyle, responsivePropType } from 'utils/styling';
 import Text from './Text';
 
 // prettier-ignore
-const P = Text.withComponent('p').extend`
+const StyledText = styled(Text)`
   display: block;
   width: 100%;
   ${responsiveStyle({align: 'text-align'})}
 `;
+
+const P = (props) => (
+    <StyledText as="p" {...props}/>
+);
 
 P.propTypes = {
   align: responsivePropType

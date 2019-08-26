@@ -1,7 +1,8 @@
 import React from 'react';
+import { styled } from 'utils/styling';
 import { FullScreenDiv, Div } from '../layout';
 
-const BackLayer = FullScreenDiv.extend`
+const BackLayer = styled(FullScreenDiv)`
   visibility: hidden;
   opacity: 0;
   transition: all linear 250ms;
@@ -12,7 +13,7 @@ const BackLayer = FullScreenDiv.extend`
   }
 `;
 
-const FadeOverlay = Div.extend`
+const FadeOverlay = styled(Div)`
   position: absolute;
   top: 0;
   left: 0;

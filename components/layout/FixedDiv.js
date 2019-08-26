@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from 'utils/styling';
 import Div from './Div';
 
 const defaultToZero = style => (typeof style === 'string' ? style : '0');
 
 // prettier-ignore
-export const FixedDiv = Div.extend`
+export const FixedDiv = styled(Div)`
   position: fixed;
   ${props => props.scroll && `overflow: auto;`};
   ${props => props.bottom && 'bottom:' + defaultToZero(props.bottom) + ';'}

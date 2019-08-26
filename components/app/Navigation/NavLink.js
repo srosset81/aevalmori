@@ -5,7 +5,7 @@ import { styled } from 'utils/styling';
 import { Li } from 'components/layout';
 import { Text } from 'components/text';
 
-const StyledLi = Li.extend`
+const StyledLi = styled(Li)`
   ${props => (props.indent ? `padding: 7px 0 6px 15px;` : `padding: 7px 0 6px;`)} width: 100%;
 `;
 

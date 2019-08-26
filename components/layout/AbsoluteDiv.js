@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from 'utils/styling';
 import Div from './Div';
 
 const defaultToZero = style => (typeof style === 'string' ? style : '0');
 
 // prettier-ignore
-export const AbsoluteDiv = Div.extend`
+export const AbsoluteDiv = styled(Div)`
   position: absolute;
   ${props => props.bottom && 'bottom:' + defaultToZero(props.bottom) + ';'}
   ${props => props.top && 'top:' + defaultToZero(props.top) + ';'}

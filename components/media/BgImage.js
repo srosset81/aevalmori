@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { responsiveStyle, responsivePropType } from 'utils/styling';
+import { styled, responsiveStyle, responsivePropType } from 'utils/styling';
 
 import Div from '../layout/Div';
 
-const BgImage = Div.extend`
+const BgImage = styled(Div)`
   background-image: url(${props => props.src}) ${props => (props.fallback ? `, url('${props.fallback}')` : '')};
   background-repeat: no-repeat;
   ${responsiveStyle({ size: 'background-size', position: 'background-position' })};
