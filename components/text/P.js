@@ -9,9 +9,7 @@ const StyledText = styled(Text)`
   ${responsiveStyle({align: 'text-align'})}
 `;
 
-const P = (props) => (
-    <StyledText as="p" {...props}/>
-);
+const P = props => <StyledText as="p" {...props} />;
 
 P.propTypes = {
   align: responsivePropType

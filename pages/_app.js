@@ -1,5 +1,5 @@
 import React from 'react';
-import NextApp, { Container } from 'next/app';
+import NextApp from 'next/app';
 import { I18nProvider } from '@lingui/react';
 import getCatalog from '@catalogs';
 import apolloClient from '../config/apolloClient';
@@ -20,13 +20,11 @@ export default class App extends NextApp {
     const { Component, pageProps, locale } = this.props;
     const catalog = getCatalog(locale);
     return (
-      <Container>
-        <ApolloProvider client={apolloClient}>
-          <I18nProvider language={locale} catalogs={{ [locale]: catalog }}>
-            <Component {...pageProps} />
-          </I18nProvider>
-        </ApolloProvider>
-      </Container>
+      <ApolloProvider client={apolloClient}>
+        <I18nProvider language={locale} catalogs={{ [locale]: catalog }}>
+          <Component {...pageProps} />
+        </I18nProvider>
+      </ApolloProvider>
     );
   }
 }

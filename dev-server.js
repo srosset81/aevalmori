@@ -37,6 +37,11 @@ app
       return handle(req, res);
     });
 
+    // We need to handle POST when posting to the API
+    server.post('*', (req, res) => {
+      return handle(req, res);
+    });
+
     server.listen(3000, err => {
       if (err) throw err;
       console.log('> Ready on http://localhost:3000');

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { styled, css } from 'utils/styling';
 
 const Input = styled.input.attrs(props => ({
-  type: props.type || 'text'
+  type: props.type || 'text',
+  value: props.input.value,
+  onChange: props.input.onChange
 }))`
   display: block;
   width: ${props => props.w || 'calc(100% - 20px)'};

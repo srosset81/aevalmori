@@ -2,7 +2,9 @@ import React from 'react';
 import { styled } from 'utils/styling';
 
 const Textarea = styled.textarea.attrs(props => ({
-  rows: props.rows || 5
+  rows: props.rows || 5,
+  value: props.input.value,
+  onChange: props.input.onChange
 }))`
   display: block;
   width: calc(100% - 20px);
