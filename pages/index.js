@@ -9,14 +9,14 @@ import { Trans } from '@lingui/macro';
 
 const IndexPage = () => (
   <Layout>
-    <BgImage src="/static/images/clouds.jpg" minH="100vh" align="middle">
+    <BgImage src="/static/images/homepage.jpg" minH="100vh" align="middle">
       <Div>
         <AnimOnAppear>
           <P shadow color="white" align="center" font="lobster" fontSize="4.5em" m="0">
             Anna Elisa Valmori
           </P>
           <P shadow color="white" align="center" font="lobster" fontSize="1.5em" m="0">
-            <Trans id="home.work">Psychopraticienne relationnelle</Trans>
+            <Trans id="home.work">Psychologue</Trans>
           </P>
         </AnimOnAppear>
         <br />

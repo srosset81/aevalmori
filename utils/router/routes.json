@@ -7,6 +7,10 @@
         "fr": "blog",
         "it": "blog"
     },
+    "service-individual": {
+        "fr": "consultations-individuelles",
+        "it": "consultazioni-individuali"
+    },
     "testimonies": {
         "fr": "temoignages",
         "it": "testimonianze"

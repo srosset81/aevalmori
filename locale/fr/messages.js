@@ -8,7 +8,7 @@
   messages: {
     'about.my-journey': 'Mon parcours',
     'about.title': 'Qui suis-je ?',
-    'home.work': 'Psychopraticienne relationnelle',
+    'home.work': 'Psychologue',
     'menu.about': 'Qui suis-je?',
     'menu.contact': 'Contact',
     'menu.dmoka': 'D.M.O.K.A.',
@@ -18,6 +18,7 @@
     'menu.links': 'Liens amis',
     'menu.online-consulting': 'Consultations en ligne',
     'menu.testimony': 'T\xE9moignages',
+    'service.individual.title': 'Consultations individuelles',
     'testimonies.title': 'T\xE9moignages'
   }
 };

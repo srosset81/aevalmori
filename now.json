@@ -11,6 +11,7 @@
     { "src": "/it/?", "dest": "/?locale=it" },
     { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
     { "src": "/it/chi-sono", "dest": "/about?locale=it" },
+    { "src": "/fr/consultations-individuelles", "dest": "/service-individual?locale=fr" },
     { "src": "/fr/temoignages", "dest": "/testimonies?locale=fr" },
     { "src": "/it/testimonianze", "dest": "/testimonies?locale=it" },
     { "src": "/fr/contact", "dest": "/contact?locale=fr" },

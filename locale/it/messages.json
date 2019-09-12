@@ -1,6 +1,6 @@
 {
-  "about.my-journey": "Il mio percorso",
-  "about.title": "Chi sono ?",
+  "about.my-journey": "",
+  "about.title": "",
   "home.work": "Psicologa",
   "menu.about": "Chi sono ?",
   "menu.contact": "Contatto",
@@ -11,5 +11,6 @@
   "menu.links": "",
   "menu.online-consulting": "Consultazioni online",
   "menu.testimony": "Testimonianze",
+  "service.individual.title": "",
   "testimonies.title": "Testimonianze"
 }

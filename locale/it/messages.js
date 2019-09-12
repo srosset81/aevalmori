@@ -8,8 +8,8 @@
     }
   },
   messages: {
-    'about.my-journey': 'Il mio percorso',
-    'about.title': 'Chi sono ?',
+    'about.my-journey': 'Mon parcours',
+    'about.title': 'Qui suis-je ?',
     'home.work': 'Psicologa',
     'menu.about': 'Chi sono ?',
     'menu.contact': 'Contatto',
@@ -20,6 +20,7 @@
     'menu.links': 'Liens amis',
     'menu.online-consulting': 'Consultazioni online',
     'menu.testimony': 'Testimonianze',
+    'service.individual.title': 'Consultations individuelles',
     'testimonies.title': 'Testimonianze'
   }
 };

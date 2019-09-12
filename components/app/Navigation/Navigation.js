@@ -56,7 +56,7 @@ const Navigation = () => (
           <Trans id="menu.about">Qui suis-je?</Trans>
         </NavLink>
         <Separator m="5px 0" />
-        <NavLink page="index" indent>
+        <NavLink page="service-individual" indent>
           <Trans id="menu.individual-consulting">Séances individuelles</Trans>
         </NavLink>
         <NavLink page="index" indent>

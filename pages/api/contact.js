@@ -5,7 +5,7 @@ export default function handle(req, res) {
 
   const { name, email, phone, message } = req.body;
 
-  sgMail
+  return sgMail
     .send({
       to: 'srosset81@gmail.com',
       from: {
