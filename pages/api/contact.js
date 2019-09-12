@@ -16,7 +16,7 @@ export default function handle(req, res) {
       subject: 'Message du site web',
       text:
         message.replace(/\n/, '\n\n') +
-        '\n___________________\n\nNom : ' +
+        '\n\n___________________\n\nNom : ' +
         name +
         '\n\nEmail : ' +
         email +

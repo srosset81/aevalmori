@@ -1,12 +1,18 @@
 import React from 'react';
 import { Form, Field, FORM_ERROR } from 'utils/form';
 import { Layout } from 'components/app';
-import { Cell, Div, Row, Space } from 'components/layout';
+import { Cell, Div, Row, Space, BorderedDiv } from 'components/layout';
 import { Button, Input, Textarea, Label } from 'components/input';
-import { P, SubTitle } from 'components/text';
+import { P, Text, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 
 class ContactPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      messageSent: false
+    };
+  }
   onSubmit = async values => {
     const result = await fetch('/api/contact', {
       method: 'POST',
@@ -17,8 +23,10 @@ class ContactPage extends React.Component {
       body: JSON.stringify(values)
     });
 
-    if( !result.ok ) {
-        return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
+    if (!result.ok) {
+      return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
+    } else {
+      this.setState({ messageSent: true });
     }
   };
 
@@ -40,28 +48,34 @@ class ContactPage extends React.Component {
             <Div p="30px">
               <Form
                 onSubmit={this.onSubmit}
-                render={({ handleSubmit, submitError, pristine, submitting, submitSucceeded }) =>
-                  submitSucceeded ? (
-                    <P>Votre message a bien été envoyé, merci !</P>
-                  ) : (
-                    <form onSubmit={handleSubmit}>
-                      <Label value="Votre nom">
-                        <Field name="name" component={Input} />
-                      </Label>
-                      <Label value="Adresse email">
-                        <Field name="email" component={Input} />
-                      </Label>
-                      <Label value="Téléphone">
-                        <Field name="phone" component={Input} />
-                      </Label>
-                      <Label value="Message">
-                        <Field name="message" component={Textarea} />
-                      </Label>
-                      {submitError ? <P color="red">{submitError}</P> : <Space />}
-                      <Button disabled={submitting || pristine}>>Envoyer</Button>
-                    </form>
-                  )
-                }
+                render={({ handleSubmit, submitError, pristine, submitting, reset }) => (
+                  <form
+                    onSubmit={async event => {
+                      await handleSubmit(event);
+                      reset();
+                    }}
+                  >
+                    {this.state.messageSent && (
+                      <BorderedDiv borderRadius="5px" bg="lightGreen" p="15px" m="0 0 15px">
+                        <Text>Votre message a bien été envoyé, merci !</Text>
+                      </BorderedDiv>
+                    )}
+                    <Label value="Votre nom">
+                      <Field name="name" component={Input} />
+                    </Label>
+                    <Label value="Adresse email">
+                      <Field name="email" component={Input} />
+                    </Label>
+                    <Label value="Téléphone">
+                      <Field name="phone" component={Input} />
+                    </Label>
+                    <Label value="Message">
+                      <Field name="message" component={Textarea} />
+                    </Label>
+                    {submitError ? <P color="red">{submitError}</P> : <Space />}
+                    <Button disabled={submitting || pristine}>Envoyer</Button>
+                  </form>
+                )}
               />
             </Div>
           </Cell>
