@@ -1,23 +1,22 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Cell, Div, Row } from 'components/layout';
-import { Image } from 'components/media';
+import { Div } from 'components/layout';
 import { P, SubTitle } from 'components/text';
-import { TopSection, ContactSection, FooterSection } from 'components/section';
+import { TopSection, ContactSection, FooterSection, QuoteSection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
-const ServiceIndividualPage = () => (
+const ServicesDmokaPage = () => (
   <Layout>
-    <TopSection image="beach.jpg">
-      <Trans id="service.individual.title">Consultations individuelles</Trans>
+    <TopSection image="birds-chain.jpg">
+      <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
     </TopSection>
-    <Div p="40px">
+    <Div p="50px">
       <img
         src="/static/images/bottle-cut.jpg"
-        style={{ float: 'left', width: '350px', marginRight: '40px', marginBottom: '30px' }}
+        style={{ float: 'left', width: '350px', marginRight: '50px', marginBottom: '30px' }}
       />
       <SubTitle>
-        <Trans id="service.individual.title">Consultations individuelles</Trans>
+        <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
       </SubTitle>
       <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
@@ -52,34 +51,13 @@ const ServiceIndividualPage = () => (
         créateur de sa propre vie.
       </P>
     </Div>
-    <Div bg="ultraLightGrey" h="160px" align="middle" p="20px">
-      <Div maxW="800px">
-        <P fontSize="1.3em" align="center">
-          <em>
-            « Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur
-            de soi ne fait que rêver ; celui qui regarde en soi se réveille. »
-          </em>
-          <br />
-          C.G. Jung
-        </P>
-      </Div>
-    </Div>
-    {/*<Div p="40px">*/}
-    {/*  <P>*/}
-    {/*    Mes services*/}
-    {/*    <br />*/}
-    {/*    <br />*/}
-    {/*    • Consultations et soutien psychologique*/}
-    {/*    <br />*/}
-    {/*    • Développement personnel*/}
-    {/*    <br />*/}
-    {/*    • Consultations psycho-généalogiques*/}
-    {/*    <br />• Séances DMOKA*/}
-    {/*  </P>*/}
-    {/*</Div>*/}
-    <ContactSection/>
+    <QuoteSection author="C.G. Jung">
+      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
+      ne fait que rêver ; celui qui regarde en soi se réveille.
+    </QuoteSection>
+    <ContactSection />
     <FooterSection />
   </Layout>
 );
 
-export default ServiceIndividualPage;
+export default ServicesDmokaPage;

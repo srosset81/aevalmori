@@ -35,9 +35,7 @@ class NewsletterSection extends React.Component {
         <Cell w={{ xs: 1, sm: 1 / 3 }}>
           <Div p="40px">
             <SubTitle>Newsletter</SubTitle>
-            <P>
-              Inscrivez-vous à notre newsletter pour rester informé de notre actualité.
-            </P>
+            <P>Inscrivez-vous à notre newsletter pour rester informé de notre actualité.</P>
           </Div>
         </Cell>
         <Cell w={{ xs: 1, sm: 2 / 3 }}>

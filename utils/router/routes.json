@@ -7,9 +7,17 @@
         "fr": "blog",
         "it": "blog"
     },
-    "service-individual": {
+    "services-individuals": {
         "fr": "consultations-individuelles",
         "it": "consultazioni-individuali"
+    },
+    "services-constellations": {
+        "fr": "constellations-familiales",
+        "it": "costellazioni-familiari"
+    },
+    "services-dmoka": {
+        "fr": "dmoka",
+        "it": "dmoka"
     },
     "testimonies": {
         "fr": "temoignages",

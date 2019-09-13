@@ -42,7 +42,7 @@ const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
     <Div align="center" p="30px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/logo-new.png" w="100%" />
+        <TransparentImage src="/static/images/logo-new-2.jpg" w="100%" />
       </PageLink>
     </Div>
     <Separator />
@@ -56,16 +56,13 @@ const Navigation = () => (
           <Trans id="menu.about">Qui suis-je?</Trans>
         </NavLink>
         <Separator m="5px 0" />
-        <NavLink page="service-individual" indent>
+        <NavLink page="services-individuals" indent>
           <Trans id="menu.individual-consulting">Séances individuelles</Trans>
         </NavLink>
-        <NavLink page="index" indent>
-          <Trans id="menu.online-consulting">Consultations en ligne</Trans>
-        </NavLink>
-        <NavLink page="index" indent>
+        <NavLink page="services-constellations" indent>
           <Trans id="menu.family-constellations">Constellations familiales</Trans>
         </NavLink>
-        <NavLink page="index" indent>
+        <NavLink page="services-dmoka" indent>
           <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
         </NavLink>
         <Separator m="5px 0" />
