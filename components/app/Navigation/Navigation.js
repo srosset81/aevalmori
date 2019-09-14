@@ -80,7 +80,7 @@ const Navigation = () => (
       <Separator />
       <Row>
         <Cell w={1 / 3} h="42px">
-          <a href="https://www.facebook.com/profile.php?id=100009866502497" target="_blank">
+          <a href="https://www.facebook.com/Anna-Elisa-Valmori-psychologue-104513137604349/" target="_blank">
             <HoverDiv
               bg="background"
               color="darkGrey"

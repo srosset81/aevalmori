@@ -36,7 +36,7 @@ class Layout extends React.Component {
                 height={22}
                 strokeWidth={4}
                 rotate={0}
-                color={this.state.isMenuOpen ? 'grey' : 'white'}
+                color={'grey'}
                 borderRadius={5}
                 animationDuration={0.5}
               />

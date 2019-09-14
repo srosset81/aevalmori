@@ -2,18 +2,25 @@ import React from 'react';
 import { Layout } from 'components/app';
 import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
-import { LeadP, P } from 'components/text';
+import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 import { MenuSection, QuoteSection, FooterSection } from 'components/section';
-import { Trans } from '@lingui/macro';
 
 const IndexPage = () => (
   <Layout>
-    <BgImage src="/static/images/homepage.jpg" minH="100vh" align="middle">
+    <BgImage src="/static/images/homepage.jpg" minH="100vh" align="middle" position="bottom left">
       <Div>
         <AnimOnAppear>
-          <P shadow color="white" align="center" font="movingSkate" fontSize="7em" m="0" style={{ lineHeight: 0.9 }}>
-            Anna Elisa Valmori
+          <P
+            shadow
+            color="white"
+            align="center"
+            font="movingSkate"
+            fontSize={{ xs: '6em', sm: '8em ' }}
+            m="0"
+            style={{ lineHeight: 0.7 }}
+          >
+            Anna Elisa
           </P>
           <P
             bold
@@ -21,11 +28,11 @@ const IndexPage = () => (
             color="white"
             align="center"
             font="caviarDreams"
-            fontSize="1.5em"
+            fontSize={{ xs: '1.7em', sm: '2em' }}
             m="0"
             style={{ textTransform: 'uppercase', letterSpacing: 2 }}
           >
-            <Trans id="home.work">Psychologue</Trans>
+            Valmori
           </P>
         </AnimOnAppear>
         <br />
