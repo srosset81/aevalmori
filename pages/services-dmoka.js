@@ -1,25 +1,23 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Div, Space } from 'components/layout';
-import { LeadP, P, SubTitle } from 'components/text';
-import { TopSection, ContactSection, FooterSection, QuoteSection } from 'components/section';
+import { LeadP, P } from 'components/text';
+import { TopSection, ContactSection, FooterSection, QuoteSection, ContentSection } from 'components/section';
 import { Trans } from '@lingui/macro';
-import {SideImage} from "../components/media";
+import { SideImage } from '../components/media';
 
 const ServicesDmokaPage = () => (
   <Layout>
     <TopSection image="birds-chain.jpg">
       <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
     </TopSection>
-    <Div p="50px">
+    <ContentSection>
       <LeadP>
         La D.M.O.K.A. est une approche neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de
         changer ses croyances, d’adopter de nouveaux comportements et de se sortir des schémas récurrents en
         reconnaissant et en renforçant ses propres ressources.
       </LeadP>
-      <Space h="50px" />
       <SideImage src="/static/images/adult-adventure.jpg" />
-      <P style={{ marginTop: 0 }}>
+      <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
         appel à moi dans leur singularité et leur demande spécifique.
@@ -46,12 +44,12 @@ const ServicesDmokaPage = () => (
         prise de responsabilité : savoir écouter et répondre à ses propres besoins, pouvoir prendre des décisions sur la
         base de ce qui nous représente vraiment, avec pour objectif ultime la réalisation profonde de soi.
       </P>
-      <P style={{ marginBottom: 0 }}>
+      <P>
         Mon souhait est que chacun d’entre nous puisse transformer ses souffrances en talents – comme les alchimistes
         transmutaient le plomb en or – et puisse entreprendre le plus ardu mais gratifiant des chemins&nbsp;: devenir
         créateur de sa propre vie.
       </P>
-    </Div>
+    </ContentSection>
     <QuoteSection author="C.G. Jung">
       Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
       ne fait que rêver ; celui qui regarde en soi se réveille.

@@ -19,4 +19,6 @@ P.defaultProps = {
   lineHeight: '1.7em'
 };
 
-export default P;
+// Allows to refer to this component in other styled-components
+// See https://www.styled-components.com/docs/advanced#caveat
+export default styled(P)``;

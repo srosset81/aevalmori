@@ -19,7 +19,7 @@ BgImage.propTypes = {
 
 BgImage.defaultProps = {
   size: 'cover',
-  position: 'left top'
+  position: 'center top'
 };
 
 export default BgImage;

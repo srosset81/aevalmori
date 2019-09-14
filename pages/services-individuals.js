@@ -1,9 +1,8 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Cell, Div, Row, Space } from 'components/layout';
 import { SideImage } from 'components/media';
-import { LeadP, P, SubTitle } from 'components/text';
-import { TopSection, ContactSection, FooterSection, MenuSection } from 'components/section';
+import { LeadP, P } from 'components/text';
+import { TopSection, ContactSection, FooterSection, ContentSection, QuoteSection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const ServiceIndividualPage = () => (
@@ -11,15 +10,14 @@ const ServiceIndividualPage = () => (
     <TopSection image="plant-growing-2.jpg">
       <Trans id="services.individuals.title">Séances individuelles</Trans>
     </TopSection>
-    <Div p="50px">
+    <ContentSection>
       <LeadP>
         Je propose des parcours personnalisés dans lesquels j’intègre les instruments que j'ai expérimentés sur moi-même
         au cours des années. Une valeur particulière est donnée au choix des objectifs à atteindre et à la réalisation
         de soi selon une vision holistique, transpersonnelle et globale de l'être humain.
       </LeadP>
-      <Space h="50px" />
       <SideImage src="/static/images/bottle-cut.jpg" />
-      <P style={{ marginTop: 0 }}>
+      <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
         appel à moi dans leur singularité et leur demande spécifique.
@@ -46,37 +44,16 @@ const ServiceIndividualPage = () => (
         prise de responsabilité : savoir écouter et répondre à ses propres besoins, pouvoir prendre des décisions sur la
         base de ce qui nous représente vraiment, avec pour objectif ultime la réalisation profonde de soi.
       </P>
-      <P style={{ marginBottom: 0 }}>
+      <P>
         Mon souhait est que chacun d’entre nous puisse transformer ses souffrances en talents – comme les alchimistes
         transmutaient le plomb en or – et puisse entreprendre le plus ardu mais gratifiant des chemins&nbsp;: devenir
         créateur de sa propre vie.
       </P>
-    </Div>
-    <Div bg="ultraLightGrey" h="160px" align="middle" p="20px">
-      <Div maxW="800px">
-        <P fontSize="1.3em" align="center">
-          <em>
-            « Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur
-            de soi ne fait que rêver ; celui qui regarde en soi se réveille. »
-          </em>
-          <br />
-          C.G. Jung
-        </P>
-      </Div>
-    </Div>
-    {/*<Div p="40px">*/}
-    {/*  <P>*/}
-    {/*    Mes services*/}
-    {/*    <br />*/}
-    {/*    <br />*/}
-    {/*    • Consultations et soutien psychologique*/}
-    {/*    <br />*/}
-    {/*    • Développement personnel*/}
-    {/*    <br />*/}
-    {/*    • Consultations psycho-généalogiques*/}
-    {/*    <br />• Séances DMOKA*/}
-    {/*  </P>*/}
-    {/*</Div>*/}
+    </ContentSection>
+    <QuoteSection author="C.G. Jung">
+      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
+      ne fait que rêver ; celui qui regarde en soi se réveille.
+    </QuoteSection>
     <ContactSection />
     <FooterSection />
   </Layout>
