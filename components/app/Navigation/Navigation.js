@@ -42,7 +42,7 @@ const Navigation = () => (
   <ScrollableDiv bg="background" h="100%" w="100%">
     <Div align="center" p="30px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/logo-new-2.jpg" w="100%" />
+        <TransparentImage src="/static/images/logo.png" w="100%" />
       </PageLink>
     </Div>
     <Separator />
@@ -68,10 +68,6 @@ const Navigation = () => (
         <Separator m="5px 0" />
         <NavLink page="testimonies">
           <Trans id="menu.testimony">Témoignages</Trans>
-        </NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="links">
-          <Trans id="menu.links">Liens amis</Trans>
         </NavLink>
         <Separator m="5px 0" />
         <NavLink page="contact">

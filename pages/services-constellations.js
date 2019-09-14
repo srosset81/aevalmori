@@ -1,22 +1,25 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Div } from 'components/layout';
+import { Div, Space } from 'components/layout';
 import { SideImage } from 'components/media';
-import { P, SubTitle } from 'components/text';
-import { TopSection, FooterSection } from 'components/section';
+import { LeadP, P, SubTitle } from 'components/text';
+import { TopSection, FooterSection, TestimonySection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const ServicesConstellationsPage = () => (
   <Layout>
-    <TopSection image="tree.jpg">
+    <TopSection image="birds-sky.jpg">
       <Trans id="services.constellations.title">Constellations familiales</Trans>
     </TopSection>
-    <Div p="40px">
-      <SideImage src="/static/images/butterfly.jpg "/>
-      <SubTitle>
-        <Trans id="services.constellations.title">Constellations familiales</Trans>
-      </SubTitle>
-      <P>
+    <Div p="50px">
+      <LeadP>
+        Les constellations familiales donnent la possibilité de nous reconnecter à nos racines. Le but est d’amener
+        l’amour là où il y a eu souffrance, de laisser les fardeaux et les conflits dont nous sommes chargés et qui ne
+        nous appartiennent pas, en laissant à chacun sa part de responsabilité.
+      </LeadP>
+      <Space h="50px" />
+      <SideImage src="/static/images/birds-black.jpg" />
+      <P style={{ marginTop: 0 }}>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
         appel à moi dans leur singularité et leur demande spécifique.
@@ -43,24 +46,14 @@ const ServicesConstellationsPage = () => (
         prise de responsabilité : savoir écouter et répondre à ses propres besoins, pouvoir prendre des décisions sur la
         base de ce qui nous représente vraiment, avec pour objectif ultime la réalisation profonde de soi.
       </P>
+
       <P style={{ marginBottom: 0 }}>
         Mon souhait est que chacun d’entre nous puisse transformer ses souffrances en talents – comme les alchimistes
         transmutaient le plomb en or – et puisse entreprendre le plus ardu mais gratifiant des chemins&nbsp;: devenir
         créateur de sa propre vie.
       </P>
     </Div>
-    <Div bg="ultraLightGrey" h="160px" align="middle" p="20px">
-      <Div maxW="800px">
-        <P fontSize="1.3em" align="center">
-          <em>
-            « Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur
-            de soi ne fait que rêver ; celui qui regarde en soi se réveille. »
-          </em>
-          <br />
-          C.G. Jung
-        </P>
-      </Div>
-    </Div>
+    <TestimonySection type="Constellation" />
     <FooterSection />
   </Layout>
 );

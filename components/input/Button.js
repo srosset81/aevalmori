@@ -127,14 +127,16 @@ const StyledButton = styled.button`
   flex: 0 0 auto; /* prevent height to be impacted by flex */
   display: inline-block;
   cursor: pointer;
-  font-family: 'Century Gothic', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
   padding: ${props => buttonSizes[props.size].padding };
   height: ${props => buttonSizes[props.size].height };
   ${props => props.bold && css`font-weight: bold;` }
   border-radius: 3px;
   border: 1px solid transparent;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   vertical-align: middle;
 
   ${buttonColorStyle('font', 'color')};
@@ -150,8 +152,8 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, icon, go, ...otherProps }) => (
-  <StyledButton data-go={go} {...otherProps}>
+const Button = ({ children, icon, ...otherProps }) => (
+  <StyledButton {...otherProps}>
     {icon && (
       <span>
         <Icon name={icon} size="1.1em" />
@@ -170,8 +172,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['auto', 'big', 'normal', 'medium']),
   fontSize: responsivePropType,
   w: responsivePropType,
-  m: responsivePropType,
-  go: PropTypes.string
+  m: responsivePropType
 };
 
 Button.defaultProps = {

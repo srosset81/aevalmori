@@ -15,7 +15,9 @@ const theme = {
     montserrat: "'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif",
     noto: "'Noto Serif', 'Open Sans', Helvetica, Arial, sans-serif",
     lobster: "'Lobster', cursive",
-    century: "'Century Gothic', 'Open Sans', Helvetica, Arial, sans-serif"
+    century: "'Century Gothic', 'Open Sans', Helvetica, Arial, sans-serif",
+    movingSkate: "'Moving Skate', cursive",
+    caviarDreams: "'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
     lightRose: '#EFCFD9',

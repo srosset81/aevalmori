@@ -1,9 +1,10 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Div } from 'components/layout';
-import { P, SubTitle } from 'components/text';
+import { Div, Space } from 'components/layout';
+import { LeadP, P, SubTitle } from 'components/text';
 import { TopSection, ContactSection, FooterSection, QuoteSection } from 'components/section';
 import { Trans } from '@lingui/macro';
+import {SideImage} from "../components/media";
 
 const ServicesDmokaPage = () => (
   <Layout>
@@ -11,14 +12,14 @@ const ServicesDmokaPage = () => (
       <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
     </TopSection>
     <Div p="50px">
-      <img
-        src="/static/images/bottle-cut.jpg"
-        style={{ float: 'left', width: '350px', marginRight: '50px', marginBottom: '30px' }}
-      />
-      <SubTitle>
-        <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
-      </SubTitle>
-      <P>
+      <LeadP>
+        La D.M.O.K.A. est une approche neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de
+        changer ses croyances, d’adopter de nouveaux comportements et de se sortir des schémas récurrents en
+        reconnaissant et en renforçant ses propres ressources.
+      </LeadP>
+      <Space h="50px" />
+      <SideImage src="/static/images/adult-adventure.jpg" />
+      <P style={{ marginTop: 0 }}>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
         appel à moi dans leur singularité et leur demande spécifique.

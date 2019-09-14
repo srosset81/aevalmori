@@ -1,22 +1,25 @@
 import React from 'react';
 import { Layout } from 'components/app';
-import { Cell, Div, Row } from 'components/layout';
+import { Cell, Div, Row, Space } from 'components/layout';
 import { SideImage } from 'components/media';
-import { P, SubTitle } from 'components/text';
-import { TopSection, ContactSection, FooterSection } from 'components/section';
+import { LeadP, P, SubTitle } from 'components/text';
+import { TopSection, ContactSection, FooterSection, MenuSection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const ServiceIndividualPage = () => (
   <Layout>
     <TopSection image="plant-growing-2.jpg">
-      <Trans id="services.individuals.title">Consultations individuelles</Trans>
+      <Trans id="services.individuals.title">Séances individuelles</Trans>
     </TopSection>
     <Div p="50px">
+      <LeadP>
+        Je propose des parcours personnalisés dans lesquels j’intègre les instruments que j'ai expérimentés sur moi-même
+        au cours des années. Une valeur particulière est donnée au choix des objectifs à atteindre et à la réalisation
+        de soi selon une vision holistique, transpersonnelle et globale de l'être humain.
+      </LeadP>
+      <Space h="50px" />
       <SideImage src="/static/images/bottle-cut.jpg" />
-      <SubTitle>
-        <Trans id="service.individual.title">Consultations individuelles</Trans>
-      </SubTitle>
-      <P>
+      <P style={{ marginTop: 0 }}>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
         appel à moi dans leur singularité et leur demande spécifique.

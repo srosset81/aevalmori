@@ -3,4 +3,5 @@ export { default as FooterSection } from './FooterSection';
 export { default as MenuSection } from './MenuSection';
 export { default as NewsletterSection } from './NewsletterSection';
 export { default as QuoteSection } from './QuoteSection';
+export { default as TestimonySection } from './TestimonySection';
 export { default as TopSection } from './TopSection';

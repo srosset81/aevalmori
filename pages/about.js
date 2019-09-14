@@ -2,15 +2,22 @@ import React from 'react';
 import { Layout } from 'components/app';
 import { Cell, Div, Row } from 'components/layout';
 import { Image } from 'components/media';
-import { P, SubTitle } from 'components/text';
-import { TopSection, FooterSection, QuoteSection } from 'components/section';
+import { P, LeadP, SubTitle } from 'components/text';
+import { TopSection, FooterSection, QuoteSection, MenuSection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const AboutPage = () => (
   <Layout>
     <TopSection image="elisa.jpg">
-      <Trans id="about.title">Qui suis-je ?</Trans>
+      <Trans id="about.title">Qui suis-je</Trans>
     </TopSection>
+    <Div p="50px 50px 0">
+      <LeadP>
+        Ayant toujours été passionnée par la compréhension de la nature humaine, il a été très naturel pour moi
+        d’orienter mes études vers la relation d’aide. Au travers de mon parcours, j’ai intégré différentes visions et
+        orientations afin de pouvoir offrir différents outils aux personnes qui viennent me voir.
+      </LeadP>
+    </Div>
     <Row>
       <Cell w={{ xs: 1, sm: 1 / 2, md: 1 / 3 }}>
         <Div p="50px 0 50px 50px">
@@ -19,29 +26,36 @@ const AboutPage = () => (
       </Cell>
       <Cell w={{ xs: 1, sm: 1 / 2, md: 2 / 3 }}>
         <Div p="50px">
-          <SubTitle>
-            <Trans id="about.my-journey">Mon parcours</Trans>
-          </SubTitle>
-          <P>
+          <P style={{ marginTop: 0 }}>
             Selon les légendes familiales, ma vocation de psychologue a été décelée très tôt : dès ma petite enfance,
             j'étais naturellement attirée vers les autres et, en particulier, vers les enfants ou les personnes en
-            difficultés.<br/>J'ai aussi ressenti – je crois depuis toujours – l'élan d’explorer, de connaître en profondeur
-            les relations humaines, les différents phénomènes qui font notre société, afin de comprendre leur raison
-            d’être...<br/>Cette soif des connaissances m'a amené, en parallèle à mon parcours universitaire et à mon entrée
-            dans le monde des adultes, à me lancer dans des voyages à l’autre bout du monde et à me plonger dans des
-            voyages intérieurs.<br/>Les premiers m’ont permis de connaître des réalités, cultures et modes de vie
-            complètement différents du mien, mais surtout de me connaître plus en profondeur, loin de la célèbre « zone
-            de confort », la cage dorée qui nous berce dans nos habitudes.<br/>Les deuxièmes, qui m’ont conduit à la
-            recherche de la vérité et de mon essence, furent tout aussi passionnants mais aussi parfois tortueux et
-            difficiles.
+            difficultés.
+            <br />
+            J'ai aussi ressenti – je crois depuis toujours – l'élan d’explorer, de connaître en profondeur les relations
+            humaines, les différents phénomènes qui font notre société, afin de comprendre leur raison d’être...
+            <br />
+            Cette soif des connaissances m'a amené, en parallèle à mon parcours universitaire et à mon entrée dans le
+            monde des adultes, à me lancer dans des voyages à l’autre bout du monde et à me plonger dans des voyages
+            intérieurs.
+            <br />
+            Les premiers m’ont permis de connaître des réalités, cultures et modes de vie complètement différents du
+            mien, mais surtout de me connaître plus en profondeur, loin de la célèbre « zone de confort », la cage dorée
+            qui nous berce dans nos habitudes.
+            <br />
+            Les deuxièmes, qui m’ont conduit à la recherche de la vérité et de mon essence, furent tout aussi
+            passionnants mais aussi parfois tortueux et difficiles.
           </P>
           <P>
             La connaissance de soi n’est pas toujours un voyage plaisant, surtout lorsqu’on va à la rencontre de notre
-            part d’ombre, de nos peurs et de nos limites. Jung disait: <em>« Ce n’est pas en regardant la lumière qu’on
-            devient lumineux, mais en plongeant dans son obscurité. Mais ce travail est souvent désagréable, donc
-              impopulaire. »</em><br/>Pour cette raison, il peut être utile d’être accompagné par quelqu’un qui est déjà passé par
-            ces sentiers tortueux, même s’il est important de se rappeler que nous sommes tous en chemin et que le
-            travail sur soi continue toute la vie…
+            part d’ombre, de nos peurs et de nos limites. Jung disait:{' '}
+            <em>
+              « Ce n’est pas en regardant la lumière qu’on devient lumineux, mais en plongeant dans son obscurité. Mais
+              ce travail est souvent désagréable, donc impopulaire. »
+            </em>
+            <br />
+            Pour cette raison, il peut être utile d’être accompagné par quelqu’un qui est déjà passé par ces sentiers
+            tortueux, même s’il est important de se rappeler que nous sommes tous en chemin et que le travail sur soi
+            continue toute la vie…
           </P>
           <P>
             J'ai beaucoup de gratitude pour tous les thérapeutes et formateurs qui m’ont transmis les connaissances et

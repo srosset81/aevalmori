@@ -9,7 +9,7 @@
   },
   messages: {
     'about.my-journey': 'Mon parcours',
-    'about.title': 'Qui suis-je ?',
+    'about.title': 'Qui suis-je',
     'home.work': 'Psicologa',
     'menu.about': 'Chi sono ?',
     'menu.contact': 'Contatto',
