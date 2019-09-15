@@ -33,16 +33,19 @@ class ContactSection extends React.Component {
     return (
       <Row>
         <Cell w={{ xs: 1, sm: 1 / 3 }}>
-          <Div p={{ xs: '25px 25px 0', sm: '40px ' }}>
+          <Div p={{ xs: '25px 25px 0', sm: '50px ' }}>
             <SubTitle>Rencontrons-nous !</SubTitle>
             <P>
               N'hésitez pas à prendre contact avec moi en laissant vos coordonnées ci-contre, je répondrai à votre
               demande dans les meilleurs délais.
             </P>
+            <P>
+              Vous pouvez également m'appeler ou m'envoyer un SMS au <a href="tel:+33659026479">06 59 02 64 79</a>
+            </P>
           </Div>
         </Cell>
         <Cell w={{ xs: 1, sm: 2 / 3 }}>
-          <Div p={{ xs: '10px 25px 25px', sm: '40px ' }}>
+          <Div p={{ xs: '10px 25px 25px', sm: '50px ' }}>
             <Form
               onSubmit={this.onSubmit}
               render={({ handleSubmit, submitError, pristine, submitting, reset }) => (

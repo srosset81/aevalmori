@@ -2,10 +2,9 @@ import React from 'react';
 import NextApp from 'next/app';
 import { I18nProvider } from '@lingui/react';
 import getCatalog from '@catalogs';
-import apolloClient from '../config/apolloClient';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { withApollo } from '../utils/apollo';
 
-export default class App extends NextApp {
+class App extends NextApp {
   static async getInitialProps({ query, Component, router, ctx }) {
     let pageProps = {};
 
@@ -20,11 +19,11 @@ export default class App extends NextApp {
     const { Component, pageProps, locale } = this.props;
     const catalog = getCatalog(locale);
     return (
-      <ApolloProvider client={apolloClient}>
-        <I18nProvider language={locale} catalogs={{ [locale]: catalog }}>
-          <Component {...pageProps} />
-        </I18nProvider>
-      </ApolloProvider>
+      <I18nProvider language={locale} catalogs={{ [locale]: catalog }}>
+        <Component {...pageProps} />
+      </I18nProvider>
     );
   }
 }
+
+export default withApollo(App);

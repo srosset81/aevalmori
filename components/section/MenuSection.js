@@ -10,9 +10,9 @@ const MenuSection = ({ right, image, title, children, link = 'index' }) => (
       <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '200px', sm: '500px' }} />
     </Cell>
     <Cell w={{ xs: 1, sm: 1 / 3 }} order="1" align="middle">
-      <Div p="40px">
+      <Div p={{ xs: '25px', sm: '50px' }}>
         <SubTitle>{title}</SubTitle>
-        <P m="10px 0 15px">{children}</P>
+        <P m="25px 0">{children}</P>
         <PageLink page={link}>
           <Button>En savoir +</Button>
         </PageLink>

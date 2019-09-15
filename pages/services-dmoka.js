@@ -1,7 +1,14 @@
 import React from 'react';
 import { Layout } from 'components/app';
 import { LeadP, P } from 'components/text';
-import { TopSection, ContactSection, FooterSection, QuoteSection, ContentSection } from 'components/section';
+import {
+  TopSection,
+  ContactSection,
+  FooterSection,
+  QuoteSection,
+  ContentSection,
+  TestimonySection
+} from 'components/section';
 import { Trans } from '@lingui/macro';
 import { SideImage } from '../components/media';
 
@@ -50,10 +57,7 @@ const ServicesDmokaPage = () => (
         créateur de sa propre vie.
       </P>
     </ContentSection>
-    <QuoteSection author="C.G. Jung">
-      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
-      ne fait que rêver ; celui qui regarde en soi se réveille.
-    </QuoteSection>
+    <TestimonySection type="Dmoka" />
     <ContactSection />
     <FooterSection />
   </Layout>

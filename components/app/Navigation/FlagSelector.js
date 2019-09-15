@@ -54,17 +54,17 @@ class FlagSelector extends React.Component {
     return (
       <ClickableDiv w="100%" h="100%" align="middle" onClick={this.showMenu}>
         <Image src={`/static/images/flag_${value}.png`} w="30px" />
-        <SlidingDiv
-          ref={e => (this.slidingDiv = e)}
-          top={this.state.showMenu ? '-45px' : '0'}
-          bottom={this.state.showMenu ? '45px' : '0'}
-          left="-1px"
-          right="-3px"
-          align="middle"
-          onClick={() => this.onSelect(otherLocale)}
-        >
-          <Image src={`/static/images/flag_${otherLocale}.png`} w="30px" />
-        </SlidingDiv>
+        {/*<SlidingDiv*/}
+        {/*  ref={e => (this.slidingDiv = e)}*/}
+        {/*  top={this.state.showMenu ? '-45px' : '0'}*/}
+        {/*  bottom={this.state.showMenu ? '45px' : '0'}*/}
+        {/*  left="-1px"*/}
+        {/*  right="-3px"*/}
+        {/*  align="middle"*/}
+        {/*  onClick={() => this.onSelect(otherLocale)}*/}
+        {/*>*/}
+        {/*  <Image src={`/static/images/flag_${otherLocale}.png`} w="30px" />*/}
+        {/*</SlidingDiv>*/}
       </ClickableDiv>
     );
   }

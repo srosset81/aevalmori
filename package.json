@@ -9,6 +9,7 @@
     "now-build": "next build",
     "now:dev": "now dev",
     "now:deploy": "now",
+    "now:alias": "now alias aevalmori",
     "lingui:extract": "lingui extract --clean",
     "lingui:compile": "lingui compile",
     "prettier": "prettier --single-quote --print-width 120 --write --ignore-path .gitignore '{.,components,config,pages,utils}/**/*.js'"
@@ -18,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
+    "@apollo/react-ssr": "^3.1.0",
     "@lingui/react": "^2.8.3",
     "@sendgrid/mail": "^6.4.0",
     "apollo-boost": "^0.4.4",
@@ -31,6 +33,7 @@
     "final-form": "^4.6.1",
     "fs": "0.0.1-security",
     "graphql": "^14.4.2",
+    "isomorphic-unfetch": "^3.0.0",
     "locale": "^0.1.0",
     "module": "^1.2.5",
     "next": "^9.0.5",

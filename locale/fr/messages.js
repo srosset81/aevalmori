@@ -6,19 +6,18 @@
     }
   },
   messages: {
-    'about.my-journey': 'Mon parcours',
     'about.title': 'Qui suis-je',
-    'home.work': 'Psychologue',
+    'about.vision': 'Ma vision',
     'menu.about': 'Qui suis-je ?',
     'menu.contact': 'Contact',
     'menu.dmoka': 'D.M.O.K.A.',
     'menu.family-constellations': 'Constellations familiales',
     'menu.home': 'Accueil',
     'menu.individual-consulting': 'S\xE9ances individuelles',
-    'menu.links': 'Liens amis',
-    'menu.online-consulting': 'Consultations en ligne',
     'menu.testimony': 'T\xE9moignages',
-    'service.individual.title': 'Consultations individuelles',
+    'services.constellations.title': 'Constellations familiales',
+    'services.dmoka.title': 'D.M.O.K.A.',
+    'services.individuals.title': 'S\xE9ances individuelles',
     'testimonies.title': 'T\xE9moignages'
   }
 };

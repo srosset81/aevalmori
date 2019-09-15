@@ -2,7 +2,7 @@ const express = require('express');
 const locale = require('locale');
 
 const port = process.env.PORT || 3000;
-const supportedLocales = ['fr', 'it'];
+const supportedLocales = ['fr'];
 const defaultLocale = 'fr';
 
 const app = express();

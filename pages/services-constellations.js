@@ -23,9 +23,10 @@ const ServicesConstellationsPage = () => (
         appel à moi dans leur singularité et leur demande spécifique.
       </P>
       <P>
-        Cette approche dite « intégrative » reflète ma vision du monde et de l’être humain (lien vers « ma vision »).
-        Elle permet de porter un regard plus large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il
-        n’existe pas une seule voie pour dépasser une problématique, et que chaque parcours est différent d’un autre.
+        Cette approche dite « intégrative » reflète{' '}
+        <a href="/fr/qui-suis-je#vision">ma vision du monde et de l’être humain</a>. Elle permet de porter un regard
+        plus large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il n’existe pas une seule voie pour
+        dépasser une problématique, et que chaque parcours est différent d’un autre.
       </P>
       <P>
         Il est en effet souvent nécessaire d'élargir l'horizon au « système » auquel appartient la personne, afin

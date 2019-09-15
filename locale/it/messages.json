@@ -1,16 +1,15 @@
 {
-  "about.my-journey": "",
   "about.title": "",
-  "home.work": "Psicologa",
+  "about.vision": "",
   "menu.about": "Chi sono ?",
   "menu.contact": "Contatto",
   "menu.dmoka": "D.M.O.K.A.",
   "menu.family-constellations": "Costellazioni familiari",
   "menu.home": "Accoglienza",
   "menu.individual-consulting": "Consultazioni individuali",
-  "menu.links": "",
-  "menu.online-consulting": "Consultazioni online",
   "menu.testimony": "Testimonianze",
-  "service.individual.title": "",
+  "services.constellations.title": "",
+  "services.dmoka.title": "",
+  "services.individuals.title": "",
   "testimonies.title": "Testimonianze"
 }

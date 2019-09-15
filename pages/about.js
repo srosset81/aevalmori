@@ -66,23 +66,19 @@ const AboutPage = () => (
       <P>
         Nous sommes à un moment historique de grand renouvellement, nous avons accès à d’innombrables informations,
         thérapies, livres, techniques… Les choix que nous pouvons faire pour notre vie semblent infinis et, parfois,
-        cela nous paralyse et nous désoriente, parce qu’il y a moins de points de repères que dans le passé.
-      </P>
-      <P>
-        Pour cette raison il est important, aujourd’hui plus que jamais, d’entrer en contact profondément avec
-        nous-même, avec cette part de sagesse qui nous accompagne depuis toujours, même si nous n’avons pas toujours été
-        à son écoute. C’est grâce à elle que nous pouvons reconquérir un espace de liberté intérieur et retrouver la
-        voie qui nous est propre.
+        cela nous paralyse et nous désoriente, parce qu’il y a moins de points de repères que dans le passé. Pour cette
+        raison il est important, aujourd’hui plus que jamais, d’entrer en contact profondément avec nous-même, avec
+        cette part de sagesse qui nous accompagne depuis toujours, même si nous n’avons pas toujours été à son écoute.
+        C’est grâce à elle que nous pouvons reconquérir un espace de liberté intérieur et retrouver la voie qui nous est
+        propre.
       </P>
     </ContentSection>
     <QuoteSection author="C.G. Jung">
       Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
       ne fait que rêver ; celui qui regarde en soi se réveille.
     </QuoteSection>
-    <ContentSection>
-      <SubTitle>
-        <Trans id="about.vision">Ma vision</Trans>
-      </SubTitle>
+    <ContentSection id="vision">
+      <SubTitle>Ma vision</SubTitle>
       <SideImage src="/static/images/colibris.jpg" align="right" />
       <P>
         Nous ne sommes pas seulement notre psychisme ou notre corps, mais nous formons un tout au sein duquel la

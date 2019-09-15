@@ -34,7 +34,9 @@ const TestimoniesPage = () => {
               <Div bg="lightGrey" key={i}>
                 {i > 0 && (
                   <Div align="middle">
-                    <Divider style={{ fill: 'rgba(213,121,139,0.39)' }} width="280px" />
+                    <Div w={{ xs: 4 / 5, sm: 3 / 5 }}>
+                      <Divider style={{ fill: 'rgba(213,121,139,0.39)' }} width="100%" />
+                    </Div>
                   </Div>
                 )}
                 <Testimony testimony={testimony} />

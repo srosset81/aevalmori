@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from 'components/app';
 import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
-import { P } from 'components/text';
+import { LeadP, P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 import { MenuSection, QuoteSection, FooterSection } from 'components/section';
 
@@ -58,9 +58,16 @@ const IndexPage = () => (
       l’amour là où il y a eu souffrance, de laisser les fardeaux et les conflits dont nous sommes chargés et qui ne
       nous appartiennent pas, en laissant à chacun sa part de responsabilité.
     </MenuSection>
+    <MenuSection left title="D.M.O.K.A." image="birds-chain.jpg" link="services-dmoka">
+      La D.M.O.K.A. est une approche neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de
+      changer ses croyances, d’adopter de nouveaux comportements et de se sortir des schémas récurrents en reconnaissant
+      et en renforçant ses propres ressources.
+    </MenuSection>
+    <MenuSection right title="Témoignages" image="flowers.jpg" link="testimonies">
+      Au fil du temps, j'ai récolté de très beaux témoignages que je souhaite partager avec vous ici.
+    </MenuSection>
     <MenuSection title="Contactez-moi" image="contact.jpg" link="contact">
-      N'hésitez pas à prendre contact avec moi en laissant vos coordonnées, je répondrai à votre demande dans les
-      meilleurs délais.
+      N'hésitez pas à prendre contact avec moi, je répondrai à votre demande dans les meilleurs délais.
     </MenuSection>
     <FooterSection />
   </Layout>

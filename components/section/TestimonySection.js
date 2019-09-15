@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Testimony } from 'components/ui';
 import { Div } from '../layout';
+import { Loading } from '../media';
 
 const TestimonySection = ({ type }) => {
   const { loading, error, data } = useQuery(gql`
