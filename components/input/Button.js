@@ -120,8 +120,8 @@ const buttonSizes = {
     height: '56px'
   },
   normal: {
-    padding: '0 12px',
-    height: '39px'
+    padding: '0 11px',
+    height: '38px'
   },
   medium: {
     padding: '0 10px',
