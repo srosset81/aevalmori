@@ -40,7 +40,7 @@ class ContactSection extends React.Component {
               demande dans les meilleurs délais.
             </P>
             <P>
-              Vous pouvez également m'appeler ou m'envoyer un SMS au <a href="tel:+33659026479">06 59 02 64 79</a>
+              Vous pouvez également m'appeler ou m'envoyer un SMS au <a href="tel:+33659026479">06 59 02 64 79</a>.
             </P>
           </Div>
         </Cell>

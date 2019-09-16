@@ -3,7 +3,7 @@ import { Layout } from 'components/app';
 import { Cell, Div, Row } from 'components/layout';
 import { Image, SideImage } from 'components/media';
 import { P, LeadP, SubTitle } from 'components/text';
-import { TopSection, FooterSection, QuoteSection, ContentSection } from 'components/section';
+import { TopSection, FooterSection, QuoteSection, ContentSection, TestimonySection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const AboutPage = () => (
@@ -73,9 +73,10 @@ const AboutPage = () => (
         propre.
       </P>
     </ContentSection>
-    <QuoteSection author="C.G. Jung">
-      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
-      ne fait que rêver ; celui qui regarde en soi se réveille.
+    <QuoteSection author="Ameya Canovi" bg="darkPurple" color="white">
+      Si vous y réfléchissez, votre malheur n'est pas causé par l'autre. Il vous a toujours appartenu. Tant que vous ne
+      faites pas un travail sérieux, constant et honnête avec vous-même, vous rencontrerez toujours les mêmes
+      dynamiques, les mêmes histoires
     </QuoteSection>
     <ContentSection id="vision">
       <SubTitle>Ma vision</SubTitle>
@@ -114,6 +115,7 @@ const AboutPage = () => (
         .
       </P>
     </ContentSection>
+    <TestimonySection id="1368702" />
     <FooterSection />
   </Layout>
 );

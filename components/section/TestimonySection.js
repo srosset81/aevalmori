@@ -3,12 +3,13 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Testimony } from 'components/ui';
 import { Div } from '../layout';
-import { Loading } from '../media';
 
-const TestimonySection = ({ type }) => {
+const TestimonySection = ({ type, id }) => {
+  const filter = type ? `participatedAt: {eq: "${type}"}` : `id: {eq: "${id}"}`;
+
   const { loading, error, data } = useQuery(gql`
     {
-      testimonyFr(filter: {participatedAt: {eq: "${type}"}}) {
+      testimonyFr(filter: {${filter}}) {
         title
         content(markdown: true)
         surname
@@ -19,7 +20,7 @@ const TestimonySection = ({ type }) => {
   `);
 
   return data.testimonyFr ? (
-    <Div bg="lightGrey">
+    <Div bg="ultraLightGrey">
       <Testimony testimony={data.testimonyFr} showMore />
     </Div>
   ) : null;

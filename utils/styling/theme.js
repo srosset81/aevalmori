@@ -20,12 +20,12 @@ const theme = {
     caviarDreams: "'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
-    lightRose: '#EFCFD9',
+    lightRose: '#cfadf4',
     rose: '#DC00E4',
     purple: '#B500DF',
-    darkPurple: '#6d0092',
+    darkPurple: '#976694',
     darkBlue: '#063A56',
-    blue: '#23719B',
+    blue: '#B159FA',
     lightBlue: '#EBF0F4',
     green: '#3ea542',
     darkGreen: '#3C763D',

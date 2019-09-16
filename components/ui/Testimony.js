@@ -9,7 +9,7 @@ import QuoteClose from '../../svg/quote-close.svg';
 import { P, SubTitle } from '../text';
 import { Button } from '../input';
 import { PageLink } from '../../utils/router';
-import { Loading } from '../media';
+import { Hidden, Visible } from '../layout';
 
 function nl2br(str) {
   const newlineRegex = /(\r\n|\r|\n)/g;
@@ -29,8 +29,16 @@ function nl2br(str) {
 }
 
 const Gradient = styled(AbsoluteDiv)`
-  background: linear-gradient(to bottom, transparent, #bbb);
+  background: linear-gradient(to bottom, transparent, #ddd);
 `;
+
+const AllTestimoniesLink = ({ float }) => (
+  <PageLink page="testimonies">
+    <Button colors="lightGrey" style={{ float }} w={float ? undefined : '100%'}>
+      Tous les témoignages
+    </Button>
+  </PageLink>
+);
 
 const Testimony = ({ testimony, showMore }) => {
   const contentRef = useRef(null);
@@ -41,34 +49,41 @@ const Testimony = ({ testimony, showMore }) => {
   }, [contentRef.current]);
 
   return testimony ? (
-    <Div p={{ xs: '45px 40px 10px 45px', md: '50px 90px 30px' }}>
+    <Div p={{ xs: '30px 25px 15px', md: '50px 80px 40px 90px' }}>
       <AbsoluteDiv top left p={{ xs: '15px', md: '50px 40px 0px' }}>
-        <QuoteOpen style={{ fill: 'grey' }} />
+        <QuoteOpen style={{ fill: '#BBB' }} />
       </AbsoluteDiv>
       <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
         <SubTitle>{testimony.title}</SubTitle>
         <P>{nl2br(testimony.content.replace(/<[^>]*>?/gm, ''))}</P>
         {showMore && (
-          <PageLink page="testimonies">
-            <Button colors="mediumGrey" style={{ float: 'left' }}>
-              Tous les témoignages
-            </Button>
-          </PageLink>
+          <Visible sm md lg xl>
+            <AllTestimoniesLink float="left" />
+          </Visible>
         )}
-        <P fontSize="15pt" align="right" italic>
+        <P fontSize="1.3em" align="right" italic lineHeight="1em">
           - {testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}
         </P>
+        {showMore && (
+          <Hidden sm md lg xl>
+            <Div p="0 0 15px">
+              <AllTestimoniesLink />
+            </Div>
+          </Hidden>
+        )}
         {isLongText && !isExpanded && (
           <Gradient bottom left right h="150px" align="middle">
-            <Button colors="mediumGrey" onClick={() => setIsExpanded(true)}>
+            <Button colors="lightGrey" onClick={() => setIsExpanded(true)} m="30px 0 0">
               Lire plus
             </Button>
           </Gradient>
         )}
       </Div>
-      <AbsoluteDiv bottom right p={{ xs: '0 15px 80px', md: '0px 40px 110px' }}>
-        <QuoteClose style={{ fill: 'grey' }} />
-      </AbsoluteDiv>
+      {(!isLongText || isExpanded) && (
+        <AbsoluteDiv bottom right p={{ xs: showMore ? '0 15px 120px' : '0 15px 65px', md: '0px 40px 110px' }}>
+          <QuoteClose style={{ fill: '#BBB' }} />
+        </AbsoluteDiv>
+      )}
     </Div>
   ) : null;
 };

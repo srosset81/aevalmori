@@ -31,7 +31,7 @@ const TestimoniesPage = () => {
           {data &&
             data.allTestimonyFrs &&
             data.allTestimonyFrs.map((testimony, i) => (
-              <Div bg="lightGrey" key={i}>
+              <Div bg="ultraLightGrey" key={i}>
                 {i > 0 && (
                   <Div align="middle">
                     <Div w={{ xs: 4 / 5, sm: 3 / 5 }}>

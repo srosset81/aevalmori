@@ -68,6 +68,13 @@ const buttonColors = {
     hoverFont: 'mediumGrey',
     hoverBg: 'white'
   },
+  lightGrey: {
+    font: 'white',
+    bg: 'lightGrey',
+    border: 'lightGrey',
+    hoverFont: 'mediumGrey',
+    hoverBg: 'ultraLightGrey'
+  },
   banner: {
     font: 'darkRed',
     bg: 'white',
