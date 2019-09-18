@@ -1,12 +1,13 @@
 import fetch from 'node-fetch';
 
+const listDomain = 'us17';
 const listId = 'eda7a7d2c1';
 const apiKey = '235f612d17ed4b857a44bd0cc8937146-us17';
 
 export default function handle(req, res) {
-  const { email } = req.body;
+  const { email, name } = req.body;
 
-  return fetch(`https://us17.api.mailchimp.com/3.0/lists/${listId}/members/`, {
+  return fetch(`https://${listDomain}.api.mailchimp.com/3.0/lists/${listId}/members/`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -15,11 +16,11 @@ export default function handle(req, res) {
     },
     body: JSON.stringify({
       email_address: email,
-      status: 'subscribed'
-      // "merge_fields": {
-      //     "FNAME": "Urist",
-      //     "LNAME": "McVankab"
-      // }
+      status: 'subscribed',
+      merge_fields: {
+        FNAME: name
+        //  LNAME: "lastName"
+      }
     })
   })
     .then(() => {

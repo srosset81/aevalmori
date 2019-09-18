@@ -2,11 +2,12 @@ import React from 'react';
 import { PageLink } from 'utils/router';
 import { styled } from 'utils/styling';
 
-import { Li } from 'components/layout';
+import { Div, Li } from 'components/layout';
 import { Text } from 'components/text';
 
-const StyledLi = styled(Li)`
-  ${props => (props.indent ? `padding: 7px 0 6px 15px;` : `padding: 7px 0 6px;`)} width: 100%;
+const StyledDiv = styled(Div)`
+  ${props => (props.indent ? `padding: 5px 0 4px 25px;` : `padding: 4px 0 3px 10px;`)}
+  width: 100%;
 `;
 
 const StyledA = styled.a`
@@ -18,13 +19,15 @@ const StyledA = styled.a`
 `;
 
 const NavLink = ({ page, indent, children }) => (
-  <StyledLi indent={indent}>
-    <PageLink page={page}>
-      <Text color="darkGrey" fontSize="0.95em">
-        <StyledA>{children}</StyledA>
-      </Text>
-    </PageLink>
-  </StyledLi>
+  <Li>
+    <StyledDiv indent={indent}>
+      <PageLink page={page}>
+        <Text color="darkGrey" fontSize="0.95em">
+          <StyledA>{children}</StyledA>
+        </Text>
+      </PageLink>
+    </StyledDiv>
+  </Li>
 );
 
 NavLink.defaultProps = {

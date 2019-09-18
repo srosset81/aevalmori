@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,700,400italic,700italic|Montserrat:400,700|Roboto:300,400,500,700"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
           <link href="/static/fonts/stylesheet.css" rel="stylesheet" />
           <meta httpEquiv="Content-Language" content={locale} />
           <script dangerouslySetInnerHTML={{ __html: linguiCatalog }} />

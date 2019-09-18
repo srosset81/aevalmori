@@ -46,7 +46,7 @@ const Navigation = () => (
       </PageLink>
     </Div>
     <Separator />
-    <Div p="20px 30px 70px">
+    <Div p="10px 15px 70px">
       <Ul>
         <NavLink page="index">
           <Trans id="menu.home">Accueil</Trans>

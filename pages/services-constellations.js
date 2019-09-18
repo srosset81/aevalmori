@@ -51,7 +51,7 @@ const ServicesConstellationsPage = () => (
         créateur de sa propre vie.
       </P>
     </ContentSection>
-    <TestimonySection type="Constellation" />
+    <TestimonySection id="1519285" />
     <FooterSection />
   </Layout>
 );

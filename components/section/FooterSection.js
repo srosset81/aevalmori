@@ -6,13 +6,6 @@ import { P, Text } from 'components/text';
 import { FORM_ERROR } from 'final-form';
 
 class FooterSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      messageSent: false
-    };
-  }
-
   onSubmit = async values => {
     const result = await fetch('/api/newsletter', {
       method: 'POST',
@@ -24,9 +17,10 @@ class FooterSection extends React.Component {
     });
 
     if (!result.ok) {
+      alert("Impossible de s'abonner à la newsletter. Veuillez me contacter directement.");
       return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
     } else {
-      this.setState({ messageSent: true });
+      alert('Vous vous êtes bien inscrit à la newsletter, merci !');
     }
   };
 
@@ -49,7 +43,7 @@ class FooterSection extends React.Component {
             <P color="white" linkColor="white" lineHeight="1.4em">
               Abonnez-vous pour rester
               <br />
-              informé de notre actualité.
+              informé de notre actualit&nbsp;!
             </P>
           </Cell>
           <Cell w={{ xs: 1, sm: 1 / 2 }} p={{ xs: '0', sm: '25px 0 0' }}>
@@ -62,11 +56,6 @@ class FooterSection extends React.Component {
                     reset();
                   }}
                 >
-                  {this.state.messageSent && (
-                    <BorderedDiv borderRadius="5px" bg="lightGreen" p="15px" m="0 0 15px">
-                      <Text>Vous avez bien été inscrit, merci !</Text>
-                    </BorderedDiv>
-                  )}
                   <Row>
                     <Cell w={{ xs: 1, sm: 2 / 5 }}>
                       <Label value="Votre nom" color="white">
