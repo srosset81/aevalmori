@@ -21,16 +21,17 @@ const SideImage = styled.img`
   margin-right: ${props => (props.align === 'left' ? '50px' : '0px')};
   margin-bottom: 25px;
   ${mediaQuery('sm')} {
-    margin-bottom: 35px;
+    margin-bottom: ${props => (props.noBottomMargin ? '0px' : '35px')};
   }
   &::after {
-    clear: both;
+    clear: both; 
   }
 `;
 
 SideImage.propTypes = {
   src: PropTypes.string.isRequired,
-  align: PropTypes.string
+  align: PropTypes.string,
+  noBottomMargin: PropTypes.bool
 };
 
 SideImage.defaultProps = {

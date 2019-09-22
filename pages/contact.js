@@ -1,14 +1,17 @@
 import React from 'react';
+import Head from 'next/head';
 import { Layout } from 'components/app';
 import { TopSection, FooterSection, ContactSection, QuoteSection } from 'components/section';
 
 const ContactPage = () => (
   <Layout>
+    <Head>
+      <title>Contactez-moi - Anna Elisa Valmori, psychologue à Paris</title>
+    </Head>
     <TopSection image="contact.jpg">Contactez-moi</TopSection>
     <ContactSection />
-    <QuoteSection author="C.G. Jung" bg="lightRose">
-      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
-      ne fait que rêver ; celui qui regarde en soi se réveille.
+    <QuoteSection author="Bert Hellinger" color="black" bg="lightRose">
+      La réalité rend fort et libre quand elle est reconnue.
     </QuoteSection>
     <FooterSection />
   </Layout>

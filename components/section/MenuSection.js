@@ -17,7 +17,7 @@ const MenuSection = ({ right, image, title, children, link = 'index' }) => (
         <SubTitle>
           <PageLink page={link}>{title}</PageLink>
         </SubTitle>
-        <P m="25px 0">{children}</P>
+        <P m={{ xs: '15px 0', sm: '25px 0' }}>{children}</P>
         <PageLink page={link}>
           <Button>En savoir +</Button>
         </PageLink>

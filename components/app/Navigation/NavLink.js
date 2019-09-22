@@ -22,7 +22,7 @@ const NavLink = ({ page, indent, children }) => (
   <Li>
     <StyledDiv indent={indent}>
       <PageLink page={page}>
-        <Text color="darkGrey" fontSize="0.95em">
+        <Text color="darkGrey" fontSize="1em">
           <StyledA>{children}</StyledA>
         </Text>
       </PageLink>

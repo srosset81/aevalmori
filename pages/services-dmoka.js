@@ -1,29 +1,38 @@
 import React from 'react';
+import YouTube from 'react-youtube';
+import Head from 'next/head';
 import { Layout } from 'components/app';
+import { Div } from 'components/layout';
 import { LeadP, P } from 'components/text';
 import {
   TopSection,
   ContactSection,
   FooterSection,
-  QuoteSection,
   ContentSection,
-  TestimonySection
+  TestimonySection,
+  QuoteSection
 } from 'components/section';
-import { Trans } from '@lingui/macro';
 import { SideImage } from '../components/media';
 
 const ServicesDmokaPage = () => (
-  <Layout>
-    <TopSection image="birds-chain.jpg">
-      <Trans id="services.dmoka.title">D.M.O.K.A.</Trans>
+  <Layout title="D.M.O.K.A.">
+    <Head>
+      <title>
+        D.M.O.K.A. à Paris- Déprogrammation par les Mouvements Oculaires, Kinesthésiques et Auditifs - Anna Elisa
+        Valmori, psychologue à Paris
+      </title>
+    </Head>
+    <TopSection image="wave.jpg" position="center bottom">
+      D.m.o.k.a.
     </TopSection>
     <ContentSection>
       <LeadP>
-        La D.M.O.K.A. est une approche neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de
-        changer ses croyances, d’adopter de nouveaux comportements et de se sortir des schémas récurrents en
-        reconnaissant et en renforçant ses propres ressources.
+        La D.M.O.K.A. (Déprogrammation par les Mouvements Oculaires, Kinesthésiques et Auditifs) est une approche
+        neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de changer ses croyances, d’adopter
+        de nouveaux comportements et de se sortir des schémas récurrents en reconnaissant et en renforçant ses propres
+        ressources.
       </LeadP>
-      <SideImage src="/static/images/adult-adventure.jpg" />
+      <SideImage src="/static/images/eye-2.jpg" />
       <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
@@ -58,6 +67,23 @@ const ServicesDmokaPage = () => (
       </P>
     </ContentSection>
     <TestimonySection type="Dmoka" />
+    <Div align="middle" p={{ xs: '25px', sm: '50px' }}>
+      <YouTube
+        videoId="IlAUmzI6O9E"
+        opts={{
+          height: '390',
+          width: '690',
+          playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 0
+          }
+        }}
+      />
+    </Div>
+    <QuoteSection author="C.G. Jung" bg="lightRose">
+      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
+      ne fait que rêver ; celui qui regarde en soi se réveille.
+    </QuoteSection>
     <ContactSection />
     <FooterSection />
   </Layout>

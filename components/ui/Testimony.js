@@ -50,11 +50,11 @@ const Testimony = ({ testimony, showMore }) => {
 
   return testimony ? (
     <Div p={{ xs: '30px 25px 15px', md: '50px 80px 40px 90px' }}>
-      <AbsoluteDiv top left p={{ xs: '15px', md: '50px 40px 0px' }}>
-        <QuoteOpen style={{ fill: '#BBB' }} />
+      <AbsoluteDiv top left p={{ xs: '25px 15px 15px', md: '47px 40px 0px' }}>
+        <QuoteOpen style={{ fill: '#bd95f6' }} />
       </AbsoluteDiv>
       <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
-        <SubTitle>{testimony.title}</SubTitle>
+        <SubTitle p={{ xs: '0 0 0 30px', sm: '0px' }}>{showMore ? 'Témoignage' : testimony.title}</SubTitle>
         <P>{nl2br(testimony.content.replace(/<[^>]*>?/gm, ''))}</P>
         {showMore && (
           <Visible sm md lg xl>
@@ -73,7 +73,7 @@ const Testimony = ({ testimony, showMore }) => {
         )}
         {isLongText && !isExpanded && (
           <Gradient bottom left right h="150px" align="middle">
-            <Button colors="lightGrey" onClick={() => setIsExpanded(true)} m="30px 0 0">
+            <Button colors="greyViolet" onClick={() => setIsExpanded(true)} m="30px 0 0">
               Lire plus
             </Button>
           </Gradient>
@@ -81,7 +81,7 @@ const Testimony = ({ testimony, showMore }) => {
       </Div>
       {(!isLongText || isExpanded) && (
         <AbsoluteDiv bottom right p={{ xs: showMore ? '0 15px 120px' : '0 15px 65px', md: '0px 40px 110px' }}>
-          <QuoteClose style={{ fill: '#BBB' }} />
+          <QuoteClose style={{ fill: '#bd95f6' }} />
         </AbsoluteDiv>
       )}
     </Div>

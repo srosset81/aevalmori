@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { Layout } from 'components/app';
 import { SideImage } from 'components/media';
 import { LeadP, P } from 'components/text';
@@ -7,7 +8,10 @@ import { Trans } from '@lingui/macro';
 
 const ServiceIndividualPage = () => (
   <Layout>
-    <TopSection image="plant-growing-2.jpg">
+    <Head>
+      <title>Séances individuelles - Anna Elisa Valmori, psychologue à Paris</title>
+    </Head>
+    <TopSection image="plant-growing-2.jpg" position="bottom right">
       <Trans id="services.individuals.title">Séances individuelles</Trans>
     </TopSection>
     <ContentSection>
@@ -17,6 +21,15 @@ const ServiceIndividualPage = () => (
         de soi selon une vision holistique, transpersonnelle et globale de l'être humain.
       </LeadP>
       <SideImage src="/static/images/bottle-cut.jpg" />
+      <P>
+        Nous sommes à un moment historique de grand renouvellement, nous avons accès à d’innombrables informations,
+        thérapies, livres, techniques… Les choix que nous pouvons faire pour notre vie semblent infinis et, parfois,
+        cela nous paralyse et nous désoriente, parce qu’il y a moins de points de repères que dans le passé. Pour cette
+        raison il est important, aujourd’hui plus que jamais, d’entrer en contact profondément avec nous-même, avec
+        cette part de sagesse qui nous accompagne depuis toujours, même si nous n’avons pas toujours été à son écoute.
+        C’est grâce à elle que nous pouvons reconquérir un espace de liberté intérieur et retrouver la voie qui nous est
+        propre.
+      </P>
       <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font

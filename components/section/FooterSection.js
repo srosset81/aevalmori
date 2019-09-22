@@ -43,7 +43,7 @@ class FooterSection extends React.Component {
             <P color="white" linkColor="white" lineHeight="1.4em">
               Abonnez-vous pour rester
               <br />
-              informé de notre actualit&nbsp;!
+              informé de notre actualité&nbsp;!
             </P>
           </Cell>
           <Cell w={{ xs: 1, sm: 1 / 2 }} p={{ xs: '0', sm: '25px 0 0' }}>
@@ -69,9 +69,7 @@ class FooterSection extends React.Component {
                     </Cell>
                     <Cell w={{ xs: 1, sm: 1 / 5 }}>
                       <Space h="28px" />
-                      <Button disabled={pristine || submitting} colors="mediumGrey">
-                        Envoyer
-                      </Button>
+                      <Button disabled={pristine || submitting}>Envoyer</Button>
                     </Cell>
                   </Row>
                 </form>

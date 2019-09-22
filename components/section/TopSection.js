@@ -3,8 +3,8 @@ import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 
-const TopSection = ({ image, children }) => (
-  <BgImage src={`/static/images/${image}`} h={{ xs: '250px', md: '400px' }} align="middle">
+const TopSection = ({ image, position, children }) => (
+  <BgImage src={`/static/images/${image}`} h={{ xs: '250px', md: '400px' }} align="middle" position={position}>
     <Div>
       <AnimOnAppear>
         <P

@@ -16,6 +16,7 @@ P.propTypes = {
 };
 
 P.defaultProps = {
+  fontSize: '1.1em',
   lineHeight: '1.7em'
 };
 

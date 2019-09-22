@@ -11,6 +11,8 @@
     { "src": "/it/?", "dest": "/?locale=it" },
     { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
     { "src": "/it/chi-sono", "dest": "/about?locale=it" },
+    { "src": "/fr/ma-vision", "dest": "/vision?locale=fr" },
+    { "src": "/it/la-mia-visione", "dest": "/vision?locale=it" },
     { "src": "/fr/consultations-individuelles", "dest": "/services-individuals?locale=fr" },
     { "src": "/it/consultazioni-individuali", "dest": "/services-individuals?locale=it" },
     { "src": "/fr/constellations-familiales", "dest": "/services-constellations?locale=fr" },

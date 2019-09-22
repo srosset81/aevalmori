@@ -27,6 +27,9 @@ const ContentSection = styled(Div)`
   ${P}:last-of-type {
     margin-bottom: 0;
   }
+  ${P}:last-of-type:after {
+    clear: both;
+  }
 `;
 
 ContentSection.propTypes = {

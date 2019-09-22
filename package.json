@@ -45,6 +45,7 @@
     "react-dom": "^16.8.6",
     "react-final-form": "^3.4.0",
     "react-on-screen": "^2.0.4",
+    "react-youtube": "^7.9.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

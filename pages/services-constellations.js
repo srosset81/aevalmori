@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { Layout } from 'components/app';
 import { SideImage } from 'components/media';
 import { LeadP, P } from 'components/text';
@@ -7,6 +8,9 @@ import { Trans } from '@lingui/macro';
 
 const ServicesConstellationsPage = () => (
   <Layout>
+    <Head>
+      <title>Constellations Familiales à Paris - Anna Elisa Valmori, psychologue</title>
+    </Head>
     <TopSection image="birds-sky.jpg">
       <Trans id="services.constellations.title">Constellations familiales</Trans>
     </TopSection>
@@ -16,7 +20,7 @@ const ServicesConstellationsPage = () => (
         l’amour là où il y a eu souffrance, de laisser les fardeaux et les conflits dont nous sommes chargés et qui ne
         nous appartiennent pas, en laissant à chacun sa part de responsabilité.
       </LeadP>
-      <SideImage src="/static/images/birds-black.jpg" />
+      <SideImage src="/static/images/birds-black-violet.jpg" />
       <P>
         Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
         orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
