@@ -8,12 +8,12 @@ import { TopSection, FooterSection, ContentSection, TestimonySection, ContactSec
 import { Trans } from '@lingui/macro';
 
 const Year = ({ year, bg, children }) => (
-  <Cell w={1 / 3} bg={bg}>
-    <Div p="50px">
+  <Cell w={{ xs: 1, sm: 1 / 3 }} bg={bg}>
+    <Div p={{ xs: '30px 25px', sm: "50px" }}>
       <P fontSize="3em" lineHeight="0.8em" m="0">
         {year}
       </P>
-      <P fontSize="1.1em">{children}</P>
+      <P fontSize="1.1em" m="15px 0 0">{children}</P>
     </Div>
   </Cell>
 );
@@ -77,7 +77,7 @@ const AboutPage = () => (
       </P>
     </ContentSection>
     <Row>
-      <Year month="Novembre" year="2005" bg="lightRose">
+      <Year month="Novembre" year="2005" bg="lightBlue">
         Obtention du diplôme de psychologie (Master&nbsp;II), psychologie clinique et communauté (110/110 avec mention)
       </Year>
       <Year month="Décembre" year="2006" bg="lightPurple">
@@ -92,7 +92,7 @@ const AboutPage = () => (
       <Year month="Janvier" year="2011" bg="lightBlue">
         Certificat de Facilitatrice en Constellations Systémiques, délivré par l'Institut de Management Systémique
       </Year>
-      <Year month="Fin" year="2017" bg="lightRose">
+      <Year month="Fin" year="2017" bg="lightPurple">
         Déménagement en France et début d'une nouvelle vie&nbsp;!
       </Year>
     </Row>
