@@ -2,7 +2,7 @@ import { styled } from 'utils/styling';
 import P from './P';
 
 const LeadP = ({ children, ...otherProps }) => (
-  <P italic fontSize={{ xs: '1.1em', md: '1.5em' }} lineHeight="1.3em" m="0" {...otherProps}>
+  <P italic fontSize={{ xs: '1.2em', md: '1.5em' }} lineHeight="1.3em" m="0" {...otherProps}>
     {children}
   </P>
 );

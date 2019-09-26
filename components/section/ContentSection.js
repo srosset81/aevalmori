@@ -4,19 +4,13 @@ import { styled, mediaQuery } from '../../utils/styling';
 import Div from '../layout/Div';
 import P from '../text/P';
 import LeadP from '../text/LeadP';
+import SubTitle from '../text/SubTitle';
 
 // prettier-ignore
 const ContentSection = styled(Div)`
   padding: 25px;
   ${mediaQuery('sm')} {
     padding: 50px;
-  }
-  ${LeadP} {
-    margin-bottom: 25px;
-    ${mediaQuery('sm')} {
-      margin-bottom: 50px;
-    }
-    text-align: justify;
   }
   ${P} {
     text-align: justify;
@@ -29,6 +23,23 @@ const ContentSection = styled(Div)`
   }
   ${P}:last-of-type:after {
     clear: both;
+  }
+  ${LeadP} {
+    margin-bottom: 25px;
+    ${mediaQuery('sm')} {
+      margin-bottom: 50px;
+    }
+    text-align: left;
+  }
+  ${SubTitle} {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 1.2em;
+    
+    ${mediaQuery('sm')} {
+      margin-top: 45px;
+      font-size: 1.5em;
+    }
   }
 `;
 

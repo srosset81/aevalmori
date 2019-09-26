@@ -9,11 +9,13 @@ import { Trans } from '@lingui/macro';
 
 const Year = ({ year, bg, children }) => (
   <Cell w={{ xs: 1, sm: 1 / 3 }} bg={bg}>
-    <Div p={{ xs: '30px 25px', sm: "50px" }}>
+    <Div p={{ xs: '30px 25px', sm: '50px' }}>
       <P fontSize="3em" lineHeight="0.8em" m="0">
         {year}
       </P>
-      <P fontSize="1.1em" m="15px 0 0">{children}</P>
+      <P fontSize="1.1em" m="15px 0 0">
+        {children}
+      </P>
     </Div>
   </Cell>
 );

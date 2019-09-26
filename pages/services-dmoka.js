@@ -3,14 +3,15 @@ import YouTube from 'react-youtube';
 import Head from 'next/head';
 import { Layout } from 'components/app';
 import { Div } from 'components/layout';
-import { LeadP, P } from 'components/text';
+import { LeadP, P, SubTitle } from 'components/text';
 import {
   TopSection,
   ContactSection,
   FooterSection,
   ContentSection,
   TestimonySection,
-  QuoteSection
+  QuoteSection,
+  VideoSection
 } from 'components/section';
 import { SideImage } from '../components/media';
 
@@ -27,59 +28,85 @@ const ServicesDmokaPage = () => (
     </TopSection>
     <ContentSection>
       <LeadP>
-        La D.M.O.K.A. (Déprogrammation par les Mouvements Oculaires, Kinesthésiques et Auditifs) est une approche
+        La D.M.O.K.A.® (Déprogrammation par les Mouvements Oculaires, Kinesthésiques et Auditifs) est une approche
         neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de changer ses croyances, d’adopter
         de nouveaux comportements et de se sortir des schémas récurrents en reconnaissant et en renforçant ses propres
         ressources.
       </LeadP>
       <SideImage src="/static/images/eye-2.jpg" />
       <P>
-        Pendant mon parcours de développement personnel et professionnel, j’ai rencontré et intériorisé différentes
-        orientations et instruments qui me servent comme une « boîte à outils » afin d’aider les personnes qui font
-        appel à moi dans leur singularité et leur demande spécifique.
+        La D.M.O.K.A. est une des thérapies neuro-émotionnelles les plus efficaces. Ses origines remontent à des
+        techniques telles que le yoga occulaire, l'I.M.O. (Intégration par les Mouvements Oculaires) et les mouvements
+        orthoptiques, ainsi que dans l'hypnose, la PNL et les thérapies humanistes.
       </P>
       <P>
-        Cette approche dite « intégrative » reflète ma vision du monde et de l’être humain (lien vers « ma vision »).
-        Elle permet de porter un regard plus large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il
-        n’existe pas une seule voie pour dépasser une problématique, et que chaque parcours est différent d’un autre.
+        Il s’agit d’une méthode thérapeutique qui a été conçue au début des années 2000 par Pascale Chavance,
+        orthoptiste diplômée de la faculté de médecine de Paris et spécialiste en thérapies humanistes et familiales.
+      </P>
+      <SubTitle>Comment fonctionne la D.M.O.K.A. ?</SubTitle>
+      <P>
+        La D.M.O.K.A. permet de désensibiliser des chocs et événements traumatisants – récents et lointains – qui ont
+        laissés des traces dans notre mémoire (agressions, violence, deuils, traumatismes, mais aussi de simples chocs
+        émotionnels, stress, culpabilité, colère...) et d'en désactiver l'impact négatif.
       </P>
       <P>
-        Il est en effet souvent nécessaire d'élargir l'horizon au « système » auquel appartient la personne, afin
-        d'identifier l'événement non-résolu de la généalogie qui a laissé des traces dans la mémoire familiale et qui se
-        répète depuis des générations.
+        La prise de conscience d'un choc ne résout pas toujours de façon automatique les manifestations physiques ou
+        émotionnelles qui en découlent. En effet, le choc inhibe la possibilité d'intégration de l'événement
+        traumatique, qui reste généralement bloqué au niveau du “cerveau émotionnel”, sans pouvoir être traité par
+        l'analyse rationnelle du cerveau cognitif.
       </P>
       <P>
-        J’accompagne le patient dans la recherche de sa propre vérité, pour l’aider à accéder à la connaissance profonde
-        de soi-même. Il n’y a pas de temps pré-établi. C’est la personne qui formule sa propre demande sur la base de ce
-        qui est important pour elle : cela peut être un état de souffrance, un mal-être à dépasser, un besoin de soutien
-        dans un moment délicat de sa vie, le désir d’atteindre un objectif (de type émotionnel, relationnel, matériel…)
-        ou de sortir de scénarios répétitifs.
+        Chaque fois que nous nous trouvons confrontés à un événement qui a des similitude avec le traumatisme original,
+        une réponse de survie est déclenchée par notre cerveau. Or cette réponse est inadapée aux circonstances du
+        moment présent parce que, dans cette état d’urgence, notre cerveau émotionnel prédomine sur notre cerveau
+        rationnel. Nos capacités d'analyse et de prise de décisions sont donc perturbées.
       </P>
       <P>
-        Dans mon accompagnement, je mets à disposition des outils dont la finalité est l’autonomie de la personne et la
-        prise de responsabilité : savoir écouter et répondre à ses propres besoins, pouvoir prendre des décisions sur la
-        base de ce qui nous représente vraiment, avec pour objectif ultime la réalisation profonde de soi.
-      </P>
-      <P>
-        Mon souhait est que chacun d’entre nous puisse transformer ses souffrances en talents – comme les alchimistes
-        transmutaient le plomb en or – et puisse entreprendre le plus ardu mais gratifiant des chemins&nbsp;: devenir
-        créateur de sa propre vie.
+        La D.M.O.K.A. permet, à partir du sentiment négatif ressenti sur le moment, de créer des liens et des
+        connections avec des événements et des traumatismes du passé, offrant ainsi la possibilité d’intégrer des
+        expériences douloureuses. On a ainsi l’opportunité de changer des croyances limitantes ou des perceptions
+        erronées, de mieux se connaître et de trouver des solutions dans notre vie en rapport avec notre propre vérité.
       </P>
     </ContentSection>
+    <VideoSection id="IlAUmzI6O9E" />
+    <ContentSection>
+      <SubTitle>Dans quels cas la D.M.O.K.A. est-elle pertinente ?</SubTitle>
+      <P>
+        La D.M.O.K.A. est très efficace pour les T.S.P.T., les troubles de stress post-traumatique (suite à des viols,
+        violences, accidents..), les deuils non résolus ainsi que dans le traitement des sentiments “négatif” tels que
+        la culpabilité ou la colère. Elle permet également de faire face à des scénarios récurrents d’échecs ou
+        d’insatisfaction, à du stress sévère, des phobies, des addictions...
+      </P>
+      <P>
+        Ce traitement donne également d’excellents résultats au niveau psycho-somatique (intolérances alimentaires,
+        eczéma, acouphènes, attaques de panique, etc.).
+      </P>
+      <P>
+        La D.M.O.K.A. peut être insérée dans un parcours thérapeutique, mais peut aussi être utilisée ponctuellement
+        dans une situation de stress, un choc, ou dans le domaine du développement personnel (comme pour du coaching,
+        par exemple), afin de libérer des blocages et atteindre les objectifs que l’on s’est fixé.
+      </P>
+      <SubTitle>Comment se passe une séance de D.M.O.K.A. ?</SubTitle>
+      <P>
+        La D.M.O.K.A. est une approche qui peut être objectivée par le patient et par le thérapeute. Au début de la
+        séance, la personne est invitée à revivre la situation stressante et/ou traumatique et à indiquer le niveau de
+        stress ressenti sur une échelle de 0 (calme) à 10 (niveau de stress maximal).
+      </P>
+      <P>
+        Pendant la séance, on utilise les mouvements oculaires, kinesthésiques et auditifs reprenant les mécanismes
+        naturels d’auto-guérison existants chez l’être humain. À la fin de la séance, le patient évaluera le changement
+        par rapport à la situation initiale : généralement l'impact négatif et le stress sera alors très faible, voire
+        inexistant.
+      </P>
+      <P>
+        La D.M.O.K.A. permet d'ancrer des “états-ressources”, de changer nos croyances sur nous-mêmes et sur la réalité,
+        en utilisant des "cognitions positives" personnelles qui nous permettent de poursuivre le processus
+        d'élaboration et de changement même après la séance, nous amenant dans un état de bien-être, de légèreté et de
+        paix intérieure.
+      </P>
+    </ContentSection>
+
     <TestimonySection type="Dmoka" />
-    <Div align="middle" p={{ xs: '25px', sm: '50px' }}>
-      <YouTube
-        videoId="IlAUmzI6O9E"
-        opts={{
-          height: '390',
-          width: '690',
-          playerVars: {
-            // https://developers.google.com/youtube/player_parameters
-            autoplay: 0
-          }
-        }}
-      />
-    </Div>
     <QuoteSection author="C.G. Jung" bg="lightRose">
       Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
       ne fait que rêver ; celui qui regarde en soi se réveille.
