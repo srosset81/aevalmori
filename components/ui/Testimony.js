@@ -34,7 +34,7 @@ const Gradient = styled(AbsoluteDiv)`
 
 const AllTestimoniesLink = ({ float }) => (
   <PageLink page="testimonies">
-    <Button colors="lightGrey" style={{ float }} w={float ? undefined : '100%'}>
+    <Button colors="greyViolet" style={{ float }} w={float ? undefined : '100%'}>
       Tous les témoignages
     </Button>
   </PageLink>

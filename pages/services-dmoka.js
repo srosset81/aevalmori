@@ -105,12 +105,7 @@ const ServicesDmokaPage = () => (
         paix intérieure.
       </P>
     </ContentSection>
-
     <TestimonySection type="Dmoka" />
-    <QuoteSection author="C.G. Jung" bg="lightRose">
-      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
-      ne fait que rêver ; celui qui regarde en soi se réveille.
-    </QuoteSection>
     <ContactSection />
     <FooterSection />
   </Layout>

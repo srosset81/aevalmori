@@ -41,6 +41,11 @@ const ContentSection = styled(Div)`
       font-size: 1.5em;
     }
   }
+  li {
+    margin-left: -20px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
 `;
 
 ContentSection.propTypes = {
