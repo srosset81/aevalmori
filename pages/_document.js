@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
           <link href="/static/fonts/stylesheet.css" rel="stylesheet" />
+          <meta name="google-site-verification" content="myJ_CwUBXOaGJlyttvQKhJtgoiJgNXjOV0HA_pPxRBQ" />
           <meta httpEquiv="Content-Language" content={locale} />
           <script dangerouslySetInnerHTML={{ __html: linguiCatalog }} />
           {this.props.styleTags}

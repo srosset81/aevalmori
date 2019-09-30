@@ -7,7 +7,7 @@ export default function handle(req, res) {
 
   return sgMail
     .send({
-      to: 'srosset81@gmail.com',
+      to: 'aelisa.valmori@gmail.com',
       from: {
         name: 'Anna-Elisa-Valmori.com',
         email: 'ae@anna-elisa-valmori.com>'
