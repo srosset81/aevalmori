@@ -67,16 +67,6 @@ const AboutPage = () => (
         outils que j'utilise aujourd’hui dans ma pratique et qui m'ont accompagné sur ce chemin – en particulier Gilles
         Placet et Pascale Chavance. C'est aussi grâce à eux si aujourd’hui je suis la psychologue que je suis.
       </P>
-      <P>
-        Depuis sept ans, j’accompagne mes patients, hommes et femmes courageux, qui ont décidés d’aller au-delà d’une
-        vision superficielle d’eux-mêmes et d’embrasser leurs souffrances. En découvrant le sens supérieur de nos
-        expériences, on s’allège petit à petit, et le chemin devient plus joyeux et libre des conditionnements
-        extérieurs et intérieurs.
-      </P>
-      <P>
-        Ma mission est d’accueillir et d’accompagner les personnes dans le plus ardu mais le plus enrichissant des
-        chemins : devenir responsable de sa propre vie et créateur de sa propre réalité.
-      </P>
     </ContentSection>
     <Row>
       <Year month="Novembre" year="2005" bg="lightBlue">

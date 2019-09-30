@@ -9,7 +9,7 @@
     "now-build": "next build",
     "now:dev": "now dev",
     "now:deploy": "now",
-    "now:alias": "now alias aevalmori",
+    "now:alias": "now alias anna-elisa-valmori.com",
     "lingui:extract": "lingui extract --clean",
     "lingui:compile": "lingui compile",
     "prettier": "prettier --single-quote --print-width 120 --write --ignore-path .gitignore '{.,components,config,pages,utils}/**/*.js'"

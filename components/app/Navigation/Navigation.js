@@ -97,18 +97,20 @@ const Navigation = () => (
           </a>
         </Cell>
         <BorderedCell w={0.32} h="42px">
-          <HoverDiv
-            bg="background"
-            color="darkGrey"
-            hoverColor="white"
-            hoverBgColor="facebookDark"
-            align="middle"
-            h="100%"
-          >
-            <Icon size="18px">
-              <LinkedIn />
-            </Icon>
-          </HoverDiv>
+          <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
+            <HoverDiv
+              bg="background"
+              color="darkGrey"
+              hoverColor="white"
+              hoverBgColor="facebookDark"
+              align="middle"
+              h="100%"
+            >
+              <Icon size="18px">
+                <LinkedIn />
+              </Icon>
+            </HoverDiv>
+          </a>
         </BorderedCell>
         <Cell w={1 / 3} h="42px" align="middle" bg="background">
           <I18n>

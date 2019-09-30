@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Layout } from 'components/app';
 import { SideImage } from 'components/media';
 import { LeadP, P, SubTitle } from 'components/text';
-import {TopSection, FooterSection, TestimonySection, ContentSection, QuoteSection} from 'components/section';
+import { TopSection, FooterSection, TestimonySection, ContentSection, QuoteSection } from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const ServicesConstellationsPage = () => (
@@ -20,7 +20,7 @@ const ServicesConstellationsPage = () => (
         l’amour là où il y a eu souffrance, de laisser les fardeaux et les conflits dont nous sommes chargés et qui ne
         nous appartiennent pas, en laissant à chacun sa part de responsabilité.
       </LeadP>
-      <SideImage align="right" src="/static/images/birds-black-violet.jpg" />
+      <SideImage src="/static/images/birds-black-violet.jpg" />
       <P>
         Les Constellations familiales telles que nous les connaissons aujourd'hui doivent leur synthèse et leur
         diffusion dans le monde entier à Bert Hellinger, psychanalyste allemand décédé en 2019. La méthode qu’il met au
@@ -49,14 +49,13 @@ const ServicesConstellationsPage = () => (
         <br />
         En élargissant notre regard, nous pouvons voir que nous sommes tous liés par une trame invisible : nous
         appartenons à une famille, qui dépend à son tour de la réunion de deux groupes familiaux, remontant aux
-        générations précédentes et donnant vie à un arbre généalogique, unique pour chacun d’entre nous. Cette trame
-        s’étend également aux villes, aux nations…
+        générations précédentes et donnant vie à un arbre généalogique, unique pour chacun d’entre nous.
       </P>
       <P>
-        Ces systèmes sont régis par des lois qu’Hellinger appelle les « ordres de l'amour ». Lorsque ces ordres ne sont
-        pas respectés, le système n'est plus en équilibre et des problèmes apparaissent qui, s’ils ne remontent pas à la
-        conscience, sont transmis aux générations suivante. C'est le cas des événements tragiques ou des « violations
-        systémiques » (lorsqu’une personne de la famille a été exclue, jugée, traitée injustement, etc.).
+        Ces systèmes sont régis par des lois qu’Hellinger appelle les «&nbdp;ordres de l'amour ». Lorsque ces ordres ne
+        sont pas respectés, le système n'est plus en équilibre et des problèmes apparaissent qui, s’ils ne remontent pas
+        à la conscience, sont transmis aux générations suivante. C'est le cas des événements tragiques ou des
+        « violations systémiques » (lorsqu’une personne de la famille a été exclue, jugée, traitée injustement, etc.).
         <br />
         Cette transmission se fait principalement de manière inconsciente : la personne qui vit un blocage dans sa vie
         n’est que le porteur d’un symptôme de déséquilibre du système – l'inconscient familial répète (ou manifeste) ce
@@ -73,6 +72,44 @@ const ServicesConstellationsPage = () => (
         avec amour, leurs destin à ceux qui les ont précédés et en leur rendant les poids et des responsabilités qui ne
         lui appartiennent pas.
       </P>
+      <SubTitle>Pourquoi participer à une Constellation ?</SubTitle>
+      <SideImage align="right" src="/static/images/flowers-2.jpg" />
+      <P>
+        Chacun de nous peut vivre des difficultés dans sa vie, à différents niveaux, car il existe différents types de
+        besoins fondamentaux chez l’être humain. Une Constellation familiale peut être pertinente si vous êtes dans l’un
+        ou l’autre de ces cas :
+      </P>
+      <ul>
+        <li>
+          <P>
+            Vous vivez des dynamiques répétitives dans votre vie : symptômes psycho-physiques récurrents, dynamiques
+            relationnelles qui vous font souffrir, échecs dans vos entreprises, difficultés sur votre lieu de travail ou
+            dans votre relation avec l'argent ;
+          </P>
+        </li>
+        <li>
+          <P>
+            Vous voulez vous réaliser pleinement dans votre vie professionnelle, amoureuse, vous sentir joyeux et
+            présent ici et maintenant ;
+          </P>
+        </li>
+        <li>
+          <P>
+            Vous voulez atteindre un objectif spécifique dans votre vie, comprendre en profondeur une difficulté dans le
+            "système" dont vous faites partie (famille, entreprise, association, etc.) pour retrouver équilibre et
+            harmonie ;
+          </P>
+        </li>
+        <li>
+          <P>Vous n'arrivez pas à prendre votre place dans la vie, vous voulez découvrir votre mission ;</P>
+        </li>
+        <li>
+          <P>
+            Vous voulez suivre un chemin de connaissance de soi au sein d'un groupe où vous pouvez faire l'expérience de
+            la confiance et de l'absence de jugement.
+          </P>
+        </li>
+      </ul>
       <SubTitle>Comment se déroule une Constellation ?</SubTitle>
       <P>
         La mise en scène d’une Constellation passe par plusieurs étapes : après avoir clarifié la problématique avec le
@@ -128,9 +165,12 @@ const ServicesConstellationsPage = () => (
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
-  <QuoteSection author="Alejandro Jodorowsky" color="black" bg="lightRose">
-    Sentir qu’on se détache du passé, se retrouver dans un corps d’adulte, porter le fardeau des années douloureuses. Mais au cœur, garder l’enfant, comme une hostie vivante, comme un canari blanc, comme un digne diamant, comme une lucidité sans murs. Portes et fenêtres ouvertes, traversées par le vent, seulement par le vent, rien que par le vent.
-  </QuoteSection>
+    <QuoteSection author="Alejandro Jodorowsky" color="black" bg="lightRose">
+      Sentir qu’on se détache du passé, se retrouver dans un corps d’adulte, porter le fardeau des années douloureuses.
+      Mais au cœur, garder l’enfant, comme une hostie vivante, comme un canari blanc, comme un digne diamant, comme une
+      lucidité sans murs. Portes et fenêtres ouvertes, traversées par le vent, seulement par le vent, rien que par le
+      vent.
+    </QuoteSection>
     <FooterSection />
   </Layout>
 );

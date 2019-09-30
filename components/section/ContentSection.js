@@ -41,6 +41,9 @@ const ContentSection = styled(Div)`
       font-size: 1.5em;
     }
   }
+  ul {
+    overflow: hidden;
+  }
   li {
     margin-left: -20px;
     padding-left: 10px;
