@@ -40,8 +40,11 @@ const ServicesDmokaPage = () => (
         orthoptiques, ainsi que dans l'hypnose, la PNL et les thérapies humanistes.
       </P>
       <P>
-        Il s’agit d’une méthode thérapeutique qui a été conçue au début des années 2000 par Pascale Chavance,
-        orthoptiste diplômée de la faculté de médecine de Paris et spécialiste en thérapies humanistes et familiales.
+        Il s’agit d’une méthode thérapeutique qui a été conçue au début des années 2000 par{' '}
+        <a href="https://www.dmoka.org/" target="_blank">
+          Pascale Chavance
+        </a>
+        , orthoptiste diplômée de la faculté de médecine de Paris et spécialiste en thérapies humanistes et familiales.
       </P>
       <SubTitle>Comment fonctionne la D.M.O.K.A. ?</SubTitle>
       <P>

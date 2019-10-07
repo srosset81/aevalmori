@@ -5,6 +5,7 @@ import { SideImage } from 'components/media';
 import { LeadP, P } from 'components/text';
 import { TopSection, ContactSection, FooterSection, ContentSection, QuoteSection } from 'components/section';
 import { Trans } from '@lingui/macro';
+import { PageLink } from '../utils/router';
 
 const ServiceIndividualPage = () => (
   <Layout>
@@ -36,9 +37,9 @@ const ServiceIndividualPage = () => (
         appel à moi dans leur singularité et leur demande spécifique.
       </P>
       <P>
-        Cette approche dite « intégrative » reflète ma vision du monde et de l’être humain (lien vers « ma vision »).
-        Elle permet de porter un regard plus large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il
-        n’existe pas une seule voie pour dépasser une problématique, et que chaque parcours est différent d’un autre.
+        Cette approche dite « intégrative » reflète ma <PageLink page="vision">vision du monde et de l’être humain</PageLink>. Elle permet de porter un regard plus
+        large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il n’existe pas une seule voie pour dépasser
+        une problématique, et que chaque parcours est différent d’un autre.
       </P>
       <P>
         Il est en effet souvent nécessaire d'élargir l'horizon au « système » auquel appartient la personne, afin
