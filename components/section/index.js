@@ -1,3 +1,4 @@
+export { default as AnnounceSection } from './AnnounceSection';
 export { default as ContactSection } from './ContactSection';
 export { default as ContentSection } from './ContentSection';
 export { default as FooterSection } from './FooterSection';

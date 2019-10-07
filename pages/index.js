@@ -5,7 +5,7 @@ import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
-import { MenuSection, QuoteSection, FooterSection } from 'components/section';
+import { MenuSection, QuoteSection, FooterSection, AnnounceSection } from 'components/section';
 
 const IndexPage = () => (
   <Layout>
@@ -45,10 +45,11 @@ const IndexPage = () => (
         <br />
       </Div>
     </BgImage>
-    <QuoteSection author="C.G. Jung" bg="lightRose">
-      Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
-      ne fait que rêver ; celui qui regarde en soi se réveille.
-    </QuoteSection>
+    <AnnounceSection />
+    {/*<QuoteSection author="C.G. Jung" bg="lightRose">*/}
+    {/*  Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi*/}
+    {/*  ne fait que rêver ; celui qui regarde en soi se réveille.*/}
+    {/*</QuoteSection>*/}
     <MenuSection right title="Qui suis-je ?" image="elisa.jpg" link="about">
       Ayant toujours été passionnée par la compréhension de la nature humaine, il a été très naturel pour moi d’orienter
       mes études vers la relation d’aide. Au travers de mon parcours, j’ai intégré différentes visions et orientations

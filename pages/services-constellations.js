@@ -3,7 +3,14 @@ import Head from 'next/head';
 import { Layout } from 'components/app';
 import { SideImage } from 'components/media';
 import { LeadP, P, SubTitle } from 'components/text';
-import { TopSection, FooterSection, TestimonySection, ContentSection, QuoteSection } from 'components/section';
+import {
+  TopSection,
+  FooterSection,
+  TestimonySection,
+  ContentSection,
+  QuoteSection,
+  AnnounceSection
+} from 'components/section';
 import { Trans } from '@lingui/macro';
 
 const ServicesConstellationsPage = () => (
@@ -11,6 +18,7 @@ const ServicesConstellationsPage = () => (
     <Head>
       <title>Constellations Familiales à Paris - Anna Elisa Valmori, psychologue</title>
     </Head>
+    <AnnounceSection />
     <TopSection image="birds-sky.jpg">
       <Trans id="services.constellations.title">Constellations familiales</Trans>
     </TopSection>
