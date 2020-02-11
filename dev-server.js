@@ -18,8 +18,14 @@ app
       app.render(req, res, actualPage, queryParams);
     });*/
 
-    server.get('/:locale(it|fr)(/:page)?', (req, res) => {
+    server.get('/fr/blog', (req, res) => {
+      res.redirect(302, '/fr/blog/l-enfant-interieur');
+    });
+
+    server.get('/:locale(it|fr)(/:page)?(/:subPage)?', (req, res) => {
       const queryParams = { locale: req.params.locale };
+
+      if (req.params.subPage) req.params.page += '/' + req.params.subPage;
 
       if (req.params.page) {
         const actualPage = Object.keys(routes).find(page => routes[page][req.params.locale] === req.params.page);

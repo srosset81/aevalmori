@@ -5,23 +5,27 @@
     { "src": "select-locale.js", "use": "@now/node-server" },
     { "src": "package.json", "use": "@now/next" }
   ],
-  "routes": [
-    { "src": "/", "dest": "select-locale.js" },
-    { "src": "/fr/?", "dest": "/?locale=fr" },
-    { "src": "/it/?", "dest": "/?locale=it" },
-    { "src": "/fr/qui-suis-je", "dest": "/about?locale=fr" },
-    { "src": "/it/chi-sono", "dest": "/about?locale=it" },
-    { "src": "/fr/ma-vision", "dest": "/vision?locale=fr" },
-    { "src": "/it/la-mia-visione", "dest": "/vision?locale=it" },
-    { "src": "/fr/consultations-individuelles", "dest": "/services-individuals?locale=fr" },
-    { "src": "/it/consultazioni-individuali", "dest": "/services-individuals?locale=it" },
-    { "src": "/fr/constellations-familiales", "dest": "/services-constellations?locale=fr" },
-    { "src": "/it/costellazioni-familiari", "dest": "/services-constellations?locale=it" },
-    { "src": "/fr/dmoka", "dest": "/services-dmoka?locale=fr" },
-    { "src": "/it/dmoka", "dest": "/services-dmoka?locale=it" },
-    { "src": "/fr/temoignages", "dest": "/testimonies?locale=fr" },
-    { "src": "/it/testimonianze", "dest": "/testimonies?locale=it" },
-    { "src": "/fr/contact", "dest": "/contact?locale=fr" },
-    { "src": "/it/contatto", "dest": "/contact?locale=it" }
+  "redirects": [
+    { "source": "/fr/blog", "destination": "/fr/blog/l-enfant-interieur", "statusCode": 302 }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "select-locale.js" },
+    { "source": "/fr/", "destination": "/?locale=fr" },
+    { "source": "/it/", "destination": "/?locale=it" },
+    { "source": "/fr/qui-suis-je", "destination": "/about?locale=fr" },
+    { "source": "/it/chi-sono", "destination": "/about?locale=it" },
+    { "source": "/fr/ma-vision", "destination": "/vision?locale=fr" },
+    { "source": "/it/la-mia-visione", "destination": "/vision?locale=it" },
+    { "source": "/fr/consultations-individuelles", "destination": "/services-individuals?locale=fr" },
+    { "source": "/it/consultazioni-individuali", "destination": "/services-individuals?locale=it" },
+    { "source": "/fr/constellations-familiales", "destination": "/services-constellations?locale=fr" },
+    { "source": "/it/costellazioni-familiari", "destination": "/services-constellations?locale=it" },
+    { "source": "/fr/dmoka", "destination": "/services-dmoka?locale=fr" },
+    { "source": "/it/dmoka", "destination": "/services-dmoka?locale=it" },
+    { "source": "/fr/temoignages", "destination": "/testimonies?locale=fr" },
+    { "source": "/it/testimonianze", "destination": "/testimonies?locale=it" },
+    { "source": "/fr/blog/l-enfant-interieur", "destination": "/blog-inner-child?locale=fr" },
+    { "source": "/fr/contact", "destination": "/contact?locale=fr" },
+    { "source": "/it/contatto", "destination": "/contact?locale=it" }
   ]
 }

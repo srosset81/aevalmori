@@ -23,6 +23,10 @@
         "fr": "temoignages",
         "it": "testimonianze"
     },
+    "blog-inner-child": {
+        "fr": "blog/l-enfant-interieur",
+        "it": "blog/il-bambino-interiore"
+    },
     "contact": {
         "fr": "contact",
         "it": "contatto"

@@ -33,7 +33,7 @@ class FooterSection extends React.Component {
               Anna Elisa Valmori
             </P>
             <P color="white" linkColor="white" lineHeight="1.4em">
-              Copyright &copy; 2019
+              Copyright &copy; 2019-2020
             </P>
           </Cell>
           <Cell w={{ xs: 1, sm: 1 / 4 }}>
@@ -69,7 +69,7 @@ class FooterSection extends React.Component {
                     </Cell>
                     <Cell w={{ xs: 1, sm: 1 / 5 }}>
                       <Space h="28px" />
-                      <Button disabled={pristine || submitting}>Envoyer</Button>
+                      <Button disabled={pristine || submitting}>S'abonner</Button>
                     </Cell>
                   </Row>
                 </form>

@@ -40,10 +40,10 @@ const AllTestimoniesLink = ({ float }) => (
   </PageLink>
 );
 
-const Testimony = ({ testimony, showMore }) => {
+const Testimony = ({ testimony, showMore, expand }) => {
   const contentRef = useRef(null);
   const [isLongText, setLongText] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(expand);
   useEffect(() => {
     setLongText(contentRef.current.clientHeight < contentRef.current.scrollHeight);
   }, [contentRef.current]);

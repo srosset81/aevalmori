@@ -1,7 +1,8 @@
 {
   "about.title": "",
-  "about.vision": "",
+  "blog.inner-child.title": "",
   "menu.about": "Chi sono ?",
+  "menu.blog": "",
   "menu.contact": "Contatto",
   "menu.dmoka": "D.M.O.K.A.",
   "menu.family-constellations": "Costellazioni familiari",
@@ -9,7 +10,6 @@
   "menu.individual-consulting": "Consultazioni individuali",
   "menu.testimony": "Testimonianze",
   "services.constellations.title": "",
-  "services.dmoka.title": "",
   "services.individuals.title": "",
   "testimonies.title": "Testimonianze"
 }

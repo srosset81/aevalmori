@@ -37,7 +37,8 @@ const ServiceIndividualPage = () => (
         appel à moi dans leur singularité et leur demande spécifique.
       </P>
       <P>
-        Cette approche dite « intégrative » reflète ma <PageLink page="vision">vision du monde et de l’être humain</PageLink>. Elle permet de porter un regard plus
+        Cette approche dite « intégrative » reflète ma{' '}
+        <PageLink page="vision">vision du monde et de l’être humain</PageLink>. Elle permet de porter un regard plus
         large sur les problèmes qui peuvent être rencontrés, compte tenu qu’il n’existe pas une seule voie pour dépasser
         une problématique, et que chaque parcours est différent d’un autre.
       </P>
