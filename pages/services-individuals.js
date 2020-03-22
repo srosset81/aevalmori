@@ -3,7 +3,14 @@ import Head from 'next/head';
 import { Layout } from 'components/app';
 import { SideImage } from 'components/media';
 import { LeadP, P } from 'components/text';
-import { TopSection, ContactSection, FooterSection, ContentSection, QuoteSection } from 'components/section';
+import {
+  TopSection,
+  ContactSection,
+  FooterSection,
+  ContentSection,
+  QuoteSection,
+  AnnounceSection
+} from 'components/section';
 import { Trans } from '@lingui/macro';
 import { PageLink } from '../utils/router';
 
@@ -12,6 +19,7 @@ const ServiceIndividualPage = () => (
     <Head>
       <title>Séances individuelles - Anna Elisa Valmori, psychologue à Paris</title>
     </Head>
+    <AnnounceSection />
     <TopSection image="plant-growing-2.jpg" position="bottom right">
       <Trans id="services.individuals.title">Séances individuelles</Trans>
     </TopSection>

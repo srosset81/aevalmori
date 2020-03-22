@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "aevalmori",
   "builds": [
     { "src": "select-locale.js", "use": "@now/node-server" },
     { "src": "package.json", "use": "@now/next" }
