@@ -70,7 +70,7 @@ const Navigation = () => (
         <NavLink page="testimonies">
           <Trans id="menu.testimony">Témoignages</Trans>
         </NavLink>
-        <NavLink page="blog-inner-child">
+        <NavLink page="blog">
           <Trans id="menu.blog">Blog</Trans>
         </NavLink>
         <Separator m="5px 0" />

@@ -4,10 +4,10 @@ import { BgImage } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { Button } from 'components/input';
 
-const MenuSection = ({ right, image, title, children, link = 'index' }) => (
+const MenuSection = ({ right, image, title, children, link = 'index', linkCaption = 'En savoir +' }) => (
   <Row>
     <Cell w={{ xs: 1, sm: 2 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
-      <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '200px', sm: '500px' }} />
+      <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '200px', sm: '100%' }} minH={{ xs: '200px', sm: '500px' }} />
       <PageLink page={link}>
         <AbsoluteDiv top bottom left right />
       </PageLink>
@@ -19,7 +19,7 @@ const MenuSection = ({ right, image, title, children, link = 'index' }) => (
         </SubTitle>
         <P m={{ xs: '15px 0', sm: '25px 0' }}>{children}</P>
         <PageLink page={link}>
-          <Button>En savoir +</Button>
+          <Button>{linkCaption}</Button>
         </PageLink>
       </Div>
     </Cell>

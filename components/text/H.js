@@ -6,7 +6,7 @@ const H = ({ size, ...otherProps }) => {
   const BaseElement = 'h' + size;
   return (
     <BaseElement>
-      <Text {...otherProps} />
+      <Text bold font="openSans" {...otherProps} />
     </BaseElement>
   );
 };
@@ -16,8 +16,7 @@ H.propTypes = {
 };
 
 H.defaultProps = {
-  size: '1',
-  font: 'montserrat'
+  size: '1'
 };
 
 export default H;

@@ -8,7 +8,7 @@ const ContactPage = () => (
     <Head>
       <title>Contactez-moi - Anna Elisa Valmori, psychologue à Paris</title>
     </Head>
-    <TopSection image="contact.jpg">Contactez-moi</TopSection>
+    <TopSection image="butterfly-3.jpg">Contactez-moi</TopSection>
     <ContactSection />
     <QuoteSection author="Bert Hellinger" color="black" bg="lightRose">
       La réalité rend fort et libre quand elle est reconnue.

@@ -7,7 +7,7 @@ import {
   TopSection,
   FooterSection,
   TestimonySection,
-  ContentSection,
+  ArticleSection,
   QuoteSection,
   ContactSection
 } from 'components/section';
@@ -16,12 +16,12 @@ import { Trans } from '@lingui/macro';
 const BlogInnerChildPage = () => (
   <Layout>
     <Head>
-      <title>L'enfant intérieur - Blog d'Anna Elisa Valmori, psychologue</title>
+      <title>L'enfant intérieur - Première partie - Blog d'Anna Elisa Valmori, psychologue</title>
     </Head>
-    <TopSection image="inner-child.jpg">
+    <TopSection image="inner-child.jpg" subTitle="Première partie">
       <Trans id="blog.inner-child.title">L'enfant intérieur</Trans>
     </TopSection>
-    <ContentSection>
+    <ArticleSection>
       <LeadP>
         Ces derniers temps, on a beaucoup entendu parler du concept d'enfant intérieur. Les références dans le monde de
         la psychologie sont nombreuses : Jung parle de “l'enfant divin” et de notre essence ; selon Winnicott, il s’agit
@@ -103,7 +103,12 @@ const BlogInnerChildPage = () => (
         possible d'accéder à cette partie de nous qui existe et existera toujours, malgré tout, et qui peut devenir
         notre plus grande alliée.
       </P>
-    </ContentSection>
+      <P>
+        Je vous embrasse.
+        <br/>
+        Anna Elisa
+      </P>
+    </ArticleSection>
     <QuoteSection author="Ameya Canovi" bg="lightPurple">
       Si vous y réfléchissez, votre malheur n'est pas causé par l'autre. Il vous a toujours appartenu. Tant que vous ne
       faites pas un travail sérieux, constant et honnête avec vous-même, vous rencontrerez toujours les mêmes

@@ -77,7 +77,11 @@ const IndexPage = () => (
     <MenuSection left title="Témoignages" image="flowers.jpg" link="testimonies">
       Au fil des années, j'ai récolté de beaux témoignages que je souhaite partager avec vous sur cette page.
     </MenuSection>
-    <MenuSection right title="Contactez-moi" image="contact.jpg" link="contact">
+    <MenuSection right title="Blog" image="contact.jpg" link="blog">
+      Je vous partage mes réflexions par rapport aux thématiques que je rencontre dans mon travail, qui peuvent vous
+      aider à éclairer des interrogations, vous inspirer... N'hésitez pas à les partager !
+    </MenuSection>
+    <MenuSection left title="Contactez-moi" image="butterfly-3.jpg" link="contact">
       N'hésitez pas à prendre contact avec moi, je répondrai à votre demande dans les meilleurs délais.
     </MenuSection>
     <FooterSection />

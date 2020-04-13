@@ -18,10 +18,6 @@ app
       app.render(req, res, actualPage, queryParams);
     });*/
 
-    server.get('/fr/blog', (req, res) => {
-      res.redirect(302, '/fr/blog/l-enfant-interieur');
-    });
-
     server.get('/:locale(it|fr)(/:page)?(/:subPage)?', (req, res) => {
       const queryParams = { locale: req.params.locale };
 

@@ -3,7 +3,7 @@ import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 
-const TopSection = ({ image, position, children }) => (
+const TopSection = ({ image, position, subTitle, children }) => (
   <BgImage src={`/static/images/${image}`} h={{ xs: '250px', md: '400px' }} align="middle" position={position}>
     <Div>
       <AnimOnAppear>
@@ -18,6 +18,11 @@ const TopSection = ({ image, position, children }) => (
         >
           {children}
         </P>
+        {subTitle &&
+          <P shadow color="white" align="center" font="openSans" fontSize={{ xs: '1.5em', md: '2em' }} lineHeight="0.8em" italic m="0">
+            {subTitle}
+          </P>
+        }
       </AnimOnAppear>
     </Div>
   </BgImage>
