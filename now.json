@@ -6,6 +6,8 @@
   ],
   "rewrites": [
     { "source": "/", "destination": "select-locale.js" },
+    { "source": "/fr", "destination": "/?locale=fr" },
+    { "source": "/it", "destination": "/?locale=it" },
     { "source": "/fr/", "destination": "/?locale=fr" },
     { "source": "/it/", "destination": "/?locale=it" },
     { "source": "/fr/qui-suis-je", "destination": "/about?locale=fr" },
