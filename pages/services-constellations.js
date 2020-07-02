@@ -60,7 +60,7 @@ const ServicesConstellationsPage = () => (
         générations précédentes et donnant vie à un arbre généalogique, unique pour chacun d’entre nous.
       </P>
       <P>
-        Ces systèmes sont régis par des lois qu’Hellinger appelle les «&nbdp;ordres de l'amour ». Lorsque ces ordres ne
+        Ces systèmes sont régis par des lois qu’Hellinger appelle les «&nbsp;ordres de l'amour ». Lorsque ces ordres ne
         sont pas respectés, le système n'est plus en équilibre et des problèmes apparaissent qui, s’ils ne remontent pas
         à la conscience, sont transmis aux générations suivante. C'est le cas des événements tragiques ou des
         « violations systémiques » (lorsqu’une personne de la famille a été exclue, jugée, traitée injustement, etc.).
