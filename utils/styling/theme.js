@@ -60,7 +60,8 @@ const theme = {
     pinterest: '#E2012F',
     youtube: '#CD181F',
     instagram: '#3798EF',
-    whatsapp: '#41C452'
+    whatsapp: '#41C452',
+    doctolib: '#0596de'
   },
   zIndex: {
     hamburger: 101,

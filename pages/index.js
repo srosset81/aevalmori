@@ -5,7 +5,7 @@ import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
-import { MenuSection, QuoteSection, FooterSection, AnnounceSection } from 'components/section';
+import { MenuSection, FooterSection, DoctolibSection } from 'components/section';
 
 const IndexPage = () => (
   <Layout>
@@ -45,7 +45,7 @@ const IndexPage = () => (
         <br />
       </Div>
     </BgImage>
-    <AnnounceSection />
+    <DoctolibSection />
     {/*<QuoteSection author="C.G. Jung" bg="lightRose">*/}
     {/*  Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi*/}
     {/*  ne fait que rêver ; celui qui regarde en soi se réveille.*/}

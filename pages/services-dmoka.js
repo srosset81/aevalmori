@@ -11,7 +11,8 @@ import {
   ContentSection,
   TestimonySection,
   QuoteSection,
-  VideoSection, AnnounceSection
+  VideoSection,
+  DoctolibSection
 } from 'components/section';
 import { SideImage } from '../components/media';
 
@@ -23,7 +24,7 @@ const ServicesDmokaPage = () => (
         Valmori, psychologue à Paris
       </title>
     </Head>
-    <AnnounceSection dmoka />
+    <DoctolibSection />
     <TopSection image="wave.jpg" position="center bottom">
       D.m.o.k.a.
     </TopSection>

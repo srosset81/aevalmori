@@ -11,6 +11,7 @@ import { Icon, Image } from 'components/media';
 
 import Facebook from '../../../svg/logo-facebook.svg';
 import LinkedIn from '../../../svg/logo-linkedin.svg';
+import Doctolib from '../../../svg/logo-doctolib.svg';
 
 import NavLink from './NavLink';
 import FlagSelector from './FlagSelector';
@@ -99,7 +100,7 @@ const Navigation = () => (
             </HoverDiv>
           </a>
         </Cell>
-        <BorderedCell w={0.32} h="42px">
+        <BorderedCell w={0.33} h="42px">
           <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
             <HoverDiv
               bg="background"
@@ -115,11 +116,27 @@ const Navigation = () => (
             </HoverDiv>
           </a>
         </BorderedCell>
-        <Cell w={1 / 3} h="42px" align="middle" bg="background">
-          <I18n>
-            {({ i18n }) => <FlagSelector value={i18n._language || 'fr'} onChange={value => Router.push('/' + value)} />}
-          </I18n>
+        <Cell w={0.33} h="42px">
+          <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
+            <HoverDiv
+              bg="background"
+              color="darkGrey"
+              hoverColor="white"
+              hoverBgColor="doctolib"
+              align="middle"
+              h="100%"
+            >
+              <Icon size="100px">
+                <Doctolib />
+              </Icon>
+            </HoverDiv>
+          </a>
         </Cell>
+        {/*<Cell w={1 / 3} h="42px" align="middle" bg="background">*/}
+        {/*  <I18n>*/}
+        {/*    {({ i18n }) => <FlagSelector value={i18n._language || 'fr'} onChange={value => Router.push('/' + value)} />}*/}
+        {/*  </I18n>*/}
+        {/*</Cell>*/}
       </Row>
     </FixedDiv>
   </ScrollableDiv>
