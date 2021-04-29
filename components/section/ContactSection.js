@@ -25,7 +25,12 @@ class ContactSection extends React.Component {
     if (!result.ok) {
       return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
     } else {
-      this.setState({ messageSent: true });
+      const json = await result.json();
+      if( json.success !== true ) {
+        return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
+      } else {
+        this.setState({ messageSent: true });
+      }
     }
   };
 
