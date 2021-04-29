@@ -23,11 +23,11 @@ class ContactSection extends React.Component {
     });
 
     if (!result.ok) {
-      return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
+      return { [FORM_ERROR]: 'Impossible de soumettre le formulaire. Veuillez me contacter directement.' };
     } else {
       const json = await result.json();
       if( json.success !== true ) {
-        return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
+        return { [FORM_ERROR]: 'Impossible de soumettre le formulaire. Veuillez me contacter directement.' };
       } else {
         this.setState({ messageSent: true });
       }
