@@ -60,8 +60,7 @@ class ContactSection extends React.Component {
                 <form
                   onSubmit={async event => {
                     const result = await handleSubmit(event);
-                    console.log('result', result);
-                    reset();
+                    if( !result ) reset();
                   }}
                 >
                   {this.state.messageSent && (
