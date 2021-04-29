@@ -10,7 +10,7 @@ export default function handle(req, res) {
       to: 'aelisa.valmori@gmail.com',
       from: {
         name: 'Anna-Elisa-Valmori.com',
-        email: 'ae@anna-elisa-valmori.com'
+        email: 'ae@anna-elisa-valmori.com>'
       },
       replyTo: email,
       subject: 'Message du site web',
