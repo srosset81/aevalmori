@@ -26,7 +26,6 @@ class ContactSection extends React.Component {
       return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
     } else {
       const json = await result.json();
-      return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
       if( json.success !== true ) {
         return { [FORM_ERROR]: 'Impossible de soumettre le formulaire' };
       } else {
@@ -60,7 +59,8 @@ class ContactSection extends React.Component {
               render={({ handleSubmit, submitError, pristine, submitting, reset }) => (
                 <form
                   onSubmit={async event => {
-                    await handleSubmit(event);
+                    const result = await handleSubmit(event);
+                    console.log('result', result);
                     reset();
                   }}
                 >
