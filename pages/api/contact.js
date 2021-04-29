@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail');
 
 export default function handle(req, res) {
-  sgMail.setApiKey('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');
+  sgMail.setApiKey('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');
 
   const { name, email, phone, message } = req.body;
 
