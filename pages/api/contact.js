@@ -30,6 +30,6 @@ export default function handle(req, res) {
     .catch(error => {
       console.error(error.toString());
       res.status = 500;
-      res.json({ success: false });
+      res.json({ success: false, error: error.toString() });
     });
 }
