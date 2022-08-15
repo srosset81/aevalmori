@@ -68,6 +68,9 @@ const Navigation = () => (
           <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
         </NavLink>
         <Separator m="5px 0" />
+        <NavLink page="events">
+          <Trans id="menu.events">Agenda</Trans>
+        </NavLink>
         <NavLink page="testimonies">
           <Trans id="menu.testimony">Témoignages</Trans>
         </NavLink>

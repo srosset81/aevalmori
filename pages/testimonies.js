@@ -40,7 +40,7 @@ const TestimoniesPage = () => {
         {data &&
           data.allTestimonyFrs &&
           data.allTestimonyFrs.map((testimony, i) => (
-            <>
+            <React.Fragment key={i}>
               {i > 0 && (
                 <Div align="middle">
                   <Div w={{ xs: 4 / 5, sm: 3 / 5 }}>
@@ -49,7 +49,7 @@ const TestimoniesPage = () => {
                 </Div>
               )}
               <Testimony testimony={testimony} />
-            </>
+            </React.Fragment>
           ))}
       </Div>
       <FooterSection />
