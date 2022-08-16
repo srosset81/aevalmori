@@ -12,9 +12,9 @@ import { Trans } from '@lingui/macro';
 const EventsPage = () => {
   const { loading, error, data } = useQuery(gql`
     {
-      allEventFrs {
+      allEventFrs(orderBy: startDate_ASC) {
         title
-        content(markdown: true)
+        content
         startDate
         endDate
       }
@@ -29,7 +29,7 @@ const EventsPage = () => {
       <TopSection image="single-tree-2.jpg">
         <Trans id="events.title">Agenda</Trans>
       </TopSection>
-      <Div bg="ultraLightGrey">
+      <Div p="50px 80px">
         {loading && (
           <Div minH="100vh" p={{ xs: '25px', sm: '50px' }}>
             <P align="center">Chargement en cours...</P>
@@ -38,7 +38,7 @@ const EventsPage = () => {
         {data &&
           data.allEventFrs &&
           data.allEventFrs.map((event, i) => (
-            <Event event={event} key={i} />
+            <Event event={event} expand={true} key={i} />
           ))}
       </Div>
       <FooterSection />
