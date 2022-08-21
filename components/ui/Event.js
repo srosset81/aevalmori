@@ -2,30 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useRef, useState, useEffect } from 'react';
 import { I18n } from '@lingui/react';
-import Markdown from 'markdown-to-jsx';
 import { styled } from '../../utils/styling';
-import { Div, AbsoluteDiv, Row, Cell } from '../layout';
-import { P, SubTitle } from '../text';
+import { Div, AbsoluteDiv } from '../layout';
+import { P, SubTitle, Text, Markdown } from '../text';
 import { Button } from '../input';
 import { PageLink } from '../../utils/router';
 import { Hidden, Visible } from '../layout';
-
-function nl2br(str) {
-  const newlineRegex = /(\r\n|\r|\n)/g;
-
-  if (typeof str === 'number') {
-    return str;
-  } else if (typeof str !== 'string') {
-    return '';
-  }
-
-  return str.split(newlineRegex).map(function(line, index) {
-    if (line.match(newlineRegex)) {
-      return React.createElement('br', { key: index });
-    }
-    return line;
-  });
-}
 
 const fromDateToDate = (event, i18n) => {
   const startDate = new Date(event.startDate);
@@ -57,7 +39,7 @@ const FlexDiv = styled(Div)`
 
 const AllEventsLink = ({ float }) => (
   <PageLink page="testimonies">
-    <Button colors="greyViolet" style={{ float }} w={float ? undefined : '100%'}>
+    <Button colors="darkGrey" style={{ float }} w={float ? undefined : '100%'}>
       Tous les événements
     </Button>
   </PageLink>
@@ -74,56 +56,54 @@ const Event = ({ event, showMore, expand }) => {
   return event ? (
     <I18n>
       {({ i18n }) => (
-        <Div p={{ xs: '25px 0px' }}>
-          <Row>
-            <Cell w={{ xs: 1, sm: 1 / 6 }}>
-              <SquareDiv bg="lightPurple">
-                <AbsoluteDiv top bottom left right p="20px">
-                  <FlexDiv>
-                    <P align="center" m="0" upper>{i18n.date(event.startDate, { weekday: 'long' })}</P>
-                    <P align="center" m="0" fontSize="80px" font="montserrat" lineHeight="1.2em" bold>{i18n.date(event.startDate, { day: 'numeric' })}</P>
-                    <P align="center" m="0" upper>{i18n.date(event.startDate, { month: 'long' })}</P>
-                  </FlexDiv>
-                </AbsoluteDiv>
-              </SquareDiv>
-            </Cell>
-            <Cell w={{ xs: 1, sm: 5 / 6 }}>
-              <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
-                <SubTitle p={{ xs: '0 0 0 30px', sm: '0px' }}>{showMore ? 'Evénement' : event.title}</SubTitle>
-                <P italic>{fromDateToDate(event, i18n)}</P>
-                {/*<P>{nl2br(event.content.replace(/<[^>]*>?/gm, '').replace(/&#39;/gm, `'`))}</P>*/}
-                <Markdown
-                  options={{
-                    overrides: {
-                      p: P,
-                    },
-                  }}
-                >{event.content}</Markdown>
-                {showMore && (
-                  <Visible sm md lg xl>
-                    <AllEventsLink float="left" />
-                  </Visible>
-                )}
-                {showMore && (
-                  <Hidden sm md lg xl>
-                    <Div p="0 0 15px">
-                      <AllEventsLink />
-                    </Div>
-                  </Hidden>
-                )}
-                {isLongText && !isExpanded && (
-                  <Gradient bottom left right h="150px" align="middle">
-                    <Button colors="greyViolet" onClick={() => setIsExpanded(true)} m="30px 0 0">
-                      Lire plus
-                    </Button>
-                  </Gradient>
-                )}
-              </Div>
-            </Cell>
-          </Row>
+        <Div p={{ xs: '0px', md: '25px 0px' }} m={{ xs: '0 0 25px', sm: '0px' }}>
+          <Hidden sm md lg xl>
+            <Div bg="primaryLight" p="15px">
+              <P align="center" m="0" upper>{i18n.date(event.startDate, { weekday: 'long' })}</P>
+              <P align="center" m="0" fontSize="55px" lineHeight="1em" bold>{i18n.date(event.startDate, { day: 'numeric' })}</P>
+              <P align="center" m="0" lineHeight="2em" upper>{i18n.date(event.startDate, { month: 'long' })}</P>
+            </Div>
+          </Hidden>
+          <Div p={{ xs: '30px 0 0', sm: '0 0 0 180px' }} maxH={isExpanded ? undefined : '400px'} noOverflow ref={contentRef}>
+            <Visible sm md lg xl>
+              <AbsoluteDiv top left h="180px" w="180px">
+                <SquareDiv bg="primaryLight">
+                  <AbsoluteDiv top bottom left right p="20px">
+                    <FlexDiv>
+                      <P align="center" m="0" upper>{i18n.date(event.startDate, { weekday: 'long' })}</P>
+                      <P align="center" m="0" fontSize="55px" lineHeight="1em" bold>{i18n.date(event.startDate, { day: 'numeric' })}</P>
+                      <P align="center" m="0" lineHeight="2em" upper>{i18n.date(event.startDate, { month: 'long' })}</P>
+                    </FlexDiv>
+                  </AbsoluteDiv>
+                </SquareDiv>
+              </AbsoluteDiv>
+            </Visible>
+            <SubTitle p={{ xs: '0px', sm: '0px' }}>{showMore ? 'Evénement' : event.title}</SubTitle>
+            <P italic>{fromDateToDate(event, i18n)}</P>
+            <Markdown>{event.content}</Markdown>
+            {showMore && (
+              <Visible sm md lg xl>
+                <AllEventsLink float="left" />
+              </Visible>
+            )}
+            {showMore && (
+              <Hidden sm md lg xl>
+                <Div p="0 0 15px">
+                  <AllEventsLink />
+                </Div>
+              </Hidden>
+            )}
+            {isLongText && !isExpanded && (
+              <Gradient bottom left right h="150px" align="middle">
+                <Button colors="darkGrey" onClick={() => setIsExpanded(true)} m="30px 0 0">
+                  Lire plus
+                </Button>
+              </Gradient>
+            )}
+          </Div>
         </Div>
       )}
-      </I18n>
+    </I18n>
   ) : null;
 };
 

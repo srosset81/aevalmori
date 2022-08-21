@@ -12,7 +12,7 @@ const Input = styled.input.attrs(props => ({
   height: ${props => props.h || '22px'};
   margin: 3px 0;
   padding: 7px 10px;
-  font-family: ${({ font, theme }) => (font ? theme.fontFamily[font] : theme.fontFamily.openSans)};
+  font-family: ${({ font, theme }) => (font ? theme.fontFamily[font] : theme.fontFamily.regular)};
   font-size: ${props => props.fontSize || '14px'};
   background-color: #fff;
   border: 1px solid #ccc;

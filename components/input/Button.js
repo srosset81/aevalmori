@@ -8,106 +8,80 @@ import { Icon } from 'components/media';
 const buttonColors = {
   classic: {
     font: 'white',
-    bg: 'darkPurple',
-    border: 'darkPurple',
-    hoverFont: 'darkPurple',
+    bg: 'primaryDark',
+    border: 'primaryDark',
+    hoverFont: 'primaryDark',
     hoverBg: 'transparent'
   },
   classicNoHover: {
     font: 'white',
-    bg: 'darkBlue',
-    border: 'darkBlue',
-    hoverBg: 'darkBlue'
+    bg: 'secondaryDark',
+    border: 'secondaryDark',
+    hoverBg: 'secondaryDark'
   },
   classicLight: {
     font: 'white',
-    bg: 'darkBlue',
+    bg: 'secondaryDark',
     border: 'white',
-    hoverFont: 'darkBlue',
+    hoverFont: 'secondaryDark',
     hoverBg: 'white'
   },
   classicHoverLight: {
     font: 'white',
-    bg: 'darkBlue',
-    border: 'darkBlue',
+    bg: 'secondaryDark',
+    border: 'secondaryDark',
     hoverFont: 'white',
     hoverBg: 'transparent',
     hoverBorder: 'white'
   },
-  primary: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow'
-  },
-  primaryLight: {
-    font: 'yellow',
-    border: 'yellow'
-  },
-  primaryLightHover: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow',
-    hoverFont: 'yellow',
-    hoverBg: 'transparent'
-  },
-  primaryDarkHover: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow',
-    hoverBg: 'orange',
-    hoverBorder: 'orange'
-  },
-  whiteTransparent: {
-    font: 'white',
-    hoverBorder: 'white'
-  },
-  mediumGrey: {
-    font: 'white',
-    bg: 'mediumGrey',
-    border: 'mediumGrey',
-    hoverFont: 'mediumGrey',
-    hoverBg: 'white'
-  },
-  lightGrey: {
-    font: 'white',
-    bg: 'lightGrey',
-    border: 'lightGrey',
-    hoverFont: 'mediumGrey',
-    hoverBg: 'ultraLightGrey'
-  },
-  greyViolet: {
+  darkGrey: {
     font: 'white',
     bg: 'lightGrey',
     border: 'lightGrey',
     hoverFont: 'white',
-    hoverBg: 'violet'
-  },
-  banner: {
-    font: 'darkRed',
-    bg: 'white',
-    border: 'white',
-    hoverFont: 'white',
-    hoverBg: 'transparent'
-  },
-  red: {
-    font: 'white',
-    bg: 'darkRed',
-    border: 'darkRed',
-    hoverFont: 'darkRed',
-    hoverBg: 'white'
-  },
-  facebook: {
-    font: 'white',
-    bg: 'facebook',
-    border: 'none',
-    hoverBg: 'facebookDark'
-  },
-  twitter: {
-    font: 'white',
-    bg: 'twitter',
-    border: 'none',
-    hoverBg: 'twitterDark'
+    hoverBg: 'primaryDark'
   }
+  // primary: {
+  //   font: 'white',
+  //   bg: 'yellow',
+  //   border: 'yellow'
+  // },
+  // primaryLight: {
+  //   font: 'yellow',
+  //   border: 'yellow'
+  // },
+  // primaryLightHover: {
+  //   font: 'white',
+  //   bg: 'yellow',
+  //   border: 'yellow',
+  //   hoverFont: 'yellow',
+  //   hoverBg: 'transparent'
+  // },
+  // primaryDarkHover: {
+  //   font: 'white',
+  //   bg: 'yellow',
+  //   border: 'yellow',
+  //   hoverBg: 'orange',
+  //   hoverBorder: 'orange'
+  // },
+  // whiteTransparent: {
+  //   font: 'white',
+  //   hoverBorder: 'white'
+  // },
+  // mediumGrey: {
+  //   font: 'white',
+  //   bg: 'mediumGrey',
+  //   border: 'mediumGrey',
+  //   hoverFont: 'mediumGrey',
+  //   hoverBg: 'white'
+  // },
+  // lightGrey: {
+  //   font: 'white',
+  //   bg: 'lightGrey',
+  //   border: 'lightGrey',
+  //   hoverFont: 'mediumGrey',
+  //   hoverBg: 'ultraLightGrey'
+  // },
 };
 
 const buttonColorStyle = (prop, cssProp) => ({ colors, theme }) =>

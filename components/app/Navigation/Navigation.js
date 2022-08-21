@@ -109,7 +109,7 @@ const Navigation = () => (
               bg="background"
               color="darkGrey"
               hoverColor="white"
-              hoverBgColor="facebookDark"
+              hoverBgColor="linkedin"
               align="middle"
               h="100%"
             >
