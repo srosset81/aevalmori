@@ -70,6 +70,43 @@ const theme = {
   },
   sizes: {
     header: { xs: '45px', sm: '55px' }
+  },
+  buttons: {
+    classic: {
+      font: 'white',
+      bg: 'primaryDark',
+      border: 'primaryDark',
+      hoverFont: 'primaryDark',
+      hoverBg: 'transparent'
+    },
+    classicNoHover: {
+      font: 'white',
+      bg: 'secondaryDark',
+      border: 'secondaryDark',
+      hoverBg: 'secondaryDark'
+    },
+    classicLight: {
+      font: 'white',
+      bg: 'secondaryDark',
+      border: 'white',
+      hoverFont: 'secondaryDark',
+      hoverBg: 'white'
+    },
+    classicHoverLight: {
+      font: 'white',
+      bg: 'secondaryDark',
+      border: 'secondaryDark',
+      hoverFont: 'white',
+      hoverBg: 'transparent',
+      hoverBorder: 'white'
+    },
+    darkGrey: {
+      font: 'white',
+      bg: 'lightGrey',
+      border: 'lightGrey',
+      hoverFont: 'white',
+      hoverBg: 'primaryDark'
+    }
   }
 };
 

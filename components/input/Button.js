@@ -1,93 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { styled, css, responsiveStyle, responsivePropType } from 'utils/styling';
-
 import { Icon } from 'components/media';
 
-const buttonColors = {
-  classic: {
-    font: 'white',
-    bg: 'primaryDark',
-    border: 'primaryDark',
-    hoverFont: 'primaryDark',
-    hoverBg: 'transparent'
-  },
-  classicNoHover: {
-    font: 'white',
-    bg: 'secondaryDark',
-    border: 'secondaryDark',
-    hoverBg: 'secondaryDark'
-  },
-  classicLight: {
-    font: 'white',
-    bg: 'secondaryDark',
-    border: 'white',
-    hoverFont: 'secondaryDark',
-    hoverBg: 'white'
-  },
-  classicHoverLight: {
-    font: 'white',
-    bg: 'secondaryDark',
-    border: 'secondaryDark',
-    hoverFont: 'white',
-    hoverBg: 'transparent',
-    hoverBorder: 'white'
-  },
-  darkGrey: {
-    font: 'white',
-    bg: 'lightGrey',
-    border: 'lightGrey',
-    hoverFont: 'white',
-    hoverBg: 'primaryDark'
-  }
-  // primary: {
-  //   font: 'white',
-  //   bg: 'yellow',
-  //   border: 'yellow'
-  // },
-  // primaryLight: {
-  //   font: 'yellow',
-  //   border: 'yellow'
-  // },
-  // primaryLightHover: {
-  //   font: 'white',
-  //   bg: 'yellow',
-  //   border: 'yellow',
-  //   hoverFont: 'yellow',
-  //   hoverBg: 'transparent'
-  // },
-  // primaryDarkHover: {
-  //   font: 'white',
-  //   bg: 'yellow',
-  //   border: 'yellow',
-  //   hoverBg: 'orange',
-  //   hoverBorder: 'orange'
-  // },
-  // whiteTransparent: {
-  //   font: 'white',
-  //   hoverBorder: 'white'
-  // },
-  // mediumGrey: {
-  //   font: 'white',
-  //   bg: 'mediumGrey',
-  //   border: 'mediumGrey',
-  //   hoverFont: 'mediumGrey',
-  //   hoverBg: 'white'
-  // },
-  // lightGrey: {
-  //   font: 'white',
-  //   bg: 'lightGrey',
-  //   border: 'lightGrey',
-  //   hoverFont: 'mediumGrey',
-  //   hoverBg: 'ultraLightGrey'
-  // },
-};
-
 const buttonColorStyle = (prop, cssProp) => ({ colors, theme }) =>
-  buttonColors[colors] && buttonColors[colors][prop]
+  theme.buttons[colors] && theme.buttons[colors][prop]
     ? css`
-        ${cssProp}: ${theme.colors[buttonColors[colors][prop]]};
+        ${cssProp}: ${theme.colors[theme.buttons[colors][prop]]};
       `
     : null;
 
@@ -136,7 +55,7 @@ const StyledButton = styled.button`
     ${buttonColorStyle('hoverFont', 'color')};
     ${buttonColorStyle('hoverBg', 'background-color')};
     ${buttonColorStyle('hoverBorder', 'border-color')};
-    ${props => buttonColors[props.colors].hoverBg === 'transparent' && css`background: none;`}
+    ${props => props.theme.buttons[props.colors].hoverBg === 'transparent' && css`background: none;`}
   }
 `;
 
