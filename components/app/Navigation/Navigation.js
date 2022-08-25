@@ -40,14 +40,13 @@ const TransparentImage = styled(Image)`
 `;
 
 const Navigation = () => (
-  <ScrollableDiv bg="background" h="100%" w="100%">
+  <ScrollableDiv bg="navBackground" h="100%" w="100%">
     <Div align="center" p="30px">
       <PageLink page="index">
         <TransparentImage src="/static/images/logo-4.png" w="100%" />
       </PageLink>
     </Div>
-    <Separator />
-    <Div p="10px 15px 70px">
+    <Div p="0px 15px 70px">
       <Ul>
         <NavLink page="index">
           <Trans id="menu.home">Accueil</Trans>
@@ -90,7 +89,7 @@ const Navigation = () => (
         <Cell w={1 / 3} h="42px">
           <a href="https://www.facebook.com/Anna-Elisa-Valmori-psychologue-104513137604349/" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
               hoverBgColor="facebook"
@@ -106,7 +105,7 @@ const Navigation = () => (
         <BorderedCell w={0.33} h="42px">
           <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
               hoverBgColor="linkedin"
@@ -122,7 +121,7 @@ const Navigation = () => (
         <Cell w={0.33} h="42px">
           <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
               hoverBgColor="doctolib"

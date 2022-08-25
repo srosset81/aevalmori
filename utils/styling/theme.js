@@ -28,6 +28,10 @@ const theme = {
     background: '#F7F7F7',
     white: '#FFF',
 
+    navText: '#444',
+    navSeparator: '#BBB',
+    navBackground: '#DDDDDD',
+
     // lightRose: '#f8d4cc',
     // rose: '#DC00E4',
     // lightPurple: '#e6d5f6',  // primaryLight
