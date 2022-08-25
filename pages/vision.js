@@ -57,7 +57,7 @@ const VisionPage = () => (
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
-    <QuoteSection author="Ameya Canovi" bg="darkPurple" color="white">
+    <QuoteSection author="Ameya Canovi" bg="primaryDark" color="white">
       Si vous y réfléchissez, votre malheur n'est pas causé par l'autre. Il vous a toujours appartenu. Tant que vous ne
       faites pas un travail sérieux, constant et honnête avec vous-même, vous rencontrerez toujours les mêmes
       dynamiques, les mêmes histoires
