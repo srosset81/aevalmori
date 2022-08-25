@@ -1,0 +1,22 @@
+[
+    {
+        "index": "Accueil"
+    },
+    {
+        "about": "Qui suis-je ?",
+        "vision": "Ma vision"
+    },
+    {
+        "services-individuals": "Séances individuelles",
+        "services-constellations": "Constellations familiales",
+        "services-dmoka": "D.M.O.K.A."
+    },
+    {
+        "events": "Agenda",
+        "testimonies": "Témoignages",
+        "blog": "Blog"
+    },
+    {
+        "contact": "Contact"
+    }
+]
