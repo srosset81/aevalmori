@@ -79,7 +79,7 @@ const Event = ({ event, showMore, expand }) => {
               </AbsoluteDiv>
             </Visible>
             <SubTitle p={{ xs: '0px', sm: '0px' }}>{showMore ? 'Evénement' : event.title}</SubTitle>
-            <P italic>{fromDateToDate(event, i18n)}</P>
+            <P m="10px 0" italic>{fromDateToDate(event, i18n)}</P>
             <Markdown>{event.content}</Markdown>
             {showMore && (
               <Visible sm md lg xl>

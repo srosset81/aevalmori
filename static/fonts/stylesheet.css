@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll; /* Show scrollbars */
+}
+
 @font-face {
     font-family: 'Caviar Dreams';
     src: url('CaviarDreams.eot');

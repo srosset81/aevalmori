@@ -1,3 +1,4 @@
+export { default as Chip } from './Chip';
 export { default as H } from './H';
 export { default as LeadP } from './LeadP';
 export { default as P } from './P';

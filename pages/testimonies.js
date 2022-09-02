@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Div } from 'components/layout';
-import { P } from 'components/text';
+import { Cell, Div, Row, Separator } from 'components/layout';
+import { Chip, P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Testimony } from 'components/ui';
 import { Trans } from '@lingui/macro';
-import Divider from '../svg/divider.svg';
+import Tags from "../components/ui/Tags";
+import { testimoniesTags } from "../utils/constants";
 
 const TestimoniesPage = () => {
-  const { loading, error, data } = useQuery(gql`
+  const [tag, setTag] = useState();
+
+  const { loading, error, data } = useQuery(
+    gql`
+      query ($tag: String) {
+        allTestimonyFrs(filter: { participatedAt: { eq: $tag } }) {
+          title
+          content(markdown: true)
+          surname
+          date
+          participatedAt
+        }
+      }
+    `,
     {
-      allTestimonyFrs {
-        title
-        content(markdown: true)
-        surname
-        date
-        participatedAt
+      variables: {
+        tag
       }
     }
-  `);
+  );
 
   return (
     <Layout>
@@ -31,7 +41,15 @@ const TestimoniesPage = () => {
       <TopSection image="flowers.jpg">
         <Trans id="testimonies.title">Témoignages</Trans>
       </TopSection>
-      <Div bg="ultraLightGrey">
+      <Div p={{ xs: "30px", sm: '50px 80px' }}>
+        <Row>
+          <Cell w={{ xs: 1/2 }}>
+            <SubTitle>Témoignages 💌</SubTitle>
+          </Cell>
+          <Cell w={{ xs: 1/2 }}>
+            <Tags tags={testimoniesTags} setTag={setTag} tag={tag} />
+          </Cell>
+        </Row>
         {loading && (
           <Div minH="100vh" p={{ xs: '25px', sm: '50px' }}>
             <P align="center">Chargement en cours...</P>
@@ -41,16 +59,18 @@ const TestimoniesPage = () => {
           data.allTestimonyFrs &&
           data.allTestimonyFrs.map((testimony, i) => (
             <React.Fragment key={i}>
-              {i > 0 && (
-                <Div align="middle">
-                  <Div w={{ xs: 4 / 5, sm: 3 / 5 }}>
-                    <Divider style={{ fill: 'rgba(213,121,139,0.39)' }} width="100%" />
-                  </Div>
-                </Div>
-              )}
+              <Separator m="15px 0px" color="lightGrey" />
               <Testimony testimony={testimony} />
             </React.Fragment>
           ))}
+        {!loading && (data && data.allTestimonyFrs.length === 0) && (
+          <Div minH="500px">
+            <P>Aucun témoignage n'a été trouvé.</P>
+            {tag &&
+              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Enlever les filtres</P>
+            }
+          </Div>
+        )}
       </Div>
       <FooterSection />
     </Layout>

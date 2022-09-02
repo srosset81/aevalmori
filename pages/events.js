@@ -1,21 +1,24 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Div } from 'components/layout';
-import { P } from 'components/text';
+import { Div, Row, Cell, Separator } from 'components/layout';
+import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Event } from 'components/ui';
 import { Trans } from '@lingui/macro';
+import Tags from "../components/ui/Tags";
+import { eventsTags } from "../utils/constants";
 
 const EventsPage = () => {
-  // const now = useMemo(() => (new Date()).toISOString(), []);
+  const now = useMemo(() => (new Date()).toISOString(), []);
+  const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
     gql`
-      query ($now: DateTime!) {
-        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }}) {
+      query ($now: DateTime!, $tag: String) {
+        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag } }) {
           title
           content
           startDate
@@ -24,19 +27,32 @@ const EventsPage = () => {
       }
     `,
     {
-      variables: { now: '2022-09-10' }
+      variables: {
+        now: '2022-09-10',
+        tag
+      }
     }
   );
+
+  console.log('data', data);
 
   return (
     <Layout>
       <Head>
         <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
       </Head>
-      <TopSection image="single-tree-2.jpg">
+      <TopSection image="birds-sunset.jpg">
         <Trans id="events.title">Agenda</Trans>
       </TopSection>
       <Div p={{ xs: "30px", sm: "50px 80px" }}>
+        <Row>
+          <Cell w={{ xs: 1/2 }}>
+            <SubTitle>📅 Prochains événements</SubTitle>
+          </Cell>
+          <Cell w={{ xs: 1/2 }}>
+            <Tags tags={eventsTags} tag={tag} setTag={setTag} />
+          </Cell>
+        </Row>
         {loading && (
           <Div minH="100vh" p={{ xs: '25px', sm: '50px' }}>
             <P align="center">Chargement en cours...</P>
@@ -45,8 +61,19 @@ const EventsPage = () => {
         {data &&
           data.allEventFrs &&
           data.allEventFrs.map((event, i) => (
-            <Event event={event} expand={false} key={i} />
+            <React.Fragment key={i}>
+              <Separator m="15px 0px" color="ultraLightGrey" />
+              <Event event={event} expand={false} />
+            </React.Fragment>
           ))}
+        {!loading && (data && data.allEventFrs.length === 0) && (
+          <Div minH="500px">
+            <P>Aucun événement n'a été trouvé.</P>
+            {tag &&
+              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Enlever les filtres</P>
+            }
+          </Div>
+        )}
       </Div>
       <FooterSection />
     </Layout>

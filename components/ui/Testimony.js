@@ -11,7 +11,7 @@ import { PageLink } from '../../utils/router';
 import { Hidden, Visible } from '../layout';
 
 const Gradient = styled(AbsoluteDiv)`
-  background: linear-gradient(to bottom, transparent, #ddd);
+  background: linear-gradient(to bottom, transparent, white);
 `;
 
 const AllTestimoniesLink = ({ float }) => (
@@ -31,8 +31,8 @@ const Testimony = ({ testimony, showMore, expand }) => {
   }, [contentRef.current]);
 
   return testimony ? (
-    <Div p={{ xs: '30px 25px 15px', md: '50px 80px 40px 90px' }}>
-      <AbsoluteDiv top left p={{ xs: '25px 15px 15px', md: '47px 40px 0px' }}>
+    <Div p="25px 0">
+      <AbsoluteDiv top="20px" left="-45px">
         <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
       </AbsoluteDiv>
       <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
@@ -62,7 +62,7 @@ const Testimony = ({ testimony, showMore, expand }) => {
         )}
       </Div>
       {(!isLongText || isExpanded) && (
-        <AbsoluteDiv bottom right p={{ xs: showMore ? '0 15px 120px' : '0 15px 65px', md: '0px 40px 110px' }}>
+        <AbsoluteDiv bottom="45px" right="-45px">
           <QuoteClose style={{ fill: theme.colors.primaryDark }} />
         </AbsoluteDiv>
       )}
