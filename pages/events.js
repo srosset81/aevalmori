@@ -34,14 +34,12 @@ const EventsPage = () => {
     }
   );
 
-  console.log('data', data);
-
   return (
     <Layout>
       <Head>
         <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
       </Head>
-      <TopSection image="birds-sunset.jpg">
+      <TopSection image="bird3.jpg">
         <Trans id="events.title">Agenda</Trans>
       </TopSection>
       <Div p={{ xs: "30px", sm: "50px 80px" }}>

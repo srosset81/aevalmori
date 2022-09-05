@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { styled, theme } from '../../utils/styling';
+import { styled, theme, css } from '../../utils/styling';
 import Div from '../layout/Div';
 import AbsoluteDiv from '../layout/AbsoluteDiv';
 import QuoteOpen from '../../svg/quote-open.svg';
@@ -11,7 +11,7 @@ import { PageLink } from '../../utils/router';
 import { Hidden, Visible } from '../layout';
 
 const Gradient = styled(AbsoluteDiv)`
-  background: linear-gradient(to bottom, transparent, white);
+  background: ${props => css`linear-gradient(to bottom, transparent, ${props.bg ? props.theme.colors[props.bg] : 'white'})`};
 `;
 
 const AllTestimoniesLink = ({ float }) => (
@@ -22,7 +22,7 @@ const AllTestimoniesLink = ({ float }) => (
   </PageLink>
 );
 
-const Testimony = ({ testimony, showMore, expand }) => {
+const Testimony = ({ bg, testimony, showMore, expand }) => {
   const contentRef = useRef(null);
   const [isLongText, setLongText] = useState(false);
   const [isExpanded, setIsExpanded] = useState(expand);
@@ -54,7 +54,7 @@ const Testimony = ({ testimony, showMore, expand }) => {
           </Hidden>
         )}
         {isLongText && !isExpanded && (
-          <Gradient bottom left right h="150px" align="middle">
+          <Gradient bottom left right h="150px" align="middle" bg={bg}>
             <Button colors="darkGrey" onClick={() => setIsExpanded(true)} m="30px 0 0">
               Lire plus
             </Button>
