@@ -11,7 +11,7 @@ const QuoteSection = ({ author, title, bg, color, children }) => (
           color="white"
           align="center"
           font="title"
-          fontSize={{ xs: '1.5em', md: '3em' }}
+          fontSize={{ xs: '2em', md: '3em' }}
           m="0 0 15px 0"
           lineHeight="1em"
         >
@@ -22,7 +22,7 @@ const QuoteSection = ({ author, title, bg, color, children }) => (
         <em>«&nbsp;{children}&nbsp;»</em>
       </P>
       {author &&
-        <P fontSize="1.3em" lineHeight="1em" color={color} m="0" align="right">
+        <P fontSize={{ xs: "1.1em", sm: "1.3em" }} lineHeight="1em" color={color} m="0" align="right">
           - {author}
         </P>
       }
