@@ -1,7 +1,4 @@
-export const eventsTags = {
-  sharedGovernance: 'Gouvernance partagée',
-  constellations: 'Constellations'
-};
+export const eventsTags = {};
 
 export const testimoniesTags = {
   constellations: 'Constellations',

@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import {Layout} from 'components/app';
-import {SideImage} from 'components/media';
-import {LeadP, P, H} from 'components/text';
+import { Layout } from 'components/app';
+import { SideImage } from 'components/media';
+import { LeadP, P, H } from 'components/text';
 import { ArticleSection, FooterSection, TopSection } from 'components/section';
 import { PageLink } from "../utils/router";
 

@@ -18,7 +18,6 @@ const ServicesConstellationsPage = () => (
     <Head>
       <title>Constellations Familiales à Paris - Anna Elisa Valmori, psychologue</title>
     </Head>
-    <AnnounceSection />
     <TopSection image="birds-sky.jpg">
       <Trans id="services.constellations.title">Constellations familiales</Trans>
     </TopSection>

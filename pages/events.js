@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
@@ -11,8 +11,9 @@ import { Trans } from '@lingui/macro';
 import Tags from "../components/ui/Tags";
 import { eventsTags } from "../utils/constants";
 
+const now = (new Date()).toISOString().substring(0,10);
+
 const EventsPage = () => {
-  const now = useMemo(() => (new Date()).toISOString(), []);
   const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
@@ -28,7 +29,7 @@ const EventsPage = () => {
     `,
     {
       variables: {
-        now: '2022-09-10',
+        now,
         tag
       }
     }
@@ -39,7 +40,7 @@ const EventsPage = () => {
       <Head>
         <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
       </Head>
-      <TopSection image="bird3.jpg">
+      <TopSection image="events.jpg">
         <Trans id="events.title">Agenda</Trans>
       </TopSection>
       <Div p={{ xs: "30px", sm: "50px 80px" }}>
