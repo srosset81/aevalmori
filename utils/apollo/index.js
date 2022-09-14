@@ -137,9 +137,11 @@ const httpLink = createHttpLink({
   fetch
 });
 
+console.log('process.env', process.env);
+
 const authLink = setContext((_, { headers }) => ({
   headers: {
     ...headers,
-    Authorization: process.env.DATOCMS_API_KEY
+    Authorization: process.env.NEXT_PUBLIC_DATOCMS_API_KEY
   }
 }));
