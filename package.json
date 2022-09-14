@@ -8,7 +8,7 @@
     "start": "next start",
     "vercel:dev": "vercel dev",
     "vercel:deploy": "vercel",
-    "vercel:alias": "vercel alias nouvel-air.org && now alias www.nouvel-air.org",
+    "vercel:alias": "vercel alias nouvel-air.org",
     "vercel:pull-env": "now env pull .env.local",
     "lingui:extract": "lingui extract --clean",
     "lingui:compile": "lingui compile",
