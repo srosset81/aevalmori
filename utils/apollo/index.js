@@ -137,8 +137,6 @@ const httpLink = createHttpLink({
   fetch
 });
 
-console.log('process.env', process.env);
-
 const authLink = setContext((_, { headers }) => ({
   headers: {
     ...headers,
