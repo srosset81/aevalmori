@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Div, Row, Cell, Separator } from 'components/layout';
+import { Visible, Div, Row, Cell, Separator } from 'components/layout';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Event } from 'components/ui';
@@ -45,11 +45,13 @@ const EventsPage = () => {
       </TopSection>
       <Div p={{ xs: "30px", sm: "50px 80px" }}>
         <Row>
-          <Cell w={{ xs: 1/2 }}>
+          <Cell w={{ xs: 1, sm: 1/2 }}>
             <SubTitle>📅 Prochains événements</SubTitle>
           </Cell>
-          <Cell w={{ xs: 1/2 }}>
-            <Tags tags={eventsTags} tag={tag} setTag={setTag} />
+          <Cell w={{ sm: 1/2 }}>
+            <Visible sm md lg xl>
+              <Tags tags={eventsTags} tag={tag} setTag={setTag} />
+            </Visible>
           </Cell>
         </Row>
         {loading && (

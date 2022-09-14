@@ -32,9 +32,16 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
 
   return testimony ? (
     <Div p="25px 0">
-      <AbsoluteDiv top="20px" left="-45px">
-        <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
-      </AbsoluteDiv>
+      <Hidden sm md lg xl>
+        <AbsoluteDiv top="20px" left="-10px">
+          <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
+        </AbsoluteDiv>
+      </Hidden>
+      <Visible sm md lg xl>
+        <AbsoluteDiv top="20px" left="-45px">
+          <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
+        </AbsoluteDiv>
+      </Visible>
       <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
         <SubTitle p={{ xs: '0 0 0 30px', sm: '0px' }}>{showMore ? 'Témoignage' : testimony.title}</SubTitle>
         <Markdown>{testimony.content}</Markdown>

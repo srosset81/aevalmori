@@ -3,8 +3,8 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Cell, Div, Row, Separator } from 'components/layout';
-import { Chip, P, SubTitle } from 'components/text';
+import { Visible, Cell, Div, Row, Separator } from 'components/layout';
+import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Testimony } from 'components/ui';
 import { Trans } from '@lingui/macro';
@@ -43,11 +43,13 @@ const TestimoniesPage = () => {
       </TopSection>
       <Div p={{ xs: "30px", sm: '50px 80px' }}>
         <Row>
-          <Cell w={{ xs: 1/2 }}>
+          <Cell w={{ xs: 1, sm: 1/2 }}>
             <SubTitle>Témoignages 💌</SubTitle>
           </Cell>
-          <Cell w={{ xs: 1/2 }}>
-            <Tags tags={testimoniesTags} setTag={setTag} tag={tag} />
+          <Cell w={{ sm: 1/2 }}>
+            <Visible sm md lg xl>
+              <Tags tags={testimoniesTags} setTag={setTag} tag={tag} />
+            </Visible>
           </Cell>
         </Row>
         {loading && (
