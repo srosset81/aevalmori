@@ -12,7 +12,7 @@ const TopSection = ({ image, position, subTitle, children }) => (
           color="white"
           align="center"
           font="title"
-          fontSize={{ xs: '4.5em', md: '7em' }}
+          fontSize={{ xs: '4.5em', md: '4em' }}
           m="0"
           lineHeight="1em"
         >

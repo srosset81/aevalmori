@@ -2,7 +2,7 @@ const theme = {
   breakpoints: { xs: '0px', sm: '540px', md: '820px', lg: '1060px', xl: '1200px' },
   fontFamily: {
     regular: "'Open Sans', Helvetica, Arial, sans-serif",
-    title: "'Moving Skate', cursive",
+    title: "'Secret Winter', cursive",
     subTitle: "'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
