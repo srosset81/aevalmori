@@ -1,21 +1,23 @@
-const sgMail = require('@sendgrid/mail');
+const formData = require('form-data');
+const Mailgun = require('mailgun.js');
 
 export default function handle(req, res) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const mailgun = new Mailgun(formData);
+  const mg = mailgun.client({
+    username: 'api',
+    key: process.env.MAILGUN_API_KEY,
+    url: 'https://api.eu.mailgun.net'
+  });
 
   const { name, email, phone, message } = req.body;
 
-  return sgMail
-    .send({
-      to: 'aelisa.valmori@gmail.com',
-      from: {
-        name: 'Anna-Elisa-Valmori.com',
-        email: 'ae@anna-elisa-valmori.com'
-      },
-      replyTo: email,
+  return mg
+    .messages
+    .create('mg.anna-elisa-valmori.com', {
+      from: `${name} <${email}>`,
+      to: ['aelisa.valmori@gmail.com'],
       subject: 'Message du site web',
-      text:
-        message.replace(/\n/, '\n\n') +
+      text: message.replace(/\n/, '\n\n') +
         '\n\n___________________\n\nNom : ' +
         name +
         '\n\nEmail : ' +
