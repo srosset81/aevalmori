@@ -38,7 +38,7 @@ const EventsPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>Agenda - {process.env.APP_TITLE}</title>
       </Head>
       <TopSection image="events.jpg">
         <Trans id="events.title">Agenda</Trans>
