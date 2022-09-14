@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 
-const listDomain = 'us17';
-const listId = 'eda7a7d2c1';
-const apiKey = '235f612d17ed4b857a44bd0cc8937146-us17';
+const listDomain = process.env.MAILCHIMP_LIST_DOMAIN;
+const listId = process.env.MAILCHIMP_LIST_ID;
+const apiKey = process.env.MAILCHIMP_API_KEY;
 
 export default function handle(req, res) {
   const { email, name } = req.body;
