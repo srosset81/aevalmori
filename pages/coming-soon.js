@@ -1,15 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
-import {Layout} from 'components/app';
-import {Div} from 'components/layout';
-import {BgImage} from 'components/media';
-import {P, H} from 'components/text';
-import {AnimOnAppear} from 'components/motion';
-import {MenuSection, FooterSection, QuoteSection} from 'components/section';
-import ClientSection from "../components/section/ClientSection";
+import { ThemeProvider, theme } from "utils/styling";
+import { Div } from 'components/layout';
+import { BgImage } from 'components/media';
+import { P } from 'components/text';
+import { AnimOnAppear } from 'components/motion';
 
 const ComingSoonPage = () => (
-  <>
+  <ThemeProvider theme={theme}>
     <Head>
       <title>Nouvel air - Constellations d'organisations et Gouvernance partagée dans l'Oise et à Paris</title>
     </Head>
@@ -38,7 +36,7 @@ const ComingSoonPage = () => (
             m="15px 0"
             style={{textTransform: 'uppercase', letterSpacing: 2}}
           >
-            Au coeur de votre organisation
+            Bientôt
           </P>
         </AnimOnAppear>
         <br/>
@@ -46,7 +44,7 @@ const ComingSoonPage = () => (
         <br/>
       </Div>
     </BgImage>
-  </>
+  </ThemeProvider>
 );
 
 export default ComingSoonPage;
