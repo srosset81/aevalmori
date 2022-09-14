@@ -4,3 +4,4 @@ node_modules
 static/images/stock
 locale/_build
 .now
+.env.local

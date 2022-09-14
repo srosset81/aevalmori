@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Head, Main, NextScript } from 'utils/next';
+import { Html, Document, Head, Main, NextScript } from 'utils/next';
 import { ServerStyleSheet } from 'utils/styling';
 
 const supportedLocale = ['fr', 'it'];
@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
   render() {
     const { linguiCatalog, locale } = this.props;
     return (
-      <html lang={locale}>
+      <Html lang={locale}>
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
