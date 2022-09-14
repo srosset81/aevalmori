@@ -30,10 +30,10 @@ class FooterSection extends React.Component {
         <Row>
           <Cell w={{ xs: 1, sm: 1 / 4 }}>
             <P bold upper color="white" lineHeight="1em">
-              Anna Elisa Valmori
+              Nouvel air
             </P>
             <P color="white" linkColor="white" lineHeight="1.4em">
-              Copyright &copy; 2019-2022
+              Copyright &copy; 2022
             </P>
           </Cell>
           <Cell w={{ xs: 1, sm: 1 / 4 }}>
