@@ -38,7 +38,7 @@ const EventsPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Agenda - {process.env.APP_TITLE}</title>
+        <title>Agenda - {process.env.NEXT_PUBLIC_APP_TITLE}</title>
       </Head>
       <TopSection image="events.jpg">
         <Trans id="events.title">Agenda</Trans>
