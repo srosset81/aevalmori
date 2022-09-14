@@ -3,31 +3,33 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Cell, Div, Row, Separator } from 'components/layout';
-import { Chip, P, SubTitle } from 'components/text';
+import { Div, Row, Cell, Separator } from 'components/layout';
+import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
-import { Testimony } from 'components/ui';
+import { Event } from 'components/ui';
 import { Trans } from '@lingui/macro';
 import Tags from "../components/ui/Tags";
-import { testimoniesTags } from "../utils/constants";
+import { eventsTags } from "../utils/constants";
 
-const TestimoniesPage = () => {
+const now = (new Date()).toISOString().substring(0,10);
+
+const EventsPage = () => {
   const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
     gql`
-      query ($tag: String) {
-        allTestimonyFrs(filter: { participatedAt: { eq: $tag } }) {
+      query ($now: DateTime!, $tag: String) {
+        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag } }) {
           title
-          content(markdown: true)
-          surname
-          date
-          participatedAt
+          content
+          startDate
+          endDate
         }
       }
     `,
     {
       variables: {
+        now,
         tag
       }
     }
@@ -36,18 +38,18 @@ const TestimoniesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Témoignages - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
       </Head>
-      <TopSection image="flowers.jpg">
-        <Trans id="testimonies.title">Témoignages</Trans>
+      <TopSection image="events.jpg">
+        <Trans id="events.title">Agenda</Trans>
       </TopSection>
-      <Div p={{ xs: "30px", sm: '50px 80px' }}>
+      <Div p={{ xs: "30px", sm: "50px 80px" }}>
         <Row>
           <Cell w={{ xs: 1/2 }}>
-            <SubTitle>Témoignages 💌</SubTitle>
+            <SubTitle>📅 Prochains événements</SubTitle>
           </Cell>
           <Cell w={{ xs: 1/2 }}>
-            <Tags tags={testimoniesTags} setTag={setTag} tag={tag} />
+            <Tags tags={eventsTags} tag={tag} setTag={setTag} />
           </Cell>
         </Row>
         {loading && (
@@ -56,16 +58,16 @@ const TestimoniesPage = () => {
           </Div>
         )}
         {data &&
-          data.allTestimonyFrs &&
-          data.allTestimonyFrs.map((testimony, i) => (
+          data.allEventFrs &&
+          data.allEventFrs.map((event, i) => (
             <React.Fragment key={i}>
-              <Separator m="15px 0px" color="lightGrey" />
-              <Testimony testimony={testimony} />
+              <Separator m="15px 0px" color="ultraLightGrey" />
+              <Event event={event} expand={false} />
             </React.Fragment>
           ))}
-        {!loading && (data && data.allTestimonyFrs.length === 0) && (
+        {!loading && (data && data.allEventFrs.length === 0) && (
           <Div minH="500px">
-            <P>Aucun témoignage n'a été trouvé.</P>
+            <P>Aucun événement n'a été trouvé.</P>
             {tag &&
               <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Enlever les filtres</P>
             }
@@ -77,4 +79,4 @@ const TestimoniesPage = () => {
   );
 };
 
-export default TestimoniesPage;
+export default EventsPage;

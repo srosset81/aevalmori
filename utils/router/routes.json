@@ -19,6 +19,10 @@
         "fr": "dmoka",
         "it": "dmoka"
     },
+    "events": {
+        "fr": "agenda",
+        "it": "eventi"
+    },
     "testimonies": {
         "fr": "temoignages",
         "it": "testimonianze"

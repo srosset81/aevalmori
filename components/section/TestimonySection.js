@@ -20,8 +20,8 @@ const TestimonySection = ({ type, id, showMore, expand }) => {
   `);
 
   return data && data.testimonyFr ? (
-    <Div bg="ultraLightGrey">
-      <Testimony testimony={data.testimonyFr} showMore={showMore} expand={expand} />
+    <Div bg="ultraLightGrey" p={{ xs: "30px", sm: '30px 80px' }}>
+      <Testimony testimony={data.testimonyFr} showMore={showMore} expand={expand} bg="ultraLightGrey" />
     </Div>
   ) : null;
 };

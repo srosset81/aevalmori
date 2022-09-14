@@ -73,7 +73,7 @@ const ServiceIndividualPage = () => (
         créateur de sa propre vie.
       </P>
     </ContentSection>
-    <QuoteSection author="C.G. Jung" bg="lightRose">
+    <QuoteSection author="C.G. Jung" bg="tertiaryLight">
       Votre vision devient claire lorsque vous pouvez regarder dans votre cœur. Celui qui regarde à l’extérieur de soi
       ne fait que rêver ; celui qui regarde en soi se réveille.
     </QuoteSection>

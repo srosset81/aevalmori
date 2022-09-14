@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Layout } from 'components/app';
 import { Div } from 'components/layout';
 import { BgImage } from 'components/media';
-import { P } from 'components/text';
+import { P, H } from 'components/text';
 import { AnimOnAppear } from 'components/motion';
 import { MenuSection, FooterSection, DoctolibSection } from 'components/section';
 
@@ -19,7 +19,7 @@ const IndexPage = () => (
             shadow
             color="white"
             align="center"
-            font="movingSkate"
+            font="title"
             fontSize={{ xs: '6em', sm: '8em ' }}
             m="0"
             style={{ lineHeight: 0.7 }}
@@ -31,7 +31,7 @@ const IndexPage = () => (
             shadow
             color="white"
             align="center"
-            font="caviarDreams"
+            font="subTitle"
             fontSize={{ xs: '1.7em', sm: '1.7em' }}
             lineHeight="1.4em"
             m="15px 0"

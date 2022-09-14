@@ -6,7 +6,7 @@ import { styled, css, responsiveStyle, responsivePropType } from 'utils/styling'
 const Text = styled.span`
   word-wrap: break-word;
   display: ${props => (props.m || props.p ? 'inline-block' : 'inline')};
-  font-family: ${({ font, theme }) => (font ? theme.fontFamily[font] : theme.fontFamily.openSans)};
+  font-family: ${({ font, theme }) => (font ? theme.fontFamily[font] : theme.fontFamily.regular)};
   line-height: ${props => props.lineHeight || '1.3em'};
   float: ${props => props.float};
   ${props => props.bold && css`font-weight: bold;`}

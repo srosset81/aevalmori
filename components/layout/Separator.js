@@ -6,7 +6,7 @@ import { styled, responsiveStyle, responsivePropType } from 'utils/styling';
 const Separator = styled.div`
   ${responsiveStyle({m: 'margin'})}
   height: 1px;
-  background-color: ${props => (props.color ? props.theme.colors[props.color] : props.theme.colors.ultraLightGrey)};
+  background-color: ${props => (props.color ? props.theme.colors[props.color] : props.theme.colors.navSeparator)};
 `;
 
 Separator.propTypes = {

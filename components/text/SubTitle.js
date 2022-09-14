@@ -2,7 +2,7 @@ import P from './P';
 import { styled } from 'utils/styling';
 
 const SubTitle = styled(P)`
-  font-family: ${({ theme }) => theme.fontFamily.caviarDreams};
+  font-family: ${({ theme }) => theme.fontFamily.subTitle};
   font-size: 1.5em;
   font-weight: bold;
   margin: 0 0 15px;

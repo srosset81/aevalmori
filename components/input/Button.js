@@ -1,119 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { styled, css, responsiveStyle, responsivePropType } from 'utils/styling';
-
 import { Icon } from 'components/media';
 
-const buttonColors = {
-  classic: {
-    font: 'white',
-    bg: 'darkPurple',
-    border: 'darkPurple',
-    hoverFont: 'darkPurple',
-    hoverBg: 'transparent'
-  },
-  classicNoHover: {
-    font: 'white',
-    bg: 'darkBlue',
-    border: 'darkBlue',
-    hoverBg: 'darkBlue'
-  },
-  classicLight: {
-    font: 'white',
-    bg: 'darkBlue',
-    border: 'white',
-    hoverFont: 'darkBlue',
-    hoverBg: 'white'
-  },
-  classicHoverLight: {
-    font: 'white',
-    bg: 'darkBlue',
-    border: 'darkBlue',
-    hoverFont: 'white',
-    hoverBg: 'transparent',
-    hoverBorder: 'white'
-  },
-  primary: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow'
-  },
-  primaryLight: {
-    font: 'yellow',
-    border: 'yellow'
-  },
-  primaryLightHover: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow',
-    hoverFont: 'yellow',
-    hoverBg: 'transparent'
-  },
-  primaryDarkHover: {
-    font: 'white',
-    bg: 'yellow',
-    border: 'yellow',
-    hoverBg: 'orange',
-    hoverBorder: 'orange'
-  },
-  whiteTransparent: {
-    font: 'white',
-    hoverBorder: 'white'
-  },
-  mediumGrey: {
-    font: 'white',
-    bg: 'mediumGrey',
-    border: 'mediumGrey',
-    hoverFont: 'mediumGrey',
-    hoverBg: 'white'
-  },
-  lightGrey: {
-    font: 'white',
-    bg: 'lightGrey',
-    border: 'lightGrey',
-    hoverFont: 'mediumGrey',
-    hoverBg: 'ultraLightGrey'
-  },
-  greyViolet: {
-    font: 'white',
-    bg: 'lightGrey',
-    border: 'lightGrey',
-    hoverFont: 'white',
-    hoverBg: 'violet'
-  },
-  banner: {
-    font: 'darkRed',
-    bg: 'white',
-    border: 'white',
-    hoverFont: 'white',
-    hoverBg: 'transparent'
-  },
-  red: {
-    font: 'white',
-    bg: 'darkRed',
-    border: 'darkRed',
-    hoverFont: 'darkRed',
-    hoverBg: 'white'
-  },
-  facebook: {
-    font: 'white',
-    bg: 'facebook',
-    border: 'none',
-    hoverBg: 'facebookDark'
-  },
-  twitter: {
-    font: 'white',
-    bg: 'twitter',
-    border: 'none',
-    hoverBg: 'twitterDark'
-  }
-};
-
 const buttonColorStyle = (prop, cssProp) => ({ colors, theme }) =>
-  buttonColors[colors] && buttonColors[colors][prop]
+  theme.buttons[colors] && theme.buttons[colors][prop]
     ? css`
-        ${cssProp}: ${theme.colors[buttonColors[colors][prop]]};
+        ${cssProp}: ${theme.colors[theme.buttons[colors][prop]]};
       `
     : null;
 
@@ -162,7 +55,7 @@ const StyledButton = styled.button`
     ${buttonColorStyle('hoverFont', 'color')};
     ${buttonColorStyle('hoverBg', 'background-color')};
     ${buttonColorStyle('hoverBorder', 'border-color')};
-    ${props => buttonColors[props.colors].hoverBg === 'transparent' && css`background: none;`}
+    ${props => props.theme.buttons[props.colors].hoverBg === 'transparent' && css`background: none;`}
   }
 `;
 

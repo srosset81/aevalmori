@@ -15,6 +15,7 @@ import Doctolib from '../../../svg/logo-doctolib.svg';
 
 import NavLink from './NavLink';
 import FlagSelector from './FlagSelector';
+import NavLinks from "./NavLinks";
 
 const ScrollableDiv = styled(Div)`
   overflow-y: auto;
@@ -40,45 +41,14 @@ const TransparentImage = styled(Image)`
 `;
 
 const Navigation = () => (
-  <ScrollableDiv bg="background" h="100%" w="100%">
+  <ScrollableDiv bg="navBackground" h="100%" w="100%">
     <Div align="center" p="30px">
       <PageLink page="index">
         <TransparentImage src="/static/images/logo-4.png" w="100%" />
       </PageLink>
     </Div>
-    <Separator />
-    <Div p="10px 15px 70px">
-      <Ul>
-        <NavLink page="index">
-          <Trans id="menu.home">Accueil</Trans>
-        </NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="about">
-          <Trans id="menu.about">Qui suis-je?</Trans>
-        </NavLink>
-        <NavLink page="vision">Ma vision</NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="services-individuals">
-          <Trans id="menu.individual-consulting">Séances individuelles</Trans>
-        </NavLink>
-        <NavLink page="services-constellations">
-          <Trans id="menu.family-constellations">Constellations familiales</Trans>
-        </NavLink>
-        <NavLink page="services-dmoka">
-          <Trans id="menu.dmoka">D.M.O.K.A.</Trans>
-        </NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="testimonies">
-          <Trans id="menu.testimony">Témoignages</Trans>
-        </NavLink>
-        <NavLink page="blog">
-          <Trans id="menu.blog">Blog</Trans>
-        </NavLink>
-        <Separator m="5px 0" />
-        <NavLink page="contact">
-          <Trans id="menu.contact">Contact</Trans>
-        </NavLink>
-      </Ul>
+    <Div p="0px 15px 70px">
+      <NavLinks />
     </Div>
 
     <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '350px' }}>
@@ -87,7 +57,7 @@ const Navigation = () => (
         <Cell w={1 / 3} h="42px">
           <a href="https://www.facebook.com/Anna-Elisa-Valmori-psychologue-104513137604349/" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
               hoverBgColor="facebook"
@@ -103,10 +73,10 @@ const Navigation = () => (
         <BorderedCell w={0.33} h="42px">
           <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
-              hoverBgColor="facebookDark"
+              hoverBgColor="linkedin"
               align="middle"
               h="100%"
             >
@@ -119,7 +89,7 @@ const Navigation = () => (
         <Cell w={0.33} h="42px">
           <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
             <HoverDiv
-              bg="background"
+              bg="navBackground"
               color="darkGrey"
               hoverColor="white"
               hoverBgColor="doctolib"

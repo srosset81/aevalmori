@@ -6,7 +6,7 @@ const H = ({ size, ...otherProps }) => {
   const BaseElement = 'h' + size;
   return (
     <BaseElement>
-      <Text bold font="openSans" {...otherProps} />
+      <Text font="regular" {...otherProps} />
     </BaseElement>
   );
 };

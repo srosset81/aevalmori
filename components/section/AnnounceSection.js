@@ -3,7 +3,7 @@ import { Div } from '../layout';
 import { Text } from '../text';
 
 const AnnounceSection = ({ dmoka }) => (
-  <Div bg="lightOrange" p="25px" align="center">
+  <Div bg="warning" p="25px" align="center">
     <Text fontSize={{ xs: '1.3em', sm: '1.5em' }} m="0 0 10px">
       Possibilité de sessions {dmoka ? 'de D.M.O.K.A.' : ''} en ligne sur Skype !
     </Text>

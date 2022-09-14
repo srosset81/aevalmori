@@ -18,7 +18,6 @@ const ServicesConstellationsPage = () => (
     <Head>
       <title>Constellations Familiales à Paris - Anna Elisa Valmori, psychologue</title>
     </Head>
-    <AnnounceSection />
     <TopSection image="birds-sky.jpg">
       <Trans id="services.constellations.title">Constellations familiales</Trans>
     </TopSection>
@@ -173,7 +172,7 @@ const ServicesConstellationsPage = () => (
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
-    <QuoteSection author="Alejandro Jodorowsky" color="black" bg="lightRose">
+    <QuoteSection author="Alejandro Jodorowsky" color="black" bg="tertiaryLight">
       Sentir qu’on se détache du passé, se retrouver dans un corps d’adulte, porter le fardeau des années douloureuses.
       Mais au cœur, garder l’enfant, comme une hostie vivante, comme un canari blanc, comme un digne diamant, comme une
       lucidité sans murs. Portes et fenêtres ouvertes, traversées par le vent, seulement par le vent, rien que par le
