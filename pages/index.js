@@ -21,7 +21,7 @@ const IndexPage = () => (
             color="white"
             align="center"
             font="title"
-            fontSize={{xs: '6em', sm: '6em'}}
+            fontSize={{ xs: '3.5em', sm: '6em' }}
             m="0"
             style={{ lineHeight: 1 }}
           >
@@ -33,7 +33,7 @@ const IndexPage = () => (
             color="white"
             align="center"
             font="subTitle"
-            fontSize={{ xs: '1.7em', sm: '1.8em' }}
+            fontSize={{ xs: '1.6em', sm: '1.8em' }}
             lineHeight="1.4em"
             m="15px 0"
             style={{textTransform: 'uppercase', letterSpacing: 2}}

@@ -18,7 +18,7 @@ const ClientSection = () => (
     <Div align="center">
       {Object.entries(clients).map(([image, website]) => (
         <a href={website} target="_blank" rel="noopener noreferrer">
-          <Image src={`/static/logos/${image}`} w="auto" h="120px" m="0 20px" />
+          <Image src={`/static/logos/${image}`} w="auto" h="120px" m="5px 20px" />
         </a>
       ))}
     </Div>
