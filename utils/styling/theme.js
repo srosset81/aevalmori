@@ -30,7 +30,7 @@ const theme = {
 
     navText: '#444',
     navSeparator: '#BBB',
-    navBackground: '#DDDDDD',
+    navBackground: '#F7F7F7',
 
     // lightRose: '#f8d4cc',
     // rose: '#DC00E4',
