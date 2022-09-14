@@ -44,7 +44,7 @@ const Navigation = () => (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
     <Div align="center" p="30px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/nouvel-air-3.jpg" w="100%" />
+        <TransparentImage src="/static/images/nouvel-air.png" w="100%" />
       </PageLink>
     </Div>
     <Div p="0px 25px 70px">
