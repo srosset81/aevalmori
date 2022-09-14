@@ -56,3 +56,14 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Secret Winter';
+    src: url('SecretWinter.eot');
+    src: url('SecretWinter.eot?#iefix') format('embedded-opentype'),
+    url('SecretWinter.woff2') format('woff2'),
+    url('SecretWinter.woff') format('woff'),
+    url('SecretWinter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

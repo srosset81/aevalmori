@@ -1,23 +1,20 @@
 {
-    "about": {
-        "fr": "qui-suis-je",
+    "about-us": {
+        "fr": "qui-sommes-nous",
         "it": "chi-sono"
     },
     "vision": {
         "fr": "ma-vision",
         "it": "la-mia-visione"
     },
-    "services-individuals": {
-        "fr": "consultations-individuelles",
-        "it": "consultazioni-individuali"
+    "organizational-constellations": {
+        "fr": "constellations-d-organisations"
     },
-    "services-constellations": {
-        "fr": "constellations-familiales",
-        "it": "costellazioni-familiari"
+    "shared-governance": {
+        "fr": "gouvernance-partagee"
     },
-    "services-dmoka": {
-        "fr": "dmoka",
-        "it": "dmoka"
+    "information-liberation": {
+        "fr": "liberation-de-l-information"
     },
     "events": {
         "fr": "agenda",
