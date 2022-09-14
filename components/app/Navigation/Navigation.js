@@ -42,7 +42,7 @@ const TransparentImage = styled(Image)`
 
 const Navigation = () => (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
-    <Div align="center" p="30px">
+    <Div align="center" p="15px 25px">
       <PageLink page="index">
         <TransparentImage src="/static/images/nouvel-air.png" w="100%" />
       </PageLink>
