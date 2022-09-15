@@ -52,7 +52,7 @@ const IndexPage = () => (
       afin qu'elles puissent pleinement réaliser leur raison d'être au sein de l'écosystème dans lequel elles sont se incarnées.
     </QuoteSection>
     <ClientSection />
-    <MenuSection left title="Qui sommes-nous ?" image="about-us.jpg" link="about">
+    <MenuSection left title="Qui sommes-nous ?" image="about-us.jpg" link="about-us">
       Après nous être engagés plusieurs années ensemble dans le monde associatif, nous avons décidé en 2022 de mettre
       en commun nos compétences et de créer Nouvel air. Notre envie ? Aider les organisations à déployer leurs
       ailes, afin qu'elles contribuent pleinement à l'émergence d'une société où l'humain est au centre.
