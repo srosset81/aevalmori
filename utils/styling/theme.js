@@ -6,9 +6,9 @@ const theme = {
     subTitle: "'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
-    primaryLight: '#e6d5f6',
-    primary: '#B500DF',
-    primaryDark: '#976694',
+    primaryLight: '#90c0f6',
+    primary: '#3b7cc9',
+    primaryDark: '#2e66a6',
     secondaryLight: '#dde2ff',
     secondary: '#1271a4',
     secondaryDark: '#063A56',
@@ -29,8 +29,8 @@ const theme = {
     white: '#FFF',
 
     navText: '#444',
-    navSeparator: '#BBB',
-    navBackground: '#F7F7F7',
+    navSeparator: '#AAA',
+    navBackground: '#EEE',
 
     // lightRose: '#f8d4cc',
     // rose: '#DC00E4',

@@ -2,8 +2,9 @@ import {Div, Row, Cell, AbsoluteDiv} from 'components/layout';
 import { BgImage } from 'components/media';
 import { P } from 'components/text';
 import { Button } from 'components/input';
+import {SubTitle} from "../text";
 
-const InformationSection = ({ right, image, bg, children, linkCaption, link }) => (
+const InformationSection = ({ right, image, bg, children, title, linkCaption, link }) => (
   <Div bg={bg} align="middle" p={{ xs: '45px 25px', sm: '50px' }}>
     <Row>
       <Cell w={{ xs: 1, sm: 1 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
@@ -15,7 +16,8 @@ const InformationSection = ({ right, image, bg, children, linkCaption, link }) =
       <Cell w={{ xs: 1, sm: 2 / 3 }} order="1" align="middle">
         <Div p={{ xs: '25px', sm: right ? '0 50px 0 0' : '0 0 0 50px' }}>
           <Div>
-            <P>{children}</P>
+            <SubTitle>{title}</SubTitle>
+            <P align="justify">{children}</P>
           </Div>
           {link && (
             <>
