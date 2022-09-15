@@ -2,6 +2,10 @@ body {
     overflow-y: scroll; /* Show scrollbars */
 }
 
+a, a:hover, a:active, a:visited {
+    color: #2e66a6;
+}
+
 @font-face {
     font-family: 'Caviar Dreams';
     src: url('CaviarDreams.eot');

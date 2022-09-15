@@ -35,11 +35,11 @@ const SharedGovernancePage = () => (
         d'ateliers, de conférences mais aussi d'un grand MOOC organisé en partenariat avec le mouvement Colibris.
       </P>
       <P>
-        La Gouvernance partagée est constituée d'un certain nombre de méthodes, issues pour la plupart de la <a href="https://fr.wikipedia.org/wiki/Sociocratie">sociocratie</a> et de l'<a href="https://fr.wikipedia.org/wiki/Holacratie">holocratie</a>. Appliquées correctement, ces méthodes ont surtout l'avantage d'inviter les participants à
+        La Gouvernance partagée est constituée d'un certain nombre de méthodes, issues pour la plupart de la <a href="https://fr.wikipedia.org/wiki/Sociocratie">sociocratie</a> et de l'<a href="https://fr.wikipedia.org/wiki/Holacratie">holacratie</a>. Appliquées correctement, ces méthodes ont surtout l'avantage d'inviter les participants à
         adopter un changement de posture par rapport à ce à quoi ils sont habitués. Car évidemment, aucun changement
         extérieur ne peut être durable sans un changement intérieur.
       </P>
-      <SideImage align="right" src="/static/images/fusee.jpg" />
+      <SideImage align="right" src="/static/images/flamme.jpg" />
       <P>
         Contrairement à ce que le terme peut laisser penser, la Gouvernance partagée ne se focalise pas uniquement sur
         le fait d'amener plus d'horizontalité, mais elle valorise aussi la verticalité. Il ne s'agit pas toujours
@@ -79,16 +79,15 @@ const SharedGovernancePage = () => (
         </li>
       </ul>
     </ContentSection>
-    <InformationSection image="coeur-poumons-2.jpg">
-      <strong>L'analogie coeur-poumons</strong> : dans le corps humain, il n'y a pas de supériorité entre les organes.
-      Les poumons apportent de l'oxygène, tandis que le coeur impulse le sang à travers tout le corps. Chacun a une
-      fonction bien définie, avec un périmètre clair. Si le sang déborde dans les poumons, c'est la mort. En Gouvernance
-      partagée, c'est pareil: chaque rôle a une fonction claire, avec un périmètre. Il faut que les deux fonctionnent
-      ensemble, mais il n'est pas nécessaire qu'ils décident ensemble.
+    <InformationSection title="L'analogie coeur-poumons" image="coeur-poumons-2.jpg">
+      Dans le corps humain, il n'y a pas de supériorité entre les organes. Par exemple, les poumons apportent de
+      l'oxygène depuis l'extérieur, tandis que le coeur impulse le sang à travers tout le corps. Chacun a une
+      raison d'être bien définie, avec un périmètre clair. Si le sang déborde dans les poumons, c'est la mort.
+      <br />
+      En Gouvernance partagée, c'est pareil: chaque rôle a une raison d'être définie ensemble. Il est vital que les
+      rôles collaborent entre eux, mais il n'est pas nécessaire qu'ils décident tout ensemble à partir du moment où leur
+      périmètre d'action est clair.
     </InformationSection>
-    <QuoteSection author="Université du Nous" color="black" bg="tertiaryLight">
-      Si  nous  imaginons  notre  projet  comme  un  grand  jeu  collectif  coopératif,  comme  dans  n’importe quel  jeu,  pour  que  ça  fonctionne,  il  faut  des  règles.  Ce  sera  l’ensemble  des  règles  relationnelles  et organisationnelles qui permettront de répondre aux questions que posent tout projet collectif
-    </QuoteSection>
     <ContentSection>
       <SubTitle>L'approche Nouvel Air</SubTitle>
       <P>
@@ -111,7 +110,10 @@ const SharedGovernancePage = () => (
       </ul>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
-    <TestimonySection id="1519285" />
+    <TestimonySection id="15670375" />
+    {/*<QuoteSection author="Université du Nous" color="black" bg="tertiaryLight">*/}
+    {/*  Si  nous  imaginons  notre  projet  comme  un  grand  jeu  collectif  coopératif,  comme  dans  n’importe quel  jeu,  pour  que  ça  fonctionne,  il  faut  des  règles.  Ce  sera  l’ensemble  des  règles  relationnelles  et organisationnelles qui permettront de répondre aux questions que posent tout projet collectif*/}
+    {/*</QuoteSection>*/}
     <ContactUsSection />
     <FooterSection />
   </Layout>

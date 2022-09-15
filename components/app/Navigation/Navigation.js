@@ -11,7 +11,7 @@ import { Icon, Image } from 'components/media';
 
 import Facebook from '../../../svg/logo-facebook.svg';
 import LinkedIn from '../../../svg/logo-linkedin.svg';
-import Doctolib from '../../../svg/logo-doctolib.svg';
+import Mail from '../../../svg/mail.svg';
 
 import NavLink from './NavLink';
 import FlagSelector from './FlagSelector';
@@ -42,9 +42,9 @@ const TransparentImage = styled(Image)`
 
 const Navigation = () => (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
-    <Div align="center" p="15px 25px">
+    <Div align="center" p="25px 25px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/nouvel-air.png" w="100%" />
+        <TransparentImage src="/static/images/nouvel-air-5.jpg" w="100%" />
       </PageLink>
     </Div>
     <Div p="0px 25px 70px">
@@ -87,7 +87,7 @@ const Navigation = () => (
           </a>
         </BorderedCell>
         <Cell w={0.33} h="42px">
-          <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
+          <PageLink page="contact">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"
@@ -96,11 +96,11 @@ const Navigation = () => (
               align="middle"
               h="100%"
             >
-              <Icon size="100px">
-                <Doctolib />
+              <Icon size="24px">
+                <Mail />
               </Icon>
             </HoverDiv>
-          </a>
+          </PageLink>
         </Cell>
         {/*<Cell w={1 / 3} h="42px" align="middle" bg="background">*/}
         {/*  <I18n>*/}
