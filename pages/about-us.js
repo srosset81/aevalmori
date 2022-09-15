@@ -64,7 +64,7 @@ const AboutUsPage = () => (
       afin qu'elles puissent pleinement réaliser leur raison d'être au sein de l'écosystème dans lequel elles sont se incarnées.
     </QuoteSection>
     <ClientSection />
-    <TestimonySection id="1519285" />
+    <TestimonySection id="15667581" />
     <ContactUsSection />
     <FooterSection />
   </Layout>
