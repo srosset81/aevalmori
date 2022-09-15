@@ -10,7 +10,7 @@ const StyledDiv = styled(Div)`
   width: 100%;
 `;
 
-const StyledA = styled.a`
+const StyledA = styled.span`
   text-decoration: none;
   cursor: pointer;
   &:hover {

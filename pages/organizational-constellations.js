@@ -88,7 +88,7 @@ const OrganizationalConstellationsPage = () => (
         sentiment de paix émerge au sein du champ d'énergie familial.
       </P>
     </ContentSection>
-    <TestimonySection id="1519285"/>
+    <TestimonySection id="15667581" />
     <ContentSection>
       <SideImage align="left" src="/static/images/fusee.jpg"/>
       <SubTitle>✨ Offre d'accompagnement gratuit</SubTitle>

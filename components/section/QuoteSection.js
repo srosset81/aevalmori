@@ -7,8 +7,8 @@ const QuoteSection = ({ author, title, bg, color, children }) => (
     <Div maxW="850px">
       {title &&
         <P
-          shadow
-          color="white"
+          // shadow
+          color="black"
           align="center"
           font="title"
           fontSize={{ xs: '2em', md: '3em' }}

@@ -25,9 +25,9 @@ const AboutUsPage = () => (
     </TopSection>
     <ContentSection>
       <LeadP>
-        Ayant toujours été passionnée par la compréhension de la nature humaine, il a été très naturel pour moi
-        d’orienter mes études vers la relation d’aide. Au travers de mon parcours, j’ai intégré différentes visions et
-        orientations afin de pouvoir offrir différents outils aux personnes qui viennent me voir.
+        Après nous être engagés plusieurs années ensemble dans le monde associatif, nous avons décidé en 2022 de mettre
+        en commun nos compétences et de créer Nouvel air. Notre envie ? Aider les organisations à déployer leurs
+        ailes, afin qu'elles contribuent pleinement à l'émergence d'une société où l'humain est au centre.
       </LeadP>
       <SideImage src="/static/images/elisa-psi-2.jpg" />
       <SubTitle>Elisa Valmori</SubTitle>
@@ -48,11 +48,13 @@ const AboutUsPage = () => (
       <P>
         Passionné depuis toujours par l’intelligence collective, Sébastien a vécu pendant 10 ans dans une communauté
         avant de se tourner vers des dynamiques citoyennes telles que celles proposées par Colibris. Depuis 2018, il
-        pratique les différents outils autour de la gouvernance partagée et a accompagné
-        une demi-douzaine de collectifs et associations dans leur appropriation de ces outils et postures.
+        pratique les différents outils autour de la gouvernance partagée et a accompagné une demi-douzaine de collectifs
+        et associations dans leur appropriation de ces outils et postures.
         <br />
-        En tant que développeur web, il aide par ailleurs les organisations à ouvrir leurs données afin qu'elles soient
-        transparente et qu'elles permettent la collaboration avec d'autres organisations de l'écosystème.
+        Développeur web depuis l'apparition de l'Internet grand public (1995), il a toujours cherché des moyens
+        par lesquels la technologie pourrait être vraiment au service de l'humain. Au sein de Nouvel air, il souhaite
+        aider les organisations à ouvrir leurs données afin de faciliter l'implication de leur communauté et de
+        permettre la collaboration avec d'autres organisations.
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
@@ -62,7 +64,7 @@ const AboutUsPage = () => (
       afin qu'elles puissent pleinement réaliser leur raison d'être au sein de l'écosystème dans lequel elles sont se incarnées.
     </QuoteSection>
     <ClientSection />
-    <TestimonySection id="1368702" />
+    <TestimonySection id="1519285"/>
     <ContactUsSection />
     <FooterSection />
   </Layout>
