@@ -23,8 +23,8 @@ const ScrollableDiv = styled(Div)`
 `;
 
 const BorderedCell = styled(Cell)`
-  border-left: 1px #dddddd solid;
-  border-right: 1px #dddddd solid;
+  border-left: 1px #808080 solid;
+  border-right: 1px #808080 solid;
 `;
 
 const HoverDiv = styled(Div)`
@@ -44,13 +44,12 @@ const Navigation = () => (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
     <Div align="center" p="25px 25px">
       <PageLink page="index">
-        <TransparentImage src="/static/images/nouvel-air-5.jpg" w="100%" />
+        <TransparentImage src="/static/images/nouvel-air-7.jpg" w="100%" />
       </PageLink>
     </Div>
     <Div p="0px 25px 70px">
       <NavLinks />
     </Div>
-
     <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '350px' }}>
       <Separator />
       <Row>
@@ -71,7 +70,7 @@ const Navigation = () => (
           </a>
         </Cell>
         <BorderedCell w={0.33} h="42px">
-          <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
+          <a href="https://www.linkedin.com/company/nouvel-air-au-coeur-de-votre-organisation" target="_blank">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"
@@ -87,7 +86,7 @@ const Navigation = () => (
           </a>
         </BorderedCell>
         <Cell w={0.33} h="42px">
-          <PageLink page="contact">
+          <PageLink page="contact-us">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"

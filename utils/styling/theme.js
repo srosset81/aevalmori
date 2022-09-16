@@ -28,8 +28,8 @@ const theme = {
     background: '#F7F7F7',
     white: '#FFF',
 
-    navText: '#444',
-    navSeparator: '#AAA',
+    navText: '#000',
+    navSeparator: '#808080',
     navBackground: '#EEE',
 
     // lightRose: '#f8d4cc',

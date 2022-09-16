@@ -26,7 +26,7 @@ const OrganizationalConstellationsPage = () => (
         résistances qui existent au sein du collectif, mais aussi de les faire évoluer en faisant littéralement “bouger
         les choses”.
       </LeadP>
-      <SideImage align="left" src="/static/images/constellations-3.jpg"/>
+      <SideImage align="left" src="/static/images/balloons.jpg"/>
       <P>
         Cet outil est une adaptation des Constellation familiales, pratiqué depuis des décennies partout dans le monde.
         En effet, une entreprise, une association, un groupe de personnes travaillant ensemble dans un but commun,
@@ -65,28 +65,28 @@ const OrganizationalConstellationsPage = () => (
         </li>
       </ul>
       <SubTitle>📃 Comment se déroule une Constellation ?</SubTitle>
-      <SideImage align="right" src="/static/images/constellation-organisation.jpg"/>
+      <SideImage align="right" src="/static/images/constellation-organisation.jpg" width="500px" />
       <P>
         La mise en scène d’une Constellation d'organisation passe par plusieurs étapes: en amont de la Constellation, le
         facilitateur clarifie avec le client la problème que celui-ci souhaite traiter. Ensemble, ils décident de ce qui
         va être mis en scène: des fonctions, des cercles, des personnes, des concepts plus abstraits tels que le blocage,
         l'objectif, la raison d'être de l'organisation, etc...
-        <br/>
+      </P>
+      <P>
         Le jour J, le client choisit parmi les participants (qui peuvent être extérieurs à l'organisation) ceux qui vont
-        incarner tel ou tel rôle et il les place dans l'espace. Assez vite va se constituer un champ conscient grâce
+        incarner tel ou tel rôle et il les place dans l'espace. Assez vite va se constituer un champ grâce
         auquel les participants auront accès à des informations, des sentiments, parfois des symptômes physiques
         appartenant aux personnes ou concepts qu'ils représentent.
-        <br/>
+      </P>
+      <P>
         Accompagnant le mouvement, le facilitateur pose des questions aux représentants pour obtenir des informations sur
         leur état d'esprit et leurs relations avec les autres personnages de la scène. Il peut aussi leur proposer des
-        phrases qui révèlent les liens entre les représentants, pour favoriser l'expression de non-dits, des émotions,
-        afin qu'un changement puisse se produire.
-        <br/>
+        phrases pour favoriser une rééquilibrage du système.
+      </P>
+      <P>
         Au fur et à mesure que la Constellation avance, les représentants entrent en contact les uns avec les autres,
         accompagnés dans l'expression de leur ressenti. Chacun prend sa juste place et l'énergie du champ devient plus
-        légère.
-        <br/>
-        La résolution d'une Constellation donne généralement aux participants le sentiment d’être déchargés d'un poids – un
+        légère. La résolution d'une Constellation donne généralement aux participants le sentiment d’être déchargés d'un poids – un
         sentiment de paix émerge au sein du champ d'énergie de l'organisation.
       </P>
     </ContentSection>
@@ -125,7 +125,7 @@ const OrganizationalConstellationsPage = () => (
         </li>
       </ul>
       <P>
-        Pour candidater, merci de prendre connaissance de ce document.
+        Pour candidater, merci de prendre connaissance de ce document puis de remplir le formulaire indiqué à la fin.
       </P>
       <P style={{clear: 'both'}}></P>
     </ContentSection>

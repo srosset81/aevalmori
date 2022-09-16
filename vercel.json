@@ -11,6 +11,6 @@
     { "source": "/fr/liberation-de-l-information", "destination": "/information-liberation?locale=fr" },
     { "source": "/fr/agenda", "destination": "/events?locale=fr" },
     { "source": "/fr/temoignages", "destination": "/testimonies?locale=fr" },
-    { "source": "/fr/contact", "destination": "/contact?locale=fr" }
+    { "source": "/fr/contact", "destination": "/contact-us?locale=fr" }
   ]
 }
