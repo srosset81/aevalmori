@@ -18,7 +18,7 @@ Chip.defaultProps = {
   bg: 'secondaryLight'
 }
 
-Chip.PropTypes = {
+Chip.propTypes = {
   p: responsivePropType
 };
 

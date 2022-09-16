@@ -4,7 +4,7 @@ import { styled, css, mediaQuery } from 'utils/styling';
 
 const SideImage = styled.img`
   float: ${props => props.align};
-  width: 360px;
+  width: ${props => props.width};
   max-width: 100%;
   ${props =>
     props.align === 'right' &&
@@ -31,11 +31,13 @@ const SideImage = styled.img`
 SideImage.propTypes = {
   src: PropTypes.string.isRequired,
   align: PropTypes.string,
+  width: PropTypes.string,
   noBottomMargin: PropTypes.bool
 };
 
 SideImage.defaultProps = {
-  align: 'left'
+  align: 'left',
+  width: '360px'
 };
 
 export default SideImage;

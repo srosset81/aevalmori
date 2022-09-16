@@ -6,6 +6,7 @@ import Li from './Li';
 // prettier-ignore
 const Ul = styled.ul`
   -webkit-padding-start: 0px;
+  -moz-padding-start: 0px;
   list-style: none;
   margin: -${props => props.p};
   vertical-align: middle;
