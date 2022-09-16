@@ -32,15 +32,7 @@ const AboutUsPage = () => (
       <SideImage src="/static/images/elisa-psi-2.jpg" />
       <SubTitle>Elisa Valmori</SubTitle>
       <P>
-        Selon les légendes familiales, ma vocation de psychologue a été décelée très tôt : dès ma petite enfance,
-        j'étais naturellement attirée vers les autres et, en particulier, vers les enfants ou les personnes en
-        difficultés.
-        <br />
-        J'ai aussi ressenti – je crois depuis toujours – l'élan d’explorer, de connaître en profondeur les relations
-        humaines, les différents phénomènes qui font notre société, afin de comprendre leur raison d’être...
-        <br />
-        Cette soif des connaissances m'a amené, en parallèle à mon parcours universitaire et à mon entrée dans le monde
-        des adultes, à me lancer dans des voyages à l’autre bout du monde et à me plonger dans des voyages intérieurs.
+        <em>(Biographie en cours d'écriture)</em>
       </P>
       <P style={{ clear: 'both' }}></P>
       <SideImage align="right" src="/static/images/sebastien.jpg" />

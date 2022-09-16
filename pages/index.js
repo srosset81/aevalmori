@@ -67,21 +67,22 @@ const IndexPage = () => (
       comme source d'inspiration principale l'Université du Nous. Nous croyons qu'il s'agit d'un élément-clé pour
       redonner du souffle à une organisation.
     </MenuSection>
-    <MenuSection right title="Libération de l'information" image="tree.jpg" link="information-liberation">
+    <MenuSection right title="Libération de l'information" image="tree6.jpg" link="information-liberation">
       La juste circulation des informations via les outils numériques adéquats est un facteur essentiel de la santé
       et de la vitalité d'une organisation. Nous travaillons sur la circulation intra- et inter-organisations des
       informations depuis de nombreuses années et pouvons vous orienter et vous accompagner dans vos choix stratégiques,
       mais aussi développer des solutions sur mesure.
     </MenuSection>
-    <MenuSection left title="Agenda" image="clouds.jpg" link="events">
+    <MenuSection left title="Agenda" image="events.jpg" link="events">
       Nous proposons régulièrement des activités sur Compiègne autour de la gouvernance partagée et des Constellations
-      d'organisations. Elles sont autant d'occasions de découvrir notre approche et de rencontrer des personnes sur le
-      même chemin.
+      d'organisations. Elles sont autant d'occasions de découvrir notre approche, de nous rencontrer et de rencontrer
+      d'autres personnes sur le même chemin.
     </MenuSection>
     <MenuSection right title="Témoignages" image="balloons2.jpg" link="testimonies">
-      Au fil des années, nous avons récolté de beaux témoignages que nous souhaitons partager avec vous sur cette page.
+      Les personnes avec qui nous avons travaillé parlent souvent mieux de notre travail que nous le pouvons nous-mêmes.
+      C'est pourquoi nous donner la plage à leur témoignages sur cette page.
     </MenuSection>
-    <MenuSection left title="Contactez-nous" image="bird.jpg" link="contact">
+    <MenuSection left title="Contactez-nous" image="bird.jpg" link="contact-us">
       N'hésitez pas à prendre contact avec nous, nous répondrons à votre demande dans les meilleurs délais.
     </MenuSection>
     <FooterSection/>

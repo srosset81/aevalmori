@@ -39,7 +39,7 @@ const SharedGovernancePage = () => (
         adopter un changement de posture par rapport à ce à quoi ils sont habitués. Car évidemment, aucun changement
         extérieur ne peut être durable sans un changement intérieur.
       </P>
-      <SideImage align="right" src="/static/images/flamme.jpg" />
+      <SideImage align="right" src="/static/images/candles2.jpg" />
       <P>
         Contrairement à ce que le terme peut laisser penser, la Gouvernance partagée ne se focalise pas uniquement sur
         le fait d'amener plus d'horizontalité, mais elle valorise aussi la verticalité. Il ne s'agit pas toujours
@@ -79,17 +79,21 @@ const SharedGovernancePage = () => (
         </li>
       </ul>
     </ContentSection>
-    <InformationSection title="L'analogie coeur-poumons" image="coeur-poumons-2.jpg">
-      Dans le corps humain, il n'y a pas de supériorité entre les organes. Par exemple, les poumons apportent de
-      l'oxygène depuis l'extérieur, tandis que le coeur impulse le sang à travers tout le corps. Chacun a une
-      raison d'être bien définie, avec un périmètre clair. Si le sang déborde dans les poumons, c'est la mort.
-      <br />
-      En Gouvernance partagée, c'est pareil: chaque rôle a une raison d'être définie ensemble. Il est vital que les
-      rôles collaborent entre eux, mais il n'est pas nécessaire qu'ils décident tout ensemble à partir du moment où leur
-      périmètre d'action est clair.
+    <InformationSection image="coeur-poumons-2.jpg">
+      <SubTitle>L'analogie coeur-poumons</SubTitle>
+      <P align="justify">
+        Dans le corps humain, il n'y a pas de supériorité entre les organes. Par exemple, les poumons apportent de
+        l'oxygène depuis l'extérieur, tandis que le coeur impulse le sang à travers tout le corps. Chacun a une
+        raison d'être bien définie, avec un périmètre clair. Si le sang déborde dans les poumons, c'est la mort.
+      </P>
+      <P>
+        En Gouvernance partagée, c'est pareil: chaque rôle a une raison d'être définie ensemble. Il est vital que les
+        rôles collaborent entre eux, mais il n'est pas nécessaire qu'ils décident tout ensemble à partir du moment où leur
+        périmètre d'action est clair.
+      </P>
     </InformationSection>
     <ContentSection>
-      <SubTitle>L'approche Nouvel Air</SubTitle>
+      <SubTitle>✨ L'approche Nouvel Air</SubTitle>
       <P>
         A Nouvel air nous proposons:
       </P>
@@ -103,8 +107,9 @@ const SharedGovernancePage = () => (
         </li>
         <li>
           <P>
-            Un accompagnement spécifique au sein des organisations (existantes ou en cours de formation) en amenant
-            les ingrédients de la Gouvernance partagée dont elles ont besoin pour mieux fonctionner.
+            Un accompagnement spécifique au sein des organisations (existantes ou en cours de formation) qui nous en
+            font la demande, en apportant les ingrédients de la Gouvernance partagée dont elles ont besoin pour
+            pleinement réaliser leur raison d'être dans ce monde.
           </P>
         </li>
       </ul>

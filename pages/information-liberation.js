@@ -12,6 +12,7 @@ import { PageLink } from "utils/router";
 import { Trans } from '@lingui/macro';
 import InformationSection from "../components/section/InformationSection";
 import {SideImage} from "../components/media";
+import ContactUsSection from "../components/section/ContactUsSection";
 
 const InformationLiberationPage = () => (
   <Layout>
@@ -28,7 +29,7 @@ const InformationLiberationPage = () => (
         informations depuis de nombreuses années et pouvons vous orienter dans vos choix stratégiques, mais aussi
         développer des solutions sur mesure.
       </LeadP>
-      <SideImage align="right" src="/static/images/zen.jpg" />
+      <SideImage align="right" src="/static/images/zen2.jpg" />
       <SubTitle>Circulation intra-organisation</SubTitle>
       <P>
         Si vos informations ne sont disponibles qu’à un petit nombre, il sera difficile d’impliquer une communauté plus
@@ -52,12 +53,15 @@ const InformationLiberationPage = () => (
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
-      <InformationSection image="organigraph.png" title="OrganiGraph" link="https://cercles.jardiniersdunous.org">
-        Logiciel open-source que nous avons développé avec l’objectif d’aider les
-        organisations à rendre visible leur fonctionnement. Il permet de visualisation la structure de l’organisation
-        (sous la forme d’une hiérarchie de cercles) et, pour chaque cercles, de voir les personnes impliquées, le
-        calendrier des réunions, les documents, les actualités, etc. Un outil simple qui permet à n’importe qui de
-        visualiser ce qui se passe pour potentiellement s’impliquer.
+      <InformationSection image="organigraph.png" link="https://cercles.jardiniersdunous.org" linkCaption="Voir l'instance des Jardiniers du Nous">
+        <SubTitle>OrganiGraph</SubTitle>
+        <P>
+          Logiciel open-source que nous avons développé avec l’objectif d’aider les
+          organisations à rendre visible leur fonctionnement. Il permet de visualisation la structure de l’organisation
+          (sous la forme d’une hiérarchie de cercles) et, pour chaque cercles, de voir les personnes impliquées, le
+          calendrier des réunions, les documents, les actualités, etc. Un outil simple qui permet à n’importe qui de
+          visualiser ce qui se passe pour potentiellement s’impliquer.
+        </P>
       </InformationSection>
     <ContentSection>
       <SubTitle>Circulation inter-organisations</SubTitle>
@@ -86,12 +90,16 @@ const InformationLiberationPage = () => (
         collaboratif et résilient.
       </P>
     </ContentSection>
-    <InformationSection right title="Cas d'étude" image="colibris.png" link="/colibris-study">
-      Colibris a fait appel à Nouvel air pour résoudre un problème de communication interne: donner plus de
-      visibilité sur ce qui se passe à l’intérieur du mouvement afin d'augmenter l'engagement des citoyens. La solution
-      que nous avons mis en place a permis de libérer l’intégralité des données du mouvement, ouvrant des perspectives
-      de coopération avec d'autres organisations de la transition.
+    <InformationSection right image="colibris.png" link="/colibris-study">
+      <SubTitle>Cas d'étude</SubTitle>
+      <P>
+        Colibris a fait appel à Nouvel air pour résoudre un problème de communication interne: donner plus de
+        visibilité sur ce qui se passe à l’intérieur du mouvement afin d'augmenter l'engagement des citoyens. La solution
+        que nous avons mis en place a permis de libérer l’intégralité des données du mouvement, ouvrant des perspectives
+        de coopération avec d'autres organisations de la transition.
+      </P>
     </InformationSection>
+    <ContactUsSection />
     <FooterSection/>
   </Layout>
 );
