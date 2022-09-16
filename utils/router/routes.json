@@ -1,11 +1,6 @@
 {
     "about-us": {
-        "fr": "qui-sommes-nous",
-        "it": "chi-sono"
-    },
-    "vision": {
-        "fr": "ma-vision",
-        "it": "la-mia-visione"
+        "fr": "qui-sommes-nous"
     },
     "organizational-constellations": {
         "fr": "constellations-d-organisations"
@@ -17,27 +12,12 @@
         "fr": "liberation-de-l-information"
     },
     "events": {
-        "fr": "agenda",
-        "it": "eventi"
+        "fr": "agenda"
     },
     "testimonies": {
-        "fr": "temoignages",
-        "it": "testimonianze"
+        "fr": "temoignages"
     },
-    "blog": {
-        "fr": "blog",
-        "it": "blog"
-    },
-    "blog-inner-child": {
-        "fr": "blog/l-enfant-interieur",
-        "it": "blog/il-bambino-interiore"
-    },
-    "blog-prisoner": {
-        "fr": "blog/je-me-sens-prisonnier",
-        "it": "blog/mi-sento-prigioniero"
-    },
-    "contact": {
-        "fr": "contact",
-        "it": "contatto"
+    "contact-us": {
+        "fr": "contact"
     }
 }

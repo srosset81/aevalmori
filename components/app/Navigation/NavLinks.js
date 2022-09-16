@@ -31,8 +31,8 @@ const NavLinks = () => {
         <Trans id="menu.testimonies">Témoignages</Trans>
       </NavLink>
       <Separator m="5px 0" />
-      <NavLink page="contact">
-        <Trans id="menu.contact">Accueil</Trans>
+      <NavLink page="contact-us">
+        <Trans id="menu.contact-us">Contactez-nous</Trans>
       </NavLink>
     </Ul>
   );

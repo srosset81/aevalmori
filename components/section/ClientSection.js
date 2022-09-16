@@ -13,7 +13,7 @@ const clients = {
 const ClientSection = () => (
   <Div p={{ xs: '45px 25px', sm: '50px' }}>
     <Div>
-      <SubTitle align="center">Ils ont travaillé avec nous...</SubTitle>
+      <SubTitle align="center">Ils nous ont fait confiance</SubTitle>
     </Div>
     <Div align="center">
       {Object.entries(clients).map(([image, website]) => (
