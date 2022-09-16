@@ -3,7 +3,7 @@ import { BgImage } from 'components/media';
 import { Button } from 'components/input';
 
 const InformationSection = ({ right, image, bg, children, linkCaption, link }) => (
-  <Div bg={bg} align="middle" p={{ xs: '45px 25px', sm: '50px' }}>
+  <Div bg={bg} align="middle" p={{ xs: '30px 25px', sm: '50px' }}>
     <Row>
       <Cell w={{ xs: 1, sm: 1 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
         <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '200px', sm: '100%' }} /*minH={{ xs: '200px', sm: '500px' }}*/ />
@@ -12,17 +12,14 @@ const InformationSection = ({ right, image, bg, children, linkCaption, link }) =
         </a>
       </Cell>
       <Cell w={{ xs: 1, sm: 2 / 3 }} order="1" align="middle">
-        <Div p={{ xs: '25px', sm: right ? '0 50px 0 0' : '0 0 0 50px' }}>
+        <Div p={{ xs: '30px 0 0 0', sm: right ? '0 50px 0 0' : '0 0 0 50px' }}>
           <Div>
             {children}
           </Div>
           {link && (
-            <>
-              <br />
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <Button>{linkCaption}</Button>
-              </a>
-            </>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <Button>{linkCaption}</Button>
+            </a>
           )}
         </Div>
       </Cell>
