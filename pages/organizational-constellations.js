@@ -67,25 +67,27 @@ const OrganizationalConstellationsPage = () => (
       <SubTitle>📃 Comment se déroule une Constellation ?</SubTitle>
       <SideImage align="right" src="/static/images/constellation-organisation.jpg"/>
       <P>
-        La mise en scène d’une Constellation passe par plusieurs étapes : après avoir clarifié la problématique avec le
-        facilitateur, la personne choisit parmi les participants des représentants de sa propre famille (ou de son
-        organisation, s’il s’agit d’une constellation d’organisation). Il peut aussi choisir de mettre en scène son
-        blocage, son objectif personnel, un symptôme dont il souffre, etc.
+        La mise en scène d’une Constellation d'organisation passe par plusieurs étapes: en amont de la Constellation, le
+        facilitateur clarifie avec le client la problème que celui-ci souhaite traiter. Ensemble, ils décident de ce qui
+        va être mis en scène: des fonctions, des cercles, des personnes, des concepts plus abstraits tels que le blocage,
+        l'objectif, la raison d'être de l'organisation, etc...
         <br/>
-        A ce moment on peut observer la création d'un champ conscient, grâce auquel les participants auront accès à des
-        sentiments, des émotions, parfois des symptômes physiques appartenant aux personnes qu'ils représentent.
+        Le jour J, le client choisit parmi les participants (qui peuvent être extérieurs à l'organisation) ceux qui vont
+        incarner tel ou tel rôle et il les place dans l'espace. Assez vite va se constituer un champ conscient grâce
+        auquel les participants auront accès à des informations, des sentiments, parfois des symptômes physiques
+        appartenant aux personnes ou concepts qu'ils représentent.
         <br/>
-        Accompagnant le mouvement, l'animateur pose des questions aux représentants pour obtenir des informations sur
+        Accompagnant le mouvement, le facilitateur pose des questions aux représentants pour obtenir des informations sur
         leur état d'esprit et leurs relations avec les autres personnages de la scène. Il peut aussi leur proposer des
-        phrases qui révèlent les liens entre les personnages, pour favoriser l'expression de non-dits, des émotions,
+        phrases qui révèlent les liens entre les représentants, pour favoriser l'expression de non-dits, des émotions,
         afin qu'un changement puisse se produire.
         <br/>
         Au fur et à mesure que la Constellation avance, les représentants entrent en contact les uns avec les autres,
         accompagnés dans l'expression de leur ressenti. Chacun prend sa juste place et l'énergie du champ devient plus
         légère.
         <br/>
-        La résolution d'une Constellation donne à tous les participants le sentiment d’être déchargés d'un poids – un
-        sentiment de paix émerge au sein du champ d'énergie familial.
+        La résolution d'une Constellation donne généralement aux participants le sentiment d’être déchargés d'un poids – un
+        sentiment de paix émerge au sein du champ d'énergie de l'organisation.
       </P>
     </ContentSection>
     <TestimonySection id="15667581" />
