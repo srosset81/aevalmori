@@ -80,7 +80,7 @@ const IndexPage = () => (
     </MenuSection>
     <MenuSection right title="Témoignages" image="balloons2.jpg" link="testimonies">
       Les personnes avec qui nous avons travaillé parlent souvent mieux de notre travail que nous le pouvons nous-mêmes.
-      C'est pourquoi nous donner la plage à leur témoignages sur cette page.
+      C'est pourquoi nous donner la place à leur témoignages sur cette page.
     </MenuSection>
     <MenuSection left title="Contactez-nous" image="bird.jpg" link="contact-us">
       N'hésitez pas à prendre contact avec nous, nous répondrons à votre demande dans les meilleurs délais.
