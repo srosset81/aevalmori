@@ -12,9 +12,6 @@ const ContentSection = styled(Div)`
   ${mediaQuery('sm')} {
     padding: 50px;
   }
-  ${P} {
-    text-align: justify;
-  }
   ${P}:first-of-type {
     margin-top: 0;
   }

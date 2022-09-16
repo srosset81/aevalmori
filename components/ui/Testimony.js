@@ -69,9 +69,11 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
         )}
       </Div>
       {(!isLongText || isExpanded) && (
-        <AbsoluteDiv bottom="45px" right="-45px">
-          <QuoteClose style={{ fill: theme.colors.primaryDark }} />
-        </AbsoluteDiv>
+        <Visible sm md lg xl>
+          <AbsoluteDiv bottom="45px" right="-45px">
+            <QuoteClose style={{ fill: theme.colors.primaryDark }} />
+          </AbsoluteDiv>
+        </Visible>
       )}
     </Div>
   ) : null;

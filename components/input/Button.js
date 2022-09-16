@@ -20,7 +20,7 @@ const buttonSizes = {
     height: '56px'
   },
   normal: {
-    padding: '0 11px',
+    padding: '5px 11px',
     height: '38px'
   },
   medium: {
@@ -39,7 +39,6 @@ const StyledButton = styled.button`
   letter-spacing: 2px;
   font-weight: 700;
   padding: ${props => buttonSizes[props.size].padding };
-  height: ${props => buttonSizes[props.size].height };
   ${props => props.bold && css`font-weight: bold;` }
   border-radius: 3px;
   border: 1px solid transparent;

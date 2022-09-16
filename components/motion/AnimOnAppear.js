@@ -12,6 +12,11 @@ const AnimatedDiv = styled.div`
     opacity: 1;
     left: 0;
   }
+  
+  @media (max-width: ${props => props.theme.breakpoints.sm}) {
+    opacity: 1;
+    left: 0;
+  }
 `;
 
 const AnimOnAppaer = ({ children }) => (
