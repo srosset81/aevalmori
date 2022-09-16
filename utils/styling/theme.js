@@ -17,7 +17,7 @@ const theme = {
     tertiaryDark: '#DC00E4',
     error: '#D80033',
     warning: '#f9be8e',
-    success: '#3C763D',
+    success: '#75f677',
 
     black: '#222',
     darkGrey: '#444',
