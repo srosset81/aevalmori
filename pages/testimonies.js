@@ -36,7 +36,7 @@ const TestimoniesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Témoignages - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>Témoignages - Nouvel air</title>
       </Head>
       <TopSection image="balloons2.jpg">
         <Trans id="testimonies.title">Témoignages</Trans>
