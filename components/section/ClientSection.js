@@ -4,7 +4,7 @@ import { Image } from 'components/media';
 import { SubTitle } from 'components/text';
 
 const clients = {
-  'colibris.png': 'https://www.colibris-lemouvement.org/',
+  'colibris.png': 'https://nouvel-air.org/static/pdf/cas-d-etude-colibris.pdf',
   'jardiniers-du-nous.png': 'https://www.jardiniersdunous.org/',
   'chemins-de-la-transition.png': 'https://lescheminsdelatransition.org/',
   'assemblee-virtuelle.png': 'https://assemblee-virtuelle.org/',

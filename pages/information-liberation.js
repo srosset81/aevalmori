@@ -90,7 +90,7 @@ const InformationLiberationPage = () => (
         collaboratif et résilient.
       </P>
     </ContentSection>
-    <InformationSection right image="colibris.png" link="/pdf/cas-d-etude-colibris.pdf">
+    <InformationSection right image="colibris.png" link="/static/pdf/cas-d-etude-colibris.pdf">
       <SubTitle>Cas d'étude</SubTitle>
       <P>
         Colibris a fait appel à Nouvel air pour résoudre un problème de communication interne: donner plus de
