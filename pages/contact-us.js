@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { TopSection, FooterSection, ContactSection } from 'components/section';
+import { TopSection, FooterSection } from 'components/section';
+import ContactUsSection from "../components/section/ContactUsSection";
 
 const ContactUsPage = () => (
   <Layout>
@@ -9,7 +10,7 @@ const ContactUsPage = () => (
       <title>Contactez-nous - Nouvel air</title>
     </Head>
     <TopSection image="bird.jpg">Contactez-nous</TopSection>
-    <ContactSection />
+    <ContactUsSection />
     <FooterSection />
   </Layout>
 );
