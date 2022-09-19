@@ -125,7 +125,7 @@ const OrganizationalConstellationsPage = () => (
         </li>
       </ul>
       <P>
-        Pour candidater, merci de prendre connaissance de ce document puis de remplir le formulaire indiqué à la fin.
+        Pour candidater, merci de prendre connaissance de <a href="/static/pdf/offre-accompagnement-gratuit.pdf" target="_blank">ce document</a>.
       </P>
       <P style={{clear: 'both'}}></P>
     </ContentSection>
