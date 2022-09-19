@@ -30,12 +30,12 @@ const SharedGovernancePage = () => (
       </LeadP>
       <SubTitle>Qu'est-ce que la Gouvernance partagée ?</SubTitle>
       <P>
-        Le terme "Gouvernance partagée" a été popularisé en francophonie grâce au travail sans relâche de l'<a href="https://universite-du-nous.org/">Université
+        Le terme "Gouvernance partagée" a été popularisé en francophonie grâce au travail sans relâche de l'<a href="https://universite-du-nous.org/" target="_blank">Université
         du Nous</a>, qui a fait découvrir à des milliers de personnes une autre manière de faire ensemble au travers
         d'ateliers, de conférences mais aussi d'un grand MOOC organisé en partenariat avec le mouvement Colibris.
       </P>
       <P>
-        La Gouvernance partagée est constituée d'un certain nombre de méthodes, issues pour la plupart de la <a href="https://fr.wikipedia.org/wiki/Sociocratie">sociocratie</a> et de l'<a href="https://fr.wikipedia.org/wiki/Holacratie">holacratie</a>. Appliquées correctement, ces méthodes ont surtout l'avantage d'inviter les participants à
+        La Gouvernance partagée est constituée d'un certain nombre de méthodes, issues pour la plupart de la <a href="https://fr.wikipedia.org/wiki/Sociocratie" target="_blank">sociocratie</a> et de l'<a href="https://fr.wikipedia.org/wiki/Holacratie" target="_blank">holacratie</a>. Appliquées correctement, ces méthodes ont surtout l'avantage d'inviter les participants à
         adopter un changement de posture par rapport à ce à quoi ils sont habitués. Car évidemment, aucun changement
         extérieur ne peut être durable sans un changement intérieur.
       </P>

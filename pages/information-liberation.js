@@ -42,21 +42,21 @@ const InformationLiberationPage = () => (
         entrepris vers plus d’implication et de partage.
       </P>
       <P>
-        De nos jours, il existe de nombreux outils informatiques facilitant la communique: espaces de chat, forums, wikis,
+        De nos jours, il existe de nombreux outils informatiques facilitant la communications: espaces de tchat, forums, wikis,
         applications mobiles... Mais encore faut-il choisir l'outil répondant aux besoins précis de votre organisation,
-        et trouver le bon moyen de l'intégrer à votre fonctionnement actuel.
+        et trouver la bonne manière de l'intégrer à votre fonctionnement actuel.
       </P>
       <P>
         Cela peut demander une adaptation des outils existants, afin que la transition se fasse dans la douceur. Cela
-        peut aussi demander des temps de pédagogie, quoique nous avons la croyance que, lorsque les outils répondent
-        réellement à un besoin, les gens n'ont pas de difficulté à s'en emparer.
+        peut aussi demander des temps de pédagogie, quoique nous croyons que, lorsque les outils répondent réellement à
+        un besoin, la communauté n'a pas de difficulté à s'en emparer.
       </P>
       <P style={{ clear: 'both' }}></P>
     </ContentSection>
       <InformationSection image="organigraph.png" link="https://cercles.jardiniersdunous.org" linkCaption="Voir l'instance des Jardiniers du Nous">
         <SubTitle>OrganiGraph</SubTitle>
         <P>
-          Logiciel open-source que nous avons développé avec l’objectif d’aider les
+          Logiciel <a href="https://github.com/assemblee-virtuelle/organigraph" target="_blank">open-source</a> que nous avons développé avec l’objectif d’aider les
           organisations à rendre visible leur fonctionnement. Il permet de visualisation la structure de l’organisation
           (sous la forme d’une hiérarchie de cercles) et, pour chaque cercles, de voir les personnes impliquées, le
           calendrier des réunions, les documents, les actualités, etc. Un outil simple qui permet à n’importe qui de
@@ -73,24 +73,25 @@ const InformationLiberationPage = () => (
       <P>
         Nous collaborons depuis 2018 avec l'association <a href="https://virtual-assembly.org" target="_blank">Assemblée Virtuelle</a> pour
         mettre au point des technologies facilitant la coopération inter-organisations. Nos efforts se sont concentrés
-        sur le développement de <a href="https://semapps.org">SemApps</a>, une boîte à outil pour créer des logiciels
+        sur le développement de <a href="https://semapps.org" target="_blank">SemApps</a>, une boîte à outil pour créer des logiciels
         faisant usage des standards du web sémantique.
       </P>
+      <SideImage align="left" src="/static/images/semantic-web.jpg"/>
       <P>
-        <a href="https://fr.wikipedia.org/wiki/Web_s%C3%A9mantique">Le web sémantique</a> permet à plusieurs
+        <a href="https://fr.wikipedia.org/wiki/Web_s%C3%A9mantique" target="_blank">Le web sémantique</a> permet à plusieurs
         organisations de partager facilement leurs données, grâce à des vocabulaires communs. Ce standard a été mis au
         point par le W3C, l’organisme international qui a permis l’émergence d'Internet (email, web...).
       </P>
       <P>
         Un des objectifs du web sémantique est de revenir aux racines d'Internet, conçu initialement pour faciliter la
         collaboration entre scientifiques. Avec le temps, de plus en plus de nos données se sont trouvées piégées par de
-        grosses entreprises (les fameuses <a href="https://fr.wikipedia.org/wiki/GAFAM">GAFAM</a>, mais aussi la plupart
+        grosses entreprises (les fameuses <a href="https://fr.wikipedia.org/wiki/GAFAM" target="_blank">GAFAM</a>, mais aussi la plupart
         des startups), avec l'objectif de maximiser leur rentabilité. Nous croyons cependant qu'en promouvant des
         solutions informatiques utilisant des standards partagés, il est possible de revenir à un web plus ouvert,
         collaboratif et résilient.
       </P>
     </ContentSection>
-    <InformationSection right image="colibris.png" link="/static/pdf/cas-d-etude-colibris.pdf">
+    <InformationSection right image="colibris.png" link="/static/pdf/cas-d-etude-colibris.pdf" linkCaption="Lire le cas d'étude">
       <SubTitle>Cas d'étude</SubTitle>
       <P>
         Colibris a fait appel à Nouvel air pour résoudre un problème de communication interne: donner plus de
