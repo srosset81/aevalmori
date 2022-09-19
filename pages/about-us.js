@@ -14,6 +14,13 @@ import {
 import ContactUsSection from "../components/section/ContactUsSection";
 import { Trans } from '@lingui/macro';
 import ClientSection from "../components/section/ClientSection";
+import { styled, mediaQuery } from "utils/styling";
+
+const SubTitleNoMargin = styled(SubTitle)`
+  ${mediaQuery('sm')} {
+      // margin-top: 0px !important;
+    }
+`;
 
 const AboutUsPage = () => (
   <Layout>
@@ -36,21 +43,23 @@ const AboutUsPage = () => (
         universitaire en psychologie en 2006. Elle a ensuite approfondi diverses orientations, notamment celle des
         Constellations familiales, une approche qui a changé sa vie personnelle et professionnelle au point de devenir
         facilitatrice en 2012. Elle accompagne aujourd'hui régulièrement des groupes en Italie et en France.
-        <br />
+      </P>
+      <P>
         Animées par la conviction profonde que chacun d'entre nous est sur cette Terre pour un but bien précis et pour
         apporter sa contribution, elle croit que les Constellations d'organisations peuvent avoir un rôle majeur dans
         la transformation sociétale actuelle, en aidant des groupes à coopérer pour réaliser des projets ayant un grand
         impact sur le monde.
       </P>
-      <P style={{ clear: 'both' }}></P>
-      <SideImage align="right" src="/static/images/sebastien.jpg" />
+      <P style={{ clear: 'both', marginBottom: 30 }}></P>
       <SubTitle>Sébastien Rosset</SubTitle>
+      <SideImage align="right" src="/static/images/sebastien.jpg" />
       <P>
         Passionné depuis toujours par l’intelligence collective, Sébastien a vécu pendant 10 ans dans une communauté
         avant de se tourner vers des dynamiques citoyennes telles que celles proposées par Colibris. Depuis 2018, il
         pratique les différents outils autour de la gouvernance partagée et a accompagné une demi-douzaine de collectifs
         et associations dans leur appropriation de ces outils et postures.
-        <br />
+      </P>
+      <P>
         Développeur web depuis l'apparition de l'Internet grand public (1995), il a toujours cherché des moyens
         par lesquels la technologie pourrait être vraiment au service de l'humain. Au sein de Nouvel air, il souhaite
         aider les organisations à ouvrir leurs données afin de faciliter l'implication de leur communauté et de
