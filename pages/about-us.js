@@ -32,7 +32,15 @@ const AboutUsPage = () => (
       <SideImage src="/static/images/elisa-psi-2.jpg" />
       <SubTitle>Elisa Valmori</SubTitle>
       <P>
-        <em>(Biographie en cours d'écriture)</em>
+        Passionnée par la nature humaine et la compréhension profonde des relations, Elisa a obtenu un diplôme
+        universitaire en psychologie en 2006. Elle a ensuite approfondi diverses orientations, notamment celle des
+        Constellations familiales, une approche qui a changé sa vie personnelle et professionnelle au point de devenir
+        facilitatrice en 2012. Elle accompagne aujourd'hui régulièrement des groupes en Italie et en France.
+        <br />
+        Animées par la conviction profonde que chacun d'entre nous est sur cette Terre pour un but bien précis et pour
+        apporter sa contribution, elle croit que les Constellations d'organisations peuvent avoir un rôle majeur dans
+        la transformation sociétale actuelle, en aidant des groupes à coopérer pour réaliser des projets ayant un grand
+        impact sur le monde.
       </P>
       <P style={{ clear: 'both' }}></P>
       <SideImage align="right" src="/static/images/sebastien.jpg" />
