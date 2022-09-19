@@ -58,9 +58,10 @@ const IndexPage = () => (
       ailes, afin qu'elles contribuent pleinement à l'émergence d'une société où l'humain est au centre.
     </MenuSection>
     <MenuSection right title="Constellations d'organisations" image="constellations-2.jpg" link="organizational-constellations">
-      La Constellation d'organisation est un outil qui permet, à travers des mises en scènes, de faire apparaître votre
-      organisation telle qu’elle est, dans toute sa complexité. Il permet de constater les dynamiques et résistances qui
-      existent au sein du collectif, mais aussi de les faire évoluer en faisant littéralement “bouger les choses”.
+      La Constellation d'organisation est un outil qui permet, à travers des mises en scènes, de faire émerger les
+      dynamiques, les résistances et les interactions qui composent une organisation. Elle permet à chacun de prendre
+      sa place, de rétablir l'équilibre et l'harmonie, et de trouver les ressources pour amener des solutions durables
+      en accord avec la raison d'être de l'organisation.
     </MenuSection>
     <MenuSection left title="Gouvernance partagée" image="gouvernance-partagee.jpg" link="shared-governance">
       A Nouvel air, nous explorons les méthodes et postures de la Gouvernance partagée depuis bientôt 5 ans, avec

@@ -21,10 +21,10 @@ const OrganizationalConstellationsPage = () => (
     </TopSection>
     <ContentSection>
       <LeadP>
-        La Constellation d'organisation est un outil qui permet, à travers des mises en scènes, de faire apparaître
-        votre organisation telle qu’elle est, dans toute sa complexité. Il permet de constater les dynamiques et
-        résistances qui existent au sein du collectif, mais aussi de les faire évoluer en faisant littéralement “bouger
-        les choses”.
+        La Constellation d'organisation est un outil qui permet, à travers des mises en scènes, de faire émerger les
+        dynamiques, les résistances et les interactions qui composent une organisation. Elle permet à chacun de prendre
+        sa place, de rétablir l'équilibre et l'harmonie, et de trouver les ressources pour amener des solutions durables
+        en accord avec la raison d'être de l'organisation.
       </LeadP>
       <SideImage align="left" src="/static/images/balloons.jpg"/>
       <P>

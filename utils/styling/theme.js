@@ -29,7 +29,7 @@ const theme = {
     white: '#FFF',
 
     navText: '#000',
-    navSeparator: '#808080',
+    navSeparator: '#BBB',
     navBackground: '#EEE',
 
     // lightRose: '#f8d4cc',

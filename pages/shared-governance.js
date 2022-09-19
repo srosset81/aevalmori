@@ -39,7 +39,7 @@ const SharedGovernancePage = () => (
         adopter un changement de posture par rapport à ce à quoi ils sont habitués. Car évidemment, aucun changement
         extérieur ne peut être durable sans un changement intérieur.
       </P>
-      <SideImage align="right" src="/static/images/candles2.jpg" />
+      <SideImage align="right" src="/static/images/fire.jpg" />
       <P>
         Contrairement à ce que le terme peut laisser penser, la Gouvernance partagée ne se focalise pas uniquement sur
         le fait d'amener plus d'horizontalité, mais elle valorise aussi la verticalité. Il ne s'agit pas toujours
