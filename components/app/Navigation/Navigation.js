@@ -54,7 +54,7 @@ const Navigation = () => (
       <Separator />
       <Row>
         <Cell w={1 / 3} h="42px">
-          <a href="https://www.facebook.com/Anna-Elisa-Valmori-psychologue-104513137604349/" target="_blank">
+          <a href="https://www.facebook.com/NouvelAirOrg" target="_blank">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"
@@ -70,7 +70,7 @@ const Navigation = () => (
           </a>
         </Cell>
         <BorderedCell w={0.33} h="42px">
-          <a href="https://www.linkedin.com/company/nouvel-air-au-coeur-de-votre-organisation" target="_blank">
+          <a href="https://www.linkedin.com/company/nouvel-air-org" target="_blank">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"
