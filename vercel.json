@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "redirects": [],
+  "redirects": [
+    { "source": "/", "destination": "/fr" }
+  ],
   "rewrites": [
-    { "source": "/", "destination": "/coming-soon?locale=fr" },
     { "source": "/fr", "destination": "/?locale=fr" },
     { "source": "/fr/", "destination": "/?locale=fr" },
     { "source": "/fr/qui-sommes-nous", "destination": "/about-us?locale=fr" },
