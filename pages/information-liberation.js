@@ -26,8 +26,8 @@ const InformationLiberationPage = () => (
       <LeadP>
         La juste circulation des informations via les outils numériques adéquats est un facteur essentiel de la santé
         et de la vitalité d'une organisation. Nous travaillons sur la circulation intra- et inter-organisations des
-        informations depuis de nombreuses années et pouvons vous orienter dans vos choix stratégiques, mais aussi
-        développer des solutions sur mesure.
+        informations depuis de nombreuses années et pouvons vous accompagner dans vos choix stratégiques, mais aussi
+        développer des solutions sur-mesure.
       </LeadP>
       <SideImage align="right" src="/static/images/zen2.jpg" />
       <SubTitle>Circulation intra-organisation</SubTitle>
