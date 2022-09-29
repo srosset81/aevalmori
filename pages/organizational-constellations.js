@@ -95,7 +95,7 @@ const OrganizationalConstellationsPage = () => (
       <SideImage align="left" src="/static/images/fusee.jpg"/>
       <SubTitle>✨ Offre d'accompagnement gratuit</SubTitle>
       <P>
-        Si nous avons lancé « Nouvel air », c’est parce que nous sommes convaincus que des organisations saines peuvent
+        Si nous avons lancé Nouvel air, c’est parce que nous sommes convaincus que des organisations saines peuvent
         avoir un profond impact sur le monde. Mais nous savons également que les organisations – en particulier les
         associations – n’ont pas toujours les moyens de se procurer les « soins » dont elles auraient besoin, soit parce
         qu’elles sont justement en difficultés financières, soit parce qu’elles fonctionnent avec des moyens économiques
@@ -103,7 +103,7 @@ const OrganizationalConstellationsPage = () => (
       </P>
       <P>
         Face à ce constat, nous souhaitons « faire notre part » en proposant – au maximum deux fois par année – une
-        constellation gratuite à une organisation qui en fait la demande. Cette offre comprend la « formule complète »
+        Constellation gratuite à une organisation qui en fait la demande. Cette offre comprend la « formule complète »
         que nous proposons dans nos prestations payantes, à savoir :
       </P>
       <ul>
@@ -126,6 +126,9 @@ const OrganizationalConstellationsPage = () => (
       </ul>
       <P>
         Pour candidater, merci de prendre connaissance de <a href="/static/pdf/offre-accompagnement-gratuit.pdf" target="_blank">ce document</a>.
+      </P>
+      <P>
+        <em>Le candidatures sont ouvertes jusqu'au 30 novembre, avec possibilité de Constellation en début 2023.</em>
       </P>
       <P style={{clear: 'both'}}></P>
     </ContentSection>
