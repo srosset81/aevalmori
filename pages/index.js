@@ -51,7 +51,7 @@ const IndexPage = () => (
     </QuoteSection>
     <ClientSection />
     <AnnounceSection link="/static/pdf/offre-accompagnement-gratuit.pdf">
-      Offre de Constellation gratuite pour organisations avec peu de moyens.
+      Offre de Constellation gratuite pour associations et collectifs.
       <br />
       Candidatures ouvertes jusqu'au 21 décembre 2022 !
     </AnnounceSection>
