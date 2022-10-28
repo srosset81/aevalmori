@@ -128,7 +128,7 @@ const OrganizationalConstellationsPage = () => (
         Pour candidater, merci de prendre connaissance de <a href="/static/pdf/offre-accompagnement-gratuit.pdf" target="_blank">ce document</a>.
       </P>
       <P>
-        <em>Le candidatures sont ouvertes jusqu'au 30 novembre, avec possibilité de Constellation en début 2023.</em>
+        <em>Le candidatures pour la première session sont ouvertes jusqu'au 21 décembre !</em>
       </P>
       <P style={{clear: 'both'}}></P>
     </ContentSection>
