@@ -39,7 +39,7 @@ const EventsPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>Agenda - Nouvel air</title>
       </Head>
       <TopSection image="events.jpg">
         <Trans id="events.title">Agenda</Trans>
