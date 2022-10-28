@@ -11,12 +11,11 @@ app
   .then(() => {
     const server = express();
 
-    // https://learnnextjs.com/basics/server-side-support-for-clean-urls/create-our-custom-route
-    /*server.get('/blog/:slug', (req, res) => {
-      const actualPage = '/article';
-      const queryParams = { slug: req.params.slug };
+    server.get('/fr/agenda/:eventId', (req, res) => {
+      const actualPage = '/event';
+      const queryParams = { eventId: req.params.eventId };
       app.render(req, res, actualPage, queryParams);
-    });*/
+    });
 
     server.get('/:locale(it|fr)(/:page)?(/:subPage)?', (req, res) => {
       const queryParams = { locale: req.params.locale };

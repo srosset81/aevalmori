@@ -19,6 +19,7 @@
     { "source": "/fr/dmoka", "destination": "/services-dmoka?locale=fr" },
     { "source": "/it/dmoka", "destination": "/services-dmoka?locale=it" },
     { "source": "/fr/agenda", "destination": "/events?locale=fr" },
+    { "source": "/fr/agenda/:eventId", "destination": "/event?locale=fr&eventId=:eventId" },
     { "source": "/it/eventi", "destination": "/events?locale=it" },
     { "source": "/fr/temoignages", "destination": "/testimonies?locale=fr" },
     { "source": "/it/testimonianze", "destination": "/testimonies?locale=it" },
