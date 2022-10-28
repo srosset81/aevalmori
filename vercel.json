@@ -11,6 +11,7 @@
     { "source": "/fr/gouvernance-partagee", "destination": "/shared-governance?locale=fr" },
     { "source": "/fr/liberation-de-l-information", "destination": "/information-liberation?locale=fr" },
     { "source": "/fr/agenda", "destination": "/events?locale=fr" },
+    { "source": "/fr/agenda/:eventId", "destination": "/event?locale=fr&eventId=:eventId" },
     { "source": "/fr/temoignages", "destination": "/testimonies?locale=fr" },
     { "source": "/fr/contact", "destination": "/contact-us?locale=fr" }
   ]

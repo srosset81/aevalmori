@@ -14,6 +14,10 @@
     "events": {
         "fr": "agenda"
     },
+    "event": {
+        "fr": "agenda",
+        "it": "eventi"
+    },
     "testimonies": {
         "fr": "temoignages"
     },
