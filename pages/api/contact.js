@@ -13,10 +13,10 @@ export default function handle(req, res) {
 
   return mg
     .messages
-    .create('mg.anna-elisa-valmori.com', {
+    .create('mg.nouvel-air.org', {
       from: `${name} <${email}>`,
-      to: ['aelisa.valmori@gmail.com'],
-      subject: 'Message du site web',
+      to: ['sebastien@nouvel-air.org', 'elisa@nouvel-air.org'],
+      subject: 'Message du site nouvel-air.org',
       text: message.replace(/\n/, '\n\n') +
         '\n\n___________________\n\nNom : ' +
         name +

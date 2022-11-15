@@ -1,50 +1,26 @@
 {
-    "about": {
-        "fr": "qui-suis-je",
-        "it": "chi-sono"
+    "about-us": {
+        "fr": "qui-sommes-nous"
     },
-    "vision": {
-        "fr": "ma-vision",
-        "it": "la-mia-visione"
+    "organizational-constellations": {
+        "fr": "constellations-d-organisations"
     },
-    "services-individuals": {
-        "fr": "consultations-individuelles",
-        "it": "consultazioni-individuali"
+    "shared-governance": {
+        "fr": "gouvernance-partagee"
     },
-    "services-constellations": {
-        "fr": "constellations-familiales",
-        "it": "costellazioni-familiari"
-    },
-    "services-dmoka": {
-        "fr": "dmoka",
-        "it": "dmoka"
+    "information-liberation": {
+        "fr": "liberation-de-l-information"
     },
     "events": {
-        "fr": "agenda",
-        "it": "eventi"
+        "fr": "agenda"
     },
     "event": {
-        "fr": "agenda",
-        "it": "eventi"
+        "fr": "agenda"
     },
     "testimonies": {
-        "fr": "temoignages",
-        "it": "testimonianze"
+        "fr": "temoignages"
     },
-    "blog": {
-        "fr": "blog",
-        "it": "blog"
-    },
-    "blog-inner-child": {
-        "fr": "blog/l-enfant-interieur",
-        "it": "blog/il-bambino-interiore"
-    },
-    "blog-prisoner": {
-        "fr": "blog/je-me-sens-prisonnier",
-        "it": "blog/mi-sento-prigioniero"
-    },
-    "contact": {
-        "fr": "contact",
-        "it": "contatto"
+    "contact-us": {
+        "fr": "contact"
     }
 }

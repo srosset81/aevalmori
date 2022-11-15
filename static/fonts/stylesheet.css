@@ -2,6 +2,10 @@ body {
     overflow-y: scroll; /* Show scrollbars */
 }
 
+a, a:hover, a:active, a:visited {
+    color: #2e66a6;
+}
+
 @font-face {
     font-family: 'Caviar Dreams';
     src: url('CaviarDreams.eot');
@@ -53,6 +57,17 @@ body {
     url('MovingSkate.woff2') format('woff2'),
     url('MovingSkate.woff') format('woff'),
     url('MovingSkate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Secret Winter';
+    src: url('SecretWinter.eot');
+    src: url('SecretWinter.eot?#iefix') format('embedded-opentype'),
+    url('SecretWinter.woff2') format('woff2'),
+    url('SecretWinter.woff') format('woff'),
+    url('SecretWinter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

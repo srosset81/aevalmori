@@ -36,17 +36,17 @@ const TestimoniesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Témoignages - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>Témoignages - Nouvel air</title>
       </Head>
-      <TopSection image="flowers.jpg">
+      <TopSection image="balloons2.jpg">
         <Trans id="testimonies.title">Témoignages</Trans>
       </TopSection>
       <Div p={{ xs: "30px", sm: '50px 80px' }}>
         <Row>
-          <Cell w={{ xs: 1, sm: 1/2 }}>
+          <Cell w={{ xs: 1, sm: 1/3 }}>
             <SubTitle>Témoignages 💌</SubTitle>
           </Cell>
-          <Cell w={{ sm: 1/2 }}>
+          <Cell w={{ sm: 2/3 }}>
             <Visible sm md lg xl>
               <Tags tags={testimoniesTags} setTag={setTag} tag={tag} />
             </Visible>

@@ -1,6 +1,10 @@
-export const eventsTags = {};
+export const eventsTags = {
+  'constellations': "Constellations",
+  'shared-governance': 'Gouvernance partagée'
+};
 
 export const testimoniesTags = {
-  constellations: 'Constellations',
-  dmoka: 'D.M.O.K.A.'
+  'organizational-constellations': "Constellations d'organisations",
+  'shared-governance': 'Gouvernance partagée',
+  'information-liberation': "Libération de l'information"
 };

@@ -2,13 +2,13 @@ const theme = {
   breakpoints: { xs: '0px', sm: '540px', md: '820px', lg: '1060px', xl: '1200px' },
   fontFamily: {
     regular: "'Open Sans', Helvetica, Arial, sans-serif",
-    title: "'Moving Skate', cursive",
+    title: "'Secret Winter', cursive",
     subTitle: "'Caviar Dreams', 'Open Sans', Helvetica, Arial, sans-serif"
   },
   colors: {
-    primaryLight: '#e6d5f6',
-    primary: '#B500DF',
-    primaryDark: '#976694',
+    primaryLight: '#90c0f6',
+    primary: '#3b7cc9',
+    primaryDark: '#2e66a6',
     secondaryLight: '#dde2ff',
     secondary: '#1271a4',
     secondaryDark: '#063A56',
@@ -17,7 +17,7 @@ const theme = {
     tertiaryDark: '#DC00E4',
     error: '#D80033',
     warning: '#f9be8e',
-    success: '#3C763D',
+    success: '#75f677',
 
     black: '#222',
     darkGrey: '#444',
@@ -28,9 +28,9 @@ const theme = {
     background: '#F7F7F7',
     white: '#FFF',
 
-    navText: '#444',
+    navText: '#000',
     navSeparator: '#BBB',
-    navBackground: '#DDDDDD',
+    navBackground: '#EEE',
 
     // lightRose: '#f8d4cc',
     // rose: '#DC00E4',

@@ -5,28 +5,14 @@
   ],
   "rewrites": [
     { "source": "/fr", "destination": "/?locale=fr" },
-    { "source": "/it", "destination": "/?locale=it" },
     { "source": "/fr/", "destination": "/?locale=fr" },
-    { "source": "/it/", "destination": "/?locale=it" },
-    { "source": "/fr/qui-suis-je", "destination": "/about?locale=fr" },
-    { "source": "/it/chi-sono", "destination": "/about?locale=it" },
-    { "source": "/fr/ma-vision", "destination": "/vision?locale=fr" },
-    { "source": "/it/la-mia-visione", "destination": "/vision?locale=it" },
-    { "source": "/fr/consultations-individuelles", "destination": "/services-individuals?locale=fr" },
-    { "source": "/it/consultazioni-individuali", "destination": "/services-individuals?locale=it" },
-    { "source": "/fr/constellations-familiales", "destination": "/services-constellations?locale=fr" },
-    { "source": "/it/costellazioni-familiari", "destination": "/services-constellations?locale=it" },
-    { "source": "/fr/dmoka", "destination": "/services-dmoka?locale=fr" },
-    { "source": "/it/dmoka", "destination": "/services-dmoka?locale=it" },
+    { "source": "/fr/qui-sommes-nous", "destination": "/about-us?locale=fr" },
+    { "source": "/fr/constellations-d-organisations", "destination": "/organizational-constellations?locale=fr" },
+    { "source": "/fr/gouvernance-partagee", "destination": "/shared-governance?locale=fr" },
+    { "source": "/fr/liberation-de-l-information", "destination": "/information-liberation?locale=fr" },
     { "source": "/fr/agenda", "destination": "/events?locale=fr" },
     { "source": "/fr/agenda/:eventId", "destination": "/event?locale=fr&eventId=:eventId" },
-    { "source": "/it/eventi", "destination": "/events?locale=it" },
     { "source": "/fr/temoignages", "destination": "/testimonies?locale=fr" },
-    { "source": "/it/testimonianze", "destination": "/testimonies?locale=it" },
-    { "source": "/fr/blog", "destination": "/blog?locale=fr" },
-    { "source": "/fr/blog/l-enfant-interieur", "destination": "/blog-inner-child?locale=fr" },
-    { "source": "/fr/blog/je-me-sens-prisonnier", "destination": "/blog-prisoner?locale=fr" },
-    { "source": "/fr/contact", "destination": "/contact?locale=fr" },
-    { "source": "/it/contatto", "destination": "/contact?locale=it" }
+    { "source": "/fr/contact", "destination": "/contact-us?locale=fr" }
   ]
 }

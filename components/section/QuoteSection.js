@@ -7,22 +7,21 @@ const QuoteSection = ({ author, title, bg, color, children }) => (
     <Div maxW="850px">
       {title &&
         <P
-          shadow
-          color="white"
+          color="black"
           align="center"
           font="title"
-          fontSize={{ xs: '3em', md: '5em' }}
-          m="0 0 10px 0"
+          fontSize={{ xs: '2em', md: '3em' }}
+          m="0 0 15px 0"
           lineHeight="1em"
         >
           {title}
         </P>
       }
-      <P fontSize="1.4em" lineHeight="1.3em" m="0 0 15px" color={color} align="center">
+      <P fontSize={{ xs: '1.2em', sm: '1.4em' }} lineHeight="1.3em" m="0 0 15px" color={color} align="center">
         <em>«&nbsp;{children}&nbsp;»</em>
       </P>
       {author &&
-        <P fontSize="1.3em" lineHeight="1em" color={color} m="0" align="right">
+        <P fontSize={{ xs: "1.1em", sm: "1.3em" }} lineHeight="1em" color={color} m="0" align="right">
           - {author}
         </P>
       }
