@@ -4,10 +4,12 @@ import { useRef, useState, useEffect } from 'react';
 import { I18n } from '@lingui/react';
 import { styled } from '../../utils/styling';
 import { Div, AbsoluteDiv } from '../layout';
-import { P, SubTitle, Text, Markdown } from '../text';
+import { P, SubTitle, Markdown } from '../text';
 import { Button } from '../input';
 import { PageLink } from '../../utils/router';
 import { Hidden, Visible } from '../layout';
+import LinkIcon from '../../svg/link.svg';
+import SideImage from "../media/SideImage";
 
 const fromDateToDate = (event, i18n) => {
   const startDate = new Date(event.startDate);
@@ -78,8 +80,20 @@ const Event = ({ event, showMore, expand }) => {
                 </SquareDiv>
               </AbsoluteDiv>
             </Visible>
-            <SubTitle p={{ xs: '0px', sm: '0px' }}>{showMore ? 'Evénement' : event.title}</SubTitle>
+            <SubTitle p={{ xs: '0px', sm: '0px' }}>
+              {showMore ? 'Evénement' : event.title}
+              {!expand &&
+                <PageLink page="event" param={event.id}>
+                  <LinkIcon style={{ width: 18, height: 18, marginLeft: 5, fill: 'lightgrey' }} />
+                </PageLink>
+              }
+            </SubTitle>
             <P m="10px 0" italic>{fromDateToDate(event, i18n)}</P>
+            {event.image &&
+              <a href={event.image.url} target="_blank">
+                <SideImage align="right" src={event.image.url} />
+              </a>
+            }
             <Markdown>{event.content}</Markdown>
             {showMore && (
               <Visible sm md lg xl>

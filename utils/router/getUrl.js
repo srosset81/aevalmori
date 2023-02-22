@@ -1,6 +1,6 @@
 import routes from './routes';
 
-const getUrl = (pageName, lang) => {
+const getUrl = (pageName, lang, param) => {
   let path;
 
   if (pageName === 'index') {
@@ -17,7 +17,7 @@ const getUrl = (pageName, lang) => {
     }
   }
 
-  return '/' + lang + '/' + path;
+  return '/' + lang + '/' + path + (param ? '/' + param : '');
 };
 
 export default getUrl;

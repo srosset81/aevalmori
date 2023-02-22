@@ -23,6 +23,9 @@
         "fr": "agenda",
         "it": "eventi"
     },
+    "event": {
+        "fr": "agenda"
+    },
     "testimonies": {
         "fr": "temoignages",
         "it": "testimonianze"
