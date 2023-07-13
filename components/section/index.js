@@ -2,7 +2,7 @@ export { default as AnnounceSection } from './AnnounceSection';
 export { default as ArticleSection } from './ArticleSection';
 export { default as ContactSection } from './ContactSection';
 export { default as ContentSection } from './ContentSection';
-export { default as DoctolibSection } from './DoctolibSection';
+export { default as BookingSection } from './BookingSection';
 export { default as FooterSection } from './FooterSection';
 export { default as ImageSection } from './ImageSection';
 export { default as MenuSection } from './MenuSection';

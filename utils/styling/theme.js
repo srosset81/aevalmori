@@ -58,7 +58,7 @@ const theme = {
     transparent: 'transparent',
     facebook: '#3B5998',
     linkedin: '#2F4A84',
-    doctolib: '#0596de'
+    booking: '#E77B8B'
   },
   zIndex: {
     hamburger: 101,

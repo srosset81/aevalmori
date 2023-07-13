@@ -11,7 +11,7 @@ import { Icon, Image } from 'components/media';
 
 import Facebook from '../../../svg/logo-facebook.svg';
 import LinkedIn from '../../../svg/logo-linkedin.svg';
-import Doctolib from '../../../svg/logo-doctolib.svg';
+import Booking from '../../../svg/booking.svg';
 
 import NavLink from './NavLink';
 import FlagSelector from './FlagSelector';
@@ -87,17 +87,17 @@ const Navigation = () => (
           </a>
         </BorderedCell>
         <Cell w={0.33} h="42px">
-          <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
+          <a href="https://perfactive.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
             <HoverDiv
               bg="navBackground"
               color="darkGrey"
               hoverColor="white"
-              hoverBgColor="doctolib"
+              hoverBgColor="booking"
               align="middle"
               h="100%"
             >
-              <Icon size="100px">
-                <Doctolib />
+              <Icon size="18px">
+                <Booking />
               </Icon>
             </HoverDiv>
           </a>

@@ -45,7 +45,7 @@ class ContactSection extends React.Component {
               demande dans les meilleurs délais.
             </P>
             <P>
-              Si vous le souhaitez, les séances peuvent être réservées en ligne directement sur <a href="https://www.doctolib.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">Doctolib</a>.
+              Si vous le souhaitez, les séances peuvent être réservées en ligne directement sur <a href="https://perfactive.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">cette page</a>.
             </P>
             <P>
               Vous pouvez également m'appeler ou m'envoyer un SMS au <a href="tel:+33659026479">06 59 02 64 79</a>.

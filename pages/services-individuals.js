@@ -9,7 +9,7 @@ import {
   FooterSection,
   ContentSection,
   QuoteSection,
-  DoctolibSection
+  BookingSection
 } from 'components/section';
 import { Trans } from '@lingui/macro';
 import { PageLink } from '../utils/router';
@@ -19,7 +19,7 @@ const ServiceIndividualPage = () => (
     <Head>
       <title>Séances individuelles - Anna Elisa Valmori, psychologue à Paris</title>
     </Head>
-    <DoctolibSection />
+    <BookingSection />
     <TopSection image="plant-growing-2.jpg" position="bottom right">
       <Trans id="services.individuals.title">Séances individuelles</Trans>
     </TopSection>
