@@ -20,6 +20,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
     "@apollo/react-ssr": "^3.1.0",
+    "@getbrevo/brevo": "^2.2.0",
     "@lingui/react": "^2.8.3",
     "apollo-boost": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.3",
@@ -35,7 +36,6 @@
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
     "locale": "^0.1.0",
-    "mailgun.js": "^8.0.1",
     "module": "^1.2.5",
     "markdown-to-jsx": "^7.1.7",
     "next": "^9.4.4",
