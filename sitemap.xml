@@ -9,4 +9,7 @@
         <loc>/fr/qui-suis-je</loc>
         <xhtml:link rel="alternate" hreflang="en" href="http://www.mon-domaine.com/english/" />
     </url>
+    <url>
+        <loc>/fr/parcours-ose-prendre-ta-place</loc>
+    </url>
 </urlset>

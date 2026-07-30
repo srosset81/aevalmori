@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Anna Elisa Valmori",
   "scripts": {
-    "dev": "node dev-server.js",
+    "dev": "node --openssl-legacy-provider dev-server.js",
     "build": "next build",
     "start": "next start",
     "vercel:dev": "vercel dev",

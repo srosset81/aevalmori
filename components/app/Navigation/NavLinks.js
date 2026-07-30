@@ -26,6 +26,9 @@ const NavLinks = () => {
       <NavLink page="services-dmoka">
         <Trans id="menu.services-dmoka">D.M.O.K.A.</Trans>
       </NavLink>
+      <NavLink page="ose-prendre-ta-place">
+        <Trans id="menu.ose-prendre-ta-place">Parcours Ose prendre ta place</Trans>
+      </NavLink>
       <Separator m="5px 0" />
       <NavLink page="events">
         <Trans id="menu.events">Agenda</Trans>
