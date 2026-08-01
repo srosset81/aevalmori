@@ -9,6 +9,8 @@ const Markdown = (props) => (
         p: P,
         li: props => (<li><P {...props}></P></li>)
       },
+      forceWrapper: true,
+      wrapper: P
     }}
     {...props}
   />

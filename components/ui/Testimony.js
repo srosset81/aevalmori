@@ -42,16 +42,26 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
           <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
         </AbsoluteDiv>
       </Visible>
-      <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
+      <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef} m="-25px 0 10px">
         <SubTitle p={{ xs: '0 0 0 30px', sm: '0px' }}>{showMore ? 'Témoignage' : testimony.title}</SubTitle>
+        {testimony.googleReview && (
+          <P fontSize="1em" lineHeight="0.6em" color="grey" p="10px 0 0">
+            {testimony.stars && [0, 1, 2, 3, 4].fill('⭐', 0, testimony.stars).join('')}
+            &nbsp;
+            Avis certifié sur Google
+            (<a href={testimony.googleReview} target="_blank" rel="noopener noreferrer" style={{ color: 'grey' }}>
+              Voir l'original
+            </a>)
+          </P>
+        )}
         <Markdown>{testimony.content}</Markdown>
         {showMore && (
           <Visible sm md lg xl>
             <AllTestimoniesLink float="left" />
           </Visible>
         )}
-        <P fontSize="1.3em" align="right" italic lineHeight="1em">
-          - {testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}
+        <P fontSize="1.3em" align="right" lineHeight="1em">
+          <i>{testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}</i>
         </P>
         {showMore && (
           <Hidden sm md lg xl>
