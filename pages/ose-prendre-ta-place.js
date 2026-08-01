@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { Layout } from 'components/app';
-import { Div } from 'components/layout';
+import { Div, Hidden } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { ContactSection, FooterSection, QuoteSection, TopSection, TestimonySection } from 'components/section';
@@ -55,9 +55,12 @@ const CtaButton = styled(({ light, ...props }) => <a {...props} />)`
 
 const PainPointList = styled.ul`
   list-style: none;
-  max-width: calc(100% - 200px);
+  max-width: 100%;
   margin: 30px auto 0;
   padding: 0;
+  ${mediaQuery('sm')} {
+    max-width: calc(100% - 140px);
+  }
 `;
 
 const PainPoint = styled.li`
@@ -66,7 +69,7 @@ const PainPoint = styled.li`
   gap: 15px;
   margin: 20px 0;
   font-family: ${theme.fontFamily.regular};
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.7em;
   &::before {
     content: '✅';
@@ -76,7 +79,7 @@ const PainPoint = styled.li`
 
 const BenefitList = styled.ul`
   list-style: none;
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto 0;
   padding: 0;
 `;
@@ -87,7 +90,7 @@ const BenefitPoint = styled.li`
   gap: 15px;
   margin: 15px 0;
   font-family: ${theme.fontFamily.regular};
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.7em;
   &::before {
     content: '✨';
@@ -222,7 +225,7 @@ const PortraitImage = styled.img`
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   float: left;
-  margin: 0 30px 15px 0;
+  margin: 0 30px 30px 0;
 `;
 
 const JoyImage = styled.img`
@@ -260,7 +263,7 @@ const TriedText = styled.div`
 const TriedImage = styled.img`
   width: 100%;
   max-width: 350px;
-  height: 450px;
+  height: 420px;
   object-fit: cover;
   flex-shrink: 0;
 `;
@@ -306,29 +309,30 @@ const OsePrendreTaPlacePage = () => (
     </Head>
 
     <BgImage src="/static/images/empty-boat-6.jpg" h="500px" align="middle" position="bottom left">
-      <Div>
+      <Div m="15px">
         <P
           shadow
           color="white"
           align="center"
           font="title"
-          fontSize={{ xs: '4.5em', md: '7em' }}
-          m="0"
-          lineHeight="1em"
+          fontSize={{ xs: '6em', md: '9em' }}
+          m="0 0 15px"
+          lineHeight="0.7em"
         >
           Ose prendre ta place
         </P>
-        <P shadow color="white" align="center" fontSize={{ xs: '1.5em', md: '2em' }} lineHeight="0.8em" italic m="0">
+        <P shadow color="white" align="center" fontSize={{ xs: '1.5em', md: '2em' }} lineHeight="1em" italic m="0">
           Par Anna Elisa Valmori, psychologue
         </P>
-        {/* <Div h="100px" /> */}
-        
+         <Hidden md lg xl>
+            <Div h="80px" />
+         </Hidden>
       </Div>
     </BgImage>
 
-    <Div bg="primaryDark" p={{ xs: '50px 60px', sm: '45px 25px' }}>
+    <Div bg="primaryDark" p="45px 25px">
       <Container> 
-        <P color="white" align="center" fontSize={{ xs: '1.2em', md: '1.5em' }} m="0 0 30px">
+        <P color="white" align="center" fontSize="1.5em" m="0 0 30px">
           Un accompagnement pour celles et ceux qui passent toujours après les autres.<br/>Pour apprendre à dire non sans
           culpabilité et reprendre sa place.
         </P>
@@ -395,14 +399,14 @@ const OsePrendreTaPlacePage = () => (
         <TriedRow>
           <TriedText>
             <SectionTitle large align="left">Tu as essayé différentes choses</SectionTitle>
-            <P align="left" fontSize="1.2em" m="0 0 30px">
+            <P align="left" fontSize="1.2em">
               Tu as cherché à apaiser cette partie de toi qui ne va pas bien en essayant diverses approches&nbsp;: yoga,
               respiration, sophrologie, thérapies énergétiques, séances de développement personnel, coaching…
             </P>
-            <P align="left" fontSize="1.2em" m="0 0 30px">
+            <P align="left" fontSize="1.2em">
               Ces démarches t'ont souvent apporté un soulagement temporaire, mais inévitablement, <strong>les mêmes problèmes reviennent toujours.</strong>
             </P>
-            <P align="left" fontSize="1.2em" m="0 0 30px">
+            <P align="left" fontSize="1.2em">
               Tu t'es senti·e mieux, mais le problème est revenu. Peut-être que ce dont tu as besoin, c'est une approche qui
               aille travailler encore plus en profondeur.
             </P>
@@ -438,7 +442,7 @@ const OsePrendreTaPlacePage = () => (
       </Container>
     </Section>
 
-    <QuoteSection author="C.G. Jung" bg="white" p="0 0 50px">
+    <QuoteSection author="C.G. Jung" bg="white" p="0 25px 45px">
       Rends conscient l'inconscient, sinon c'est l'inconscient qui guidera ta vie et tu appelleras ça le destin.
     </QuoteSection>
 
@@ -448,7 +452,7 @@ const OsePrendreTaPlacePage = () => (
     <Section alt>
       <Container>
         <SectionTitle large>C'est pour arrêter ce schéma infernal que j'ai conçu ce parcours</SectionTitle>
-        <P align="center" fontSize="1.3em" lineHeight="1.8em" m="30px 0">
+        <P align="center" fontSize="1.2em" lineHeight="1.8em" m="30px 0">
           <strong>«&nbsp;Ose prendre ta place&nbsp;»</strong> est un programme de{' '}
           <strong>transformation profonde en 4 mois</strong> qui t'accompagne à&nbsp;:
         </P>
@@ -506,7 +510,7 @@ const OsePrendreTaPlacePage = () => (
           </CtaButton>
         </CtaCenter>
         <Div maxW="400px" m="40px auto 0">
-          <P align="center" italic fontSize="1.3em" lineHeight="1.8em" color="primaryDark" m="0">
+          <P align="center" italic fontSize="1.3em" lineHeight="1.5em" color="primaryDark" m="0">
             «&nbsp;Transformer tes souffrances en forces, et devenir créateur de ta propre vie.&nbsp;»
           </P>
         </Div>
@@ -582,7 +586,7 @@ const OsePrendreTaPlacePage = () => (
     {/* CE QUE TU VAS OBTENIR */}
     <Section alt>
       <Container>
-        <SectionTitle large>📦 Ce que comprend le parcours</SectionTitle>
+        <SectionTitle large>Ce que comprend le parcours</SectionTitle>
         <BenefitsGrid>
           <Benefit>
             <P fontSize="3em" m="0 0 15px" align="center">
@@ -673,14 +677,12 @@ const OsePrendreTaPlacePage = () => (
     {/* QUI SUIS-JE */}
     <Section id="qui-suis-je">
       <Container>
-        {/* <SectionTitle large>Qui suis-je ?</SectionTitle> */}
         <About>
           <PortraitImage src="/static/images/elisa-livres.jpg" alt="Anna Elisa Valmori" />
           <AboutText>
             <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.8em' }} m="0 0 30px" large>
               Qui suis-je ?
             </SubTitle>
-
             <P m="0 0 15px">
               <b>Je suis Anna Elisa Valmori.</b> Psychologue depuis 2005, facilitatrice en Constellations Familiales et formée à la 
               technique D.M.O.K.A.® pour le traitement des traumatismes, j'ai une approche intégrative qui combine différentes
@@ -741,13 +743,13 @@ const OsePrendreTaPlacePage = () => (
           Prêt·e à te choisir, enfin&nbsp;?
         </SubTitle>
         <CtaInnerBox>
-          <SubTitle color="white" align="left" fontSize="1.2em" m="0 0 20px">
+          <SubTitle color="white">
             Avant de commencer, on fait connaissance
           </SubTitle>
-          <P color="white" m="0 0 15px">
+          <P color="white">
             Je ne travaille pas avec tout le monde, ni de la même manière avec chacun.
           </P>
-          <P color="white" m="0 0 15px">
+          <P color="white">
             Avant tout engagement, on prend le temps d'un appel. Tu me parles de là où tu en es, de ce qui te bloque.
             De mon côté, je te dis honnêtement si ce parcours est fait pour toi, et comment on l'ajusterait à tes
             objectifs.
@@ -766,7 +768,7 @@ const OsePrendreTaPlacePage = () => (
         </CtaButton>
         <P color="white" align="center" fontSize="1.1em" m="30px 0 0">
           <b>Une question ?</b><br />
-          📧 Écris-moi à <a href="mailto:aelisa.valmori@gmail.com" style={{ color: 'white' }}>
+          ✉️ Écris-moi à <a href="mailto:aelisa.valmori@gmail.com" style={{ color: 'white' }}>
             aelisa.valmori@gmail.com
           </a>
           <br />

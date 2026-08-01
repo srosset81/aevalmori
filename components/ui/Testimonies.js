@@ -34,7 +34,7 @@ const Testimonies = () => {
     data.allTestimonyFrs &&
     data.allTestimonyFrs.map((testimony, i) => (
       <React.Fragment key={i}>
-        {i > 0 && <Separator m="15px 0px" color="lightGrey" />}
+        {i > 0 && <Separator m="-10px 0 25px" color="lightGrey" />}
         <Testimony testimony={testimony} />
       </React.Fragment>
   ));

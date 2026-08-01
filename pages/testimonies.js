@@ -19,10 +19,13 @@ const TestimoniesPage = () => {
       query ($tag: String) {
         allTestimonyFrs(filter: { participatedAt: { eq: $tag } }, first: 100) {
           title
-          content(markdown: true)
+          content
           surname
           date
           participatedAt
+          googleReview
+          stars
+          order
         }
       }
     `,
@@ -61,7 +64,7 @@ const TestimoniesPage = () => {
           data.allTestimonyFrs &&
           data.allTestimonyFrs.map((testimony, i) => (
             <React.Fragment key={i}>
-              <Separator m="15px 0px" color="lightGrey" />
+              <Separator m="0px 0px 25px" color="lightGrey" />
               <Testimony testimony={testimony} />
             </React.Fragment>
           ))}
