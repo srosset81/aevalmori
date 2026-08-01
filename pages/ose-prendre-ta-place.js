@@ -647,32 +647,32 @@ const OsePrendreTaPlacePage = () => (
     </TopSection>
 
     {/* IMAGINE */}
-    <Section alt>
+    <Div bg="tertiaryLight" p="60px 25px">
       <Container maxW="1100px">
-        <SectionTitle large>Ferme les yeux et imagine…</SectionTitle>
-        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0 0 25px">
+        <SubTitle align="center" large>Ferme les yeux et imagine…</SubTitle>
+        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="20px 0 20px">
           Comment serait ta vie si tu pouvais dire NON sans culpabilité, sans cette peur constante de déplaire qui te
           paralyse&nbsp;?
         </P>
-        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0 0 25px">
+        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0 0 20px">
           Si tu pouvais enfin te choisir, vivre pour toi sans te sentir égoïste, et arrêter de tout donner aux autres
           jusqu'à l'épuisement&nbsp;?
         </P>
-        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0 0 25px">
+        <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0 0 20px">
           Si tu pouvais arrêter de chercher l'amour et la validation à l'extérieur, et enfin retrouver confiance,
           clarté et estime de toi&nbsp;?
         </P>
         <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="0">
           Cette personne qui occupe pleinement sa place, qui pose ses limites avec assurance, qui a des relations
-          authentiques où elle peut être elle-même… <strong>c'est toi dans 4 mois.</strong>
+          authentiques où elle peut être elle-même… <strong>cette personne, c'est toi dans 4 mois.</strong>
         </P>
       </Container>
-    </Section>
+    </Div>
 
-    <QuoteSection author="C.G. Jung" bg="tertiaryLight">
+    {/* <QuoteSection author="C.G. Jung" bg="tertiaryLight">
       Ta vision devient claire lorsque tu peux regarder dans ton cœur. Celui qui regarde à l'extérieur de
       soi ne fait que rêver&nbsp;; celui qui regarde en soi se réveille.
-    </QuoteSection>
+    </QuoteSection> */}
 
     {/* QUI SUIS-JE */}
     <Section id="qui-suis-je">
@@ -729,7 +729,7 @@ const OsePrendreTaPlacePage = () => (
           </CtaButton>
         </CtaCenter>
         <P align="center" m="30px 0 0">
-          <a href="https://maps.app.goo.gl/dS2EU7DYLq9ihMVY7" target="_blank" style={{ color: theme.colors.primaryDark }}>
+          <a href="https://www.google.com/maps/place/Anna+Elisa+VALMORI+%7C+Psychologue+Montpellier,+t%C3%A9l%C3%A9consultation/@43.6406432,3.8642972,859m/data=!3m2!1e3!5s0x12b6aed7950b0de7:0xa4d377f90c6f0f3a!4m8!3m7!1s0x47e7d5786f81be21:0xb0dac22308be1e08!8m2!3d43.6406432!4d3.8642972!9m1!1b1!16s%2Fg%2F11lh2ly2fb?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style={{ color: theme.colors.primaryDark }}>
             Voir tous les avis sur Google →
           </a>
         </P>
