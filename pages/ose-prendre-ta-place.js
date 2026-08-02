@@ -715,13 +715,14 @@ const OsePrendreTaPlacePage = () => (
       </Container>
     </Section>
 
-    <TopSection image="flowers.jpg" position="bottom left">
-      Ce qu'ils disent du parcours
+    <TopSection image="phare-4.jpg" position="top right">
+      Témoignages
     </TopSection>
 
     {/* TÉMOIGNAGES */}
     <Section>
       <Container>
+        <SectionTitle large>Ce qu'ils disent du parcours</SectionTitle>
         <Testimonies />
         <CtaCenter>
           <CtaButton href={PERFACTIVE_URL} target="_blank" rel="noopener">

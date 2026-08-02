@@ -6,7 +6,7 @@ import { AnimOnAppear } from 'components/motion';
 const TopSection = ({ image, position, subTitle, children }) => (
   <BgImage src={`/static/images/${image}`} h={{ xs: '250px', md: '400px' }} align="middle" position={position}>
     <Div>
-      <AnimOnAppear>
+      {/* <AnimOnAppear> */}
         <P
           shadow
           color="white"
@@ -23,7 +23,7 @@ const TopSection = ({ image, position, subTitle, children }) => (
             {subTitle}
           </P>
         }
-      </AnimOnAppear>
+      {/* </AnimOnAppear> */}
     </Div>
   </BgImage>
 );

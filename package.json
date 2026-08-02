@@ -40,7 +40,7 @@
     "markdown-to-jsx": "^7.1.7",
     "next": "^9.4.4",
     "node-fetch": "^2.6.0",
-    "vercel": "^28.2.5",
+    "vercel": "^58.4.4",
     "prettier": "^1.18.2",
     "raw-loader": "^0.5.1",
     "react": "^16.8.6",
