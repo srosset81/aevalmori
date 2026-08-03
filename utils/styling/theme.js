@@ -34,16 +34,16 @@ const theme = {
 
     // lightRose: '#f8d4cc',
     // rose: '#DC00E4',
-    // lightPurple: '#e6d5f6',  // primaryLight
+    lightPurple: '#e6d5f6',  // primaryLight
     // purple: '#B500DF',
     // darkPurple: '#976694',
     // darkBlue: '#063A56',
     // violet: '#bd95f6',
     // blue: '#B159FA',
-    // lightBlue: '#dde2ff', // secondaryLight
+    lightBlue: '#dde2ff', // secondaryLight
     // green: '#3ea542',
     // darkGreen: '#3C763D',
-    // lightGreen: '#DFF0D8',
+    lightGreen: '#DFF0D8',
     // yellow: '#f7a02d',
     // lightOrange: '#f9be8e', // warning
     // orange: '#ED7600',
