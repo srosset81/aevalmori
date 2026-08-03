@@ -313,7 +313,7 @@ const ReadMore = ({ tail, children }) => {
 const OsePrendreTaPlacePage = () => (
   <Layout>
     <Head>
-      <title>Parcours Ose prendre ta place - Anna Elisa Valmori, psychologue</title>
+      <title>Parcours "Ose prendre ta place" - Anna Elisa Valmori, psychologue</title>
     </Head>
 
     <BgImage src="/static/images/empty-boat-6.jpg" h="500px" align="middle" position="bottom left">

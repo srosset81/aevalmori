@@ -59,28 +59,33 @@ const IndexPage = () => (
       Nous ne sommes pas seulement notre psychisme ou notre corps, mais nous formons un tout au sein duquel la dimension
       transpersonnelle et spirituelle a également son importance.
     </MenuSection>
-    <MenuSection right title="Séances individuelles" image="plant-growing-2.jpg" link="services-individuals">
+    <MenuSection right title="Parcours &quot;Ose prendre ta place&quot;" image="empty-boat-6.jpg" link="ose-prendre-ta-place">
+      Un accompagnement pour celles et ceux qui passent toujours après les autres. Pour apprendre à dire non sans
+      culpabilité et reprendre sa place. Combien de fois t'es-tu senti·e passer à côté de ta vie&nbsp;? Et si tu pouvais 
+      enfin te choisir, sans culpabilité ni peur d'être abandonné&nbsp;?
+    </MenuSection>
+    <MenuSection left title="Séances individuelles" image="plant-growing-2.jpg" link="services-individuals">
       Je propose des parcours personnalisés dans lesquels j’intègre les instruments que j'ai expérimentés sur moi-même
       au cours des années. Une valeur particulière est donnée au choix des objectifs à atteindre et à la réalisation de
       soi selon une vision holistique, transpersonnelle et globale de l'être humain.
     </MenuSection>
-    <MenuSection left title="Constellations familiales" image="birds-sky.jpg" link="services-constellations">
+    <MenuSection right title="Constellations familiales" image="birds-sky.jpg" link="services-constellations">
       Les constellations familiales donnent la possibilité de nous reconnecter à nos racines. Le but est d’amener
       l’amour là où il y a eu souffrance, de laisser les fardeaux et les conflits dont nous sommes chargés et qui ne
       nous appartiennent pas, en laissant à chacun sa part de responsabilité.
     </MenuSection>
-    <MenuSection right title="D.M.O.K.A." image="birds-chain.jpg" link="services-dmoka">
+    <MenuSection left title="D.M.O.K.A." image="birds-chain.jpg" link="services-dmoka">
       La D.M.O.K.A. est une approche neuro-émotionnelle qui permet de déprogrammer le stress, les traumatismes, de
       changer ses croyances, d’adopter de nouveaux comportements et de se sortir des schémas récurrents en reconnaissant
       et en renforçant ses propres ressources.
     </MenuSection>
-    <MenuSection left title="Témoignages" image="flowers.jpg" link="testimonies">
+    <MenuSection right title="Témoignages" image="flowers.jpg" link="testimonies">
       Au fil des années, j'ai récolté de beaux témoignages que je souhaite partager avec vous sur cette page.
     </MenuSection>
-    <MenuSection right title="Blog" image="contact.jpg" link="blog">
+    {/* <MenuSection left title="Blog" image="contact.jpg" link="blog">
       Je vous partage mes réflexions par rapport aux thématiques que je rencontre dans mon travail, qui peuvent vous
       aider à éclairer des interrogations, vous inspirer... N'hésitez pas à les partager !
-    </MenuSection>
+    </MenuSection> */}
     <MenuSection left title="Contactez-moi" image="butterfly-3.jpg" link="contact">
       N'hésitez pas à prendre contact avec moi, je répondrai à votre demande dans les meilleurs délais.
     </MenuSection>
