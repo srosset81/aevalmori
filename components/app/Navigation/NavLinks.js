@@ -17,10 +17,10 @@ const NavLinks = () => {
         <Trans id="menu.vision">Ma vision</Trans>
       </NavLink>
       <Separator m="5px 0" />
-      {/* <NavLink page="ose-prendre-ta-place">
+      <NavLink page="ose-prendre-ta-place">
         <Trans id="menu.ose-prendre-ta-place">Parcours "Ose prendre ta place"</Trans>
       </NavLink>
-      <Separator m="5px 0" /> */}
+      <Separator m="5px 0" />
       <NavLink page="services-individuals">
         <Trans id="menu.services-individuals">Séances individuelles</Trans>
       </NavLink>

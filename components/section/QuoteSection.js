@@ -18,7 +18,7 @@ const QuoteSection = ({ author, p, title, bg, color, children }) => (
           {title}
         </P>
       }
-      <P fontSize="1.4em" lineHeight="1.3em" m="0 0 15px" color={color} align="center">
+      <P fontSize="1.4em" lineHeight="1.4em" m="0 0 15px" color={color} align="center">
         <em>«&nbsp;{children}&nbsp;»</em>
       </P>
       {author &&

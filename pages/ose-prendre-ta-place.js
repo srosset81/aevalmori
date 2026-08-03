@@ -7,6 +7,7 @@ import { P, SubTitle } from 'components/text';
 import { ContactSection, FooterSection, QuoteSection, TopSection, TestimonySection } from 'components/section';
 import { Testimonies } from 'components/ui';
 import { styled, theme, mediaQuery } from 'utils/styling';
+import WhatsappIcon from '../svg/whatsapp.svg';
 
 const PERFACTIVE_URL = 'https://perfactive.fr/anna-elisa-valmori/date-v2?people=11236&reason=110694';
 
@@ -70,7 +71,7 @@ const PainPoint = styled.li`
   margin: 20px 0;
   font-family: ${theme.fontFamily.regular};
   font-size: 1.2em;
-  line-height: 1.7em;
+  line-height: 1.8em;
   &::before {
     content: '✅';
     flex-shrink: 0;
@@ -93,8 +94,12 @@ const BenefitPoint = styled.li`
   font-size: 1.2em;
   line-height: 1.7em;
   &::before {
-    content: '✨';
+    content: '';
     flex-shrink: 0;
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: 0.2em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFC72C'%3E%3Cpath d='M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 008.25 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z'/%3E%3C/svg%3E") center / contain no-repeat;
   }
 `;
 
@@ -219,13 +224,16 @@ const AboutText = styled.div``;
 const PortraitImage = styled.img`
   width: 400px;
   max-width: 100%;
-  height: 450px;
+  height: 470px;
   object-fit: cover;
   object-position: center top;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   float: left;
   margin: 0 30px 30px 0;
+  ${mediaQuery('sm')} {
+    margin: 0 45px 45px 0;
+  }
 `;
 
 const JoyImage = styled.img`
@@ -269,7 +277,7 @@ const TriedImage = styled.img`
 `;
 
 const SectionTitle = ({ children, large, ...props }) => (
-  <SubTitle color="primaryDark" align="center" fontSize={{ xs: '1.4em', md: '1.8em' }} m="0 0 30px" large={large} {...props}>
+  <SubTitle color="primaryDark" align="center" fontSize={{ xs: '1.7em', md: '2em' }} m="0 0 30px" large={large} {...props}>
     {children}
   </SubTitle>
 );
@@ -341,7 +349,14 @@ const OsePrendreTaPlacePage = () => (
           Et si tu pouvais enfin te choisir, sans culpabilité ni peur d'être abandonné&nbsp;?
         </P>
         <Div m="40px 0 0" align="center">
-          <CtaButton href="#appel" light>
+          <CtaButton
+            href="#appel"
+            light
+            onClick={e => {
+              e.preventDefault();
+              document.getElementById('appel').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Je veux en savoir plus → réserver l'appel
           </CtaButton>
         </Div>
@@ -398,19 +413,19 @@ const OsePrendreTaPlacePage = () => (
       <Container maxW="1200px">
         <TriedRow>
           <TriedText>
-            <SectionTitle large align="left">Tu as essayé différentes choses</SectionTitle>
-            <P align="left" fontSize="1.2em">
+            <SectionTitle align="left" fontSize={{ xs: '1.7em', md: '2em' }}>Tu as essayé différentes choses</SectionTitle>
+            <P align="left" fontSize="1.2em" lineHeight="1.8em">
               Tu as cherché à apaiser cette partie de toi qui ne va pas bien en essayant diverses approches&nbsp;: yoga,
               respiration, sophrologie, thérapies énergétiques, séances de développement personnel, coaching…
             </P>
-            <P align="left" fontSize="1.2em">
+            <P align="left" fontSize="1.2em" lineHeight="1.8em">
               Ces démarches t'ont souvent apporté un soulagement temporaire, mais inévitablement, <strong>les mêmes problèmes reviennent toujours.</strong>
             </P>
-            <P align="left" fontSize="1.2em">
+            <P align="left" fontSize="1.2em" lineHeight="1.8em">
               Tu t'es senti·e mieux, mais le problème est revenu. Peut-être que ce dont tu as besoin, c'est une approche qui
               aille travailler encore plus en profondeur.
             </P>
-            <P align="left" fontSize="1.2em" m="0">
+            <P align="left" fontSize="1.2em" lineHeight="1.8em" m="0">
               Et à force, tu finis par te dire que rien ne marche sur toi. Que c'est peut-être toi, le problème.
             </P>
           </TriedText>
@@ -423,7 +438,7 @@ const OsePrendreTaPlacePage = () => (
     <Section>
       <Container>
         <SolutionBox>
-          <SubTitle large color="primaryDark" align="center" fontSize={{ xs: '1.3em', md: '1.5em' }} m="0 0 20px">
+          <SubTitle color="primaryDark" align="center" fontSize={{ xs: '1.7em', md: '2em' }} m="0 0 20px">
             Laisse-moi te rassurer et t'expliquer pourquoi c'est normal
           </SubTitle>
           <P fontSize="1.2em" lineHeight="1.8em" m="0">
@@ -505,7 +520,13 @@ const OsePrendreTaPlacePage = () => (
           aussi pour toi.
         </P>
         <CtaCenter>
-          <CtaButton href={PERFACTIVE_URL} target="_blank" rel="noopener">
+          <CtaButton 
+            href="#appel"
+            onClick={e => {
+              e.preventDefault();
+              document.getElementById('appel').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Prends ta place → oui, je le veux maintenant
           </CtaButton>
         </CtaCenter>
@@ -524,8 +545,8 @@ const OsePrendreTaPlacePage = () => (
         <StepsGrid>
           <Step>
             <StepNumber>1</StepNumber>
-            <SubTitle color="primaryDark" align="center" fontSize="1.2em" m="0 0 15px">
-              Ose rompre<br />les schémas<br />du passé
+            <SubTitle color="primaryDark" align="center" m="0 0 15px">
+              Ose rompre les schémas du passé
             </SubTitle>
             <P align="left" color="primaryDark" m="0 0 10px">
               Libération de la culpabilité, de la peur d'être abandonné et du besoin de validation extérieure.
@@ -542,7 +563,7 @@ const OsePrendreTaPlacePage = () => (
           </Step>
           <Step>
             <StepNumber>2</StepNumber>
-            <SubTitle color="primaryDark" align="center" fontSize="1.2em" m="0 0 15px">
+            <SubTitle color="primaryDark" align="center" m="0 0 15px">
               Ose te connaître vraiment
             </SubTitle>
             <P align="left"  color="primaryDark" m="0 0 10px">
@@ -563,7 +584,7 @@ const OsePrendreTaPlacePage = () => (
           </Step>
           <Step>
             <StepNumber>3</StepNumber>
-            <SubTitle color="primaryDark" align="center" fontSize="1.2em" m="0 0 15px">
+            <SubTitle color="primaryDark" align="center" m="0 0 15px">
               Ose<br />prendre<br />ta place
             </SubTitle>
             <P align="left" color="primaryDark" m="0 0 10px">
@@ -583,7 +604,7 @@ const OsePrendreTaPlacePage = () => (
       </Container>
     </Section>
 
-    {/* CE QUE TU VAS OBTENIR */}
+    {/* CE QUE QUE COMPREND LE PARCOURS */}
     <Section alt>
       <Container>
         <SectionTitle large>Ce que comprend le parcours</SectionTitle>
@@ -592,7 +613,7 @@ const OsePrendreTaPlacePage = () => (
             <P fontSize="3em" m="0 0 15px" align="center">
               🎯
             </P>
-            <SubTitle color="primaryDark" align="center" fontSize="1.1em" m="0 0 10px">
+            <SubTitle color="primaryDark" align="center" m="0 0 10px">
               10 Séances Individuelles
             </SubTitle>
             <P align="center" m="0">
@@ -603,7 +624,7 @@ const OsePrendreTaPlacePage = () => (
             <P fontSize="3em" m="0 0 15px" align="center">
               ♾️
             </P>
-            <SubTitle color="primaryDark" align="center" fontSize="1.1em" m="0 0 10px">
+            <SubTitle color="primaryDark" align="center" m="0 0 10px">
               Accès illimité aux ressources
             </SubTitle>
             <P align="center" m="0">
@@ -612,9 +633,9 @@ const OsePrendreTaPlacePage = () => (
           </Benefit>
           <Benefit>
             <P fontSize="3em" m="0 0 15px" align="center">
-              💬
+              <WhatsappIcon style={{ width: '1.2em', height: '1.2em', fill: '#25D366', verticalAlign: 'middle' }} />
             </P>
-            <SubTitle color="primaryDark" align="center" fontSize="1.1em" m="0 0 10px">
+            <SubTitle color="primaryDark" align="center" m="0 0 10px">
               Support WhatsApp
             </SubTitle>
             <P align="center" m="0">
@@ -625,7 +646,7 @@ const OsePrendreTaPlacePage = () => (
             <P fontSize="3em" m="0 0 15px" align="center">
               📝
             </P>
-            <SubTitle color="primaryDark" align="center" fontSize="1.1em" m="0 0 10px">
+            <SubTitle color="primaryDark" align="center" m="0 0 10px">
               Exercices Pratiques
             </SubTitle>
             <P align="center" m="0">
@@ -635,7 +656,13 @@ const OsePrendreTaPlacePage = () => (
           </Benefit>
         </BenefitsGrid>
         <CtaCenter>
-          <CtaButton href={PERFACTIVE_URL} target="_blank" rel="noopener">
+          <CtaButton
+            href="#appel"
+            onClick={e => {
+              e.preventDefault();
+              document.getElementById('appel').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Prends ta place
           </CtaButton>
         </CtaCenter>
@@ -649,7 +676,7 @@ const OsePrendreTaPlacePage = () => (
     {/* IMAGINE */}
     <Div bg="tertiaryLight" p="60px 25px">
       <Container maxW="1100px">
-        <SubTitle align="center" large>Ferme les yeux et imagine…</SubTitle>
+        <SubTitle align="center" fontSize={{ xs: '1.7em', md: '2em' }}>Ferme les yeux et imagine…</SubTitle>
         <P align="center" italic fontSize="1.2em" lineHeight="1.9em" m="20px 0 20px">
           Comment serait ta vie si tu pouvais dire NON sans culpabilité, sans cette peur constante de déplaire qui te
           paralyse&nbsp;?
@@ -680,7 +707,7 @@ const OsePrendreTaPlacePage = () => (
         <About>
           <PortraitImage src="/static/images/elisa-livres.jpg" alt="Anna Elisa Valmori" />
           <AboutText>
-            <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.8em' }} m="0 0 30px" large>
+            <SubTitle color="primaryDark" fontSize={{ xs: '1.7em', md: '2em' }} m="0 0 30px" large>
               Qui suis-je ?
             </SubTitle>
             <P m="0 0 15px">
@@ -694,9 +721,10 @@ const OsePrendreTaPlacePage = () => (
             </P>
             <P m="0 0 15px">
               À un moment de ma vie, je me suis retrouvée face à des choix qui ne correspondaient pas aux attentes de
-              ma famille&nbsp;: en 2017, j'ai quitté l'Italie par amour, en l'espace de quelques mois, et j'ai
-              recommencé ma vie à zéro, en m'installant dans un endroit où personne ne me connaissait. Je sais ce que
-              c'est que de vivre le syndrome du sauveur, la culpabilité qui s'installe quand on choisit sa propre voie.
+              ma famille&nbsp;: en 2017, j'ai quitté l'Italie pour vivre une histoire d'amour qui est devenue, 
+              au fil des années, la plus importante de ma vie, et j'ai recommencé ma vie à zéro en l'espace de quelques mois, 
+              en m'installant dans un endroit où personne ne me connaissait. Je sais ce que c'est que de vivre le syndrome 
+              du sauveur, cette culpabilité qui s'installe quand on choisit sa propre voie.
             </P>
             <P m="0 0 15px">
               J'ai osé recommencer de zéro dans un pays étranger, exercer comme psychologue et animer des groupes de
@@ -725,7 +753,13 @@ const OsePrendreTaPlacePage = () => (
         <SectionTitle large>Ce qu'ils disent du parcours</SectionTitle>
         <Testimonies />
         <CtaCenter>
-          <CtaButton href={PERFACTIVE_URL} target="_blank" rel="noopener">
+          <CtaButton 
+            href="#appel"
+            onClick={e => {
+              e.preventDefault();
+              document.getElementById('appel').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Toi aussi tu veux changer → réserve l'appel
           </CtaButton>
         </CtaCenter>
@@ -740,11 +774,11 @@ const OsePrendreTaPlacePage = () => (
     {/* CTA RÉSERVER */}
     <CtaSection id="appel">
       <Container>
-        <SubTitle color="white" align="center" large m="0 0 30px">
+        <SubTitle color="white" align="center" fontSize={{ xs: '1.7em', md: '2em' }} m="0 0 30px">
           Prêt·e à te choisir, enfin&nbsp;?
         </SubTitle>
         <CtaInnerBox>
-          <SubTitle color="white">
+          <SubTitle color="white" fontSize={{ xs: '1.3em', md: '1.5em' }}>
             Avant de commencer, on fait connaissance
           </SubTitle>
           <P color="white">
@@ -773,7 +807,8 @@ const OsePrendreTaPlacePage = () => (
             aelisa.valmori@gmail.com
           </a>
           <br />
-          💬 Ou <a href="https://wa.me/393208103398" target="_blank" rel="noopener" style={{ color: 'white' }}>
+          <WhatsappIcon style={{ width: '1em', height: '1em', fill: '#25D366', verticalAlign: '-0.15em' }} /> Ou{' '}
+          <a href="https://wa.me/393208103398" target="_blank" rel="noopener" style={{ color: 'white' }}>
               contacte-moi directement sur WhatsApp
             </a>
         </P>
@@ -786,7 +821,7 @@ const OsePrendreTaPlacePage = () => (
         <SectionTitle large>Questions fréquentes</SectionTitle>
         <Div maxW="800px" m="40px auto 0">
           <Div m="0 0 30px">
-            <SubTitle color="primaryDark" fontSize="1.2em" m="0 0 10px">
+            <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.5em' }} m="0 0 10px">
               Combien de temps dure le parcours&nbsp;?
             </SubTitle>
             <P m="0">
@@ -796,7 +831,7 @@ const OsePrendreTaPlacePage = () => (
             </P>
           </Div>
           <Div m="0 0 30px">
-            <SubTitle color="primaryDark" fontSize="1.2em" m="0 0 10px">
+            <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.5em' }} m="0 0 10px">
               Est-ce que ça marche vraiment&nbsp;?
             </SubTitle>
             <P m="0">
@@ -810,7 +845,7 @@ const OsePrendreTaPlacePage = () => (
             </P>
           </Div>
           <Div m="0 0 30px">
-            <SubTitle color="primaryDark" fontSize="1.2em" m="0 0 10px">
+            <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.5em' }} m="0 0 10px">
               Les séances se font en ligne ou en présentiel&nbsp;?
             </SubTitle>
             <P m="0">
@@ -820,21 +855,14 @@ const OsePrendreTaPlacePage = () => (
             </P>
           </Div>
           <Div m="0 0 30px">
-            <SubTitle color="primaryDark" fontSize="1.2em" m="0 0 10px">
+            <SubTitle color="primaryDark" fontSize={{ xs: '1.4em', md: '1.5em' }} m="0 0 10px">
               Combien coûte le parcours&nbsp;?
             </SubTitle>
             <P m="0">
-              Le parcours prévoit différentes modalités de paiement, y compris en plusieurs fois. C'est certes un
-              engagement pour nous deux, et ce sera ton premier vrai pas vers un changement profond. Tu pourras poser
-              toutes tes questions pendant l'appel découverte.
-            </P>
-          </Div>
-          <Div m="0">
-            <SubTitle color="primaryDark" fontSize="1.2em" m="0 0 10px">
-              Y a-t-il des facilités de paiement&nbsp;?
-            </SubTitle>
-            <P m="0">
-              Oui, le paiement en 3 fois est possible pour faciliter ton investissement dans ta transformation.
+              Le tarif du parcours peut varier selon la formule choisie. Plusieurs modalités de paiement sont proposées, 
+              y compris en plusieurs fois, pour que cet investissement reste accessible. C'est un engagement important 
+              à la hauteur du changement profond que tu es en train d'amorcer. Si tu veux en savoir plus sur le tarif, 
+              je t'invite à <a href={PERFACTIVE_URL} target="_blank" rel="noopener">réserver un appel découverte avec moi</a>.
             </P>
           </Div>
         </Div>
@@ -880,7 +908,7 @@ const OsePrendreTaPlacePage = () => (
 
     <Section>
       <Container>
-        <TestimonySection id="EegLqFGPS2e4VUEAGgr9YQ" showMore={false} bg="white" p="0px" />
+        <TestimonySection id="ZivHW-VMRlCIYi_DKnXWoA" showMore={false} bg="white" p="0px" />
       </Container>
     </Section>
     
