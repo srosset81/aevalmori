@@ -42,12 +42,12 @@ const TransparentImage = styled(Image)`
 
 const Navigation = () => (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
-    <Div align="center" p="30px">
+    <Div align="center" p={{ xs: '30px 30px 10px 10px', sm: '30px 30px 20px 30px' }}>
       <PageLink page="index">
-        <TransparentImage src="/static/images/logo-4.png" w="100%" />
+        <TransparentImage src="/static/images/logo-4.png" w={{ xs: '80%', sm: '100%' }} />
       </PageLink>
     </Div>
-    <Div p="0px 15px 70px">
+    <Div p={{ xs: '0px 15px 70px 7.5px', sm: '0px 15px 70px' }}>
       <NavLinks />
     </Div>
 

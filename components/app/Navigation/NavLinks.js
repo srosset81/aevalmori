@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 
 const NavLinks = () => {
   return (
-    <Ul>
+    <Ul p={{ xs: '0px 0px 0px 20px', sm: '0px 0px 0px 30px' }}>
       <NavLink page="index">
         <Trans id="menu.index">Accueil</Trans>
       </NavLink>
