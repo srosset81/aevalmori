@@ -18,6 +18,8 @@
     { "source": "/it/costellazioni-familiari", "destination": "/services-constellations?locale=it" },
     { "source": "/fr/dmoka", "destination": "/services-dmoka?locale=fr" },
     { "source": "/it/dmoka", "destination": "/services-dmoka?locale=it" },
+    { "source": "/fr/parcours-ose-prendre-ta-place", "destination": "/ose-prendre-ta-place?locale=fr" },
+    { "source": "/it/parcours-ose-prendre-ta-place", "destination": "/ose-prendre-ta-place?locale=it" },
     { "source": "/fr/agenda", "destination": "/events?locale=fr" },
     { "source": "/fr/agenda/:eventId", "destination": "/event?locale=fr&eventId=:eventId" },
     { "source": "/it/eventi", "destination": "/events?locale=it" },

@@ -1,17 +1,53 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { styled, theme, css } from '../../utils/styling';
+import { styled, theme, css, mediaQuery } from '../../utils/styling';
 import Div from '../layout/Div';
 import AbsoluteDiv from '../layout/AbsoluteDiv';
 import QuoteOpen from '../../svg/quote-open.svg';
 import QuoteClose from '../../svg/quote-close.svg';
-import { P, SubTitle, Markdown } from '../text';
+import { P, Markdown } from '../text';
 import { Button } from '../input';
 import { PageLink } from '../../utils/router';
 import { Hidden, Visible } from '../layout';
 
+const Title = styled(P)`
+  font-family: ${({ theme }) => theme.fontFamily.subTitle};
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px 0 15px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  a,
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+`;
+
 const Gradient = styled(AbsoluteDiv)`
   background: ${props => css`linear-gradient(to bottom, transparent, ${props.bg ? props.theme.colors[props.bg] : 'white'})`};
+`;
+
+const ReviewMeta = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 10px 0 0;
+  ${mediaQuery('sm')} {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+`;
+
+const Stars = styled.div`
+  white-space: nowrap;
+  line-height: 1.0em;
+  font-size: 1em;
+  margin-top: -3px;
 `;
 
 const AllTestimoniesLink = ({ float }) => (
@@ -31,27 +67,33 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
   }, [contentRef.current]);
 
   return testimony ? (
-    <Div p="25px 0">
-      <Hidden sm md lg xl>
-        <AbsoluteDiv top="20px" left="-10px">
-          <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
-        </AbsoluteDiv>
-      </Hidden>
+    <Div p="15px 0">
       <Visible sm md lg xl>
-        <AbsoluteDiv top="20px" left="-45px">
+        <AbsoluteDiv top="10px" left="-50px">
           <QuoteOpen style={{ fill: theme.colors.primaryDark }} />
         </AbsoluteDiv>
       </Visible>
-      <Div maxH={isExpanded ? undefined : '300px'} noOverflow ref={contentRef}>
-        <SubTitle p={{ xs: '0 0 0 30px', sm: '0px' }}>{showMore ? 'Témoignage' : testimony.title}</SubTitle>
+      <Div maxH={isExpanded ? undefined : { xs: '500px', md: '300px' }} noOverflow ref={contentRef} m="-25px 0 10px">
+        <Title>{showMore ? 'Témoignage' : testimony.title}</Title>
+        {testimony.googleReview && (
+          <ReviewMeta>
+            {testimony.stars && <Stars>{[0, 1, 2, 3, 4].fill('⭐', 0, testimony.stars).join('')}</Stars>}
+            <P fontSize="1em" lineHeight="1.2em" color="grey" m="0">
+              Avis certifié sur Google
+              (<a href={testimony.googleReview} target="_blank" rel="noopener noreferrer" style={{ color: 'grey' }}>
+                Voir l'original
+              </a>)
+            </P>
+          </ReviewMeta>
+        )}
         <Markdown>{testimony.content}</Markdown>
         {showMore && (
           <Visible sm md lg xl>
             <AllTestimoniesLink float="left" />
           </Visible>
         )}
-        <P fontSize="1.3em" align="right" italic lineHeight="1em">
-          - {testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}
+        <P fontSize="1.2em" italic align="right" lineHeight="1em">
+          <i>- {testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}</i>
         </P>
         {showMore && (
           <Hidden sm md lg xl>
@@ -68,11 +110,13 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
           </Gradient>
         )}
       </Div>
-      {(!isLongText || isExpanded) && (
-        <AbsoluteDiv bottom="45px" right="-45px">
-          <QuoteClose style={{ fill: theme.colors.primaryDark }} />
-        </AbsoluteDiv>
-      )}
+      {/* {(!isLongText || isExpanded) && (
+        <Visible sm md lg xl>
+          <AbsoluteDiv bottom="45px" right="-45px">
+            <QuoteClose style={{ fill: theme.colors.primaryDark }} />
+          </AbsoluteDiv>
+        </Visible>
+      )} */}
     </Div>
   ) : null;
 };

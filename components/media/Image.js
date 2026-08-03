@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { styled, responsiveStyle } from 'utils/styling';
 
 const Image = styled.img`
-  width: ${props => props.w};
   height: ${props => props.h};
-  ${responsiveStyle({ m: 'margin' })}
+  ${responsiveStyle({ w: 'width', m: 'margin' })}
 `;
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  w: PropTypes.string,
+  w: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   h: PropTypes.string,
 };
 
