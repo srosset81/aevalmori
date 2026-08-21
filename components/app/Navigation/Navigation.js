@@ -1,10 +1,9 @@
 import React from 'react';
-import Router from 'next/router';
-import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
+import { useRouter } from 'next/router';
+import { useTolgee } from 'utils/i18n';
 
 import { styled, theme } from 'utils/styling';
-import { PageLink } from 'utils/router';
+import { PageLink, getUrl } from 'utils/router';
 
 import { Div, FixedDiv, Ul, Separator, Row, Cell } from 'components/layout';
 import { Icon, Image } from 'components/media';
@@ -23,6 +22,7 @@ const ScrollableDiv = styled(Div)`
 `;
 
 const BorderedCell = styled(Cell)`
+  box-sizing: border-box;
   border-left: 1px #dddddd solid;
   border-right: 1px #dddddd solid;
 `;
@@ -40,7 +40,12 @@ const TransparentImage = styled(Image)`
   mix-blend-mode: multiply;
 `;
 
-const Navigation = () => (
+const Navigation = () => {
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
+  const router = useRouter();
+  const currentPage = router.pathname === '/' ? 'index' : router.pathname.replace(/^\//, '');
+
+  return (
   <ScrollableDiv bg="navBackground" h="100%" w="100%">
     <Div align="center" p={{ xs: '30px 30px 10px 10px', sm: '30px 30px 20px 30px' }}>
       <PageLink page="index">
@@ -51,10 +56,10 @@ const Navigation = () => (
       <NavLinks />
     </Div>
 
-    <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '350px' }}>
+    <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '375px' }}>
       <Separator />
       <Row>
-        <Cell w={1 / 3} h="42px">
+        <Cell w={0.25} h="42px">
           <a href="https://www.facebook.com/Anna-Elisa-Valmori-psychologue-104513137604349/" target="_blank">
             <HoverDiv
               bg="navBackground"
@@ -70,7 +75,7 @@ const Navigation = () => (
             </HoverDiv>
           </a>
         </Cell>
-        <BorderedCell w={0.33} h="42px">
+        <BorderedCell w={0.25} h="42px">
           <a href="https://www.linkedin.com/in/anna-elisa-valmori-a99155195/" target="_blank">
             <HoverDiv
               bg="navBackground"
@@ -86,7 +91,7 @@ const Navigation = () => (
             </HoverDiv>
           </a>
         </BorderedCell>
-        <Cell w={0.33} h="42px">
+        <BorderedCell w={0.25} h="42px">
           <a href="https://perfactive.fr/psychologue/compiegne/anna-elisa-valmori" target="_blank">
             <HoverDiv
               bg="navBackground"
@@ -101,15 +106,17 @@ const Navigation = () => (
               </Icon>
             </HoverDiv>
           </a>
+        </BorderedCell>
+        <Cell w={0.25} h="42px" align="middle" bg="navBackground">
+          <FlagSelector
+            value={locale}
+            onChange={otherLocale => router.push(getUrl(currentPage, otherLocale))}
+          />
         </Cell>
-        {/*<Cell w={1 / 3} h="42px" align="middle" bg="background">*/}
-        {/*  <I18n>*/}
-        {/*    {({ i18n }) => <FlagSelector value={i18n._language || 'fr'} onChange={value => Router.push('/' + value)} />}*/}
-        {/*  </I18n>*/}
-        {/*</Cell>*/}
       </Row>
     </FixedDiv>
   </ScrollableDiv>
-);
+  );
+};
 
 export default Navigation;

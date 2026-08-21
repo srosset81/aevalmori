@@ -3,13 +3,15 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Testimony } from 'components/ui';
 import { Div } from '../layout';
+import { useTolgee } from 'utils/i18n';
 
 const TestimonySection = ({ type, bg, p, id, showMore, expand }) => {
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
   const filter = type ? `participatedAt: {eq: "${type}"}` : `id: {eq: "${id}"}`;
 
   const { loading, error, data } = useQuery(gql`
     {
-      testimonyFr(filter: {${filter}}) {
+      testimonyFr(filter: {${filter}}, locale: ${locale}) {
         title
         content
         surname

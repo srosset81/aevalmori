@@ -20,14 +20,16 @@
         "it": "dmoka"
     },
     "ose-prendre-ta-place": {
-        "fr": "parcours-ose-prendre-ta-place"
+        "fr": "parcours-ose-prendre-ta-place",
+        "it": "percorso-osa-prendere-il-tuo-posto"
     },
     "events": {
         "fr": "agenda",
         "it": "eventi"
     },
     "event": {
-        "fr": "agenda"
+        "fr": "agenda",
+        "it": "eventi"
     },
     "testimonies": {
         "fr": "temoignages",

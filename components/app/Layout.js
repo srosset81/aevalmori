@@ -47,12 +47,12 @@ class Layout extends React.Component {
           </Hidden>
 
           <Visible sm>
-            <FixedDiv top left bottom w="350px" zIndex="navigation">
+            <FixedDiv top left bottom w="375px" zIndex="navigation">
               <Navigation />
             </FixedDiv>
           </Visible>
 
-          <Div p={{ xs: '0', sm: '0 0 0 350px' }}>{children}</Div>
+          <Div p={{ xs: '0', sm: '0 0 0 375px' }}>{children}</Div>
         </div>
       </ThemeProvider>
     );

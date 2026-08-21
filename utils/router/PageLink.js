@@ -1,16 +1,15 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { I18n } from '@lingui/react';
+import { useTolgee } from 'utils/i18n';
 import getUrl from './getUrl';
 
-const PageLink = ({ page, param, ...otherProps }) => (
-  <I18n>
-    {({ i18n }) => (
-      <span style={{ cursor: 'pointer' }}>
-        <NextLink href={getUrl(page, i18n._language || 'fr', param)} {...otherProps} />
-      </span>
-    )}
-  </I18n>
-);
+const PageLink = ({ page, param, ...otherProps }) => {
+  const locale = useTolgee(['language']).getLanguage();
+  return (
+    <span style={{ cursor: 'pointer' }}>
+      <NextLink href={getUrl(page, locale || 'fr', param)} {...otherProps} />
+    </span>
+  );
+};
 
 export default PageLink;

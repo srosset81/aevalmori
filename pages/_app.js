@@ -1,7 +1,6 @@
 import React from 'react';
 import NextApp from 'next/app';
-import { I18nProvider } from '@lingui/react';
-import getCatalog from '@catalogs';
+import { TolgeeProvider, tolgee } from '../utils/i18n';
 import { withApollo } from '../utils/apollo';
 
 class App extends NextApp {
@@ -12,16 +11,15 @@ class App extends NextApp {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps, locale: ctx.query.locale };
+    return { pageProps, locale: ctx.query.locale || 'fr' };
   }
 
   render() {
     const { Component, pageProps, locale } = this.props;
-    const catalog = getCatalog(locale);
     return (
-      <I18nProvider language={locale} catalogs={{ [locale]: catalog }}>
+      <TolgeeProvider tolgee={tolgee} ssr={{ language: locale }}>
         <Component {...pageProps} />
-      </I18nProvider>
+      </TolgeeProvider>
     );
   }
 }

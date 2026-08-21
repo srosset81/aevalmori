@@ -1,0 +1,8 @@
+{
+  "push": {
+    "files": [
+      { "path": "./locale/fr/messages.json", "language": "fr-FR" },
+      { "path": "./locale/it/messages.json", "language": "it-IT" }
+    ]
+  }
+}
