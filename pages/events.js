@@ -20,8 +20,8 @@ const EventsPage = () => {
 
   const { loading, error, data } = useQuery(
     gql`
-      query ($now: DateTime!, $tag: String, $locale: SiteLocale) {
-        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag } }, first: 100, locale: $locale) {
+      query ($now: DateTime!, $tag: String, $country: String) {
+        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag }, country: { eq: $country } }, first: 100) {
           id
           title
           content
@@ -37,7 +37,7 @@ const EventsPage = () => {
       variables: {
         now,
         tag,
-        locale
+        country: locale
       }
     }
   );

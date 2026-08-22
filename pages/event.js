@@ -8,19 +8,18 @@ import { Visible, Div, Row, Cell, Separator } from 'components/layout';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Event } from 'components/ui';
-import { useTranslate, useTolgee } from 'utils/i18n';
+import { useTranslate } from 'utils/i18n';
 import { PageLink } from '../utils/router';
 
 const EventPage = () => {
   const { t } = useTranslate();
-  const locale = useTolgee(['language']).getLanguage() || 'fr';
   const router = useRouter();
   const { eventId } = router.query;
 
   const { loading, data } = useQuery(
     gql`
-      query ($eventId: ItemId!, $locale: SiteLocale) {
-        eventFr(filter: { id: { eq: $eventId } }, locale: $locale) {
+      query ($eventId: ItemId!) {
+        eventFr(filter: { id: { eq: $eventId } }) {
           id
           title
           content
@@ -34,8 +33,7 @@ const EventPage = () => {
     `,
     {
       variables: {
-        eventId,
-        locale
+        eventId
       }
     }
   );

@@ -34,7 +34,6 @@
     "fs": "0.0.1-security",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
-    "locale": "^0.1.0",
     "markdown-to-jsx": "^7.1.7",
     "module": "^1.2.5",
     "next": "^9.4.4",

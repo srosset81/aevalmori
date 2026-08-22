@@ -56,7 +56,7 @@ const Navigation = () => {
       <NavLinks />
     </Div>
 
-    <FixedDiv bottom left w={{ xs: '320px', sm: '300px', md: '375px' }}>
+    <FixedDiv bottom left w={{ xs: '100%', sm: '300px', md: '375px' }}>
       <Separator />
       <Row>
         <Cell w={0.25} h="42px">

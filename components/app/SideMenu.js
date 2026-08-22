@@ -6,15 +6,15 @@ import { FadeLayer } from 'components/motion';
 const LeftFixedDiv = styled.div`
   position: fixed;
   top: 0;
-  width: 320px;
+  width: 100%;
   bottom: 0;
   z-index: ${props => props.theme.zIndex.navigation};
   background-color: ${props => props.theme.colors.grey};
-  left: -350px;
+  left: -100%;
   transition: transform ease-out 500ms;
 
   &.open {
-    transform: translate3d(350px, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 `;
 

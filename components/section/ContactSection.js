@@ -3,10 +3,17 @@ import { Form, Field, FORM_ERROR } from 'utils/form';
 import { Cell, Div, Row, Space, BorderedDiv } from 'components/layout';
 import { Button, Input, Textarea, Label } from 'components/input';
 import { P, Text, SubTitle } from 'components/text';
-import { useTranslate } from 'utils/i18n';
+import { useTranslate, useTolgee } from 'utils/i18n';
+
+const phoneByLocale = {
+  fr: { href: 'tel:+33659026479', display: '06 59 02 64 79' },
+  it: { href: 'tel:+393208103398', display: '320 810 3398' }
+};
 
 const ContactSection = () => {
   const { t } = useTranslate();
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
+  const phone = phoneByLocale[locale] || phoneByLocale.fr;
   const [messageSent, setMessageSent] = useState(false);
 
   const onSubmit = async values => {
@@ -59,7 +66,7 @@ const ContactSection = () => {
           </P>
           <P>
             {t('contact.callOrSms', "Vous pouvez également m'appeler ou m'envoyer un SMS au ")}
-            <a href="tel:+33659026479">06 59 02 64 79</a>
+            <a href={phone.href}>{phone.display}</a>
             .
           </P>
         </Div>

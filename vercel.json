@@ -1,7 +1,13 @@
 {
   "version": 2,
   "redirects": [
-    { "source": "/", "destination": "/fr" }
+    {
+      "source": "/",
+      "has": [{ "type": "header", "key": "accept-language", "value": { "pre": "it" } }],
+      "destination": "/it",
+      "permanent": false
+    },
+    { "source": "/", "destination": "/fr", "permanent": false }
   ],
   "rewrites": [
     { "source": "/fr", "destination": "/?locale=fr" },
