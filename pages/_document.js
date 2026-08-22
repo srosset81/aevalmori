@@ -13,15 +13,13 @@ export default class MyDocument extends Document {
     const queryLocale = ctx.query.locale;
     const locale = supportedLocale.find(l => l === queryLocale) ? queryLocale : 'fr';
 
-    const linguiCatalog = await import(`raw-loader!../locale/${locale}/messages.js`).then(mod => mod.default);
-
     const initialProps = await Document.getInitialProps(ctx);
 
-    return { ...initialProps, ...page, styleTags, linguiCatalog, locale };
+    return { ...initialProps, ...page, styleTags, locale };
   }
 
   render() {
-    const { linguiCatalog, locale } = this.props;
+    const { locale } = this.props;
     return (
       <Html lang={locale}>
         <Head>
@@ -37,7 +35,6 @@ export default class MyDocument extends Document {
           <meta name="google-site-verification" content="myJ_CwUBXOaGJlyttvQKhJtgoiJgNXjOV0HA_pPxRBQ" />
           <meta httpEquiv="Content-Language" content={locale} />
           <script async defer src="https://analytics.umami.is/script.js" data-website-id="2907ec6f-d0d1-4910-890c-d63870b27065"></script>
-          <script dangerouslySetInnerHTML={{ __html: linguiCatalog }} />
           {this.props.styleTags}
         </Head>
         <body style={{ margin: 0, padding: 0 }}>

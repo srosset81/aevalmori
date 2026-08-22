@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import { styled } from 'utils/styling';
+import { styled, theme } from 'utils/styling';
 
 import { Image } from 'components/media';
 import { Div, AbsoluteDiv } from 'components/layout';
 
 const SlidingDiv = styled(AbsoluteDiv)`
   background-color: #f7f7f7;
-  z-index: -1;
-  transition: all 0.3s ease-out;
+  z-index: 10;
   border-top: 1px #dddddd solid;
   border-right: 1px #dddddd solid;
   border-left: 1px #dddddd solid;
@@ -17,58 +16,47 @@ const SlidingDiv = styled(AbsoluteDiv)`
 
 const ClickableDiv = styled(Div)`
   cursor: pointer;
+  transition: all ease-in-out 200ms;
+  &:hover {
+    background-color: ${theme.colors.white};
+  }
 `;
 
 const availableLocales = ['fr', 'it'];
 
-class FlagSelector extends React.Component {
-  constructor(props) {
-    super(props);
+const FlagSelector = ({ value, onChange }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const containerRef = useRef(null);
+  const otherLocale = availableLocales.find(locale => locale !== value);
 
-    this.state = {
-      showMenu: false
+  useEffect(() => {
+    if (!showMenu) return undefined;
+
+    const closeMenu = event => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
     };
-  }
+    document.addEventListener('click', closeMenu);
+    return () => document.removeEventListener('click', closeMenu);
+  }, [showMenu]);
 
-  showMenu = () => {
-    this.setState({ showMenu: true });
-    document.addEventListener('click', this.closeMenu);
+  const onSelect = locale => {
+    setShowMenu(false);
+    if (onChange) onChange(locale);
   };
 
-  closeMenu = event => {
-    if (this.slidingDiv && !this.slidingDiv.contains(event.target)) {
-      this.setState({ showMenu: false });
-      document.removeEventListener('click', this.closeMenu);
-    }
-  };
-
-  onSelect = value => {
-    if (this.props.onChange) this.props.onChange(value);
-    this.setState({ showMenu: false });
-    document.removeEventListener('click', this.closeMenu);
-  };
-
-  render() {
-    const { value } = this.props;
-    const otherLocale = availableLocales.find(locale => locale !== value);
-    return (
-      <ClickableDiv w="100%" h="100%" align="middle" onClick={this.showMenu}>
-        <Image src={`/static/images/flag_${value}.png`} w="30px" />
-        {/*<SlidingDiv*/}
-        {/*  ref={e => (this.slidingDiv = e)}*/}
-        {/*  top={this.state.showMenu ? '-45px' : '0'}*/}
-        {/*  bottom={this.state.showMenu ? '45px' : '0'}*/}
-        {/*  left="-1px"*/}
-        {/*  right="-3px"*/}
-        {/*  align="middle"*/}
-        {/*  onClick={() => this.onSelect(otherLocale)}*/}
-        {/*>*/}
-        {/*  <Image src={`/static/images/flag_${otherLocale}.png`} w="30px" />*/}
-        {/*</SlidingDiv>*/}
-      </ClickableDiv>
-    );
-  }
-}
+  return (
+    <ClickableDiv ref={containerRef} w="100%" h="100%" align="middle" onClick={() => setShowMenu(true)}>
+      <Image src={`/static/images/flag_${value}.png`} w="30px" />
+      {showMenu && (
+        <SlidingDiv top="-45px" left="-1px" right="-1px" h="45px" align="middle" onClick={() => onSelect(otherLocale)}>
+          <Image src={`/static/images/flag_${otherLocale}.png`} w="30px" />
+        </SlidingDiv>
+      )}
+    </ClickableDiv>
+  );
+};
 
 FlagSelector.propTypes = {
   value: PropTypes.string,

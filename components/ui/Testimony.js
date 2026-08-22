@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslate } from '../../utils/i18n';
 import { styled, theme, css, mediaQuery } from '../../utils/styling';
 import Div from '../layout/Div';
 import AbsoluteDiv from '../layout/AbsoluteDiv';
@@ -50,15 +51,19 @@ const Stars = styled.div`
   margin-top: -3px;
 `;
 
-const AllTestimoniesLink = ({ float }) => (
-  <PageLink page="testimonies">
-    <Button colors="darkGrey" style={{ float }} w={float ? undefined : '100%'}>
-      Tous les témoignages
-    </Button>
-  </PageLink>
-);
+const AllTestimoniesLink = ({ float }) => {
+  const { t } = useTranslate();
+  return (
+    <PageLink page="testimonies">
+      <Button colors="darkGrey" style={{ float }} w={float ? undefined : '100%'}>
+        {t('testimony.allTestimonies', 'Tous les témoignages')}
+      </Button>
+    </PageLink>
+  );
+};
 
 const Testimony = ({ bg, testimony, showMore, expand }) => {
+  const { t } = useTranslate();
   const contentRef = useRef(null);
   const [isLongText, setLongText] = useState(false);
   const [isExpanded, setIsExpanded] = useState(expand);
@@ -74,14 +79,14 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
         </AbsoluteDiv>
       </Visible>
       <Div maxH={isExpanded ? undefined : { xs: '500px', md: '300px' }} noOverflow ref={contentRef} m="-25px 0 10px">
-        <Title>{showMore ? 'Témoignage' : testimony.title}</Title>
+        <Title>{showMore ? t('testimony.fallbackTitle', 'Témoignage') : testimony.title}</Title>
         {testimony.googleReview && (
           <ReviewMeta>
             {testimony.stars && <Stars>{[0, 1, 2, 3, 4].fill('⭐', 0, testimony.stars).join('')}</Stars>}
             <P fontSize="1em" lineHeight="1.2em" color="grey" m="0">
-              Avis certifié sur Google
+              {t('testimony.certifiedReview', 'Avis certifié sur Google')}{' '}
               (<a href={testimony.googleReview} target="_blank" rel="noopener noreferrer" style={{ color: 'grey' }}>
-                Voir l'original
+                {t('testimony.seeOriginal', "Voir l'original")}
               </a>)
             </P>
           </ReviewMeta>
@@ -93,7 +98,7 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
           </Visible>
         )}
         <P fontSize="1.2em" italic align="right" lineHeight="1em">
-          <i>- {testimony.surname || 'Anonyme'} {testimony.date ? `(${testimony.date})` : ''}</i>
+          <i>- {testimony.surname || t('testimony.anonymous', 'Anonyme')} {testimony.date ? `(${testimony.date})` : ''}</i>
         </P>
         {showMore && (
           <Hidden sm md lg xl>
@@ -105,7 +110,7 @@ const Testimony = ({ bg, testimony, showMore, expand }) => {
         {isLongText && !isExpanded && (
           <Gradient bottom left right h="150px" align="middle" bg={bg}>
             <Button colors="darkGrey" onClick={() => setIsExpanded(true)} m="30px 0 0">
-              Lire plus
+              {t('testimony.readMore', 'Lire plus')}
             </Button>
           </Gradient>
         )}

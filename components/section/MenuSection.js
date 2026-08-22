@@ -3,8 +3,11 @@ import { Div, Row, Cell, AbsoluteDiv } from 'components/layout';
 import { BgImage } from 'components/media';
 import { P, SubTitle } from 'components/text';
 import { Button } from 'components/input';
+import { useTranslate } from 'utils/i18n';
 
-const MenuSection = ({ right, image, title, children, link = 'index', linkCaption = 'En savoir +' }) => (
+const MenuSection = ({ right, image, title, children, link = 'index', linkCaption }) => {
+  const { t } = useTranslate();
+  return (
   <Row>
     <Cell w={{ xs: 1, sm: 2 / 3 }} order={{ xs: '1', sm: right ? '3' : '0' }}>
       <BgImage src={image.startsWith('http') ? image : `/static/images/${image}`} h={{ xs: '200px', sm: '100%' }} minH={{ xs: '200px', sm: '500px' }} />
@@ -19,11 +22,12 @@ const MenuSection = ({ right, image, title, children, link = 'index', linkCaptio
         </SubTitle>
         <P m={{ xs: '15px 0', sm: '25px 0' }}>{children}</P>
         <PageLink page={link}>
-          <Button>{linkCaption}</Button>
+          <Button>{linkCaption || t('menuSection.linkCaption', 'En savoir +')}</Button>
         </PageLink>
       </Div>
     </Cell>
   </Row>
-);
+  );
+};
 
 export default MenuSection;

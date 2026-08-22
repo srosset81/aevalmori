@@ -7,14 +7,16 @@ import { Visible, Cell, Div, Row, Separator } from 'components/layout';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Testimony } from 'components/ui';
+import { useTolgee } from 'utils/i18n';
 
 const Testimonies = () => {
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
   const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
     gql`
-      query {
-        allTestimonyFrs(filter: { order:{ exists: true }}, orderBy: order_ASC) {
+      query ($locale: SiteLocale) {
+        allTestimonyFrs(filter: { order:{ exists: true }}, orderBy: order_ASC, locale: $locale) {
           title
           content
           surname
@@ -25,7 +27,12 @@ const Testimonies = () => {
           order
         }
       }
-    `
+    `,
+    {
+      variables: {
+        locale
+      }
+    }
   );
 
   if (loading || !data) return null;

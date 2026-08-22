@@ -7,17 +7,19 @@ import { Visible, Cell, Div, Row, Separator } from 'components/layout';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Testimony } from 'components/ui';
-import { Trans } from '@lingui/macro';
+import { useTranslate, useTolgee } from 'utils/i18n';
 import Tags from "../components/ui/Tags";
 import { testimoniesTags } from "../utils/constants";
 
 const TestimoniesPage = () => {
+  const { t } = useTranslate();
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
   const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
     gql`
-      query ($tag: String) {
-        allTestimonyFrs(filter: { participatedAt: { eq: $tag } }, first: 100) {
+      query ($tag: String, $locale: SiteLocale) {
+        allTestimonyFrs(filter: { participatedAt: { eq: $tag } }, first: 100, locale: $locale) {
           title
           content
           surname
@@ -31,7 +33,8 @@ const TestimoniesPage = () => {
     `,
     {
       variables: {
-        tag
+        tag,
+        locale
       }
     }
   );
@@ -39,15 +42,15 @@ const TestimoniesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Témoignages - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>{t('testimonies.headTitle', 'Témoignages - Anna Elisa Valmori, psychologue à Paris')}</title>
       </Head>
       <TopSection image="flowers.jpg">
-        <Trans id="testimonies.title">Témoignages</Trans>
+        {t('testimonies.title', 'Témoignages')}
       </TopSection>
       <Div p={{ xs: "30px", sm: '50px 80px' }}>
         <Row>
           <Cell w={{ xs: 1, sm: 1/2 }}>
-            <SubTitle>Témoignages 💌</SubTitle>
+            <SubTitle>{t('testimonies.subtitle', 'Témoignages 💌')}</SubTitle>
           </Cell>
           <Cell w={{ sm: 1/2 }}>
             <Visible sm md lg xl>
@@ -57,7 +60,7 @@ const TestimoniesPage = () => {
         </Row>
         {loading && (
           <Div minH="100vh" p={{ xs: '25px', sm: '50px' }}>
-            <P align="center">Chargement en cours...</P>
+            <P align="center">{t('testimonies.loading', 'Chargement en cours...')}</P>
           </Div>
         )}
         {data &&
@@ -70,9 +73,11 @@ const TestimoniesPage = () => {
           ))}
         {!loading && (data && data.allTestimonyFrs.length === 0) && (
           <Div minH="500px">
-            <P>Aucun témoignage n'a été trouvé.</P>
+            <P>{t('testimonies.empty', "Aucun témoignage n'a été trouvé.")}</P>
             {tag &&
-              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Enlever les filtres</P>
+              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                {t('testimonies.removeFilters', 'Enlever les filtres')}
+              </P>
             }
           </Div>
         )}

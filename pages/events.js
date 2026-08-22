@@ -7,19 +7,21 @@ import { Visible, Div, Row, Cell, Separator } from 'components/layout';
 import { P, SubTitle } from 'components/text';
 import { TopSection, FooterSection } from 'components/section';
 import { Event } from 'components/ui';
-import { Trans } from '@lingui/macro';
+import { useTranslate, useTolgee } from 'utils/i18n';
 import Tags from "../components/ui/Tags";
 import { eventsTags } from "../utils/constants";
 
 const now = (new Date()).toISOString().substring(0,10);
 
 const EventsPage = () => {
+  const { t } = useTranslate();
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
   const [tag, setTag] = useState();
 
   const { loading, error, data } = useQuery(
     gql`
-      query ($now: DateTime!, $tag: String) {
-        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag } }, first: 100) {
+      query ($now: DateTime!, $tag: String, $country: String) {
+        allEventFrs(orderBy: startDate_ASC, filter: { endDate: { gt: $now }, topic: { eq: $tag }, country: { eq: $country } }, first: 100) {
           id
           title
           content
@@ -34,7 +36,8 @@ const EventsPage = () => {
     {
       variables: {
         now,
-        tag
+        tag,
+        country: locale
       }
     }
   );
@@ -42,15 +45,15 @@ const EventsPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Agenda - Anna Elisa Valmori, psychologue à Paris</title>
+        <title>{t('events.headTitle', 'Agenda - Anna Elisa Valmori, psychologue à Paris')}</title>
       </Head>
       <TopSection image="events.jpg">
-        <Trans id="events.title">Agenda</Trans>
+        {t('events.title', 'Agenda')}
       </TopSection>
       <Div p={{ xs: "30px", sm: "50px 80px" }}>
         <Row>
           <Cell w={{ xs: 1, sm: 1/2 }}>
-            <SubTitle>📅 Prochains événements</SubTitle>
+            <SubTitle>{t('events.subtitle', '📅 Prochains événements')}</SubTitle>
           </Cell>
           <Cell w={{ sm: 1/2 }}>
             <Visible sm md lg xl>
@@ -60,7 +63,7 @@ const EventsPage = () => {
         </Row>
         {loading && (
           <Div minH="100vh" p={{ xs: '25px', sm: '50px' }}>
-            <P align="center">Chargement en cours...</P>
+            <P align="center">{t('events.loading', 'Chargement en cours...')}</P>
           </Div>
         )}
         {data &&
@@ -73,9 +76,11 @@ const EventsPage = () => {
           ))}
         {!loading && (data && data.allEventFrs.length === 0) && (
           <Div minH="500px">
-            <P>Aucun événement n'a été trouvé.</P>
+            <P>{t('events.empty', "Aucun événement n'a été trouvé.")}</P>
             {tag &&
-              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Enlever les filtres</P>
+              <P onClick={() => setTag()} style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                {t('events.removeFilters', 'Enlever les filtres')}
+              </P>
             }
           </Div>
         )}
