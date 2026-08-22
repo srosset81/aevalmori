@@ -21,13 +21,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
       - name: Pull translations from Tolgee
         env:
           TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
-        run: yarn tolgee:pull
+        run: |
+          npx --yes @tolgee/cli@^2.20.0 pull \
+            --path locale/_pulled \
+            --file-structure-template "{languageTag}.json" \
+            --delimiter "" \
+            --empty-dir
+          mv locale/_pulled/fr-FR.json locale/fr/messages.json
+          mv locale/_pulled/it-IT.json locale/it/messages.json
+          rmdir locale/_pulled
 
       - name: Validate translation files
         run: |
