@@ -4,10 +4,11 @@ import { Field, Form } from 'react-final-form';
 import { Div, Row, Cell, BorderedDiv, Visible, Space } from 'components/layout';
 import { P, Text } from 'components/text';
 import { FORM_ERROR } from 'final-form';
-import { useTranslate } from 'utils/i18n';
+import { useTranslate, useTolgee } from 'utils/i18n';
 
 const FooterSection = () => {
   const { t } = useTranslate();
+  const locale = useTolgee(['language']).getLanguage() || 'fr';
 
   const onSubmit = async values => {
     const result = await fetch('/api/newsletter', {
@@ -16,7 +17,7 @@ const FooterSection = () => {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(values)
+      body: JSON.stringify({ ...values, locale })
     });
 
     if (!result.ok) {

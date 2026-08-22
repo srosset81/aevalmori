@@ -1,11 +1,15 @@
 import fetch from 'node-fetch';
 
 const listDomain = process.env.MAILCHIMP_LIST_DOMAIN;
-const listId = process.env.MAILCHIMP_LIST_ID;
+const listIdByLocale = {
+  fr: process.env.MAILCHIMP_LIST_ID_FR,
+  it: process.env.MAILCHIMP_LIST_ID_IT
+};
 const apiKey = process.env.MAILCHIMP_API_KEY;
 
 export default function handle(req, res) {
-  const { email, name } = req.body;
+  const { email, name, locale } = req.body;
+  const listId = listIdByLocale[locale] || listIdByLocale.fr;
 
   return fetch(`https://${listDomain}.api.mailchimp.com/3.0/lists/${listId}/members/`, {
     method: 'POST',
