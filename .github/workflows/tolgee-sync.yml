@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   pull-translations:
@@ -35,20 +34,14 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('locale/fr/messages.json', 'utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('locale/it/messages.json', 'utf8'))"
 
-      - name: Create pull request
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: 'chore: sync translations from Tolgee'
-          title: 'Mise à jour des traductions (Tolgee)'
-          body: |
-            Traductions mises à jour automatiquement depuis Tolgee (`fr` / `it`).
-          branch: tolgee-sync
-          delete-branch: true
-          labels: translations
-
-      - name: Auto-merge
-        if: steps.cpr.outputs.pull-request-number
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}"
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- locale/fr/messages.json locale/it/messages.json; then
+            echo "No translation changes, nothing to commit."
+          else
+            git add locale/fr/messages.json locale/it/messages.json
+            git commit -m "chore: sync translations from Tolgee"
+            git push
+          fi
